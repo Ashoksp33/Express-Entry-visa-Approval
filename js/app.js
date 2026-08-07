@@ -1,6 +1,7 @@
 /* 
    EXECUTIVE MIDNIGHT SLATE PORTFOLIO DRIVER
    Developer: Ashok Gowda S P
+   Updated with New Resume Details (JWT Auth, SkyCast, Stock Prediction)
 */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -71,84 +72,75 @@ function initArchitectureModals() {
 
   if (!overlay) return;
 
-  // Data for architecture breakdowns of each project
+  // Data for architecture breakdowns based on Ashok's updated resume
   const architectureData = {
-    'rest-api': {
-      title: 'Spring Boot RESTful Microservice Architecture',
-      desc: 'Layered Enterprise Pattern (Controller → Service → Repository → MySQL Database) separating HTTP endpoints, business logic rules, and relational data access.',
+    'jwt-auth-system': {
+      title: 'Spring Boot REST API with JWT Auth & Swagger Architecture',
+      desc: 'Secure enterprise microservice using Spring Security, JWT token validation, Swagger OpenAPI documentation, pagination, sorting, input validation, and global exception handling.',
       content: `
         <div style="background:#020617; border:1px solid var(--border-subtle); border-radius:var(--radius-md); padding:1.5rem; font-family:var(--font-code); font-size:0.88rem; color:var(--text-primary); line-height:2;">
-          <div style="color:var(--accent-cyan); font-weight:700;"><i class="fas fa-desktop"></i> 1. CLIENT / POSTMAN CONSUMER</div>
-          <div style="padding-left:1.5rem; color:var(--text-muted);">↓ Transmits HTTP Requests (JSON Payload / Headers)</div>
-
-          <div style="color:var(--accent-indigo); font-weight:700;"><i class="fas fa-layer-group"></i> 2. CONTROLLER LAYER (@RestController)</div>
+          <div style="color:var(--accent-cyan); font-weight:700;"><i class="fas fa-key"></i> 1. CLIENT AUTHENTICATION & JWT BEARER TOKEN</div>
           <div style="padding-left:1.5rem; color:var(--text-secondary); font-size:0.82rem;">
-            • Exposes Endpoints (/api/employees, /api/employees/{id})<br>
-            • Handles Request Body Deserialization & Response Formatting
+            • Client authenticates via /api/auth/login and receives signed JWT Bearer Token<br>
+            • Subsequent requests pass Authorization: Bearer &lt;token&gt; header
           </div>
 
-          <div style="padding-left:1.5rem; color:var(--text-muted);">↓ Invokes Business Logic Methods</div>
+          <div style="padding-left:1.5rem; color:var(--text-muted);">↓ Intercepted by Spring Security Filter Chain</div>
 
-          <div style="color:var(--accent-emerald); font-weight:700;"><i class="fas fa-cogs"></i> 3. SERVICE LAYER (@Service)</div>
+          <div style="color:var(--accent-indigo); font-weight:700;"><i class="fas fa-shield-halved"></i> 2. SPRING SECURITY FILTER CHAIN & JWT FILTER</div>
           <div style="padding-left:1.5rem; color:var(--text-secondary); font-size:0.82rem;">
-            • Implements Business Logic & Transactional Scopes<br>
-            • Validates Input Parameters & Exception Mapping
+            • Validates token signature & extracts User Claims & Roles<br>
+            • Populates SecurityContextHolder for Role-Based Access Control (RBAC)
           </div>
 
-          <div style="padding-left:1.5rem; color:var(--text-muted);">↓ Calls Spring Data JPA Repository Interface</div>
+          <div style="padding-left:1.5rem; color:var(--text-muted);">↓ Passes to Endpoints with OpenAPI Documentation</div>
 
-          <div style="color:var(--accent-amber); font-weight:700;"><i class="fas fa-database"></i> 4. DATA ACCESS LAYER (Hibernate ORM / @Repository)</div>
+          <div style="color:var(--accent-emerald); font-weight:700;"><i class="fas fa-layer-group"></i> 3. REST CONTROLLER LAYER & SWAGGER UI</div>
           <div style="padding-left:1.5rem; color:var(--text-secondary); font-size:0.82rem;">
-            • Executes Prepared Statements via Spring Data JPA<br>
-            • Maps Relational Rows to Java Entity Model Classes
+            • Implements Pagination, Sorting, Searching, and Input Validation (@Valid)<br>
+            • Interactive API Documentation exposed via Swagger / OpenAPI 3.0
           </div>
 
-          <div style="padding-left:1.5rem; color:var(--text-muted);">↓ Connection Pool Query Execution (Port 3306)</div>
+          <div style="padding-left:1.5rem; color:var(--text-muted);">↓ Calls Service Layer</div>
 
-          <div style="color:var(--accent-cyan); font-weight:700;"><i class="fas fa-server"></i> 5. MYSQL RELATIONAL DATABASE</div>
+          <div style="color:var(--accent-amber); font-weight:700;"><i class="fas fa-database"></i> 4. DATA ACCESS LAYER & MYSQL DATABASE</div>
           <div style="padding-left:1.5rem; color:var(--text-secondary); font-size:0.82rem;">
-            • Relational Tables with Foreign Keys, Primary Keys, and Indexes
+            • Spring Data JPA & Hibernate ORM for CRUD Operations & Pageable queries<br>
+            • Persists encrypted user credentials & role mappings to MySQL DB
           </div>
         </div>
       `
     },
-    'console-system': {
-      title: 'Modular Java Core & JDBC Prepared Statements Architecture',
-      desc: 'Layered Object-Oriented Console architecture enforcing SQL injection prevention and database transaction integrity.',
+    'skycast': {
+      title: 'SkyCast — Real-Time Weather Platform Architecture',
+      desc: 'Asynchronous JavaScript web application leveraging WeatherAPI REST services, HTML5 Geolocation, dynamic CSS animations, and theme state management.',
       content: `
         <div style="background:#020617; border:1px solid var(--border-subtle); border-radius:var(--radius-md); padding:1.5rem; font-family:var(--font-code); font-size:0.88rem; color:var(--text-primary); line-height:2;">
-          <div style="color:var(--accent-cyan); font-weight:700;"><i class="fas fa-terminal"></i> 1. CONSOLE USER INTERFACE ENGINE</div>
+          <div style="color:var(--accent-cyan); font-weight:700;"><i class="fas fa-location-crosshairs"></i> 1. HTML5 GEOLOCATION & CITY SEARCH</div>
           <div style="padding-left:1.5rem; color:var(--text-secondary); font-size:0.82rem;">
-            • Interactive CLI Scanner Input Loop & Menu Dispatcher
+            • Obtains user latitude/longitude or accepts dynamic city search input
           </div>
 
-          <div style="padding-left:1.5rem; color:var(--text-muted);">↓ Dispatches User Choice</div>
+          <div style="padding-left:1.5rem; color:var(--text-muted);">↓ Asynchronous Fetch API Request</div>
 
-          <div style="color:var(--accent-indigo); font-weight:700;"><i class="fas fa-cubes"></i> 2. CORE JAVA OBJECT-ORIENTED MODEL & SERVICE</div>
+          <div style="color:var(--accent-indigo); font-weight:700;"><i class="fas fa-cloud-sun"></i> 2. WEATHERAPI RESTFUL SERVICE INTEGRATION</div>
           <div style="padding-left:1.5rem; color:var(--text-secondary); font-size:0.82rem;">
-            • Encapsulated Employee Entity (Getters, Setters, Constructor)<br>
-            • Custom Exception Handler & Data Validation
+            • Fetches real-time temperature, humidity, wind velocity, and 5-day forecasts<br>
+            • Parses JSON payloads with dynamic error fallback handling
           </div>
 
-          <div style="padding-left:1.5rem; color:var(--text-muted);">↓ Establishes DriverManager Connection</div>
+          <div style="padding-left:1.5rem; color:var(--text-muted);">↓ Triggers DOM Animation State</div>
 
-          <div style="color:var(--accent-emerald); font-weight:700;"><i class="fas fa-link"></i> 3. JDBC PREPARED STATEMENT LAYER</div>
+          <div style="color:var(--accent-emerald); font-weight:700;"><i class="fas fa-wand-magic-sparkles"></i> 3. DYNAMIC WEATHER ANIMATIONS & THEME PIPELINE</div>
           <div style="padding-left:1.5rem; color:var(--text-secondary); font-size:0.82rem;">
-            • Safe Dynamic Parameter Binding (? placeholders)<br>
-            • Prevents SQL Injection Vulnerabilities Completely
-          </div>
-
-          <div style="padding-left:1.5rem; color:var(--text-muted);">↓ Executes Query / Update</div>
-
-          <div style="color:var(--accent-amber); font-weight:700;"><i class="fas fa-database"></i> 4. MYSQL DATABASE ENGINE</div>
-          <div style="padding-left:1.5rem; color:var(--text-secondary); font-size:0.82rem;">
-            • Performs Persistent Insert, Select, Update, and Delete Actions
+            • Renders weather-specific CSS keyframe animations (Raindrops, Sun Glow, Storm clouds)<br>
+            • Updates responsive UI components dynamically
           </div>
         </div>
       `
     },
     'stock-prediction': {
-      title: 'Machine Learning Deep Learning Pipeline Architecture',
+      title: 'Stock Market Price Prediction Machine Learning Pipeline',
       desc: 'End-to-end Deep Learning pipeline using LSTM networks for time-series stock trend forecasting served via Flask.',
       content: `
         <div style="background:#020617; border:1px solid var(--border-subtle); border-radius:var(--radius-md); padding:1.5rem; font-family:var(--font-code); font-size:0.88rem; color:var(--text-primary); line-height:2;">
@@ -157,27 +149,27 @@ function initArchitectureModals() {
             • Ingests Stock Price Time-Series Data via Yahoo Finance API / Pandas
           </div>
 
-          <div style="padding-left:1.5rem; color:var(--text-muted);">↓ Data Cleaning & Feature Extraction</div>
+          <div style="padding-left:1.5rem; color:var(--text-muted);">↓ Data Preprocessing & Feature Engineering</div>
 
-          <div style="color:var(--accent-indigo); font-weight:700;"><i class="fas fa-filter"></i> 2. PREPROCESSING & NORMALIZATION</div>
+          <div style="color:var(--accent-indigo); font-weight:700;"><i class="fas fa-filter"></i> 2. NORMALIZATION & SEQUENCE SLICING</div>
           <div style="padding-left:1.5rem; color:var(--text-secondary); font-size:0.82rem;">
             • MinMaxScaler Normalization (0 to 1 Scaling)<br>
             • Sliding Window Sequence Creation (60-day Lookback Window)
           </div>
 
-          <div style="padding-left:1.5rem; color:var(--text-muted);">↓ Passes Sequences into Neural Network</div>
+          <div style="padding-left:1.5rem; color:var(--text-muted);">↓ Passes Sequences into LSTM Neural Net</div>
 
           <div style="color:var(--accent-emerald); font-weight:700;"><i class="fas fa-brain"></i> 3. LSTM DEEP LEARNING MODEL</div>
           <div style="padding-left:1.5rem; color:var(--text-secondary); font-size:0.82rem;">
-            • Multi-layered LSTM Recurrent Neural Net with Dropout Layers<br>
-            • Trained on Historical Patterns to Predict Future Equity Trends
+            • Multi-layered LSTM Recurrent Neural Network with Dropout Layers<br>
+            • Trained on Historical Patterns to Forecast Equity Trends
           </div>
 
-          <div style="padding-left:1.5rem; color:var(--text-muted);">↓ Model Prediction Output</div>
+          <div style="padding-left:1.5rem; color:var(--text-muted);">↓ Model Forecast Output</div>
 
           <div style="color:var(--accent-amber); font-weight:700;"><i class="fas fa-chart-line"></i> 4. FLASK REST SERVICE & VISUALIZATION</div>
           <div style="padding-left:1.5rem; color:var(--text-secondary); font-size:0.82rem;">
-            • Exposes Prediction Endpoint & Renders Trend Chart
+            • Exposes Prediction Endpoint & Renders Interactive Forecast Charts
           </div>
         </div>
       `
@@ -188,7 +180,7 @@ function initArchitectureModals() {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       const projId = btn.getAttribute('data-project');
-      const data = architectureData[projId] || architectureData['rest-api'];
+      const data = architectureData[projId] || architectureData['jwt-auth-system'];
 
       titleEl.innerHTML = `<i class="fas fa-sitemap" style="color:var(--accent-indigo);"></i> ${data.title}`;
       descEl.textContent = data.desc;
