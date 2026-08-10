@@ -247,6 +247,13 @@ def get_model_info():
         "global_feature_importances": explainer.get_global_feature_importance()
     }
 
+@app.get("/download/processed-dataset")
+def download_processed_dataset():
+    processed_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "data", "processed", "canada_employment_visa_processed.csv"))
+    if os.path.exists(processed_path):
+        return FileResponse(processed_path, media_type="text/csv", filename="canada_employment_visa_processed.csv")
+    return {"error": "Processed dataset file not found"}
+
 # Mount static frontend and reports directories
 frontend_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "frontend"))
 reports_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "reports"))
