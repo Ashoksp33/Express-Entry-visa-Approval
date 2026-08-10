@@ -1,0 +1,1201 @@
+age,country_citizenship,country_residence,marital_status,dependents,education_level,field_of_study,eca_done,total_work_exp,relevant_work_exp,current_employment_status,teer_category,job_offer,employer_sponsorship,offered_salary_cad,english_test,language_overall_score,french_proficiency,annual_income_cad,settlement_funds_cad,outstanding_debt_cad,financial_sponsor,previous_canada_visa,previous_visa_refusal,previous_immigration_violation,previous_canada_work,previous_canada_study,criminal_record,medical_flag,visa_outcome
+56,India,Canada,Married,0,Diploma,Business,1,2,1,Employed,TEER 4/5,1,0,63495,IELTS,6.5,No French,32340,56628,7372,Family,1,0,0,0,0,0,1,0
+46,India,Philippines,Single,0,Diploma,Information Technology,0,2,0,Employed,TEER 1,1,1,72804,IELTS,5.5,No French,63872,11142,15453,Self,0,0,0,0,0,0,0,1
+32,India,Germany,Single,1,Bachelor's,Computer Science,1,8,8,Employed,TEER 2,1,1,60313,IELTS,8.7,Basic,74708,7973,10704,Self,0,0,0,0,0,0,0,1
+60,India,China,Married,0,Bachelor's,Information Technology,1,5,0,Employed,TEER 2,1,0,95552,CELPIP,8.8,No French,44299,38730,3802,Self,1,0,0,0,1,0,0,1
+25,China,UK,Divorced,1,Diploma,Engineering,1,5,5,Employed,TEER 1,0,0,0,IELTS,8.3,No French,8000,8069,40657,Self,0,0,0,0,0,0,0,1
+38,Nigeria,Philippines,Married,4,Bachelor's,Information Technology,1,5,3,Employed,TEER 1,0,0,0,IELTS,5.8,No French,41019,4053,8699,Self,1,0,0,1,0,0,0,1
+56,Pakistan,USA,Single,0,Bachelor's,Information Technology,1,3,1,Self-employed,TEER 2,0,0,0,CELPIP,7.8,No French,45648,27139,13509,Self,0,0,0,1,1,0,0,1
+36,USA,Nigeria,Single,0,PhD,Computer Science,1,1,1,Employed,TEER 1,1,1,38162,CELPIP,8.8,Basic,40344,9852,8861,Other,1,0,0,0,1,0,0,1
+40,Philippines,Nigeria,Divorced,0,PhD,Information Technology,1,6,6,Unemployed,TEER 1,0,0,0,IELTS,7.1,No French,51726,7712,36387,Self,1,0,0,1,0,0,0,1
+28,Philippines,Philippines,Single,0,Master's,Engineering,1,8,3,Self-employed,TEER 2,0,0,0,Other,6.3,Basic,35461,102888,13779,Self,1,0,0,1,0,0,0,1
+28,Philippines,Canada,Single,2,Diploma,Engineering,1,5,2,Employed,TEER 2,1,1,87432,CELPIP,7.9,Intermediate,61777,11628,5862,Self,1,0,0,0,0,0,0,1
+41,China,UK,Married,0,High School,Information Technology,0,5,5,Employed,TEER 1,0,0,0,IELTS,8.8,No French,21665,61440,3656,Self,0,0,0,0,0,0,0,0
+53,Philippines,India,Married,0,Bachelor's,Business,1,3,2,Employed,TEER 0,1,1,92891,Other,5.7,Basic,69736,7907,9169,Self,0,1,0,0,0,0,1,0
+57,Brazil,India,Married,1,Diploma,Finance,1,3,2,Employed,TEER 1,1,1,75595,IELTS,7.9,No French,76001,45728,7137,Family,0,0,0,1,0,0,0,1
+41,Nigeria,USA,Single,0,Bachelor's,Business,1,6,0,Employed,TEER 1,0,0,0,CELPIP,8.1,No French,26738,20429,7939,Self,1,1,0,1,0,0,0,0
+20,China,Canada,Single,1,Master's,Information Technology,1,0,0,Self-employed,TEER 1,0,0,0,CELPIP,7.9,No French,26728,5046,3360,Family,0,0,0,0,0,0,0,0
+39,Nigeria,Brazil,Divorced,0,Master's,Business,1,7,1,Employed,TEER 1,1,1,98393,IELTS,8.1,No French,53213,36069,4479,Self,1,0,0,0,0,0,0,1
+19,Philippines,Brazil,Single,2,Master's,Computer Science,0,0,0,Employed,TEER 0,1,1,63134,IELTS,8.0,Advanced,21255,58657,6533,Other,0,0,0,1,0,0,0,1
+41,France,China,Married,3,Bachelor's,Computer Science,0,8,6,Employed,TEER 1,0,0,0,Other,6.0,No French,35147,7448,14624,Self,0,0,0,0,1,0,0,0
+61,UK,UK,Married,1,Bachelor's,Information Technology,1,8,2,Employed,TEER 1,0,0,0,IELTS,6.4,No French,67050,35328,11514,Self,0,0,0,0,1,0,0,0
+47,India,UK,Married,3,Bachelor's,Business,1,8,0,Employed,TEER 1,1,1,70691,IELTS,8.0,No French,59752,17722,1010,Self,1,0,1,0,0,0,0,0
+55,Pakistan,Nigeria,Single,0,High School,Information Technology,1,9,1,Employed,TEER 1,1,1,109377,IELTS,5.6,No French,84603,38047,2254,Other,0,0,1,0,0,0,0,0
+19,Nigeria,UAE,Single,0,Bachelor's,Computer Science,1,0,0,Employed,TEER 1,1,1,90599,Other,8.0,No French,48415,34287,216,Family,1,1,0,0,0,0,0,1
+38,Pakistan,USA,Married,1,High School,Computer Science,0,3,1,Employed,TEER 3,0,0,0,No Test,4.6,Basic,32783,3674,63,Self,1,0,0,0,0,0,0,0
+50,USA,India,Married,1,Bachelor's,Business,1,4,1,Employed,TEER 0,1,0,64790,IELTS,6.5,No French,46024,7922,2032,Self,1,0,0,0,0,0,1,0
+29,Nigeria,USA,Common-Law,0,Bachelor's,Healthcare,1,5,5,Employed,TEER 2,1,0,86200,Other,7.9,Intermediate,41988,18920,12848,Employer,1,0,0,1,0,0,0,1
+39,India,Brazil,Single,0,Bachelor's,Information Technology,1,6,0,Employed,TEER 3,1,1,58056,IELTS,7.6,Basic,42268,70799,18809,Self,0,0,0,0,0,0,0,1
+61,Philippines,Brazil,Single,0,Master's,Engineering,1,7,6,Employed,TEER 1,0,0,0,No Test,4.6,No French,44523,13466,3977,Self,0,0,0,0,0,0,0,0
+42,China,Philippines,Common-Law,0,Bachelor's,Engineering,1,4,1,Self-employed,TEER 3,0,0,0,IELTS,7.4,No French,26364,27780,6626,Employer,0,1,0,0,1,0,0,0
+44,Brazil,China,Married,0,Master's,Healthcare,1,6,6,Self-employed,TEER 0,0,0,0,IELTS,9.1,No French,50644,3303,9794,Employer,0,0,0,0,0,0,0,1
+59,Philippines,UK,Common-Law,2,Diploma,Information Technology,1,13,11,Employed,TEER 1,1,1,99002,IELTS,7.2,Basic,16826,34044,24450,Family,1,0,0,0,1,0,0,1
+45,India,Germany,Single,0,Bachelor's,Business,1,3,3,Employed,TEER 1,1,1,105617,IELTS,8.0,No French,30663,26099,19528,Other,1,0,0,0,0,0,0,1
+33,USA,USA,Married,0,Bachelor's,Information Technology,1,7,7,Employed,TEER 0,0,0,0,IELTS,5.6,No French,42622,34416,471,Self,0,0,0,0,0,0,0,1
+32,Vietnam,Brazil,Married,1,Bachelor's,Healthcare,1,7,7,Employed,TEER 1,0,0,0,CELPIP,5.8,No French,8000,61757,2281,Self,0,1,0,0,0,0,0,0
+61,China,UAE,Married,1,PhD,Computer Science,0,2,0,Self-employed,TEER 1,0,0,0,IELTS,5.8,No French,60379,6960,403,Family,1,0,0,0,0,0,0,0
+20,India,Nigeria,Single,2,Diploma,Information Technology,1,0,0,Employed,TEER 2,0,0,0,No Test,4.8,No French,8000,10581,7668,Family,0,1,0,1,0,0,0,0
+54,Philippines,India,Single,1,Bachelor's,Information Technology,1,2,1,Employed,TEER 3,0,0,0,CELPIP,6.9,No French,58391,139703,9916,Family,0,0,0,0,0,0,0,0
+24,India,China,Married,0,Bachelor's,Engineering,1,4,4,Employed,TEER 0,0,0,0,CELPIP,6.4,No French,19143,7248,2948,Employer,0,0,0,0,0,0,0,1
+38,France,UAE,Single,2,Master's,Computer Science,1,3,3,Employed,TEER 1,0,0,0,IELTS,8.5,No French,36901,34880,15385,Self,0,0,0,0,0,0,0,1
+26,India,China,Married,1,Diploma,Business,1,3,0,Employed,TEER 1,0,0,0,Other,6.2,No French,55382,35281,4823,Self,0,0,0,1,0,0,0,1
+56,China,Philippines,Divorced,0,Master's,Computer Science,0,1,0,Employed,TEER 1,1,0,95984,CELPIP,6.5,No French,88962,31720,51410,Self,0,0,1,1,0,0,0,0
+35,Philippines,Germany,Single,1,Bachelor's,Healthcare,1,7,3,Employed,TEER 2,1,0,88763,Other,7.2,Basic,47329,9451,3,Family,0,1,0,0,0,0,0,1
+21,China,Brazil,Married,3,Diploma,Business,1,1,1,Employed,TEER 1,0,0,0,No Test,4.6,No French,8000,9056,927,Self,1,0,1,0,0,0,0,0
+42,Brazil,Nigeria,Single,0,Bachelor's,Engineering,1,9,4,Employed,TEER 0,1,1,87754,IELTS,7.8,No French,64073,30440,2873,Employer,0,0,0,0,0,0,1,1
+31,USA,UAE,Married,0,Bachelor's,Business,1,4,1,Employed,TEER 2,0,0,0,IELTS,6.9,No French,40361,8152,206,Self,0,0,0,0,0,0,0,0
+26,India,China,Divorced,0,Bachelor's,Healthcare,1,6,1,Employed,TEER 3,1,1,11768,CELPIP,7.1,No French,46398,30085,12198,Self,0,1,0,1,0,0,0,1
+43,India,UK,Single,0,Master's,Information Technology,0,3,0,Employed,TEER 1,1,1,93166,Other,9.0,No French,56157,19957,433,Self,0,0,0,0,0,0,0,1
+19,India,Philippines,Single,0,Bachelor's,Business,1,0,0,Employed,TEER 1,1,0,74494,IELTS,9.0,No French,8000,15219,11057,Family,0,0,0,0,0,0,0,1
+37,Pakistan,UK,Single,1,Bachelor's,Information Technology,1,6,2,Employed,TEER 0,1,1,59304,IELTS,8.8,Basic,45130,11925,432,Self,1,1,0,0,1,0,0,1
+45,Pakistan,Nigeria,Single,0,Bachelor's,Engineering,1,5,4,Employed,TEER 0,1,1,95624,CELPIP,9.0,No French,36806,76710,2330,Family,0,0,0,0,0,1,0,1
+24,China,UAE,Married,3,High School,Business,0,3,2,Employed,TEER 0,1,0,115613,IELTS,7.8,No French,69436,20736,14724,Self,0,0,0,1,1,0,0,1
+61,China,Philippines,Common-Law,2,Diploma,Information Technology,1,11,0,Employed,TEER 1,0,0,0,IELTS,8.1,Intermediate,59542,23595,24143,Self,1,0,0,0,0,0,0,0
+25,Brazil,UAE,Single,1,Bachelor's,Information Technology,1,5,0,Employed,TEER 3,1,1,69833,IELTS,7.7,No French,12459,77524,4282,Self,1,0,0,0,0,0,0,1
+52,India,Brazil,Single,2,Bachelor's,Engineering,0,6,1,Employed,TEER 1,1,1,57243,IELTS,8.6,No French,70252,29524,28036,Family,0,0,0,0,0,0,0,1
+31,France,Canada,Single,0,Diploma,Business,1,6,5,Employed,TEER 0,1,1,81181,IELTS,7.7,No French,53990,82164,7886,Self,0,0,0,1,0,0,0,1
+34,Nigeria,Philippines,Married,0,Bachelor's,Finance,0,6,3,Employed,TEER 1,0,0,0,No Test,4.6,Intermediate,14055,5811,4300,Employer,0,0,0,0,0,0,0,0
+53,Philippines,UK,Single,1,Bachelor's,Engineering,1,6,5,Employed,TEER 1,0,0,0,CELPIP,8.7,No French,46115,49874,12988,Self,0,0,0,0,0,0,0,1
+57,Nigeria,Nigeria,Married,2,Diploma,Healthcare,1,5,1,Employed,TEER 2,0,0,0,No Test,5.2,No French,65696,13214,2800,Self,0,0,0,0,0,0,0,0
+21,India,Germany,Married,2,Bachelor's,Finance,1,1,1,Employed,TEER 1,1,1,140084,CELPIP,8.8,No French,20719,44582,2471,Self,1,1,0,0,0,1,0,0
+19,India,Brazil,Married,0,Diploma,Computer Science,1,0,0,Employed,TEER 1,1,1,101730,IELTS,6.3,Basic,72551,51385,8549,Self,0,1,0,0,0,0,0,1
+23,UK,Canada,Single,3,Master's,Information Technology,1,3,1,Self-employed,TEER 1,0,0,0,CELPIP,6.6,Basic,14747,10918,3960,Self,0,0,0,1,0,0,0,1
+59,India,Germany,Married,0,Master's,Healthcare,1,13,3,Employed,TEER 0,0,0,0,Other,6.7,No French,29175,16141,1168,Self,0,0,0,0,0,0,0,0
+21,China,India,Single,2,Bachelor's,Business,1,1,1,Employed,TEER 0,1,1,62441,No Test,4.9,No French,26142,35366,554,Family,1,0,0,0,1,0,0,1
+46,India,Brazil,Single,4,Diploma,Business,1,1,0,Employed,TEER 0,1,1,79642,CELPIP,6.0,No French,72538,5607,12403,Self,0,0,0,1,0,0,0,1
+35,Philippines,Nigeria,Common-Law,0,Master's,Engineering,1,4,3,Employed,TEER 1,1,1,55974,IELTS,7.0,No French,35179,38216,9013,Self,0,0,0,0,0,0,0,1
+43,Philippines,China,Married,2,Master's,Computer Science,1,2,1,Employed,TEER 0,1,1,113208,IELTS,6.2,Basic,21743,5926,4245,Self,0,0,0,0,0,0,0,1
+61,Philippines,Philippines,Single,0,Master's,Engineering,1,7,6,Employed,TEER 1,0,0,0,IELTS,6.6,No French,53904,64468,18124,Self,0,0,1,0,0,0,0,0
+51,UK,UAE,Single,0,Diploma,Information Technology,1,4,0,Employed,TEER 2,1,1,66262,No Test,5.2,No French,58223,11085,4232,Self,0,0,0,0,0,0,0,1
+27,Philippines,Nigeria,Single,1,Bachelor's,Information Technology,1,5,2,Employed,TEER 2,1,1,117246,IELTS,8.9,No French,58350,24426,9911,Other,0,0,0,0,0,0,0,1
+53,China,Philippines,Single,1,Master's,Business,1,8,1,Unemployed,TEER 2,1,0,77906,Other,5.6,No French,39573,6115,19185,Family,0,0,1,0,0,0,0,0
+31,Nigeria,Germany,Single,3,Bachelor's,Computer Science,1,6,2,Employed,TEER 3,0,0,0,IELTS,7.8,No French,50090,10850,14696,Family,1,1,0,0,0,0,0,0
+48,Brazil,UAE,Single,1,Bachelor's,Business,1,5,4,Self-employed,TEER 1,0,0,0,CELPIP,5.6,Advanced,31995,15935,5724,Self,0,0,0,0,0,0,0,0
+32,France,USA,Married,0,Bachelor's,Engineering,1,2,2,Employed,TEER 3,0,0,0,IELTS,5.8,No French,78496,19689,9131,Self,0,0,0,0,0,0,0,1
+25,UK,UK,Married,2,Bachelor's,Engineering,1,5,1,Employed,TEER 1,1,1,108797,IELTS,8.3,No French,67884,3001,4270,Self,1,0,0,0,0,0,0,1
+31,India,India,Married,3,High School,Computer Science,0,5,0,Employed,TEER 1,0,0,0,IELTS,8.4,No French,66659,57878,8334,Self,0,0,0,0,1,0,0,1
+40,India,Brazil,Married,0,Bachelor's,Information Technology,1,6,3,Employed,TEER 1,1,1,89236,CELPIP,8.8,No French,60882,3192,2382,Self,1,0,0,1,0,1,0,1
+57,Philippines,Nigeria,Single,4,High School,Computer Science,1,3,0,Employed,TEER 0,1,1,74894,IELTS,7.4,No French,55394,40145,4563,Self,1,0,0,0,0,0,0,1
+38,China,India,Divorced,0,Bachelor's,Other,1,6,2,Employed,TEER 4/5,1,1,89310,CELPIP,8.9,No French,20112,18899,1881,Employer,0,0,0,0,1,0,0,1
+33,India,China,Married,2,Diploma,Business,1,6,3,Employed,TEER 0,0,0,0,IELTS,6.2,No French,57666,21552,311,Other,0,0,0,1,0,0,0,1
+35,Nigeria,Philippines,Married,0,Bachelor's,Engineering,1,4,0,Self-employed,TEER 1,1,1,81346,CELPIP,6.5,No French,47285,8838,7104,Self,0,0,0,1,1,0,0,1
+41,China,Philippines,Married,0,Diploma,Information Technology,1,7,0,Employed,TEER 1,0,0,0,IELTS,6.0,No French,70267,26372,15986,Family,0,1,0,0,0,0,0,0
+43,Philippines,Nigeria,Common-Law,0,Bachelor's,Finance,1,4,0,Employed,TEER 0,1,1,38820,CELPIP,8.7,No French,61148,22263,207,Family,1,0,0,0,0,0,0,1
+42,USA,Canada,Married,1,Master's,Information Technology,1,0,0,Employed,TEER 0,1,1,79109,IELTS,6.4,Basic,56007,7485,1745,Self,1,0,0,0,0,0,0,1
+58,India,Canada,Single,0,Diploma,Computer Science,1,9,3,Employed,TEER 0,1,0,105770,CELPIP,6.1,No French,11315,9799,4932,Employer,0,0,0,0,0,0,0,0
+46,India,USA,Married,0,Diploma,Engineering,1,1,0,Employed,TEER 1,1,0,98367,IELTS,8.0,Intermediate,43219,4731,8770,Self,0,0,0,0,0,0,0,1
+32,UK,UK,Married,1,Diploma,Finance,1,6,6,Employed,TEER 3,1,1,76197,CELPIP,5.8,No French,33842,4714,1502,Family,1,0,1,1,0,0,0,1
+18,Nigeria,UAE,Married,3,Master's,Computer Science,1,0,0,Unemployed,TEER 1,1,1,116433,No Test,5.5,No French,50047,3346,466,Self,0,1,0,0,0,0,0,1
+42,Brazil,China,Married,0,Bachelor's,Information Technology,1,5,0,Employed,TEER 0,1,1,65480,IELTS,5.9,Advanced,36689,9226,5855,Self,0,0,0,1,0,0,0,1
+24,Nigeria,India,Single,0,Bachelor's,Finance,1,4,2,Employed,TEER 2,1,0,35807,IELTS,5.5,No French,39481,31459,13661,Self,0,0,0,1,0,0,0,1
+26,India,Canada,Single,0,Diploma,Computer Science,1,6,0,Employed,TEER 4/5,1,1,29993,CELPIP,8.3,No French,54180,12502,286,Employer,0,0,0,0,0,0,0,1
+41,USA,USA,Common-Law,0,Bachelor's,Computer Science,1,4,0,Self-employed,TEER 0,1,1,52013,CELPIP,7.7,No French,36357,13491,3438,Self,1,0,0,0,1,0,0,1
+18,USA,USA,Married,2,Master's,Engineering,1,0,0,Employed,TEER 1,1,1,95965,IELTS,6.3,Basic,47431,6536,8713,Self,1,0,0,0,1,0,0,1
+61,Brazil,Nigeria,Married,2,Master's,Business,1,10,4,Employed,TEER 4/5,1,1,64034,IELTS,6.4,No French,14611,24419,1120,Self,0,0,0,0,0,0,0,1
+25,Philippines,China,Single,1,Bachelor's,Engineering,1,5,3,Unemployed,TEER 0,1,1,88141,IELTS,8.7,No French,28351,13469,2152,Self,0,0,0,0,1,0,0,1
+41,China,Germany,Single,0,High School,Other,0,7,4,Self-employed,TEER 1,0,0,0,IELTS,7.5,No French,58120,31199,6134,Family,1,0,0,0,0,0,0,1
+28,Philippines,UAE,Common-Law,2,Diploma,Healthcare,1,6,5,Employed,TEER 0,1,1,53797,IELTS,8.3,Basic,20396,36817,24500,Family,0,0,0,1,0,0,0,1
+34,India,UK,Married,1,High School,Computer Science,1,4,2,Self-employed,TEER 3,1,0,88526,CELPIP,7.3,No French,69914,24968,2710,Employer,0,0,1,0,1,0,0,0
+25,France,Brazil,Married,2,Diploma,Other,1,3,3,Employed,TEER 4/5,0,0,0,IELTS,6.5,No French,64487,11076,5348,Family,1,0,0,0,0,0,0,1
+52,India,Nigeria,Married,1,Diploma,Engineering,1,5,4,Employed,TEER 2,0,0,0,IELTS,9.4,No French,39635,20762,4085,Employer,0,0,0,0,0,0,0,1
+52,France,UAE,Married,2,Diploma,Information Technology,1,4,1,Employed,TEER 1,0,0,0,Other,7.8,Basic,104974,10256,18215,Family,1,0,0,0,0,0,0,0
+50,Nigeria,Brazil,Single,1,Bachelor's,Engineering,1,4,3,Self-employed,TEER 1,0,0,0,IELTS,6.0,No French,69862,61303,596,Employer,0,1,0,1,0,0,0,0
+22,India,Brazil,Married,0,Master's,Information Technology,0,2,0,Employed,TEER 0,1,1,69557,CELPIP,7.1,No French,26014,39352,6680,Self,0,1,0,0,0,0,0,1
+59,China,China,Single,3,Bachelor's,Computer Science,1,2,0,Employed,TEER 3,1,1,124455,Other,6.8,Basic,59923,19981,14972,Self,1,0,1,0,1,1,0,0
+56,Pakistan,China,Single,1,Master's,Computer Science,1,7,4,Unemployed,TEER 3,0,0,0,IELTS,6.4,No French,46317,87138,35461,Other,1,0,0,0,1,0,0,1
+58,UK,India,Married,1,Bachelor's,Engineering,0,3,0,Employed,TEER 1,0,0,0,IELTS,9.2,No French,29465,22783,9597,Family,0,0,0,0,0,0,0,0
+45,USA,USA,Common-Law,0,Diploma,Business,1,5,0,Employed,TEER 2,0,0,0,No Test,5.4,Intermediate,23601,12957,3823,Employer,0,0,0,0,0,0,0,0
+24,Brazil,UAE,Single,1,Bachelor's,Engineering,1,4,2,Employed,TEER 0,0,0,0,No Test,4.6,Basic,64897,5508,4245,Self,0,0,0,0,0,0,0,0
+26,Brazil,Nigeria,Married,1,Diploma,Other,1,6,4,Employed,TEER 1,1,1,105496,IELTS,6.9,No French,33041,22617,3466,Employer,1,0,0,0,1,0,0,1
+25,USA,Philippines,Single,0,Bachelor's,Information Technology,1,5,4,Employed,TEER 2,1,0,66958,IELTS,8.5,No French,42962,52227,7402,Family,0,0,0,0,0,0,0,1
+29,India,Nigeria,Single,0,Bachelor's,Information Technology,1,3,2,Self-employed,TEER 1,0,0,0,IELTS,6.3,No French,26579,53382,10758,Self,0,1,0,0,0,0,0,0
+51,Nigeria,India,Single,1,PhD,Computer Science,1,3,3,Employed,TEER 1,0,0,0,IELTS,7.9,Intermediate,30036,26194,13694,Self,1,0,0,0,0,0,0,1
+50,India,UK,Single,2,Diploma,Computer Science,1,5,1,Employed,TEER 0,0,0,0,IELTS,8.3,Advanced,42461,15498,4310,Self,0,0,0,0,0,1,0,0
+40,Vietnam,USA,Married,1,Diploma,Information Technology,1,7,6,Employed,TEER 2,0,0,0,CELPIP,8.1,No French,52763,29266,10090,Employer,0,0,0,0,0,0,0,1
+41,France,Philippines,Single,0,Master's,Business,1,5,5,Employed,TEER 3,1,1,83878,Other,8.3,No French,8000,38901,19836,Family,0,0,1,0,0,0,0,1
+54,India,Canada,Married,1,High School,Finance,0,5,1,Employed,TEER 4/5,1,1,67193,IELTS,8.3,Basic,45338,16259,20288,Employer,1,0,0,0,0,0,0,1
+52,UK,UK,Common-Law,0,Bachelor's,Other,1,10,9,Employed,TEER 2,0,0,0,CELPIP,9.4,No French,30077,19168,9739,Self,1,0,0,0,0,0,0,1
+61,France,China,Single,0,Bachelor's,Information Technology,1,2,0,Employed,TEER 1,0,0,0,IELTS,6.9,No French,73047,31534,8104,Employer,0,0,0,0,1,0,0,0
+57,India,Brazil,Married,0,Master's,Finance,1,6,3,Self-employed,TEER 1,1,1,70782,IELTS,9.0,No French,103855,55318,6066,Self,0,1,0,1,0,0,0,1
+39,China,Canada,Single,0,PhD,Information Technology,1,7,2,Employed,TEER 4/5,1,0,79071,IELTS,5.6,No French,37814,42136,1618,Self,0,0,0,0,0,0,0,1
+44,France,Nigeria,Married,0,PhD,Computer Science,1,4,1,Employed,TEER 1,1,1,88196,IELTS,6.7,Intermediate,10555,3566,1055,Self,0,0,0,0,0,0,0,1
+52,India,Nigeria,Single,0,High School,Finance,0,11,4,Unemployed,TEER 2,1,1,86576,IELTS,5.7,Intermediate,47337,6320,5319,Other,0,0,0,0,0,0,0,1
+18,Brazil,China,Single,0,Master's,Healthcare,0,0,0,Self-employed,TEER 2,0,0,0,Other,8.1,No French,40891,50895,1389,Self,1,0,0,0,0,0,0,1
+52,Philippines,India,Single,0,Bachelor's,Computer Science,0,4,1,Employed,TEER 3,1,1,96636,IELTS,5.9,No French,84427,47867,6883,Self,1,1,0,0,0,0,0,1
+54,France,UAE,Single,1,Bachelor's,Engineering,1,1,1,Unemployed,TEER 0,1,0,73107,CELPIP,8.9,No French,78331,15308,8300,Self,0,0,0,0,0,0,0,1
+31,Vietnam,Canada,Single,0,Diploma,Information Technology,1,11,7,Employed,TEER 0,0,0,0,IELTS,8.1,Basic,62307,24943,5965,Self,0,0,0,1,0,0,0,1
+20,France,Canada,Married,0,Bachelor's,Business,1,0,0,Employed,TEER 2,1,1,45703,IELTS,5.6,No French,33266,62070,296,Employer,0,0,0,0,0,0,0,1
+18,Nigeria,Germany,Common-Law,2,PhD,Engineering,1,0,0,Employed,TEER 3,0,0,0,IELTS,8.4,No French,58555,63635,475,Self,0,1,0,1,0,0,0,1
+22,Pakistan,UK,Married,0,Master's,Other,1,2,1,Employed,TEER 2,1,0,78272,CELPIP,8.9,No French,50300,41207,962,Family,0,0,0,0,0,0,0,1
+43,USA,USA,Married,1,Bachelor's,Computer Science,0,5,2,Employed,TEER 1,0,0,0,IELTS,8.1,No French,49826,8880,1334,Employer,0,0,0,0,0,0,0,0
+31,Philippines,UK,Single,0,High School,Information Technology,0,1,1,Employed,TEER 1,1,1,101007,CELPIP,5.6,No French,13835,35759,36747,Self,0,0,0,0,0,0,0,1
+56,USA,UAE,Single,0,Bachelor's,Engineering,1,6,0,Employed,TEER 2,1,1,67497,Other,8.9,Advanced,66235,5664,3378,Employer,0,0,0,1,1,0,0,1
+44,India,Nigeria,Single,1,Master's,Engineering,0,4,0,Employed,TEER 2,0,0,0,CELPIP,8.4,No French,47156,59093,2762,Self,0,0,0,0,0,0,0,1
+26,China,Nigeria,Single,1,Bachelor's,Information Technology,1,6,1,Employed,TEER 2,0,0,0,IELTS,7.0,No French,42983,7037,429,Other,1,1,0,0,0,0,0,0
+32,India,Nigeria,Married,2,Bachelor's,Business,1,4,4,Employed,TEER 1,1,0,84775,CELPIP,6.8,No French,32996,30143,8069,Self,0,1,0,0,0,0,0,1
+32,India,Germany,Married,1,High School,Finance,1,9,7,Employed,TEER 3,0,0,0,IELTS,7.4,No French,29127,26555,8448,Family,0,0,0,0,0,0,0,1
+43,India,Nigeria,Single,3,Bachelor's,Finance,1,5,2,Employed,TEER 1,1,1,110422,CELPIP,9.0,No French,51345,40503,1543,Family,0,0,0,0,0,0,0,1
+59,Brazil,UAE,Single,0,Bachelor's,Business,0,2,2,Employed,TEER 2,0,0,0,IELTS,6.5,No French,10016,23050,20130,Self,0,1,0,0,1,0,0,0
+30,Philippines,China,Married,0,Master's,Business,1,8,8,Employed,TEER 0,1,0,102641,IELTS,5.9,Basic,60789,4535,12895,Self,0,0,0,0,0,0,0,1
+49,UK,USA,Married,0,Bachelor's,Engineering,1,2,2,Employed,TEER 1,1,1,95405,IELTS,9.0,No French,23917,33591,2094,Self,0,0,0,0,1,0,0,1
+56,India,UAE,Single,0,Bachelor's,Business,1,7,6,Employed,TEER 3,1,1,88048,IELTS,5.6,No French,8000,15078,5321,Self,0,0,0,0,0,0,0,1
+49,Philippines,USA,Common-Law,1,Bachelor's,Information Technology,0,9,8,Employed,TEER 0,1,0,4610,IELTS,9.1,No French,81437,12652,4905,Self,0,0,1,0,0,0,0,1
+21,China,UAE,Divorced,1,High School,Information Technology,0,1,1,Unemployed,TEER 1,1,1,106245,Other,6.7,Basic,27838,122707,3428,Other,1,0,0,0,0,0,0,1
+47,USA,Nigeria,Single,0,PhD,Information Technology,1,3,3,Employed,TEER 1,1,1,55418,Other,7.5,No French,30556,25314,13613,Self,1,0,0,0,0,0,0,1
+54,Philippines,China,Single,3,Bachelor's,Engineering,1,6,2,Employed,TEER 2,1,1,66830,IELTS,6.0,Basic,67690,34008,925,Self,0,0,0,1,0,0,0,1
+40,Brazil,Canada,Married,2,Bachelor's,Information Technology,0,7,7,Employed,TEER 1,1,1,74246,IELTS,9.1,No French,82088,21680,4293,Self,0,0,0,1,0,0,0,1
+56,Pakistan,UK,Common-Law,0,Bachelor's,Other,1,2,0,Employed,TEER 0,1,0,86963,IELTS,8.5,No French,14339,39738,4469,Self,0,0,0,0,0,1,0,0
+32,China,Brazil,Common-Law,0,Bachelor's,Information Technology,1,9,0,Employed,TEER 3,0,0,0,IELTS,9.2,No French,25876,37865,5059,Self,0,0,0,0,0,0,0,1
+60,India,China,Single,0,Bachelor's,Computer Science,1,5,0,Employed,TEER 1,0,0,0,No Test,5.3,Advanced,27346,29761,15806,Other,0,0,0,0,0,0,0,0
+46,India,Canada,Single,0,Bachelor's,Engineering,1,5,3,Self-employed,TEER 0,0,0,0,CELPIP,6.2,No French,63696,155343,1968,Employer,0,1,0,1,0,0,0,1
+53,Pakistan,India,Married,0,Diploma,Computer Science,1,3,2,Employed,TEER 0,0,0,0,IELTS,6.7,No French,77782,18395,868,Self,0,0,0,1,1,0,0,1
+30,India,UAE,Married,1,Bachelor's,Computer Science,1,6,2,Employed,TEER 4/5,0,0,0,IELTS,7.4,No French,23394,33620,7694,Self,1,1,0,0,0,0,0,0
+49,Pakistan,India,Single,0,Diploma,Computer Science,1,6,1,Self-employed,TEER 0,0,0,0,CELPIP,7.9,No French,73294,42959,1527,Self,1,0,1,0,0,0,0,0
+24,China,Canada,Married,0,Bachelor's,Engineering,1,4,3,Employed,TEER 2,1,0,61477,CELPIP,9.2,No French,30819,14791,623,Family,0,0,0,0,0,0,0,1
+39,France,China,Married,4,High School,Engineering,0,6,1,Employed,TEER 1,1,1,97700,IELTS,7.0,No French,51722,18274,4450,Family,1,0,0,0,0,0,1,0
+45,USA,UAE,Married,1,Bachelor's,Business,0,8,1,Unemployed,TEER 3,1,1,96418,IELTS,8.3,No French,19570,89979,1984,Family,1,0,0,0,0,0,0,1
+19,Vietnam,Brazil,Married,3,Master's,Business,1,0,0,Employed,TEER 2,1,1,93923,IELTS,9.3,No French,42561,3820,3585,Self,0,0,0,0,0,0,0,1
+59,Philippines,Nigeria,Married,0,Master's,Engineering,1,6,0,Employed,TEER 1,0,0,0,IELTS,6.1,No French,42777,13210,2405,Employer,1,0,0,0,0,0,0,0
+23,UK,UAE,Single,0,Bachelor's,Information Technology,1,3,1,Self-employed,TEER 0,0,0,0,IELTS,9.0,No French,38696,19648,777,Self,0,0,0,1,0,0,0,1
+45,Nigeria,UAE,Married,1,Bachelor's,Information Technology,1,9,7,Employed,TEER 3,1,1,52452,IELTS,7.2,No French,52699,3036,6574,Self,1,0,0,0,0,0,0,1
+45,Nigeria,China,Single,0,High School,Business,1,5,1,Self-employed,TEER 1,0,0,0,CELPIP,8.4,No French,24859,60347,219,Employer,0,0,0,0,0,1,0,0
+61,Brazil,China,Married,0,Bachelor's,Computer Science,1,7,2,Employed,TEER 3,1,1,72260,IELTS,6.7,No French,27325,11430,27139,Self,0,1,0,0,0,0,0,0
+61,Pakistan,Canada,Single,1,Master's,Computer Science,0,2,1,Employed,TEER 1,1,1,115051,Other,6.8,No French,53757,10450,3340,Self,0,0,0,0,0,0,0,1
+37,Vietnam,Philippines,Married,1,Diploma,Business,1,4,0,Employed,TEER 2,0,0,0,IELTS,5.6,No French,71840,45915,9503,Self,0,0,0,0,1,0,0,0
+47,UK,UAE,Single,0,Bachelor's,Engineering,0,4,4,Employed,TEER 0,0,0,0,IELTS,9.4,No French,44543,11142,13301,Self,0,0,0,1,0,0,0,1
+28,Nigeria,UK,Single,0,Master's,Computer Science,1,7,6,Employed,TEER 2,0,0,0,IELTS,8.8,No French,55073,29796,2618,Self,0,0,0,0,0,0,0,1
+45,Nigeria,UAE,Single,0,Master's,Information Technology,1,3,1,Employed,TEER 1,0,0,0,IELTS,5.9,No French,60161,46079,11050,Self,1,0,0,1,0,0,0,1
+42,UK,Canada,Single,0,Diploma,Finance,1,4,4,Employed,TEER 1,1,1,82286,No Test,4.5,No French,61610,42312,14290,Self,0,1,1,0,1,0,0,0
+56,India,USA,Married,0,Bachelor's,Business,1,3,0,Employed,TEER 0,1,1,62664,IELTS,7.9,No French,25929,41075,2209,Employer,0,0,0,0,0,0,0,1
+50,India,India,Married,0,Diploma,Healthcare,0,3,1,Employed,TEER 0,1,1,76408,IELTS,8.9,No French,29459,5320,39137,Self,0,0,0,0,1,0,0,1
+18,Philippines,Nigeria,Married,0,Diploma,Engineering,0,0,0,Employed,TEER 0,0,0,0,Other,5.8,No French,31198,5080,167,Family,0,0,0,0,0,0,0,0
+44,Philippines,Philippines,Single,3,Master's,Engineering,1,10,3,Employed,TEER 1,1,0,62576,IELTS,7.1,No French,83572,12159,1956,Self,1,0,0,0,0,0,1,0
+30,Philippines,Brazil,Single,1,Master's,Other,1,3,2,Employed,TEER 3,1,0,88711,IELTS,8.2,No French,55163,3915,12113,Self,1,0,0,0,0,0,0,1
+58,India,Brazil,Single,2,Master's,Other,1,2,2,Unemployed,TEER 1,0,0,0,IELTS,5.9,Basic,54266,20350,1726,Self,1,0,0,0,0,0,1,0
+20,India,Brazil,Single,0,High School,Computer Science,0,0,0,Employed,TEER 2,0,0,0,IELTS,7.5,No French,52324,15554,9585,Family,0,0,0,1,0,0,0,0
+56,India,China,Common-Law,0,Master's,Business,1,4,2,Employed,TEER 0,0,0,0,IELTS,7.3,Advanced,18584,23356,15477,Family,0,0,0,1,0,0,0,1
+23,Vietnam,Brazil,Single,0,Bachelor's,Computer Science,1,3,0,Self-employed,TEER 1,1,1,66913,IELTS,6.4,No French,83763,11873,25595,Self,0,0,0,0,0,0,0,1
+25,Nigeria,Nigeria,Single,0,Bachelor's,Computer Science,1,2,1,Employed,TEER 1,1,1,106855,CELPIP,6.7,Basic,54583,19626,5143,Employer,1,0,0,1,0,0,0,1
+44,Philippines,India,Single,0,Bachelor's,Healthcare,1,4,4,Employed,TEER 4/5,1,1,59389,Other,9.4,No French,59463,13189,28353,Employer,1,0,0,0,0,0,0,1
+26,Brazil,Brazil,Single,2,High School,Engineering,1,6,0,Employed,TEER 3,0,0,0,IELTS,6.7,Basic,9689,8429,4243,Self,0,0,0,0,0,0,0,0
+54,India,UAE,Married,1,Master's,Finance,1,10,8,Unemployed,TEER 1,1,0,82266,IELTS,6.4,No French,60592,29200,1968,Family,0,0,0,0,0,0,0,1
+50,France,UAE,Married,1,Bachelor's,Computer Science,0,5,3,Employed,TEER 2,0,0,0,IELTS,7.6,No French,37875,30978,5771,Self,0,0,0,0,0,0,0,0
+59,USA,China,Single,0,Diploma,Engineering,1,2,0,Unemployed,TEER 0,0,0,0,IELTS,8.2,No French,18544,47186,8394,Self,0,0,0,0,0,0,0,0
+61,India,Nigeria,Single,3,Diploma,Finance,1,3,1,Self-employed,TEER 1,1,1,74424,IELTS,8.4,Advanced,25924,54936,4899,Self,0,0,0,0,0,0,0,1
+41,Nigeria,India,Single,0,Diploma,Finance,1,7,0,Employed,TEER 0,1,1,85374,CELPIP,8.5,Advanced,19702,33473,6695,Other,0,0,0,1,0,0,0,1
+32,Pakistan,Philippines,Single,0,High School,Computer Science,0,6,4,Employed,TEER 1,0,0,0,CELPIP,5.6,No French,19364,32078,4308,Self,0,0,0,0,0,0,0,1
+49,France,Canada,Single,0,Bachelor's,Information Technology,0,4,0,Employed,TEER 0,0,0,0,IELTS,7.1,No French,46210,4458,5951,Employer,0,0,0,0,0,0,0,0
+49,Nigeria,India,Divorced,2,Master's,Healthcare,0,2,1,Employed,TEER 2,0,0,0,CELPIP,8.6,No French,37264,5907,24392,Family,0,1,0,0,0,0,0,0
+41,China,Canada,Married,4,High School,Computer Science,0,7,3,Employed,TEER 1,1,1,74455,IELTS,9.1,No French,51681,44857,5542,Self,0,0,0,0,0,0,0,1
+58,India,USA,Married,0,High School,Other,1,6,4,Unemployed,TEER 2,1,1,122528,IELTS,7.9,No French,78519,9630,2335,Self,1,0,0,0,0,0,0,1
+29,Vietnam,Canada,Single,2,Bachelor's,Finance,1,7,5,Employed,TEER 1,0,0,0,IELTS,5.7,Advanced,42409,13984,11375,Family,0,0,0,0,0,0,1,0
+56,India,UK,Single,2,Master's,Computer Science,1,7,3,Employed,TEER 0,0,0,0,IELTS,7.1,No French,8000,6925,3294,Self,0,1,0,0,0,0,0,0
+19,France,UAE,Married,0,Bachelor's,Computer Science,1,0,0,Employed,TEER 2,1,0,63791,CELPIP,5.8,No French,40160,8427,13551,Self,0,0,0,1,0,0,1,0
+20,Brazil,Nigeria,Married,0,Bachelor's,Computer Science,1,0,0,Employed,TEER 3,1,0,40010,IELTS,8.5,No French,68867,40337,468,Family,0,0,0,1,0,0,0,1
+54,China,Germany,Married,0,Bachelor's,Finance,1,4,1,Employed,TEER 3,0,0,0,IELTS,5.8,No French,43281,10590,3229,Employer,1,0,0,1,0,0,0,0
+34,Nigeria,China,Single,4,Diploma,Computer Science,1,5,2,Employed,TEER 1,1,1,26342,No Test,4.8,No French,75586,17902,792,Family,0,0,0,0,0,1,0,0
+19,India,UK,Married,0,High School,Engineering,1,0,0,Employed,TEER 2,0,0,0,IELTS,7.2,No French,54058,7112,713,Self,0,1,0,1,0,0,0,0
+19,India,Canada,Single,2,Bachelor's,Engineering,1,0,0,Employed,TEER 2,1,1,73493,IELTS,7.4,No French,8234,31324,8592,Self,0,0,0,0,0,0,0,1
+45,India,Brazil,Common-Law,0,Bachelor's,Engineering,1,7,0,Unemployed,TEER 0,0,0,0,IELTS,7.1,No French,47191,35573,3893,Other,0,0,0,0,0,1,0,0
+40,India,Nigeria,Married,2,Bachelor's,Computer Science,1,5,0,Employed,TEER 0,0,0,0,IELTS,7.4,No French,50940,14223,16413,Employer,0,0,0,0,0,0,0,0
+54,USA,UK,Married,0,Bachelor's,Information Technology,0,6,4,Employed,TEER 0,1,1,58175,No Test,4.0,No French,66607,41398,5812,Self,1,1,1,0,0,0,0,0
+49,Philippines,China,Single,1,Bachelor's,Finance,1,4,1,Employed,TEER 1,0,0,0,IELTS,7.0,Intermediate,81392,9857,2800,Employer,1,0,0,0,0,0,0,1
+50,India,UAE,Married,2,Diploma,Finance,1,9,1,Employed,TEER 1,0,0,0,No Test,4.2,No French,63154,32433,10209,Self,0,1,0,1,0,0,0,0
+18,Vietnam,Nigeria,Single,2,Bachelor's,Business,1,0,0,Employed,TEER 4/5,0,0,0,IELTS,6.7,Basic,53809,35730,7825,Self,0,0,0,0,0,0,0,1
+36,Pakistan,China,Single,2,Diploma,Computer Science,1,6,1,Employed,TEER 1,1,1,76218,IELTS,6.9,No French,58523,89569,12859,Self,1,0,0,1,0,0,0,1
+19,France,USA,Single,0,Diploma,Information Technology,1,0,0,Self-employed,TEER 2,0,0,0,IELTS,8.0,No French,41639,9609,8253,Self,0,0,0,0,0,0,0,0
+61,Vietnam,USA,Married,1,Bachelor's,Healthcare,1,3,0,Employed,TEER 2,0,0,0,CELPIP,7.5,No French,15742,5459,1461,Employer,0,1,0,0,0,0,0,0
+43,India,China,Single,0,Master's,Information Technology,1,6,3,Self-employed,TEER 0,1,0,26927,IELTS,8.4,No French,45829,10630,8876,Self,1,0,0,0,0,0,0,1
+49,Philippines,UK,Single,0,PhD,Finance,1,7,0,Employed,TEER 0,0,0,0,Other,7.7,Basic,52305,6277,3974,Self,1,1,0,0,0,0,0,0
+23,UK,Nigeria,Common-Law,1,Bachelor's,Healthcare,0,3,0,Unemployed,TEER 1,1,1,64792,IELTS,8.7,No French,20926,7649,4976,Employer,0,0,0,1,0,0,0,1
+49,Brazil,UK,Single,0,Diploma,Computer Science,1,9,0,Employed,TEER 2,1,0,100358,IELTS,7.3,No French,71532,13165,20363,Employer,1,0,0,0,0,0,0,0
+21,India,Philippines,Married,1,Diploma,Finance,1,1,0,Employed,TEER 4/5,1,1,116616,IELTS,7.5,No French,65108,16360,3569,Self,1,0,0,0,0,0,0,1
+28,USA,Canada,Single,4,Master's,Other,1,4,3,Employed,TEER 1,1,1,70716,CELPIP,8.2,No French,17564,61513,7573,Family,1,1,0,1,0,0,1,1
+34,India,Philippines,Single,0,Bachelor's,Computer Science,1,3,2,Self-employed,TEER 3,0,0,0,IELTS,6.4,No French,72316,8441,3613,Family,1,0,0,0,0,0,0,1
+55,India,USA,Married,1,Bachelor's,Engineering,1,7,4,Self-employed,TEER 1,0,0,0,IELTS,7.0,No French,38833,92174,796,Family,0,0,0,1,0,0,0,1
+41,China,UAE,Single,0,Master's,Information Technology,0,4,2,Employed,TEER 2,1,1,56745,IELTS,8.0,No French,29430,44538,4834,Family,0,0,0,0,0,0,0,1
+22,China,India,Married,0,Bachelor's,Information Technology,1,2,2,Employed,TEER 1,0,0,0,CELPIP,5.6,No French,66585,56315,7271,Self,0,0,0,0,0,0,0,0
+51,China,Canada,Married,0,Master's,Computer Science,1,8,8,Employed,TEER 0,1,0,89457,CELPIP,7.2,No French,43978,69283,4187,Self,0,1,0,1,0,0,0,1
+23,India,USA,Married,3,High School,Engineering,0,1,1,Unemployed,TEER 0,0,0,0,CELPIP,7.9,No French,82983,37983,3963,Employer,0,0,0,0,0,0,0,0
+39,Pakistan,UK,Married,2,Bachelor's,Other,1,5,2,Unemployed,TEER 0,1,1,93117,IELTS,9.4,No French,27942,41871,13735,Employer,0,0,0,0,0,0,0,1
+28,Philippines,UK,Single,3,Master's,Engineering,1,4,0,Unemployed,TEER 1,1,1,84032,No Test,5.1,No French,10366,17398,241,Self,0,0,0,0,0,0,0,1
+33,India,UK,Single,4,Diploma,Computer Science,1,3,0,Self-employed,TEER 2,1,1,76477,CELPIP,6.6,No French,39391,20856,2803,Self,0,0,0,0,0,0,0,1
+50,Pakistan,UAE,Married,0,Bachelor's,Healthcare,1,2,0,Self-employed,TEER 0,0,0,0,IELTS,7.5,No French,60784,70385,13360,Employer,0,0,0,0,0,0,0,1
+26,France,Philippines,Married,0,Bachelor's,Information Technology,1,6,1,Employed,TEER 2,1,0,72048,IELTS,5.7,No French,26457,14880,20259,Self,0,0,0,0,0,0,0,1
+23,Pakistan,India,Married,1,PhD,Business,1,3,0,Self-employed,TEER 1,1,1,91711,IELTS,6.5,Intermediate,18397,4071,4252,Self,0,1,0,1,0,0,0,1
+33,USA,UK,Married,0,High School,Engineering,0,3,2,Employed,TEER 2,1,0,75299,IELTS,8.6,No French,49578,38966,17570,Self,1,1,0,0,0,0,0,1
+46,Brazil,Germany,Married,0,Bachelor's,Computer Science,1,4,2,Unemployed,TEER 2,1,1,97851,Other,6.0,No French,15726,24283,1774,Self,0,0,0,0,0,0,0,1
+20,China,Canada,Married,0,Diploma,Computer Science,1,0,0,Employed,TEER 2,0,0,0,CELPIP,6.5,Basic,51133,45168,2002,Self,1,0,0,0,0,0,0,0
+37,India,Nigeria,Single,1,Bachelor's,Business,0,3,0,Employed,TEER 1,1,1,58681,Other,9.3,No French,38187,4963,14976,Self,1,1,1,1,1,0,0,1
+53,Nigeria,Germany,Married,1,Diploma,Information Technology,0,3,1,Employed,TEER 1,0,0,0,IELTS,8.8,No French,54889,27270,18685,Self,0,1,0,0,0,0,0,0
+36,Philippines,India,Married,0,Diploma,Business,1,4,2,Employed,TEER 2,1,0,74542,IELTS,8.6,No French,17323,10115,2016,Other,0,0,0,0,1,0,0,1
+43,Philippines,UAE,Single,0,Bachelor's,Computer Science,1,3,1,Employed,TEER 0,0,0,0,IELTS,9.0,Basic,70963,61395,489,Employer,0,0,0,0,0,0,0,1
+20,UK,India,Married,1,Master's,Information Technology,1,0,0,Employed,TEER 1,1,1,85399,IELTS,8.5,Basic,41339,5910,757,Employer,0,0,0,0,0,1,0,1
+36,Nigeria,Nigeria,Common-Law,1,Diploma,Engineering,0,6,3,Employed,TEER 0,0,0,0,CELPIP,6.0,No French,60270,49298,2423,Employer,0,0,0,0,1,0,0,1
+37,India,Canada,Married,0,Diploma,Finance,1,4,1,Employed,TEER 2,1,1,64461,IELTS,7.6,No French,64197,5318,11465,Family,0,1,0,0,0,0,0,1
+49,India,Nigeria,Single,2,Master's,Finance,1,3,3,Employed,TEER 2,0,0,0,CELPIP,7.3,No French,21851,3635,5706,Self,0,0,0,0,0,0,0,0
+24,Brazil,China,Single,0,Bachelor's,Computer Science,1,4,4,Employed,TEER 2,0,0,0,CELPIP,6.7,No French,62645,9698,4864,Self,0,0,0,0,0,0,0,1
+58,India,Canada,Married,0,Master's,Information Technology,1,2,1,Unemployed,TEER 1,0,0,0,CELPIP,8.8,No French,16498,13125,7019,Self,0,0,0,0,0,0,0,0
+50,Pakistan,India,Common-Law,2,Diploma,Computer Science,1,3,1,Employed,TEER 0,1,1,78388,IELTS,7.4,No French,17597,27622,17674,Self,0,0,0,1,0,0,0,1
+57,Nigeria,UK,Single,1,Bachelor's,Engineering,1,7,1,Employed,TEER 3,0,0,0,CELPIP,5.7,No French,84279,6531,758,Self,0,0,0,0,0,0,0,0
+56,Nigeria,India,Single,0,Diploma,Engineering,1,3,0,Employed,TEER 1,0,0,0,No Test,4.5,Basic,67237,17376,9492,Other,0,0,0,0,1,0,0,0
+35,China,India,Common-Law,1,Diploma,Finance,1,7,4,Employed,TEER 1,1,0,91044,Other,6.4,No French,86473,8712,20915,Self,0,0,0,0,1,0,0,1
+57,USA,Canada,Single,1,Bachelor's,Finance,1,5,5,Employed,TEER 1,1,1,61450,CELPIP,9.0,No French,37595,51327,1919,Self,0,0,0,0,0,0,0,1
+18,Philippines,China,Married,2,Bachelor's,Information Technology,1,0,0,Employed,TEER 0,1,1,100581,CELPIP,8.1,Basic,47048,4150,14550,Family,0,0,0,0,1,1,0,0
+28,Brazil,India,Divorced,2,Master's,Engineering,1,8,6,Employed,TEER 0,1,1,128998,IELTS,7.7,Intermediate,55547,13998,9579,Self,0,0,0,0,1,0,0,1
+45,China,Germany,Single,1,Bachelor's,Finance,1,4,2,Employed,TEER 1,0,0,0,CELPIP,7.5,No French,44756,27949,116,Employer,0,0,0,0,0,0,0,0
+42,Philippines,USA,Married,0,Bachelor's,Business,1,3,3,Employed,TEER 0,0,0,0,CELPIP,8.1,No French,30077,64071,2107,Self,0,0,0,0,0,0,0,1
+40,Pakistan,Brazil,Single,0,Bachelor's,Computer Science,1,1,0,Employed,TEER 0,1,1,81861,CELPIP,8.5,No French,27078,53622,7448,Self,0,1,0,0,0,0,0,1
+48,USA,Brazil,Single,0,PhD,Information Technology,1,2,1,Employed,TEER 3,0,0,0,CELPIP,7.7,Basic,49277,59390,5583,Employer,1,0,0,1,1,0,0,1
+47,Brazil,India,Married,0,Diploma,Engineering,0,6,6,Unemployed,TEER 1,1,1,75989,IELTS,9.3,No French,23662,4622,6005,Family,0,0,0,0,1,0,0,1
+59,Pakistan,Germany,Single,1,Diploma,Information Technology,1,10,3,Employed,TEER 1,0,0,0,IELTS,9.4,No French,23102,48959,2110,Self,0,0,0,0,0,0,0,1
+52,Pakistan,UK,Divorced,1,Bachelor's,Computer Science,1,6,1,Employed,TEER 2,0,0,0,IELTS,9.5,No French,52871,40843,8991,Self,0,0,0,0,1,0,0,0
+24,UK,UAE,Married,0,Bachelor's,Computer Science,1,4,4,Employed,TEER 4/5,0,0,0,IELTS,8.2,No French,43096,61180,2478,Family,1,1,0,0,1,0,0,1
+33,USA,UAE,Single,0,Diploma,Healthcare,1,2,2,Employed,TEER 0,0,0,0,IELTS,9.2,Basic,63744,12333,3946,Self,1,0,0,1,0,0,0,1
+43,Brazil,Canada,Single,0,Master's,Information Technology,1,4,4,Employed,TEER 3,1,1,91359,IELTS,7.1,No French,36501,63693,3682,Employer,0,0,0,0,1,0,0,1
+19,Brazil,Brazil,Single,0,Diploma,Computer Science,0,0,0,Employed,TEER 1,1,0,103623,IELTS,8.9,No French,33374,15880,8918,Other,0,0,0,0,0,0,0,1
+18,China,India,Single,2,Master's,Information Technology,1,0,0,Employed,TEER 0,1,1,83285,CELPIP,9.1,No French,53471,28134,756,Self,0,1,0,0,0,0,0,1
+29,UK,UAE,Single,0,Diploma,Business,1,5,5,Employed,TEER 1,1,0,77385,IELTS,9.1,No French,28759,16798,1840,Family,0,0,0,1,0,0,0,1
+22,India,India,Single,1,Bachelor's,Business,1,2,0,Employed,TEER 1,0,0,0,IELTS,8.8,No French,31837,16950,1790,Employer,0,0,0,1,1,0,0,1
+54,Pakistan,Canada,Married,3,Master's,Engineering,1,1,1,Employed,TEER 2,1,1,59165,IELTS,7.1,Basic,32630,22776,918,Self,1,0,0,1,0,0,0,1
+49,Pakistan,Brazil,Married,0,Diploma,Engineering,1,7,0,Employed,TEER 0,0,0,0,IELTS,6.1,Advanced,40805,13998,1861,Other,0,1,0,1,0,0,0,0
+26,India,Nigeria,Married,0,PhD,Other,1,6,4,Self-employed,TEER 1,0,0,0,IELTS,6.8,No French,80448,42344,7472,Family,1,0,1,0,0,0,0,1
+58,USA,USA,Married,0,Bachelor's,Computer Science,1,4,4,Employed,TEER 2,1,1,67178,IELTS,8.6,No French,17464,28103,10539,Self,0,0,0,0,0,0,0,1
+52,India,USA,Single,1,Master's,Computer Science,1,4,1,Employed,TEER 1,1,1,60326,No Test,5.0,Advanced,70910,32259,8637,Family,0,0,0,0,0,0,0,1
+36,Philippines,UAE,Single,1,Bachelor's,Information Technology,1,4,2,Employed,TEER 3,1,0,118270,IELTS,7.4,No French,59755,9567,5157,Self,0,1,0,1,0,0,0,1
+33,UK,USA,Married,0,Bachelor's,Computer Science,0,9,1,Employed,TEER 3,0,0,0,CELPIP,7.8,Intermediate,76339,90312,430,Self,0,0,0,0,0,0,0,1
+20,India,Nigeria,Married,1,Diploma,Information Technology,1,0,0,Employed,TEER 1,0,0,0,Other,7.9,No French,107733,29983,25554,Family,0,1,0,1,0,0,0,0
+37,USA,India,Single,2,Bachelor's,Finance,1,3,1,Employed,TEER 4/5,1,1,80017,No Test,4.8,No French,73629,8491,1472,Self,0,0,0,0,0,0,0,1
+41,USA,Canada,Married,0,High School,Healthcare,0,4,1,Self-employed,TEER 0,1,1,73867,IELTS,8.1,No French,63513,37706,8831,Family,1,0,0,0,0,0,0,1
+50,Nigeria,Nigeria,Married,0,Diploma,Engineering,1,3,3,Employed,TEER 0,1,1,102364,IELTS,8.6,Basic,18750,7770,19524,Self,0,0,0,0,0,0,0,1
+41,India,Canada,Married,2,Diploma,Finance,1,3,1,Employed,TEER 1,0,0,0,IELTS,7.8,Intermediate,21275,4637,9572,Self,1,0,0,0,1,0,0,0
+28,Philippines,Canada,Single,1,Bachelor's,Computer Science,1,8,1,Employed,TEER 2,1,1,38900,IELTS,8.8,No French,52203,21745,1967,Family,0,0,0,0,0,0,0,1
+25,China,Brazil,Married,2,Master's,Computer Science,1,5,2,Self-employed,TEER 2,1,1,88472,IELTS,6.6,No French,11038,23159,3035,Other,1,0,0,0,0,0,0,1
+53,Vietnam,India,Married,1,Diploma,Engineering,1,4,4,Employed,TEER 1,0,0,0,CELPIP,6.3,No French,57308,8236,245,Employer,1,0,0,0,1,0,0,0
+55,Brazil,Germany,Married,2,Diploma,Healthcare,1,2,2,Employed,TEER 0,0,0,0,IELTS,9.2,No French,8000,13707,7589,Employer,0,0,0,0,0,0,0,0
+57,Philippines,USA,Married,0,Bachelor's,Computer Science,1,3,2,Employed,TEER 0,0,0,0,IELTS,8.3,No French,68044,75862,7594,Self,1,0,0,0,0,0,0,1
+37,Brazil,Germany,Married,2,Diploma,Engineering,1,4,4,Employed,TEER 3,1,1,59886,IELTS,8.2,No French,38565,11386,10342,Employer,1,0,0,0,0,0,0,1
+52,China,Brazil,Married,3,High School,Healthcare,1,2,0,Employed,TEER 3,0,0,0,No Test,4.8,No French,47531,7227,88,Self,0,0,0,0,1,0,0,0
+42,USA,Canada,Single,1,Diploma,Healthcare,1,7,1,Self-employed,TEER 2,0,0,0,CELPIP,7.0,No French,30032,125528,13623,Self,0,0,0,0,0,0,0,0
+52,India,UAE,Married,0,Master's,Healthcare,1,2,1,Employed,TEER 2,1,1,89552,IELTS,7.7,No French,8000,11999,10737,Self,1,0,0,0,1,0,1,1
+42,UK,USA,Married,0,Master's,Information Technology,1,11,11,Employed,TEER 1,0,0,0,IELTS,6.0,No French,69693,31505,1214,Employer,0,0,0,0,0,0,0,1
+46,China,USA,Married,0,Bachelor's,Computer Science,1,5,0,Self-employed,TEER 0,1,0,52739,IELTS,7.3,No French,71714,9584,3417,Self,0,0,0,0,0,0,0,1
+35,Vietnam,India,Single,0,Bachelor's,Engineering,1,5,2,Employed,TEER 1,1,1,118452,CELPIP,7.3,Intermediate,37970,22969,8140,Self,0,0,0,0,0,0,0,1
+35,Philippines,China,Single,0,Bachelor's,Computer Science,1,4,3,Employed,TEER 2,0,0,0,CELPIP,7.7,No French,58238,15205,5478,Self,0,1,0,0,0,0,0,0
+19,Brazil,Philippines,Common-Law,1,Bachelor's,Finance,1,0,0,Employed,TEER 1,1,1,58742,CELPIP,8.0,No French,37182,84478,978,Self,1,1,0,0,0,0,0,1
+52,France,Philippines,Married,1,Bachelor's,Engineering,1,4,3,Employed,TEER 0,0,0,0,IELTS,9.3,No French,50769,17176,731,Employer,0,0,0,0,1,0,0,1
+33,India,Philippines,Common-Law,0,Bachelor's,Information Technology,1,3,2,Employed,TEER 4/5,1,1,115637,CELPIP,8.1,Intermediate,60182,24937,12166,Self,1,0,0,1,0,0,0,1
+58,France,China,Married,1,Diploma,Business,1,5,5,Employed,TEER 3,1,0,105124,CELPIP,9.0,No French,56101,75404,1356,Self,1,0,0,0,0,0,0,1
+53,Brazil,India,Married,0,High School,Engineering,0,9,6,Unemployed,TEER 1,0,0,0,No Test,4.7,No French,71819,116284,1510,Self,0,0,0,0,0,0,0,0
+50,India,China,Married,0,Bachelor's,Information Technology,1,5,2,Self-employed,TEER 2,0,0,0,IELTS,8.0,Intermediate,55377,5680,14219,Self,0,0,0,0,0,0,0,0
+21,Philippines,Philippines,Common-Law,0,Master's,Business,1,1,0,Employed,TEER 3,1,1,143938,IELTS,5.8,No French,45561,47942,7576,Self,0,1,0,0,0,0,0,1
+50,UK,Brazil,Married,1,Bachelor's,Business,1,6,6,Employed,TEER 0,0,0,0,IELTS,6.0,No French,29771,15036,7425,Self,0,0,1,0,1,0,0,0
+31,India,Nigeria,Married,0,Master's,Healthcare,1,7,7,Employed,TEER 1,1,1,64081,IELTS,7.8,No French,35429,25586,5221,Self,0,0,0,0,0,0,0,1
+38,China,Canada,Single,0,PhD,Computer Science,1,5,0,Employed,TEER 1,0,0,0,CELPIP,7.1,Basic,61201,14752,6733,Self,1,0,0,0,0,0,0,1
+37,Philippines,China,Married,0,Diploma,Engineering,0,7,7,Employed,TEER 1,1,0,83424,CELPIP,8.7,No French,14963,15817,7365,Employer,1,1,0,0,0,0,0,1
+25,Brazil,India,Married,2,Bachelor's,Business,1,5,5,Employed,TEER 3,0,0,0,IELTS,7.7,No French,67116,7324,27492,Other,0,0,0,1,0,0,0,1
+24,India,India,Single,0,Bachelor's,Computer Science,1,4,1,Employed,TEER 1,1,1,87715,IELTS,9.0,No French,39377,24260,2018,Self,1,0,0,0,0,0,0,1
+20,Pakistan,Germany,Single,1,PhD,Information Technology,1,0,0,Self-employed,TEER 0,0,0,0,IELTS,9.4,No French,28627,22780,1932,Self,0,0,0,1,1,0,0,1
+34,Vietnam,Nigeria,Single,1,PhD,Finance,1,3,0,Employed,TEER 0,0,0,0,Other,6.1,Intermediate,23025,8248,471,Family,0,0,0,0,0,0,0,1
+50,Vietnam,UAE,Single,2,Bachelor's,Computer Science,1,4,0,Employed,TEER 0,1,1,94681,IELTS,7.1,No French,58487,22507,8588,Self,0,0,0,0,1,0,0,1
+29,UK,USA,Single,3,Diploma,Business,0,4,1,Employed,TEER 1,0,0,0,IELTS,8.2,No French,44707,93392,6371,Self,0,0,0,0,1,0,0,1
+39,India,Philippines,Single,0,Master's,Engineering,1,3,0,Employed,TEER 2,1,0,97869,IELTS,6.7,Intermediate,76775,34329,943,Self,0,0,0,0,0,0,0,1
+39,UK,UAE,Common-Law,0,Diploma,Engineering,1,7,5,Self-employed,TEER 0,1,1,33736,IELTS,6.6,No French,19738,19395,3627,Employer,0,0,0,1,0,0,0,1
+47,India,Germany,Married,2,Master's,Computer Science,1,7,5,Unemployed,TEER 2,0,0,0,CELPIP,8.8,No French,33436,64948,1574,Family,1,0,0,1,0,0,0,1
+55,India,Philippines,Single,0,Master's,Business,0,3,1,Employed,TEER 2,1,1,67022,Other,9.4,No French,43155,24410,3221,Self,1,0,0,0,0,0,0,1
+55,Philippines,Nigeria,Single,1,Bachelor's,Information Technology,1,7,3,Employed,TEER 1,1,1,84311,IELTS,8.6,No French,29962,6627,24170,Self,0,0,0,1,1,0,0,1
+25,Nigeria,Germany,Married,1,Bachelor's,Engineering,1,5,3,Employed,TEER 2,1,1,107155,CELPIP,7.6,No French,45122,22824,9198,Self,1,0,0,1,1,0,0,1
+44,USA,Philippines,Single,1,Bachelor's,Healthcare,1,3,1,Employed,TEER 2,0,0,0,IELTS,7.3,No French,51390,7990,60,Self,0,0,0,0,1,0,0,0
+44,Brazil,Nigeria,Married,3,Bachelor's,Healthcare,1,4,1,Employed,TEER 1,1,0,72575,No Test,5.4,No French,54689,39472,2328,Self,1,0,0,0,0,0,0,1
+51,Nigeria,UK,Married,4,Bachelor's,Other,1,7,1,Employed,TEER 1,1,1,90750,IELTS,7.4,No French,75123,88413,83,Employer,1,0,0,0,0,0,0,1
+38,Philippines,UAE,Married,2,Master's,Engineering,1,1,0,Employed,TEER 2,0,0,0,IELTS,7.5,No French,18930,14189,10038,Self,1,0,0,1,0,0,0,1
+47,Vietnam,UAE,Single,0,Master's,Information Technology,1,4,2,Employed,TEER 4/5,0,0,0,IELTS,6.3,No French,51755,17269,5070,Self,0,0,1,0,0,0,0,0
+50,Nigeria,USA,Married,2,Master's,Other,1,2,1,Employed,TEER 1,0,0,0,IELTS,9.1,No French,32061,16682,40952,Self,1,1,0,0,0,0,0,0
+45,Nigeria,Nigeria,Single,0,Diploma,Healthcare,1,2,2,Employed,TEER 1,0,0,0,IELTS,8.5,No French,53600,11397,10581,Self,1,0,0,1,0,0,0,1
+50,India,China,Common-Law,0,Master's,Information Technology,1,5,0,Employed,TEER 1,0,0,0,CELPIP,8.2,No French,53626,42518,5837,Other,0,0,0,0,0,1,0,0
+22,USA,UK,Married,2,Bachelor's,Computer Science,1,2,0,Employed,TEER 0,1,1,60306,CELPIP,9.3,Advanced,25261,27040,13065,Self,0,0,0,0,0,0,0,1
+36,Brazil,Brazil,Single,0,Diploma,Business,1,5,1,Employed,TEER 1,1,1,81630,IELTS,6.6,Intermediate,26976,4654,9760,Self,0,1,0,0,0,0,0,1
+21,India,Philippines,Single,0,High School,Information Technology,0,1,0,Employed,TEER 1,0,0,0,CELPIP,5.8,No French,55232,48628,2235,Self,0,0,0,0,0,0,0,0
+52,India,UK,Single,0,Diploma,Healthcare,1,5,0,Employed,TEER 0,0,0,0,IELTS,8.8,Advanced,45468,8178,6044,Self,1,1,0,0,0,0,0,0
+34,Brazil,Nigeria,Married,2,Master's,Engineering,1,7,7,Self-employed,TEER 1,0,0,0,CELPIP,9.5,Advanced,40607,99761,6495,Employer,1,1,0,0,0,0,0,1
+61,Brazil,Canada,Single,1,Bachelor's,Computer Science,1,4,4,Self-employed,TEER 0,1,0,76326,IELTS,7.8,No French,58159,14816,4800,Self,0,0,0,0,0,0,0,1
+45,Philippines,Philippines,Married,1,Bachelor's,Healthcare,1,2,0,Self-employed,TEER 1,1,0,61274,CELPIP,5.7,No French,59634,26957,1579,Self,0,0,0,0,1,0,0,0
+47,France,India,Single,0,Diploma,Computer Science,0,9,8,Employed,TEER 0,0,0,0,IELTS,8.6,Intermediate,34407,5025,2022,Self,0,0,0,0,0,0,0,0
+46,India,UAE,Married,2,Bachelor's,Engineering,1,4,2,Employed,TEER 0,0,0,0,IELTS,5.8,No French,27958,13565,2639,Family,1,0,0,0,1,0,0,0
+23,Nigeria,Nigeria,Married,2,High School,Engineering,0,3,0,Employed,TEER 3,0,0,0,IELTS,7.7,No French,19761,43531,82,Family,0,0,1,0,0,0,0,0
+52,France,India,Married,0,Bachelor's,Engineering,1,4,0,Employed,TEER 3,0,0,0,IELTS,6.6,No French,45669,19214,19905,Family,0,0,0,1,0,0,0,0
+58,Nigeria,USA,Married,0,Bachelor's,Business,1,4,3,Employed,TEER 0,1,0,97480,CELPIP,9.2,No French,16536,61742,9269,Self,0,1,0,0,0,0,0,1
+54,Brazil,Germany,Single,0,Diploma,Business,1,6,0,Employed,TEER 1,0,0,0,IELTS,7.3,No French,46988,24399,9359,Employer,1,0,0,0,0,0,0,0
+41,Philippines,Brazil,Single,4,Master's,Business,1,4,1,Employed,TEER 1,0,0,0,IELTS,9.1,No French,69336,68976,6795,Self,0,1,1,0,0,0,0,0
+46,Philippines,Brazil,Married,1,Diploma,Computer Science,1,6,4,Employed,TEER 1,1,0,49930,IELTS,6.7,No French,37930,104296,9351,Self,1,1,0,0,0,0,0,1
+48,Vietnam,India,Single,3,Bachelor's,Computer Science,0,9,0,Unemployed,TEER 1,1,0,77263,IELTS,7.0,No French,34275,18123,32078,Family,1,0,0,0,0,0,0,0
+52,Nigeria,UAE,Single,0,Bachelor's,Engineering,1,3,2,Employed,TEER 1,0,0,0,CELPIP,9.3,Intermediate,84956,23819,3891,Self,0,0,0,0,1,0,0,1
+50,Pakistan,USA,Single,2,Bachelor's,Finance,1,3,0,Self-employed,TEER 2,0,0,0,IELTS,6.3,No French,75194,48033,9972,Self,1,0,0,0,1,0,0,1
+38,India,Canada,Single,2,Diploma,Business,1,8,0,Employed,TEER 0,1,1,107100,CELPIP,7.8,No French,29708,9260,3564,Self,0,0,0,0,1,0,0,1
+49,India,UAE,Single,1,High School,Business,0,6,3,Employed,TEER 0,1,0,80884,IELTS,7.1,No French,47780,52445,15409,Self,0,0,0,1,1,0,1,0
+40,India,UK,Common-Law,3,Master's,Information Technology,1,1,1,Employed,TEER 2,1,1,43509,Other,8.6,No French,51573,25407,15617,Self,0,0,0,0,0,0,0,1
+50,Brazil,Brazil,Single,0,Diploma,Engineering,1,7,7,Employed,TEER 2,1,1,80220,No Test,5.0,Advanced,49073,35320,18604,Family,0,0,0,1,0,0,0,1
+20,Philippines,UK,Married,0,Master's,Engineering,1,0,0,Employed,TEER 1,0,0,0,CELPIP,7.2,No French,81293,5080,43,Self,1,0,0,1,0,0,0,0
+35,Pakistan,Philippines,Single,1,PhD,Computer Science,1,7,3,Employed,TEER 1,0,0,0,Other,8.3,No French,46744,39330,2832,Family,1,0,0,1,0,0,0,1
+42,Nigeria,China,Married,2,Diploma,Computer Science,1,5,4,Employed,TEER 1,0,0,0,IELTS,7.1,No French,49744,12305,1150,Employer,0,1,0,0,0,0,0,0
+59,Vietnam,Nigeria,Single,1,Diploma,Finance,1,2,1,Employed,TEER 1,0,0,0,No Test,4.3,No French,58773,43898,4840,Self,0,1,0,0,0,0,0,0
+48,India,USA,Common-Law,0,Bachelor's,Information Technology,1,6,2,Employed,TEER 1,1,1,68891,CELPIP,8.3,No French,68798,20790,5472,Self,0,0,0,1,0,0,0,1
+20,Pakistan,UAE,Common-Law,1,PhD,Information Technology,1,0,0,Employed,TEER 1,1,1,57656,No Test,4.6,No French,63737,11026,2364,Employer,0,1,0,0,0,0,0,1
+57,USA,Brazil,Single,0,Master's,Computer Science,1,5,2,Employed,TEER 1,1,1,115786,CELPIP,5.5,No French,55761,79312,10282,Family,0,0,0,0,0,0,0,1
+41,USA,UK,Common-Law,0,Bachelor's,Finance,1,6,1,Self-employed,TEER 2,1,1,92065,CELPIP,8.0,No French,13826,39210,2515,Self,1,0,0,0,0,0,0,1
+49,USA,Germany,Divorced,1,Master's,Engineering,0,5,5,Employed,TEER 2,1,1,140634,IELTS,9.2,Intermediate,35237,109163,15387,Self,0,0,0,0,0,0,0,1
+39,UK,Philippines,Married,2,Diploma,Healthcare,0,6,2,Employed,TEER 1,0,0,0,IELTS,5.9,No French,61388,14332,1564,Family,0,1,0,0,0,0,0,0
+40,Brazil,Nigeria,Married,0,PhD,Finance,1,3,0,Employed,TEER 1,0,0,0,IELTS,7.9,No French,50007,29189,3661,Self,0,0,0,0,0,0,1,0
+19,India,Nigeria,Single,0,PhD,Information Technology,1,0,0,Unemployed,TEER 1,0,0,0,Other,8.4,Basic,61522,26642,7787,Family,0,0,0,1,1,0,0,1
+44,India,UAE,Married,0,Diploma,Healthcare,0,5,2,Employed,TEER 1,0,0,0,IELTS,5.8,Basic,82743,32083,7437,Self,1,1,0,0,0,0,0,0
+59,France,USA,Single,0,Diploma,Computer Science,1,8,0,Employed,TEER 1,0,0,0,IELTS,5.6,No French,21460,3976,649,Family,0,0,0,0,0,0,0,0
+19,China,Canada,Single,2,Diploma,Computer Science,1,0,0,Employed,TEER 3,0,0,0,IELTS,7.4,Advanced,67758,11622,14979,Self,0,0,0,0,1,0,0,1
+43,USA,Germany,Divorced,3,Diploma,Business,1,5,2,Employed,TEER 2,1,1,80127,IELTS,8.7,No French,38392,63015,7291,Family,1,0,0,0,0,0,0,1
+34,Nigeria,UAE,Single,0,Master's,Business,1,3,0,Employed,TEER 3,0,0,0,Other,6.1,No French,63706,16783,16313,Other,0,1,0,0,0,0,0,0
+57,India,UK,Married,2,Bachelor's,Information Technology,1,7,4,Employed,TEER 2,1,1,63647,Other,8.8,No French,44175,83877,16177,Self,1,1,0,0,0,0,0,1
+50,India,China,Married,2,High School,Information Technology,0,2,1,Self-employed,TEER 4/5,1,0,74979,IELTS,8.1,No French,87540,9004,6315,Family,0,0,0,0,0,0,0,0
+26,Brazil,India,Married,2,Bachelor's,Engineering,1,6,6,Employed,TEER 2,1,1,74037,IELTS,6.8,No French,47601,152037,19333,Self,0,0,0,0,1,0,0,1
+60,Nigeria,Canada,Divorced,0,PhD,Computer Science,1,6,1,Self-employed,TEER 4/5,0,0,0,IELTS,7.6,No French,32189,32898,15092,Self,0,0,0,0,0,0,0,0
+56,India,USA,Single,3,Bachelor's,Information Technology,1,6,6,Self-employed,TEER 0,0,0,0,IELTS,9.4,No French,53397,40446,25384,Employer,0,0,0,0,0,0,0,1
+46,Nigeria,Philippines,Single,0,Bachelor's,Computer Science,1,5,3,Employed,TEER 0,0,0,0,IELTS,6.4,Basic,51478,15640,15203,Self,1,0,0,0,0,0,0,1
+59,India,Canada,Single,0,Diploma,Information Technology,1,0,0,Employed,TEER 1,0,0,0,IELTS,7.5,No French,67761,62381,13772,Self,1,0,0,0,0,0,0,0
+43,China,Brazil,Single,0,PhD,Business,1,6,3,Employed,TEER 4/5,1,0,69376,IELTS,8.0,No French,53961,22711,5069,Self,0,0,0,0,0,0,0,1
+52,Philippines,USA,Single,0,Master's,Information Technology,1,4,3,Unemployed,TEER 1,0,0,0,IELTS,6.1,No French,94501,31559,1906,Self,0,0,0,0,1,0,0,1
+42,USA,China,Single,0,Diploma,Computer Science,0,6,6,Employed,TEER 0,0,0,0,CELPIP,5.7,No French,42771,5490,19326,Family,0,0,0,1,1,0,0,0
+41,Philippines,Brazil,Married,0,High School,Engineering,0,3,0,Employed,TEER 1,0,0,0,IELTS,5.6,Basic,43007,27970,10256,Self,0,1,0,0,1,0,0,0
+30,Nigeria,Canada,Married,0,High School,Business,0,6,4,Employed,TEER 2,1,1,83275,IELTS,6.8,No French,32922,55815,2647,Self,0,0,0,0,0,1,0,0
+24,India,India,Single,2,Diploma,Information Technology,1,3,3,Unemployed,TEER 1,1,1,102279,IELTS,5.8,No French,46713,7908,3336,Self,0,0,0,0,0,0,0,1
+53,India,India,Married,2,Bachelor's,Computer Science,1,5,3,Self-employed,TEER 2,0,0,0,No Test,4.6,No French,49621,36459,9268,Self,0,0,0,0,0,0,0,0
+37,Philippines,China,Single,0,Master's,Information Technology,1,2,0,Employed,TEER 4/5,1,1,88819,IELTS,9.5,Basic,50624,3643,5197,Self,0,1,0,0,0,0,0,1
+18,Nigeria,Nigeria,Single,2,Bachelor's,Business,1,0,0,Employed,TEER 3,0,0,0,IELTS,5.7,No French,46343,68160,679,Family,0,0,0,0,0,0,0,0
+25,China,Germany,Married,2,Master's,Engineering,1,5,1,Employed,TEER 1,1,1,88129,IELTS,7.2,No French,32803,104741,1220,Self,0,1,0,0,1,0,0,1
+33,Philippines,Philippines,Married,2,Bachelor's,Business,1,6,0,Employed,TEER 1,0,0,0,Other,5.6,No French,27366,13930,10952,Self,0,1,0,0,1,0,0,0
+31,Brazil,Nigeria,Married,0,Bachelor's,Other,1,7,1,Self-employed,TEER 1,1,0,104317,CELPIP,6.0,Intermediate,37496,5831,3186,Family,0,0,0,1,0,0,0,1
+29,Pakistan,India,Single,1,Bachelor's,Business,1,6,4,Employed,TEER 1,0,0,0,CELPIP,6.8,No French,67830,29865,5668,Self,0,1,0,1,0,0,0,1
+40,USA,India,Married,3,Diploma,Healthcare,1,2,1,Employed,TEER 0,1,1,90503,IELTS,7.1,Advanced,72135,3757,11640,Self,0,0,0,0,0,0,0,1
+32,India,UK,Married,1,Bachelor's,Engineering,1,0,0,Employed,TEER 2,0,0,0,CELPIP,9.3,No French,43460,19467,11128,Family,1,0,0,0,0,0,0,1
+45,Nigeria,Brazil,Married,0,Bachelor's,Computer Science,1,4,3,Employed,TEER 1,1,1,61596,CELPIP,7.1,No French,26168,10928,1461,Self,0,0,0,0,0,0,0,1
+51,India,Canada,Married,1,High School,Other,0,5,5,Employed,TEER 3,0,0,0,IELTS,7.5,No French,43376,19029,828,Self,0,0,0,0,0,0,0,0
+19,India,Philippines,Married,1,Bachelor's,Information Technology,1,0,0,Employed,TEER 3,0,0,0,Other,6.5,No French,86833,3461,7155,Self,0,1,0,1,0,0,0,0
+49,Vietnam,China,Married,1,Bachelor's,Computer Science,1,3,1,Employed,TEER 0,1,1,61109,IELTS,5.5,Basic,64979,4324,10826,Self,0,1,0,0,0,0,0,1
+40,India,Canada,Married,0,PhD,Healthcare,1,6,6,Employed,TEER 4/5,0,0,0,IELTS,9.1,Basic,56014,3402,1291,Self,0,0,1,0,0,0,0,0
+39,Nigeria,UK,Divorced,0,Bachelor's,Information Technology,1,9,5,Employed,TEER 2,1,0,70880,Other,5.8,No French,64253,27132,3721,Other,0,0,0,1,0,0,0,1
+42,China,India,Married,2,Master's,Engineering,1,6,2,Employed,TEER 1,1,1,89041,CELPIP,9.4,No French,75811,23529,16338,Self,0,0,0,1,0,0,0,1
+39,UK,China,Single,2,Bachelor's,Engineering,1,4,0,Employed,TEER 1,1,1,124183,IELTS,6.0,Intermediate,21942,9636,23091,Family,1,0,0,1,0,0,0,1
+39,China,India,Married,0,Master's,Engineering,1,2,0,Employed,TEER 1,0,0,0,IELTS,7.9,No French,37159,29006,4842,Employer,0,1,0,1,0,0,0,1
+59,India,Philippines,Single,3,Bachelor's,Business,1,6,6,Employed,TEER 1,1,0,79512,Other,9.5,Basic,34425,56898,662,Family,1,1,0,0,0,0,0,1
+23,Philippines,Brazil,Single,0,Master's,Information Technology,1,3,3,Employed,TEER 2,1,1,101192,IELTS,6.1,Intermediate,56742,11119,2383,Self,1,0,0,0,0,0,0,1
+32,Nigeria,Canada,Married,1,Bachelor's,Engineering,1,2,1,Employed,TEER 0,0,0,0,IELTS,7.2,No French,48202,47593,2121,Self,1,0,1,0,0,0,0,0
+60,India,Canada,Common-Law,2,Bachelor's,Engineering,0,6,0,Employed,TEER 2,0,0,0,IELTS,8.6,Basic,60126,30155,2184,Self,0,1,0,0,0,0,0,0
+54,Philippines,Nigeria,Common-Law,2,Bachelor's,Healthcare,1,8,3,Employed,TEER 1,1,1,66631,Other,5.6,No French,34862,3860,5447,Employer,1,0,0,0,0,0,0,1
+50,India,China,Single,3,Bachelor's,Business,1,4,1,Self-employed,TEER 0,0,0,0,Other,8.3,No French,72439,14756,7001,Self,0,0,0,0,0,0,0,1
+25,India,Germany,Married,0,Diploma,Information Technology,0,5,5,Employed,TEER 1,0,0,0,IELTS,5.8,No French,43613,20719,1045,Employer,0,0,0,0,0,0,0,0
+61,Philippines,UK,Single,2,High School,Healthcare,0,6,6,Employed,TEER 1,1,1,71859,IELTS,6.4,No French,58890,35891,17611,Self,0,0,0,1,0,0,0,1
+61,India,Germany,Divorced,0,High School,Computer Science,0,1,0,Employed,TEER 1,0,0,0,IELTS,6.1,No French,68908,11461,7740,Employer,1,1,0,1,0,0,0,0
+22,China,Nigeria,Divorced,1,Master's,Finance,1,2,2,Employed,TEER 0,1,1,68610,IELTS,9.1,Basic,67302,104469,7275,Self,1,0,0,0,0,0,0,1
+56,Brazil,Philippines,Married,2,Diploma,Information Technology,0,6,2,Employed,TEER 3,0,0,0,CELPIP,6.2,No French,52216,31843,34916,Employer,0,0,0,0,0,0,0,0
+21,USA,UK,Married,1,Diploma,Business,1,1,1,Employed,TEER 2,1,1,81421,IELTS,5.7,No French,61386,14662,7913,Self,0,0,0,0,0,0,0,1
+23,India,Brazil,Married,0,Bachelor's,Computer Science,1,3,2,Employed,TEER 0,0,0,0,IELTS,7.9,No French,79833,5551,21156,Family,1,0,0,1,0,0,0,1
+49,India,Germany,Married,2,Bachelor's,Computer Science,1,7,7,Employed,TEER 1,1,1,56685,CELPIP,6.9,No French,55272,8003,2697,Self,0,0,0,0,0,0,0,1
+47,India,Brazil,Single,0,Bachelor's,Engineering,1,4,4,Employed,TEER 1,0,0,0,IELTS,7.1,No French,30407,19716,2196,Family,1,1,0,0,0,0,0,0
+52,Brazil,Germany,Married,0,Diploma,Finance,1,2,0,Self-employed,TEER 0,1,1,59710,IELTS,6.0,No French,56661,20064,5813,Family,0,1,0,1,0,0,0,1
+57,UK,Brazil,Married,1,PhD,Engineering,1,7,4,Employed,TEER 2,1,1,95466,IELTS,8.5,No French,44254,39495,5684,Self,1,0,0,0,1,0,0,1
+33,India,Germany,Married,0,Master's,Finance,0,5,5,Self-employed,TEER 2,1,1,107122,CELPIP,7.9,No French,8000,35381,2054,Self,0,0,0,0,0,0,0,1
+30,France,Brazil,Single,2,Master's,Engineering,1,8,1,Employed,TEER 2,0,0,0,IELTS,7.0,Intermediate,54239,8618,9622,Self,0,0,0,0,0,0,0,1
+59,India,Nigeria,Common-Law,0,Bachelor's,Engineering,1,7,6,Employed,TEER 0,1,1,90201,IELTS,6.2,No French,47333,25594,240,Self,0,0,0,0,0,0,0,1
+47,China,USA,Single,0,Master's,Computer Science,1,5,0,Employed,TEER 3,1,1,75216,IELTS,7.9,No French,68128,3520,9385,Family,0,0,0,0,0,0,0,1
+36,UK,UK,Married,2,Diploma,Business,1,4,2,Employed,TEER 1,1,1,95048,No Test,4.3,Advanced,29998,15710,4887,Self,1,0,1,0,1,0,0,1
+34,Pakistan,China,Married,1,High School,Information Technology,1,3,1,Employed,TEER 4/5,0,0,0,IELTS,6.7,Basic,14885,39109,9343,Self,0,0,0,0,0,0,0,0
+36,UK,Philippines,Married,0,High School,Finance,0,9,9,Employed,TEER 0,1,1,117697,No Test,5.3,No French,48373,15750,5186,Family,0,0,0,1,0,0,0,1
+45,USA,UAE,Married,2,Bachelor's,Finance,1,4,3,Employed,TEER 1,0,0,0,CELPIP,6.4,No French,52603,48135,30295,Self,1,0,0,1,0,0,0,1
+43,Philippines,India,Single,1,Bachelor's,Finance,1,8,3,Employed,TEER 1,1,0,107546,CELPIP,8.2,Basic,46876,96404,3259,Other,1,0,0,0,0,1,0,0
+54,USA,China,Single,1,Bachelor's,Engineering,0,4,3,Employed,TEER 0,1,1,97230,IELTS,9.5,No French,45414,26362,32397,Self,0,0,0,0,0,0,0,1
+43,India,India,Married,0,High School,Healthcare,1,2,2,Employed,TEER 2,0,0,0,IELTS,5.6,Basic,23625,6916,537,Self,1,0,0,1,0,0,0,0
+40,Pakistan,UK,Married,2,Bachelor's,Business,1,2,0,Self-employed,TEER 2,0,0,0,IELTS,6.7,No French,42221,14937,9210,Self,0,0,1,1,0,0,0,0
+26,China,China,Single,2,Bachelor's,Computer Science,1,5,0,Employed,TEER 0,1,1,98442,IELTS,5.7,No French,38031,3238,4844,Self,0,0,0,0,0,0,0,1
+29,USA,Brazil,Married,1,Bachelor's,Healthcare,1,8,7,Unemployed,TEER 2,1,1,75194,No Test,5.1,No French,66454,26078,13813,Self,0,0,0,1,0,0,0,1
+18,Nigeria,Brazil,Married,0,Bachelor's,Computer Science,1,0,0,Employed,TEER 1,1,1,68233,IELTS,7.1,No French,52586,46088,12470,Self,1,0,0,0,0,0,0,1
+18,Brazil,UAE,Married,2,Diploma,Engineering,1,0,0,Self-employed,TEER 0,0,0,0,IELTS,9.2,No French,39440,27852,12883,Self,0,0,0,1,0,0,0,1
+51,China,India,Married,1,Master's,Computer Science,1,3,1,Employed,TEER 4/5,1,1,77877,IELTS,5.8,No French,79477,41554,796,Self,1,0,0,1,0,0,0,1
+49,UK,Philippines,Single,1,Bachelor's,Computer Science,1,5,1,Employed,TEER 3,0,0,0,CELPIP,8.6,No French,39621,43223,13824,Self,1,1,0,0,0,0,0,1
+42,India,UK,Single,0,Diploma,Information Technology,1,8,8,Employed,TEER 1,1,1,49333,IELTS,7.1,Advanced,56155,50597,1926,Self,0,0,0,0,0,0,0,1
+57,India,Brazil,Married,2,Diploma,Engineering,1,4,3,Employed,TEER 1,1,0,45587,IELTS,8.7,No French,41661,10753,208,Family,0,0,0,0,0,0,0,1
+18,India,USA,Married,2,Bachelor's,Healthcare,1,0,0,Employed,TEER 1,1,0,88705,IELTS,7.6,No French,77623,54250,1964,Other,1,0,0,0,0,0,0,1
+33,India,Nigeria,Married,0,Master's,Computer Science,1,1,1,Employed,TEER 2,0,0,0,CELPIP,5.7,Basic,46737,29539,5220,Other,1,0,0,1,0,0,0,1
+56,Pakistan,Nigeria,Married,0,Bachelor's,Engineering,1,5,1,Self-employed,TEER 3,0,0,0,IELTS,9.3,No French,47328,11552,10841,Employer,0,0,0,0,0,0,0,0
+22,India,Germany,Married,2,Diploma,Computer Science,1,2,2,Employed,TEER 1,1,1,103318,IELTS,5.8,No French,42202,112143,1973,Employer,0,1,0,1,0,0,0,1
+39,Vietnam,Philippines,Divorced,0,Master's,Engineering,1,3,0,Employed,TEER 2,0,0,0,IELTS,7.9,No French,48930,77984,959,Self,0,0,0,0,1,1,0,0
+46,Philippines,Nigeria,Married,3,Bachelor's,Healthcare,1,6,6,Employed,TEER 1,1,1,76804,No Test,5.2,No French,68990,24358,8306,Self,0,0,0,0,0,0,0,1
+20,India,Germany,Married,1,Bachelor's,Engineering,1,0,0,Employed,TEER 1,0,0,0,IELTS,5.8,No French,61916,49320,33030,Self,0,0,0,0,0,0,0,0
+29,USA,India,Single,1,Bachelor's,Business,0,5,4,Employed,TEER 3,1,1,43674,CELPIP,7.7,Intermediate,45561,10578,7347,Family,0,0,0,0,0,0,0,1
+43,Brazil,Brazil,Single,0,Diploma,Information Technology,0,6,6,Employed,TEER 1,1,1,118802,CELPIP,8.8,No French,79026,16447,9396,Employer,0,0,0,0,0,1,0,1
+33,Nigeria,Brazil,Married,0,Bachelor's,Business,1,6,4,Unemployed,TEER 1,0,0,0,IELTS,9.4,No French,62459,8082,6589,Self,0,0,0,0,0,0,0,1
+54,China,USA,Single,3,Bachelor's,Engineering,1,7,3,Employed,TEER 2,0,0,0,IELTS,8.4,No French,36236,21354,12198,Self,1,0,0,0,0,0,0,1
+39,UK,China,Common-Law,0,PhD,Engineering,1,6,5,Employed,TEER 1,1,0,81426,IELTS,6.6,No French,17393,20129,29772,Family,0,0,0,0,0,0,0,1
+46,India,Nigeria,Married,2,Bachelor's,Healthcare,1,5,0,Employed,TEER 1,0,0,0,IELTS,8.3,Basic,36699,8982,6284,Self,0,0,0,1,0,0,0,1
+31,Vietnam,India,Married,0,Bachelor's,Computer Science,1,6,4,Unemployed,TEER 3,1,1,71972,IELTS,8.3,No French,53266,30929,4313,Self,1,0,0,0,0,0,0,1
+45,Vietnam,Canada,Single,0,Bachelor's,Healthcare,0,6,2,Employed,TEER 2,0,0,0,IELTS,8.3,No French,56944,6133,15748,Self,0,0,0,0,0,0,0,0
+22,Brazil,Nigeria,Single,0,Master's,Healthcare,1,2,0,Self-employed,TEER 3,1,1,86387,IELTS,8.9,No French,72182,4591,27980,Other,0,0,0,1,0,0,0,1
+47,India,Philippines,Single,1,Master's,Information Technology,0,10,0,Employed,TEER 1,0,0,0,IELTS,5.8,No French,23109,15149,1106,Self,0,0,0,0,0,0,0,0
+22,Brazil,China,Single,4,Bachelor's,Computer Science,1,2,0,Employed,TEER 1,1,1,86852,CELPIP,5.9,No French,36216,16183,6905,Self,0,0,0,0,0,0,0,1
+29,India,Nigeria,Single,0,Bachelor's,Computer Science,1,8,0,Employed,TEER 4/5,1,0,75348,CELPIP,8.1,No French,21447,12632,12579,Self,0,0,0,1,0,0,0,1
+33,India,India,Married,0,Bachelor's,Finance,0,6,2,Employed,TEER 1,1,1,74541,IELTS,9.3,No French,18224,10458,6097,Self,0,0,0,0,0,0,0,1
+43,Philippines,Nigeria,Common-Law,0,Bachelor's,Healthcare,1,4,1,Employed,TEER 0,1,1,98609,IELTS,7.4,Intermediate,32443,13341,4210,Self,1,1,0,0,0,0,0,1
+43,Nigeria,Philippines,Common-Law,1,Diploma,Computer Science,1,5,0,Employed,TEER 1,1,0,88195,Other,9.3,No French,52332,7459,8519,Self,1,0,0,0,0,1,0,0
+38,Pakistan,Canada,Married,0,Bachelor's,Information Technology,1,4,4,Employed,TEER 1,1,0,79599,CELPIP,9.3,No French,60427,15914,2519,Self,1,0,0,0,0,0,0,1
+56,UK,UK,Single,2,Diploma,Engineering,1,6,6,Self-employed,TEER 0,0,0,0,No Test,4.0,No French,26032,61742,3435,Self,0,0,0,0,0,0,0,0
+53,UK,UAE,Married,1,Master's,Business,1,2,1,Self-employed,TEER 3,1,1,85595,IELTS,9.1,No French,28814,9353,38908,Self,1,1,0,1,0,0,0,1
+50,Nigeria,Canada,Common-Law,1,Bachelor's,Computer Science,1,2,1,Self-employed,TEER 4/5,0,0,0,IELTS,9.1,No French,9403,31836,8095,Self,1,0,0,1,0,0,0,1
+47,Philippines,Germany,Single,0,PhD,Information Technology,1,9,3,Self-employed,TEER 1,0,0,0,IELTS,8.8,Basic,49287,6822,16503,Employer,0,0,0,0,0,0,0,1
+54,Philippines,Nigeria,Married,4,Bachelor's,Finance,1,1,1,Employed,TEER 2,0,0,0,CELPIP,8.3,No French,30357,13920,13192,Self,0,0,0,0,0,0,0,0
+40,Vietnam,Brazil,Single,0,Bachelor's,Computer Science,1,3,3,Employed,TEER 3,0,0,0,IELTS,5.6,No French,78260,12684,8450,Self,0,0,0,0,0,0,0,1
+27,India,USA,Married,0,Bachelor's,Computer Science,1,4,3,Self-employed,TEER 2,0,0,0,IELTS,6.0,Intermediate,53196,72127,14697,Employer,0,1,0,0,1,0,0,0
+22,Pakistan,Brazil,Divorced,1,Diploma,Other,1,2,1,Employed,TEER 0,0,0,0,IELTS,6.0,No French,41571,16964,2707,Self,0,0,0,0,1,0,0,0
+53,China,Canada,Single,1,Bachelor's,Healthcare,1,2,0,Employed,TEER 0,1,1,43393,CELPIP,5.6,No French,32177,32317,8109,Self,0,0,0,1,0,0,0,1
+51,Nigeria,Brazil,Common-Law,0,High School,Information Technology,0,6,3,Employed,TEER 0,0,0,0,IELTS,6.0,No French,15106,26061,7144,Self,0,0,0,0,0,0,0,0
+48,UK,India,Married,0,Bachelor's,Computer Science,1,2,1,Employed,TEER 0,0,0,0,CELPIP,9.2,No French,17642,6800,7791,Employer,0,1,0,0,0,0,0,0
+27,Nigeria,Brazil,Divorced,2,Bachelor's,Computer Science,0,7,5,Employed,TEER 1,1,1,49426,Other,8.2,No French,32557,73144,1477,Employer,0,0,0,0,0,0,0,1
+36,Pakistan,China,Married,0,Master's,Information Technology,1,10,10,Employed,TEER 1,1,0,94645,CELPIP,6.7,No French,31021,13611,2597,Self,1,0,0,0,0,0,0,1
+49,Pakistan,UK,Married,2,Diploma,Finance,1,1,0,Employed,TEER 0,1,1,73494,IELTS,8.7,No French,25016,4144,2702,Family,0,0,0,0,0,0,0,1
+18,Nigeria,Nigeria,Single,1,Diploma,Engineering,1,0,0,Unemployed,TEER 0,0,0,0,No Test,5.0,No French,52541,11932,7369,Self,0,0,0,0,0,0,0,0
+22,Philippines,Brazil,Single,0,Bachelor's,Business,1,2,0,Employed,TEER 1,1,1,51494,IELTS,6.1,Basic,55285,13223,28762,Employer,0,0,0,0,0,0,1,0
+21,China,Philippines,Single,0,Master's,Finance,1,1,1,Self-employed,TEER 1,0,0,0,IELTS,9.0,Basic,35827,5433,24644,Self,0,0,0,0,0,0,0,0
+33,France,UK,Divorced,0,Bachelor's,Engineering,0,8,5,Employed,TEER 2,0,0,0,No Test,4.6,No French,83703,27188,2061,Employer,0,0,0,1,0,0,0,1
+41,India,UK,Married,2,Bachelor's,Computer Science,1,6,6,Self-employed,TEER 0,0,0,0,IELTS,8.3,No French,10065,13645,2908,Self,0,0,0,0,0,0,0,0
+33,Brazil,Brazil,Married,1,Bachelor's,Engineering,1,2,1,Employed,TEER 3,0,0,0,IELTS,6.7,No French,46163,27797,293,Self,0,0,0,0,1,1,0,0
+19,Brazil,UK,Common-Law,0,High School,Finance,0,0,0,Employed,TEER 4/5,0,0,0,IELTS,7.5,No French,40628,3169,4070,Self,0,0,0,0,0,0,0,0
+45,UK,USA,Single,1,PhD,Business,1,8,0,Unemployed,TEER 2,1,0,42595,IELTS,8.8,No French,33985,103501,14398,Family,1,1,0,1,0,0,0,1
+49,India,Brazil,Single,4,Bachelor's,Computer Science,1,8,7,Employed,TEER 2,1,0,77169,IELTS,6.1,No French,31046,7673,19791,Family,0,1,0,1,0,0,0,1
+44,UK,India,Single,0,Diploma,Healthcare,1,2,0,Unemployed,TEER 3,1,1,86491,IELTS,9.4,No French,44860,29921,2158,Self,0,0,0,0,0,0,0,1
+37,Pakistan,Canada,Single,3,Bachelor's,Engineering,1,5,4,Employed,TEER 0,1,1,65018,IELTS,5.8,Basic,40489,34450,2471,Family,0,0,0,0,0,0,0,1
+41,India,China,Single,0,Diploma,Finance,1,4,4,Employed,TEER 4/5,1,1,45442,CELPIP,7.6,No French,37162,7706,1996,Family,0,1,0,0,0,0,0,1
+29,India,UAE,Married,0,PhD,Computer Science,1,3,0,Employed,TEER 2,0,0,0,IELTS,9.2,Advanced,19025,5961,3447,Family,1,0,0,1,0,0,0,1
+52,Vietnam,Germany,Single,0,Diploma,Engineering,1,8,8,Employed,TEER 2,0,0,0,IELTS,9.3,Basic,12637,7138,13068,Self,0,0,0,1,0,0,0,1
+50,India,UK,Single,0,Bachelor's,Finance,1,3,2,Employed,TEER 1,0,0,0,IELTS,6.4,No French,39229,10086,8327,Self,1,0,0,0,0,0,0,0
+50,Pakistan,India,Single,0,Diploma,Engineering,0,7,5,Unemployed,TEER 1,1,0,112523,CELPIP,6.1,No French,36958,7605,12332,Self,0,0,0,0,0,0,0,0
+60,Nigeria,Nigeria,Single,0,Bachelor's,Engineering,1,2,0,Unemployed,TEER 2,1,1,61449,CELPIP,8.4,No French,41059,31021,6997,Self,0,0,0,0,0,0,0,1
+54,India,Nigeria,Divorced,3,Master's,Computer Science,1,1,0,Unemployed,TEER 2,0,0,0,Other,5.7,No French,42827,16654,2384,Family,0,0,0,0,1,0,0,0
+29,Pakistan,Germany,Married,2,Bachelor's,Information Technology,0,5,2,Employed,TEER 2,1,0,94973,IELTS,7.4,No French,34549,22293,2070,Family,1,0,0,0,0,0,0,1
+20,Nigeria,China,Divorced,2,Bachelor's,Information Technology,1,0,0,Unemployed,TEER 0,1,1,77814,IELTS,8.7,No French,40751,4212,72,Family,0,0,0,0,0,0,0,1
+18,Nigeria,UK,Single,0,Master's,Finance,1,0,0,Employed,TEER 1,1,1,71449,IELTS,7.7,No French,27929,52376,12148,Self,0,0,0,0,0,0,0,1
+50,Philippines,USA,Single,0,High School,Information Technology,1,4,3,Self-employed,TEER 1,1,0,93974,IELTS,6.3,No French,75478,7675,15024,Family,0,0,0,0,0,0,0,1
+57,China,Germany,Married,0,Bachelor's,Engineering,1,3,1,Employed,TEER 1,1,0,119612,IELTS,7.4,Intermediate,29005,14163,11697,Self,0,0,0,0,0,0,0,1
+27,India,China,Single,2,Diploma,Healthcare,1,0,0,Employed,TEER 0,1,1,84612,No Test,5.3,No French,37580,4865,618,Employer,0,0,0,0,1,0,0,1
+60,Philippines,UK,Single,3,PhD,Computer Science,1,2,0,Unemployed,TEER 0,1,1,66646,IELTS,8.0,No French,30524,6677,11491,Self,0,0,0,0,0,1,0,0
+61,Vietnam,India,Single,0,Bachelor's,Engineering,1,3,0,Unemployed,TEER 1,0,0,0,No Test,4.1,No French,30188,30400,374,Family,0,0,0,0,0,0,0,0
+46,Philippines,Canada,Single,0,Bachelor's,Business,1,4,2,Employed,TEER 1,1,1,133433,IELTS,6.8,Basic,45492,32489,892,Family,0,0,0,0,0,0,0,1
+30,Brazil,USA,Single,1,Bachelor's,Business,1,2,1,Self-employed,TEER 0,1,1,80967,Other,6.3,No French,42955,31249,4645,Employer,0,1,0,0,0,0,0,1
+29,Philippines,UAE,Single,0,Diploma,Healthcare,1,6,3,Employed,TEER 4/5,0,0,0,IELTS,6.5,Basic,35810,23081,5172,Self,0,0,0,1,0,0,0,1
+48,USA,Nigeria,Married,0,Diploma,Healthcare,0,5,2,Employed,TEER 2,0,0,0,Other,7.6,Basic,39330,79187,13547,Self,1,0,0,0,0,0,0,0
+19,India,Philippines,Single,1,Diploma,Computer Science,1,0,0,Employed,TEER 2,1,0,37830,IELTS,6.6,Basic,30603,20690,9103,Self,0,0,0,0,0,0,0,1
+52,Vietnam,India,Single,1,Bachelor's,Finance,1,8,7,Employed,TEER 0,0,0,0,No Test,4.6,No French,53034,17919,1331,Self,1,0,0,0,0,0,0,1
+40,Nigeria,Nigeria,Married,0,Diploma,Computer Science,1,6,5,Employed,TEER 2,1,0,92402,IELTS,8.3,No French,86103,10110,2050,Family,1,0,0,0,0,0,0,1
+34,India,Brazil,Single,0,High School,Business,0,1,1,Employed,TEER 1,1,0,69272,IELTS,8.4,No French,27503,5602,2691,Employer,0,0,0,0,0,0,0,0
+43,India,Philippines,Single,4,Master's,Information Technology,1,9,6,Employed,TEER 4/5,0,0,0,IELTS,6.2,No French,52879,22860,1056,Self,0,0,1,0,0,0,0,0
+25,India,Nigeria,Married,0,PhD,Finance,1,3,2,Employed,TEER 2,0,0,0,IELTS,8.5,No French,45898,12454,2713,Self,1,1,0,0,0,0,0,0
+46,Nigeria,China,Single,0,Bachelor's,Healthcare,0,9,4,Employed,TEER 1,1,0,80924,CELPIP,8.2,No French,58372,21559,10433,Employer,0,0,0,0,0,0,0,1
+43,Philippines,USA,Single,0,Bachelor's,Business,0,4,4,Employed,TEER 3,0,0,0,No Test,4.1,No French,58935,8770,2210,Self,0,0,0,0,1,0,0,0
+27,USA,Nigeria,Married,0,High School,Computer Science,0,3,0,Employed,TEER 0,0,0,0,CELPIP,5.7,No French,49108,48530,14431,Self,0,0,0,0,1,0,0,0
+43,Nigeria,UAE,Single,0,Bachelor's,Engineering,1,7,4,Employed,TEER 0,1,0,115189,CELPIP,8.1,No French,44203,205561,5071,Employer,0,0,0,0,0,0,0,1
+51,India,Canada,Married,2,Master's,Healthcare,1,5,2,Employed,TEER 2,1,1,59583,IELTS,7.0,No French,36310,12730,3119,Employer,1,0,0,1,0,0,0,1
+58,China,China,Married,0,Diploma,Business,0,6,1,Employed,TEER 0,1,1,84236,CELPIP,6.1,Basic,29700,49180,4253,Self,1,0,1,0,0,0,0,0
+24,UK,India,Single,0,Diploma,Computer Science,1,3,2,Employed,TEER 0,0,0,0,IELTS,5.7,No French,43063,54586,9889,Self,1,0,0,0,0,0,0,1
+21,India,India,Married,1,Master's,Other,1,1,1,Employed,TEER 2,1,1,76299,Other,6.1,No French,19308,141502,5818,Self,1,0,0,0,0,0,1,1
+28,India,India,Married,1,Bachelor's,Finance,1,5,4,Self-employed,TEER 1,0,0,0,IELTS,9.3,No French,33122,13491,58,Self,0,0,0,1,1,0,0,1
+46,India,India,Single,2,High School,Information Technology,0,8,0,Employed,TEER 2,1,1,46564,CELPIP,8.4,Advanced,67137,38268,20441,Self,0,0,0,0,1,0,0,1
+53,UK,Canada,Married,2,Bachelor's,Business,1,7,6,Employed,TEER 3,1,1,107861,IELTS,7.6,Basic,46970,9495,546,Self,0,0,0,0,0,0,0,1
+42,Brazil,Nigeria,Single,0,Bachelor's,Engineering,0,3,3,Employed,TEER 1,0,0,0,IELTS,9.3,No French,62853,27507,22325,Family,0,1,0,0,0,0,0,1
+38,Nigeria,UK,Married,2,Bachelor's,Engineering,1,5,5,Employed,TEER 0,0,0,0,IELTS,8.0,No French,74392,33506,228,Family,0,1,0,0,0,0,0,0
+53,USA,Nigeria,Single,0,Master's,Information Technology,1,9,8,Self-employed,TEER 0,1,0,92799,IELTS,8.4,No French,41459,36784,11791,Employer,0,0,0,0,0,0,0,1
+27,USA,Brazil,Married,4,Master's,Engineering,1,5,2,Employed,TEER 0,1,1,64177,IELTS,6.6,No French,49146,8803,6120,Self,0,0,0,0,0,0,0,1
+54,China,USA,Single,0,Bachelor's,Business,1,6,1,Employed,TEER 0,0,0,0,IELTS,7.9,Basic,38963,50216,5637,Self,0,1,0,0,1,0,0,0
+26,Pakistan,Philippines,Married,4,Master's,Engineering,0,4,4,Employed,TEER 0,1,1,107358,CELPIP,6.1,No French,28747,16660,604,Employer,1,0,0,0,0,0,0,1
+41,India,UK,Single,2,Bachelor's,Healthcare,1,6,4,Employed,TEER 1,1,1,53421,IELTS,7.1,No French,25940,9095,2182,Family,1,0,0,0,0,0,0,1
+52,India,UK,Single,0,Master's,Healthcare,1,6,0,Employed,TEER 1,0,0,0,Other,5.6,No French,61863,22551,12024,Employer,0,0,0,0,0,0,0,0
+52,Philippines,Nigeria,Married,1,Bachelor's,Healthcare,1,5,2,Self-employed,TEER 2,1,1,61612,IELTS,6.4,Basic,49172,52759,17750,Other,0,0,1,0,0,0,0,0
+53,India,UK,Married,4,Master's,Computer Science,1,6,0,Unemployed,TEER 3,1,0,52050,IELTS,5.8,No French,81932,88347,6025,Employer,0,1,0,0,0,0,0,0
+35,China,Germany,Married,2,Master's,Business,1,4,0,Employed,TEER 2,1,1,80910,IELTS,7.1,Basic,64441,37478,3487,Self,0,1,0,0,0,0,0,1
+56,France,Germany,Married,0,High School,Engineering,1,4,1,Self-employed,TEER 1,0,0,0,IELTS,8.9,No French,30375,3140,494,Self,0,1,0,0,0,0,0,0
+49,India,Brazil,Married,1,Master's,Information Technology,1,7,2,Employed,TEER 0,1,1,35958,IELTS,7.0,No French,61806,6616,9170,Self,1,0,0,0,0,0,0,1
+41,India,Philippines,Married,0,Master's,Information Technology,1,7,1,Unemployed,TEER 2,0,0,0,IELTS,8.8,No French,38898,4983,2610,Family,0,0,0,0,1,0,0,1
+40,Nigeria,UAE,Single,0,Master's,Engineering,1,5,2,Self-employed,TEER 1,1,1,88477,IELTS,8.1,No French,69337,5667,452,Self,0,0,0,0,1,0,0,1
+49,France,Canada,Married,0,Diploma,Finance,0,3,0,Employed,TEER 0,1,0,78740,CELPIP,7.5,Intermediate,35273,15073,8769,Family,0,0,0,0,0,0,0,0
+54,Philippines,Nigeria,Married,0,Master's,Information Technology,0,3,3,Employed,TEER 3,1,1,86402,IELTS,6.4,Basic,23951,13330,5319,Self,0,0,0,0,0,0,0,1
+29,Nigeria,Canada,Divorced,2,Master's,Business,0,3,1,Employed,TEER 1,1,1,62203,IELTS,9.2,No French,29084,6017,96,Family,0,0,0,0,0,0,0,1
+30,India,UAE,Common-Law,0,Diploma,Computer Science,1,2,2,Employed,TEER 0,0,0,0,CELPIP,5.7,No French,30106,56476,940,Self,0,0,0,1,1,0,0,1
+40,India,Nigeria,Single,2,PhD,Engineering,1,6,2,Employed,TEER 3,1,1,74734,CELPIP,8.3,No French,28194,26890,9610,Self,0,0,0,0,0,1,0,1
+42,Vietnam,Nigeria,Single,0,High School,Other,0,3,3,Self-employed,TEER 3,0,0,0,IELTS,8.0,No French,33547,42797,526,Employer,0,0,0,0,1,0,0,0
+52,Vietnam,Philippines,Married,0,Diploma,Business,1,3,0,Self-employed,TEER 1,1,1,77016,CELPIP,7.3,No French,62133,14612,16077,Self,0,0,0,0,0,1,1,0
+58,India,Canada,Married,0,Bachelor's,Computer Science,0,11,6,Self-employed,TEER 1,1,0,69447,Other,6.5,No French,80920,16200,2983,Self,1,0,0,0,0,0,0,1
+47,France,Germany,Married,0,Bachelor's,Engineering,1,4,4,Unemployed,TEER 1,1,1,67659,IELTS,7.2,Basic,18396,12554,742,Self,0,0,0,0,1,0,0,1
+34,Brazil,India,Married,0,Bachelor's,Information Technology,1,10,3,Self-employed,TEER 2,0,0,0,IELTS,9.0,Basic,70270,17425,11408,Employer,1,0,0,0,0,0,0,1
+37,Pakistan,Canada,Married,0,High School,Engineering,0,8,5,Employed,TEER 0,0,0,0,Other,8.8,No French,35445,26564,5945,Employer,0,1,0,1,0,0,0,0
+42,Nigeria,USA,Single,1,PhD,Business,0,3,3,Employed,TEER 1,0,0,0,IELTS,9.3,Basic,51957,19980,2929,Employer,1,0,0,0,0,0,0,1
+39,Nigeria,USA,Married,0,High School,Business,1,7,5,Employed,TEER 4/5,1,1,128981,IELTS,6.7,No French,11917,48491,4168,Employer,0,0,0,0,0,0,0,1
+30,Nigeria,Nigeria,Single,0,Diploma,Information Technology,1,5,2,Employed,TEER 1,0,0,0,IELTS,7.0,No French,55480,60599,173,Family,0,0,0,0,0,0,0,1
+36,Brazil,India,Single,0,High School,Finance,0,3,0,Employed,TEER 3,1,1,106281,CELPIP,5.6,No French,8000,18857,8694,Self,0,0,0,0,0,0,0,1
+53,India,China,Married,2,Bachelor's,Engineering,1,5,2,Employed,TEER 4/5,0,0,0,Other,9.3,No French,51278,9852,3642,Self,0,0,0,0,0,0,0,0
+29,India,UAE,Married,3,Master's,Information Technology,1,6,3,Self-employed,TEER 1,0,0,0,CELPIP,6.8,Basic,50145,75598,10015,Self,0,1,0,0,0,0,0,0
+58,Philippines,Brazil,Single,0,Bachelor's,Engineering,1,5,4,Self-employed,TEER 2,1,1,48945,No Test,4.4,Basic,48820,36204,7914,Self,1,0,0,1,0,0,0,1
+36,UK,India,Single,0,Master's,Healthcare,1,5,4,Employed,TEER 0,1,1,81073,IELTS,9.1,No French,30301,28550,8427,Family,0,0,0,0,0,0,0,1
+29,India,Brazil,Divorced,0,High School,Engineering,0,2,2,Self-employed,TEER 2,0,0,0,IELTS,7.6,No French,55990,37202,12596,Self,0,0,0,1,0,0,0,1
+26,Brazil,Canada,Single,3,Bachelor's,Engineering,0,6,1,Employed,TEER 2,0,0,0,CELPIP,7.8,No French,52821,4975,7979,Self,0,0,0,0,0,0,0,0
+24,Vietnam,Canada,Married,0,Bachelor's,Engineering,1,4,2,Self-employed,TEER 0,1,0,76218,No Test,4.7,No French,40800,4750,4340,Self,0,0,0,1,0,0,0,1
+45,India,Brazil,Married,0,Bachelor's,Computer Science,1,4,1,Employed,TEER 2,0,0,0,IELTS,7.5,Basic,58437,7154,3953,Self,1,0,0,0,1,0,0,0
+31,Brazil,UAE,Married,0,High School,Business,1,7,6,Employed,TEER 2,0,0,0,IELTS,9.2,Advanced,43087,6988,1018,Family,0,1,0,0,0,0,0,1
+48,Nigeria,India,Married,0,Bachelor's,Engineering,1,5,2,Self-employed,TEER 1,1,0,43409,IELTS,7.7,No French,55575,16647,12092,Self,0,0,0,1,0,0,0,1
+36,Pakistan,China,Single,0,Bachelor's,Computer Science,1,6,1,Employed,TEER 0,1,0,80175,IELTS,6.5,Basic,42482,7281,11453,Family,1,0,0,0,1,1,1,0
+33,India,Nigeria,Married,2,Master's,Business,1,6,1,Employed,TEER 0,0,0,0,IELTS,5.6,No French,49334,51193,2262,Self,0,0,0,0,0,0,0,0
+22,Brazil,Philippines,Single,0,Bachelor's,Finance,1,2,1,Employed,TEER 1,1,1,77187,IELTS,6.8,No French,56494,24574,15883,Other,0,0,0,0,0,0,0,1
+52,USA,Canada,Married,1,Diploma,Finance,1,3,2,Employed,TEER 4/5,1,1,17687,Other,7.8,No French,37041,14482,7113,Self,1,1,0,0,0,0,0,1
+29,France,USA,Single,0,Bachelor's,Information Technology,0,5,5,Unemployed,TEER 3,0,0,0,IELTS,5.7,Basic,20323,4804,5211,Self,0,1,0,0,0,0,0,0
+42,Brazil,UAE,Married,0,Diploma,Computer Science,1,4,1,Employed,TEER 1,0,0,0,CELPIP,7.9,No French,50521,25352,141,Family,0,0,0,0,1,0,0,1
+38,Nigeria,Philippines,Single,3,Master's,Engineering,1,8,0,Self-employed,TEER 1,0,0,0,IELTS,7.6,Intermediate,68787,6097,3859,Self,0,1,0,0,0,0,0,0
+53,China,China,Single,0,Bachelor's,Computer Science,0,3,3,Employed,TEER 1,1,1,41057,IELTS,8.6,No French,50983,36988,8188,Self,0,0,0,0,0,0,0,1
+40,Pakistan,UK,Single,2,Diploma,Finance,1,2,1,Employed,TEER 0,0,0,0,IELTS,5.6,No French,51362,43583,752,Self,0,0,0,0,0,0,0,0
+33,China,Nigeria,Single,1,PhD,Computer Science,1,1,1,Employed,TEER 1,0,0,0,Other,8.6,No French,44156,22630,4923,Self,0,0,0,1,0,0,0,1
+56,India,Canada,Married,0,Bachelor's,Information Technology,1,7,5,Employed,TEER 1,1,0,58035,IELTS,7.6,Basic,59782,7051,40209,Employer,0,0,0,1,0,0,0,1
+59,France,Nigeria,Single,3,High School,Engineering,0,3,1,Employed,TEER 1,0,0,0,Other,7.0,No French,41281,41645,10085,Self,0,1,0,0,0,0,0,0
+56,Brazil,Philippines,Common-Law,0,Bachelor's,Information Technology,1,2,0,Employed,TEER 4/5,0,0,0,CELPIP,9.4,Basic,35922,12198,6332,Family,0,0,0,0,1,0,0,0
+31,Brazil,Nigeria,Divorced,2,Diploma,Business,1,4,0,Employed,TEER 2,0,0,0,IELTS,6.1,No French,67105,9296,6091,Self,0,0,0,0,1,0,0,0
+48,India,UK,Married,0,Master's,Engineering,1,6,1,Employed,TEER 2,0,0,0,IELTS,7.7,No French,34389,18898,358,Self,0,0,0,0,0,0,0,0
+22,Brazil,Philippines,Single,2,Master's,Computer Science,1,2,1,Employed,TEER 0,1,1,51600,CELPIP,6.8,Basic,62789,66984,25231,Self,1,0,0,1,0,0,0,1
+52,Philippines,Canada,Single,0,PhD,Information Technology,1,7,5,Employed,TEER 4/5,1,1,66753,IELTS,7.6,No French,67118,11823,21068,Employer,0,0,0,0,0,0,0,1
+40,Brazil,India,Married,1,Bachelor's,Engineering,0,4,3,Employed,TEER 2,0,0,0,IELTS,7.7,Basic,56336,61999,9175,Self,0,0,1,1,0,0,0,0
+46,India,USA,Single,2,Bachelor's,Computer Science,1,10,0,Employed,TEER 3,0,0,0,IELTS,5.9,No French,20015,4378,834,Other,0,0,0,1,1,0,0,1
+60,Brazil,Philippines,Single,3,Master's,Healthcare,1,8,7,Employed,TEER 1,0,0,0,IELTS,8.1,No French,45543,5180,1863,Self,0,0,0,0,0,0,0,1
+28,Vietnam,Germany,Married,3,Diploma,Engineering,1,6,5,Employed,TEER 1,1,1,120622,Other,8.0,Basic,40960,32979,1625,Family,0,1,0,0,0,0,0,1
+35,India,UK,Married,2,Bachelor's,Healthcare,1,7,4,Employed,TEER 1,1,1,94082,IELTS,8.6,Intermediate,35080,8286,5864,Employer,0,0,0,1,0,0,0,1
+29,Vietnam,Philippines,Married,2,Bachelor's,Finance,1,3,2,Employed,TEER 0,1,0,96753,IELTS,5.9,No French,47855,12517,1863,Self,1,0,0,0,1,0,0,1
+26,Nigeria,Philippines,Single,0,High School,Finance,0,4,4,Employed,TEER 2,0,0,0,IELTS,6.7,No French,60384,6665,9520,Family,0,0,0,0,0,0,0,0
+27,Pakistan,Germany,Married,0,Bachelor's,Finance,1,7,6,Employed,TEER 3,1,0,82843,CELPIP,8.1,No French,35828,13095,6303,Self,0,1,0,0,0,0,0,1
+61,USA,Canada,Single,0,Master's,Information Technology,0,5,4,Self-employed,TEER 0,0,0,0,CELPIP,6.0,No French,41572,11228,142,Self,0,0,0,0,0,0,0,0
+34,China,Philippines,Single,0,Master's,Computer Science,1,4,0,Self-employed,TEER 0,1,1,95106,No Test,5.5,No French,40178,36327,10902,Self,0,0,0,0,0,0,0,1
+55,UK,USA,Common-Law,0,High School,Information Technology,0,4,0,Employed,TEER 2,1,1,75571,CELPIP,5.7,No French,68277,33268,1674,Employer,1,0,0,1,0,0,0,1
+24,Pakistan,Nigeria,Single,1,High School,Finance,0,4,3,Employed,TEER 1,1,1,82892,IELTS,6.8,Basic,39857,80486,13938,Self,0,0,0,1,0,0,0,1
+30,Nigeria,Canada,Single,0,Diploma,Other,1,5,5,Employed,TEER 2,0,0,0,IELTS,8.9,Basic,20311,35222,3508,Self,0,0,0,0,0,0,1,0
+57,Philippines,USA,Single,1,Master's,Business,1,4,3,Self-employed,TEER 2,0,0,0,IELTS,8.6,No French,13531,32671,3307,Other,0,0,0,1,0,0,0,1
+59,Brazil,Canada,Common-Law,0,Diploma,Computer Science,1,3,0,Employed,TEER 1,0,0,0,CELPIP,8.1,Basic,52254,32620,95,Self,0,0,0,0,1,0,0,0
+26,USA,USA,Married,0,Bachelor's,Finance,0,6,5,Self-employed,TEER 2,0,0,0,CELPIP,9.0,No French,29786,56632,35204,Self,0,0,0,1,0,0,0,1
+44,UK,UK,Married,1,Diploma,Engineering,1,8,8,Employed,TEER 1,1,1,63134,No Test,4.4,No French,58374,11782,7574,Other,1,0,0,0,0,0,0,1
+19,USA,USA,Married,2,Bachelor's,Computer Science,1,0,0,Employed,TEER 3,1,0,93270,CELPIP,7.6,Basic,18375,11920,4395,Self,1,0,0,1,0,0,0,1
+22,Nigeria,Brazil,Single,2,Bachelor's,Engineering,1,2,0,Employed,TEER 2,0,0,0,IELTS,9.4,Basic,34221,36793,812,Self,1,0,1,0,0,0,0,0
+46,USA,USA,Married,1,Master's,Computer Science,0,3,2,Employed,TEER 3,0,0,0,IELTS,8.3,No French,18388,9492,9609,Employer,0,0,0,0,0,0,0,0
+54,India,India,Single,0,Diploma,Engineering,1,5,4,Employed,TEER 0,1,1,54098,IELTS,7.9,Basic,53692,63766,2658,Self,1,0,0,0,1,0,0,1
+55,China,India,Single,1,Bachelor's,Information Technology,1,5,3,Employed,TEER 0,0,0,0,IELTS,7.1,No French,57976,22131,35572,Self,0,0,0,0,0,0,0,0
+36,India,UAE,Married,0,Diploma,Engineering,1,10,3,Self-employed,TEER 0,1,0,89093,IELTS,9.1,Basic,51772,11921,24053,Self,0,0,0,0,1,0,0,1
+25,Philippines,Brazil,Common-Law,0,Bachelor's,Healthcare,1,4,1,Self-employed,TEER 1,1,0,71065,IELTS,6.7,No French,23281,40413,10633,Family,0,0,0,0,0,0,0,1
+18,Philippines,Brazil,Single,0,Master's,Business,0,0,0,Employed,TEER 3,1,1,93725,IELTS,5.5,Basic,30084,12360,28343,Self,0,1,0,0,0,0,0,0
+39,Philippines,Nigeria,Single,0,Diploma,Healthcare,1,9,6,Employed,TEER 1,0,0,0,CELPIP,6.3,No French,49686,85609,893,Self,0,0,1,0,0,0,0,0
+34,Brazil,Brazil,Single,0,Master's,Engineering,0,5,2,Employed,TEER 3,1,1,62449,IELTS,5.9,No French,11245,104847,2627,Self,0,0,0,0,0,0,0,1
+24,Philippines,Nigeria,Single,3,Bachelor's,Business,1,4,0,Employed,TEER 1,1,0,74260,IELTS,6.8,No French,40177,30475,2336,Self,0,1,0,1,0,0,0,1
+42,Nigeria,UAE,Common-Law,3,Diploma,Finance,1,2,0,Self-employed,TEER 1,1,1,52209,IELTS,8.8,No French,75338,6015,597,Family,0,0,0,1,1,0,0,1
+21,India,UAE,Married,0,Bachelor's,Computer Science,1,1,0,Employed,TEER 3,1,1,39528,IELTS,8.1,No French,41400,10636,28669,Self,0,0,0,0,0,1,0,0
+53,Philippines,UK,Married,0,Diploma,Engineering,0,4,3,Employed,TEER 1,1,1,71226,No Test,4.3,Intermediate,15229,21111,494,Family,0,0,0,0,1,0,1,0
+23,India,India,Married,0,Bachelor's,Information Technology,1,3,0,Unemployed,TEER 2,1,1,93268,IELTS,8.7,Basic,32851,50670,15541,Self,0,0,0,1,0,0,0,1
+48,India,USA,Single,0,Master's,Computer Science,1,2,2,Unemployed,TEER 0,1,0,106206,No Test,5.5,No French,32386,8110,11693,Self,0,0,0,0,1,0,0,1
+36,China,USA,Married,3,Diploma,Healthcare,1,8,1,Employed,TEER 4/5,0,0,0,IELTS,7.6,Basic,87806,5756,3771,Self,0,0,0,1,0,0,0,1
+61,Brazil,Germany,Single,0,Bachelor's,Business,1,3,3,Employed,TEER 1,1,1,94130,IELTS,6.9,No French,78313,4934,151,Self,0,0,0,0,0,0,0,1
+56,China,Germany,Married,2,Master's,Computer Science,1,5,4,Employed,TEER 2,1,1,92003,IELTS,9.0,No French,59618,20679,48,Self,0,0,0,1,1,0,0,1
+44,Nigeria,China,Divorced,0,Master's,Business,1,4,2,Employed,TEER 0,1,1,104809,IELTS,6.8,Intermediate,38138,57005,1825,Family,0,0,0,1,1,0,0,1
+27,Philippines,Canada,Married,4,Bachelor's,Business,1,5,3,Unemployed,TEER 1,0,0,0,IELTS,5.9,No French,69012,4082,5447,Family,0,0,0,0,0,0,0,1
+43,Pakistan,UK,Single,0,PhD,Finance,1,7,7,Employed,TEER 3,0,0,0,CELPIP,6.7,Basic,22330,8966,4898,Self,0,0,0,0,0,1,0,0
+36,Nigeria,China,Married,2,Bachelor's,Information Technology,1,6,4,Employed,TEER 3,1,1,79544,IELTS,8.4,Basic,66531,32543,7041,Family,0,0,0,0,0,0,0,1
+56,Nigeria,China,Single,0,Bachelor's,Finance,1,7,1,Employed,TEER 0,0,0,0,IELTS,8.1,No French,63559,46697,11825,Other,1,0,1,0,0,0,0,0
+20,India,Philippines,Single,1,Master's,Information Technology,1,0,0,Self-employed,TEER 1,0,0,0,IELTS,6.3,No French,41973,44178,3790,Self,1,0,0,0,0,1,0,0
+30,Philippines,Philippines,Single,0,Bachelor's,Engineering,1,8,5,Self-employed,TEER 1,0,0,0,IELTS,5.9,No French,67783,41435,1398,Self,0,0,0,0,0,0,0,1
+45,Philippines,China,Single,0,Bachelor's,Computer Science,1,3,3,Unemployed,TEER 0,1,1,70543,Other,8.1,Advanced,36055,6475,12877,Family,1,0,0,1,0,0,0,1
+37,Philippines,Brazil,Married,3,Bachelor's,Computer Science,1,6,6,Employed,TEER 2,1,1,81114,Other,8.2,No French,19698,15655,3236,Self,0,0,0,0,0,0,0,1
+45,China,Canada,Married,3,Master's,Business,1,6,0,Self-employed,TEER 0,0,0,0,IELTS,7.0,No French,64559,107570,2704,Family,1,0,0,0,0,0,0,0
+25,China,UK,Common-Law,2,Master's,Engineering,1,5,5,Employed,TEER 1,0,0,0,IELTS,8.9,No French,43295,115492,11561,Other,1,0,0,1,0,0,0,1
+58,China,China,Married,1,Bachelor's,Information Technology,1,3,0,Employed,TEER 2,0,0,0,IELTS,9.4,No French,57035,26059,21761,Self,0,0,0,0,0,0,1,0
+56,UK,USA,Married,2,Bachelor's,Computer Science,1,1,0,Employed,TEER 1,1,1,78325,No Test,4.5,Basic,81417,33883,19717,Employer,0,0,0,1,1,0,0,1
+18,USA,Canada,Single,0,Bachelor's,Healthcare,1,0,0,Self-employed,TEER 2,1,1,98580,IELTS,7.8,No French,30554,78543,1182,Self,0,0,0,1,0,0,0,1
+20,UK,Philippines,Single,0,Bachelor's,Computer Science,0,0,0,Unemployed,TEER 4/5,0,0,0,CELPIP,5.5,Advanced,42132,17942,5595,Self,1,0,0,0,0,0,0,0
+30,France,USA,Married,0,Diploma,Business,1,2,0,Employed,TEER 0,0,0,0,IELTS,8.4,No French,76392,6679,779,Self,0,0,0,1,0,0,0,1
+45,India,Philippines,Single,1,Master's,Computer Science,1,4,3,Employed,TEER 2,1,1,69763,No Test,5.1,No French,58374,30637,25948,Self,0,0,1,1,1,0,0,1
+42,India,Philippines,Married,0,Bachelor's,Computer Science,0,10,1,Self-employed,TEER 0,1,1,74430,IELTS,6.3,No French,31004,83535,1938,Self,0,0,0,0,0,0,0,1
+50,India,Canada,Single,0,Bachelor's,Information Technology,1,3,0,Employed,TEER 1,1,0,60763,IELTS,8.5,Intermediate,25899,32867,1759,Self,1,0,0,1,0,0,0,1
+55,Brazil,Philippines,Single,1,Diploma,Engineering,1,11,1,Unemployed,TEER 0,0,0,0,CELPIP,8.7,No French,34438,43654,17577,Family,0,1,0,0,0,0,0,0
+23,Pakistan,UAE,Single,2,Diploma,Information Technology,1,2,1,Employed,TEER 0,0,0,0,No Test,5.4,No French,30231,16736,27498,Self,0,0,0,0,0,1,0,0
+61,India,India,Single,0,Master's,Information Technology,1,3,1,Employed,TEER 1,0,0,0,No Test,4.6,No French,49746,5535,9568,Self,0,0,0,0,0,0,1,0
+49,France,UAE,Single,0,Bachelor's,Other,1,3,1,Employed,TEER 1,0,0,0,CELPIP,6.8,No French,46568,7624,1031,Self,0,1,0,0,0,0,0,0
+38,India,India,Married,0,Diploma,Healthcare,1,2,1,Employed,TEER 3,1,1,100337,CELPIP,8.0,No French,50584,104361,5322,Self,0,0,0,0,0,0,0,1
+33,France,Germany,Single,0,Bachelor's,Computer Science,1,3,2,Employed,TEER 2,0,0,0,IELTS,8.7,No French,28183,19990,13568,Self,0,0,0,0,0,0,0,1
+38,Philippines,Germany,Married,0,Bachelor's,Engineering,1,6,4,Employed,TEER 4/5,0,0,0,CELPIP,7.7,No French,43583,3302,6797,Family,1,0,0,1,0,0,0,1
+28,India,Philippines,Single,1,High School,Finance,1,6,2,Employed,TEER 1,0,0,0,Other,7.8,No French,8000,80732,1137,Self,0,0,0,0,0,0,0,0
+54,Nigeria,UK,Single,1,Bachelor's,Information Technology,1,7,3,Employed,TEER 0,0,0,0,IELTS,8.7,Basic,47900,20217,1508,Family,1,0,0,0,0,0,0,1
+53,Philippines,UK,Single,1,Bachelor's,Computer Science,0,3,3,Unemployed,TEER 1,1,1,42913,CELPIP,7.6,No French,68508,48238,15969,Self,0,0,1,0,0,0,0,0
+52,Philippines,India,Married,0,Bachelor's,Business,1,5,3,Employed,TEER 1,0,0,0,IELTS,7.9,No French,16505,22877,5989,Family,0,0,0,0,1,0,0,1
+36,Philippines,USA,Single,2,Bachelor's,Healthcare,1,2,0,Employed,TEER 1,0,0,0,IELTS,7.6,No French,54668,5681,9788,Self,0,0,0,0,0,0,0,0
+37,USA,Canada,Married,0,Bachelor's,Engineering,1,5,0,Self-employed,TEER 2,0,0,0,Other,9.0,No French,32779,26899,3735,Self,0,0,0,0,1,0,0,1
+35,China,Philippines,Single,0,PhD,Computer Science,0,4,0,Employed,TEER 1,1,1,56001,IELTS,6.4,No French,61050,151808,6082,Family,0,0,0,0,0,0,0,1
+58,Philippines,Canada,Married,2,Bachelor's,Computer Science,1,1,0,Employed,TEER 1,0,0,0,IELTS,6.6,No French,48172,3883,30214,Self,0,1,0,1,0,0,0,0
+31,China,UAE,Single,0,Diploma,Healthcare,1,3,3,Employed,TEER 0,1,1,126549,IELTS,6.0,No French,53094,49096,3200,Employer,0,0,0,1,0,0,0,1
+32,UK,UK,Married,0,Diploma,Computer Science,1,3,1,Self-employed,TEER 0,1,1,40896,IELTS,8.8,No French,46296,9712,8986,Family,1,0,0,1,0,0,0,1
+48,Philippines,Brazil,Married,2,Bachelor's,Engineering,1,8,5,Self-employed,TEER 0,1,1,54135,IELTS,7.1,No French,71566,15516,1514,Self,0,1,0,0,0,0,0,1
+18,Nigeria,UAE,Common-Law,0,Master's,Engineering,1,0,0,Employed,TEER 0,0,0,0,Other,6.9,Advanced,51948,14658,1038,Employer,0,0,0,0,0,0,0,1
+20,India,UAE,Single,1,Diploma,Information Technology,1,0,0,Self-employed,TEER 2,1,1,89286,CELPIP,9.4,Advanced,30891,60265,12246,Employer,1,0,0,0,0,0,0,1
+33,India,India,Single,0,Bachelor's,Finance,1,5,1,Employed,TEER 0,1,1,95092,Other,9.2,Basic,46974,20554,14868,Self,0,0,0,0,0,0,0,1
+40,Brazil,Nigeria,Single,1,High School,Business,0,6,4,Employed,TEER 2,0,0,0,IELTS,9.4,No French,37622,17817,8828,Self,1,0,0,0,0,0,0,1
+28,India,UAE,Married,0,Bachelor's,Business,1,3,3,Self-employed,TEER 1,0,0,0,Other,6.1,No French,48247,45597,1377,Self,1,0,0,1,0,0,0,1
+29,China,Philippines,Married,0,Master's,Computer Science,1,9,7,Employed,TEER 0,0,0,0,CELPIP,9.1,Basic,36604,4253,2201,Self,0,0,0,0,0,0,0,1
+27,UK,China,Married,1,Bachelor's,Computer Science,1,5,5,Self-employed,TEER 2,1,0,51226,IELTS,6.8,No French,31463,5260,19368,Self,0,0,0,0,1,0,0,1
+49,India,China,Single,0,Bachelor's,Engineering,1,5,5,Employed,TEER 1,0,0,0,CELPIP,5.6,No French,48985,3548,2725,Family,0,0,0,0,0,0,0,0
+33,China,Philippines,Single,0,Diploma,Computer Science,1,3,1,Employed,TEER 0,1,0,51521,No Test,4.1,No French,46115,32117,13667,Family,0,0,0,1,1,0,0,1
+25,Philippines,Nigeria,Single,0,Bachelor's,Other,1,5,0,Unemployed,TEER 3,1,1,113000,IELTS,7.5,No French,66279,21643,2694,Family,1,0,0,0,0,0,0,1
+55,Vietnam,Nigeria,Divorced,0,High School,Computer Science,1,2,1,Employed,TEER 0,1,0,63472,IELTS,5.9,Basic,36700,55191,22435,Family,0,1,0,0,0,0,0,0
+29,Nigeria,India,Married,0,Master's,Engineering,1,5,5,Unemployed,TEER 0,0,0,0,Other,7.7,Basic,8000,20255,19669,Self,0,0,1,1,1,0,0,1
+41,USA,UK,Common-Law,0,Diploma,Information Technology,1,4,3,Unemployed,TEER 2,1,1,67645,IELTS,8.8,Basic,37722,9269,353,Self,0,0,0,0,0,0,0,1
+45,China,Canada,Single,3,Master's,Healthcare,1,6,1,Self-employed,TEER 2,1,1,64461,CELPIP,7.0,Basic,12471,43887,11771,Family,1,0,0,0,0,0,0,1
+25,India,Nigeria,Married,0,Bachelor's,Computer Science,1,4,1,Employed,TEER 1,1,1,35974,IELTS,6.9,No French,53313,11714,1485,Self,1,0,0,0,1,0,0,1
+45,Brazil,Brazil,Married,0,Bachelor's,Engineering,1,5,2,Employed,TEER 0,1,0,91159,IELTS,6.9,Basic,11522,71600,1939,Family,0,0,1,0,0,0,0,0
+53,France,India,Single,0,Bachelor's,Information Technology,1,3,2,Self-employed,TEER 3,0,0,0,CELPIP,9.2,No French,25232,10206,4927,Self,0,1,0,0,0,0,0,0
+43,China,Germany,Married,0,Master's,Finance,1,5,4,Employed,TEER 1,0,0,0,IELTS,5.7,No French,37753,7589,6870,Self,0,0,0,1,0,0,0,1
+25,USA,USA,Common-Law,3,Diploma,Computer Science,1,5,3,Employed,TEER 0,1,1,44004,CELPIP,7.3,No French,75879,19997,3153,Self,1,0,0,0,0,0,0,1
+45,Pakistan,Germany,Common-Law,0,Diploma,Finance,1,3,2,Unemployed,TEER 1,1,0,95672,IELTS,6.6,Basic,23542,4295,6852,Self,0,1,0,0,0,0,0,0
+45,India,India,Married,3,Bachelor's,Business,0,7,2,Employed,TEER 3,1,1,41782,IELTS,9.1,Advanced,45248,3927,1496,Self,0,1,0,0,0,0,0,1
+54,India,UAE,Single,0,High School,Information Technology,0,4,3,Unemployed,TEER 0,0,0,0,IELTS,5.9,No French,56599,20130,180,Self,0,0,0,0,0,0,0,0
+58,China,Canada,Single,2,Diploma,Business,1,2,1,Employed,TEER 2,1,1,58103,IELTS,7.1,No French,74681,9055,6774,Self,1,0,0,1,0,0,0,1
+53,Nigeria,USA,Divorced,1,Master's,Computer Science,1,12,12,Employed,TEER 1,1,1,53727,IELTS,7.1,No French,60555,3234,5828,Self,1,0,0,0,0,0,0,1
+44,USA,Germany,Single,2,PhD,Other,1,4,4,Employed,TEER 1,1,0,83466,CELPIP,9.1,No French,66878,11776,9360,Self,0,1,0,1,1,0,0,1
+34,Pakistan,USA,Married,1,Bachelor's,Engineering,1,2,0,Employed,TEER 2,1,0,55160,No Test,4.5,No French,62286,19221,8394,Self,1,0,0,0,0,0,0,0
+26,Philippines,Brazil,Married,1,Master's,Information Technology,1,6,2,Self-employed,TEER 4/5,1,1,62443,Other,8.1,Basic,20817,15533,18222,Employer,0,0,0,0,0,0,0,1
+50,India,Brazil,Married,0,Bachelor's,Information Technology,1,1,1,Employed,TEER 0,1,1,85787,IELTS,6.0,No French,52193,6639,4921,Self,0,0,0,0,0,0,0,1
+37,USA,Brazil,Divorced,0,Diploma,Computer Science,1,0,0,Unemployed,TEER 0,1,0,24559,Other,9.3,No French,61973,24668,67,Self,0,0,0,1,0,0,0,1
+30,Philippines,India,Single,3,Bachelor's,Other,1,3,0,Employed,TEER 3,1,1,114133,Other,7.9,Basic,25869,33975,7968,Family,0,0,0,0,0,0,0,1
+45,USA,Canada,Single,0,Bachelor's,Computer Science,1,10,6,Employed,TEER 2,0,0,0,IELTS,8.0,No French,33404,31139,8994,Employer,0,0,0,0,1,0,0,1
+46,Nigeria,India,Single,0,PhD,Healthcare,1,2,0,Employed,TEER 1,1,1,49554,IELTS,7.2,No French,28936,15512,5896,Self,1,0,0,0,1,0,0,1
+30,Brazil,China,Single,2,Diploma,Engineering,1,9,1,Employed,TEER 1,1,0,55620,IELTS,6.9,Basic,60452,6700,9351,Self,1,0,0,0,0,0,0,1
+52,India,UAE,Single,0,Bachelor's,Finance,1,3,0,Employed,TEER 2,0,0,0,IELTS,6.4,Basic,43614,20303,3127,Self,0,0,0,0,0,1,0,0
+23,Brazil,UAE,Single,3,High School,Information Technology,0,3,1,Employed,TEER 2,0,0,0,No Test,4.6,No French,38583,58280,1288,Self,1,0,0,0,0,0,0,0
+35,Nigeria,Brazil,Married,2,Diploma,Engineering,1,5,5,Employed,TEER 3,1,0,108509,IELTS,9.3,No French,19366,18811,8738,Family,1,0,0,0,0,0,0,1
+22,China,China,Common-Law,1,High School,Engineering,0,2,1,Employed,TEER 1,0,0,0,CELPIP,6.9,No French,43652,8443,2250,Other,0,0,0,0,0,0,0,0
+42,India,Nigeria,Single,2,PhD,Healthcare,1,8,2,Employed,TEER 1,1,0,84524,IELTS,9.0,No French,33648,5441,4875,Family,0,0,0,0,0,0,0,1
+19,UK,Nigeria,Single,0,Master's,Computer Science,0,0,0,Self-employed,TEER 2,0,0,0,IELTS,6.1,No French,49866,75027,5412,Other,0,0,0,0,0,0,0,0
+27,Pakistan,Brazil,Common-Law,0,Master's,Computer Science,1,5,5,Employed,TEER 1,0,0,0,IELTS,9.2,No French,22140,36967,5188,Self,0,0,0,0,0,0,0,1
+47,India,Germany,Single,0,Bachelor's,Computer Science,1,4,1,Employed,TEER 1,1,1,102800,No Test,4.4,Basic,48558,12384,7299,Employer,1,0,0,0,0,0,0,1
+22,India,India,Single,0,Bachelor's,Business,1,2,0,Employed,TEER 1,1,1,62220,IELTS,7.0,No French,36220,11751,239,Self,1,0,0,0,0,0,0,1
+50,India,Brazil,Single,2,Diploma,Computer Science,1,3,0,Employed,TEER 0,1,0,75488,Other,7.4,No French,20014,59396,36591,Self,0,0,0,0,0,0,0,1
+18,Brazil,UK,Married,3,Diploma,Engineering,0,0,0,Employed,TEER 1,0,0,0,IELTS,8.4,No French,18454,7887,10078,Family,1,0,0,0,0,0,0,0
+35,China,USA,Single,0,Bachelor's,Computer Science,0,3,3,Employed,TEER 2,0,0,0,CELPIP,8.4,No French,21459,22144,4432,Self,1,0,0,0,0,0,0,1
+49,China,UAE,Divorced,0,Master's,Business,1,7,4,Self-employed,TEER 2,0,0,0,CELPIP,7.4,No French,40872,34250,1698,Self,0,0,0,0,0,0,0,1
+28,India,Nigeria,Single,3,Bachelor's,Finance,1,2,2,Self-employed,TEER 1,1,1,41611,Other,7.6,Intermediate,47419,15620,668,Family,0,0,0,0,0,0,0,1
+38,Philippines,Philippines,Married,0,High School,Engineering,1,7,4,Employed,TEER 0,1,1,102406,IELTS,5.6,No French,50396,4018,8922,Self,1,0,0,0,0,1,0,0
+43,China,Nigeria,Single,0,High School,Information Technology,0,4,0,Unemployed,TEER 1,0,0,0,IELTS,6.7,No French,51151,9461,3049,Self,0,0,0,0,0,0,0,0
+42,Nigeria,UAE,Married,0,Diploma,Information Technology,1,3,3,Employed,TEER 2,1,1,71237,IELTS,6.9,No French,29829,61020,2085,Self,0,0,0,0,0,0,0,1
+39,Vietnam,USA,Married,3,Bachelor's,Computer Science,1,3,2,Employed,TEER 1,1,1,105366,No Test,5.4,No French,66168,21512,3823,Family,0,0,0,0,0,1,0,0
+44,India,UAE,Married,1,Master's,Information Technology,0,8,5,Employed,TEER 2,1,1,85216,IELTS,7.7,No French,36155,45244,7190,Self,1,0,0,1,0,0,0,1
+30,Brazil,Philippines,Married,2,Bachelor's,Healthcare,1,10,10,Employed,TEER 1,0,0,0,IELTS,8.3,No French,54002,23280,8910,Self,0,0,0,0,1,0,0,1
+50,Nigeria,Brazil,Married,2,Master's,Engineering,1,5,1,Employed,TEER 0,0,0,0,IELTS,8.4,No French,41716,74883,8288,Self,0,0,1,0,0,0,0,0
+51,Nigeria,China,Common-Law,0,Bachelor's,Finance,0,8,6,Employed,TEER 2,0,0,0,IELTS,6.4,No French,52512,62959,15917,Family,1,0,0,0,0,0,0,1
+58,UK,Philippines,Married,0,Bachelor's,Information Technology,0,1,1,Self-employed,TEER 0,1,1,98707,CELPIP,8.6,Advanced,40713,19487,1974,Family,0,0,0,0,0,0,0,1
+52,Brazil,UAE,Married,2,Diploma,Healthcare,1,6,0,Employed,TEER 1,0,0,0,No Test,4.9,No French,52872,12578,8101,Self,0,0,0,1,0,0,0,0
+18,Vietnam,UAE,Single,0,Master's,Engineering,1,0,0,Employed,TEER 0,0,0,0,IELTS,8.4,No French,44852,26011,852,Self,0,0,0,0,0,0,0,1
+38,India,UK,Single,2,Master's,Engineering,1,4,3,Employed,TEER 0,1,1,99206,Other,5.9,No French,61276,31089,6351,Self,0,0,0,0,1,0,0,1
+23,India,UK,Single,3,Diploma,Information Technology,1,3,3,Unemployed,TEER 1,1,0,54901,CELPIP,8.4,No French,28626,20246,7015,Self,0,0,0,0,0,0,0,1
+45,UK,Canada,Married,1,Bachelor's,Engineering,1,8,7,Employed,TEER 1,1,0,83923,IELTS,7.6,No French,9602,46189,1949,Self,0,0,0,0,0,0,0,1
+34,China,UK,Single,2,Bachelor's,Engineering,1,7,6,Employed,TEER 2,0,0,0,Other,7.2,No French,25532,8062,3976,Self,0,0,0,0,1,0,0,1
+22,Philippines,India,Single,2,Bachelor's,Healthcare,0,2,2,Employed,TEER 2,1,1,77940,CELPIP,8.3,No French,66378,13177,14044,Family,1,0,0,0,0,0,0,1
+48,India,China,Common-Law,2,Master's,Finance,1,7,1,Employed,TEER 2,1,0,66594,IELTS,5.6,Basic,41908,31989,1285,Employer,1,0,0,0,1,0,0,1
+22,India,USA,Common-Law,0,Bachelor's,Information Technology,1,2,0,Employed,TEER 1,1,1,65243,CELPIP,6.4,No French,46841,10081,4560,Self,0,1,0,1,0,0,0,1
+55,Pakistan,Philippines,Common-Law,0,Bachelor's,Computer Science,0,7,6,Employed,TEER 2,0,0,0,IELTS,8.0,Intermediate,23927,17488,21592,Self,0,0,0,0,0,0,0,1
+20,India,UAE,Single,0,High School,Engineering,0,0,0,Employed,TEER 1,1,1,88618,IELTS,8.9,Basic,46311,85921,5611,Self,1,0,0,0,0,0,0,1
+40,Philippines,Canada,Married,1,High School,Engineering,0,4,1,Employed,TEER 1,1,0,63300,CELPIP,7.0,No French,24543,27579,10331,Self,0,0,0,0,1,0,0,1
+54,India,Canada,Single,0,Diploma,Computer Science,1,8,5,Employed,TEER 1,1,0,99312,CELPIP,6.5,No French,27484,77426,14029,Self,1,0,0,0,0,0,0,1
+54,Philippines,USA,Single,2,High School,Business,0,7,4,Employed,TEER 4/5,1,0,73059,CELPIP,7.6,No French,36950,35043,1822,Self,0,1,0,0,1,0,0,0
+27,India,China,Single,0,Bachelor's,Other,1,2,1,Employed,TEER 0,1,1,54714,IELTS,8.0,No French,53901,35244,1969,Self,0,1,0,0,0,0,1,1
+27,Nigeria,Philippines,Single,1,Bachelor's,Finance,1,2,1,Employed,TEER 3,1,1,72768,No Test,4.5,No French,56036,25403,11370,Self,1,0,0,0,0,0,0,1
+36,India,Nigeria,Single,0,Diploma,Computer Science,1,6,3,Employed,TEER 0,0,0,0,IELTS,9.0,No French,56580,6834,11196,Family,0,0,0,1,0,0,0,1
+34,USA,UK,Married,2,Master's,Finance,1,8,2,Self-employed,TEER 1,0,0,0,IELTS,7.6,Intermediate,13238,21334,496,Self,0,0,0,1,0,0,0,1
+38,India,Brazil,Single,1,Diploma,Healthcare,1,4,3,Employed,TEER 1,0,0,0,IELTS,5.6,No French,44866,10281,3114,Self,1,1,0,0,1,0,0,0
+31,China,Canada,Married,0,Bachelor's,Engineering,0,6,3,Employed,TEER 2,1,1,71923,IELTS,6.4,No French,41064,168612,4067,Self,0,0,1,0,1,0,0,1
+26,Pakistan,UK,Married,0,Diploma,Engineering,1,6,4,Employed,TEER 0,0,0,0,IELTS,7.3,No French,14356,10763,14130,Employer,0,0,0,0,1,0,0,1
+18,Brazil,UK,Single,2,Bachelor's,Business,1,0,0,Self-employed,TEER 3,1,1,89181,CELPIP,8.3,No French,45319,9556,4383,Self,0,1,0,0,0,0,1,0
+30,China,India,Married,0,Diploma,Engineering,1,4,2,Self-employed,TEER 3,1,0,114579,Other,6.4,Basic,39991,27446,20821,Self,1,0,0,0,1,0,0,1
+21,Philippines,China,Single,0,Bachelor's,Information Technology,1,1,1,Employed,TEER 2,0,0,0,No Test,5.1,No French,55230,20882,45490,Family,0,1,0,0,0,0,0,0
+18,Philippines,Brazil,Married,3,Bachelor's,Engineering,1,0,0,Employed,TEER 1,0,0,0,CELPIP,6.8,No French,46624,3539,12139,Employer,0,1,0,1,0,0,0,0
+57,Brazil,Nigeria,Single,1,PhD,Engineering,1,4,1,Employed,TEER 3,0,0,0,IELTS,7.6,Basic,34013,6468,8782,Family,0,0,0,0,0,0,0,0
+49,Vietnam,UAE,Single,3,High School,Computer Science,0,4,4,Employed,TEER 3,0,0,0,CELPIP,5.6,Basic,63515,44655,3979,Self,0,0,0,0,0,0,0,0
+51,Brazil,India,Single,0,Diploma,Finance,1,5,2,Unemployed,TEER 1,0,0,0,CELPIP,9.0,Basic,8000,19526,555,Employer,0,0,0,1,0,0,0,0
+45,China,UK,Married,0,High School,Healthcare,0,9,5,Employed,TEER 2,0,0,0,IELTS,8.7,Basic,43714,6946,6810,Family,1,0,0,0,0,0,0,0
+48,UK,UK,Common-Law,2,Bachelor's,Healthcare,1,5,0,Employed,TEER 1,0,0,0,CELPIP,6.3,No French,9734,18648,3591,Family,1,0,0,0,0,0,0,0
+25,Nigeria,Germany,Single,1,High School,Computer Science,0,5,5,Employed,TEER 1,0,0,0,IELTS,9.2,No French,26756,10297,3457,Self,1,1,0,0,0,0,0,0
+56,India,Brazil,Married,1,Master's,Healthcare,1,9,9,Employed,TEER 1,1,1,59577,IELTS,6.8,No French,55496,9326,9310,Self,0,0,0,0,0,0,0,1
+43,China,Brazil,Married,0,Bachelor's,Computer Science,1,3,0,Self-employed,TEER 1,1,0,70251,IELTS,8.3,No French,19516,82089,4983,Family,1,0,0,0,0,0,0,1
+51,France,Germany,Common-Law,0,Bachelor's,Computer Science,1,10,0,Employed,TEER 0,0,0,0,CELPIP,8.8,No French,16525,14236,11157,Employer,0,0,0,1,0,0,0,1
+20,India,Brazil,Married,0,Bachelor's,Engineering,1,0,0,Unemployed,TEER 1,1,0,107541,CELPIP,8.5,Intermediate,92638,4188,4062,Family,0,0,0,0,0,0,0,1
+29,Brazil,UK,Married,0,Diploma,Engineering,1,6,1,Employed,TEER 2,1,1,71767,IELTS,9.2,No French,17814,90937,1308,Employer,0,0,0,0,0,0,0,1
+18,India,Canada,Married,0,Diploma,Engineering,1,0,0,Employed,TEER 4/5,1,1,106409,IELTS,9.0,Intermediate,78010,42599,4949,Self,0,1,0,0,0,0,0,1
+61,China,Philippines,Common-Law,0,Bachelor's,Computer Science,1,5,4,Employed,TEER 4/5,1,1,50907,Other,9.5,No French,41555,10339,24129,Self,0,0,0,0,0,0,0,1
+22,India,UK,Single,4,Bachelor's,Engineering,1,2,0,Employed,TEER 1,0,0,0,No Test,5.3,No French,34503,16143,12936,Family,0,0,0,0,0,0,0,0
+47,Nigeria,India,Single,0,Diploma,Computer Science,1,7,5,Employed,TEER 2,0,0,0,IELTS,6.7,No French,56335,52565,1842,Family,0,0,0,0,0,0,0,0
+47,UK,China,Single,1,Diploma,Other,1,7,6,Employed,TEER 0,1,1,49743,IELTS,8.0,No French,71731,14056,3971,Family,1,1,0,0,1,0,0,1
+34,Philippines,Germany,Married,2,PhD,Engineering,1,5,4,Employed,TEER 2,0,0,0,CELPIP,8.4,No French,22078,23948,21025,Employer,1,0,0,0,0,0,0,1
+40,Brazil,Nigeria,Married,1,High School,Healthcare,0,2,0,Employed,TEER 0,0,0,0,IELTS,7.6,No French,34795,22135,1056,Self,1,0,0,1,0,0,0,0
+32,USA,UAE,Single,0,Master's,Information Technology,1,5,3,Employed,TEER 1,1,1,82659,IELTS,5.8,No French,61937,15824,2343,Self,0,0,0,0,0,0,0,1
+54,France,Nigeria,Married,2,Master's,Computer Science,0,4,4,Employed,TEER 2,0,0,0,IELTS,8.9,Advanced,50759,28506,2432,Employer,0,0,0,0,1,0,0,1
+38,India,UK,Married,1,Diploma,Other,1,7,5,Employed,TEER 1,1,1,87669,CELPIP,9.3,No French,67038,19027,6769,Self,1,1,0,0,1,0,0,1
+31,Philippines,India,Single,2,Diploma,Information Technology,1,3,3,Self-employed,TEER 0,1,1,82281,CELPIP,7.1,No French,55302,3536,4231,Family,1,0,0,0,1,0,0,1
+19,India,UK,Divorced,2,Diploma,Engineering,0,0,0,Employed,TEER 3,1,0,60569,IELTS,6.4,No French,81164,45101,665,Employer,0,0,0,0,0,0,0,1
+28,Vietnam,China,Single,4,Bachelor's,Healthcare,1,6,3,Employed,TEER 1,0,0,0,IELTS,5.6,No French,48571,6002,7936,Self,1,0,0,1,0,0,0,0
+56,France,Canada,Single,1,Bachelor's,Computer Science,1,3,3,Employed,TEER 0,1,1,121135,IELTS,6.4,Basic,49436,18594,834,Employer,0,1,0,0,0,0,0,0
+55,China,UAE,Married,0,Master's,Business,0,5,0,Employed,TEER 0,0,0,0,IELTS,8.3,Basic,51434,24681,7459,Self,1,0,0,0,0,0,0,0
+51,USA,China,Married,1,Master's,Engineering,1,3,1,Employed,TEER 1,0,0,0,IELTS,9.1,Intermediate,42150,33562,5658,Family,0,0,0,0,0,0,0,1
+55,China,Germany,Single,0,Bachelor's,Information Technology,1,8,3,Self-employed,TEER 0,1,1,88520,IELTS,5.9,No French,61961,16224,5444,Self,0,0,0,0,0,0,0,1
+51,Brazil,Germany,Married,2,Diploma,Computer Science,1,3,3,Employed,TEER 2,1,0,70569,IELTS,7.7,No French,49740,36252,559,Family,0,1,0,1,0,0,0,1
+35,India,UK,Married,0,Diploma,Computer Science,1,7,2,Employed,TEER 1,1,1,60439,IELTS,8.3,Intermediate,60763,6520,8155,Family,1,0,0,0,1,0,0,1
+47,UK,India,Single,0,Master's,Finance,1,5,0,Employed,TEER 2,1,0,61889,CELPIP,6.6,Advanced,63889,29492,4515,Self,1,0,0,0,0,0,0,1
+32,India,China,Single,2,Diploma,Healthcare,1,6,2,Employed,TEER 0,0,0,0,CELPIP,7.8,Advanced,53569,46766,4236,Family,0,0,0,0,1,0,0,1
+44,USA,USA,Married,1,High School,Information Technology,0,4,0,Employed,TEER 1,0,0,0,IELTS,8.4,Basic,55034,58055,7259,Employer,0,1,0,1,0,0,0,0
+51,USA,India,Single,0,Bachelor's,Computer Science,1,6,0,Unemployed,TEER 2,0,0,0,IELTS,8.9,No French,24793,24661,7456,Family,0,0,0,1,0,0,0,1
+55,UK,Canada,Common-Law,0,Bachelor's,Healthcare,1,7,0,Employed,TEER 2,1,0,94418,IELTS,7.3,No French,33992,12381,121,Other,0,0,0,0,0,0,0,1
+50,India,Germany,Married,2,Master's,Engineering,0,10,2,Unemployed,TEER 2,0,0,0,CELPIP,8.5,Basic,61867,7458,1070,Self,1,0,0,0,0,0,0,0
+41,Philippines,UK,Divorced,0,Bachelor's,Engineering,1,7,2,Employed,TEER 3,0,0,0,IELTS,6.7,Basic,73472,13599,2158,Self,0,0,0,1,1,0,0,1
+32,Philippines,Brazil,Single,2,High School,Information Technology,0,6,0,Employed,TEER 0,0,0,0,IELTS,6.4,Basic,8000,22411,9065,Self,0,0,0,0,0,0,0,0
+47,Philippines,Germany,Divorced,0,Master's,Computer Science,1,4,0,Employed,TEER 1,0,0,0,CELPIP,6.2,No French,33642,8464,6878,Other,0,0,0,0,0,0,0,0
+59,India,UAE,Single,2,Diploma,Healthcare,1,6,6,Employed,TEER 3,0,0,0,CELPIP,6.9,No French,45472,79183,11338,Self,0,0,0,0,1,0,0,1
+34,France,Philippines,Single,2,Bachelor's,Other,1,2,1,Unemployed,TEER 0,1,1,59477,IELTS,5.6,No French,27414,59858,10795,Self,1,0,0,0,0,0,0,1
+22,China,Brazil,Single,0,Bachelor's,Computer Science,1,2,2,Employed,TEER 0,0,0,0,IELTS,6.6,No French,28549,3837,15348,Self,0,1,0,0,0,1,0,0
+46,Philippines,UK,Single,0,High School,Engineering,1,3,2,Self-employed,TEER 0,0,0,0,No Test,4.4,No French,54498,23636,3783,Self,0,0,0,1,0,0,0,0
+21,Philippines,USA,Married,0,Bachelor's,Engineering,0,1,0,Employed,TEER 2,1,1,67036,No Test,4.4,Intermediate,76627,41934,3385,Employer,0,0,0,0,1,0,0,1
+27,Nigeria,Brazil,Married,1,Diploma,Engineering,1,4,0,Employed,TEER 1,1,0,77246,IELTS,5.8,No French,8000,10038,14223,Self,1,0,0,0,1,0,0,1
+34,China,UAE,Single,1,Bachelor's,Information Technology,1,7,4,Self-employed,TEER 0,1,1,76188,CELPIP,6.6,No French,41590,21552,2170,Employer,0,0,0,0,0,0,0,1
+27,Nigeria,India,Married,1,Bachelor's,Business,1,7,1,Employed,TEER 1,0,0,0,IELTS,7.8,No French,54265,16021,4946,Self,1,0,0,0,0,0,0,0
+34,France,USA,Single,0,Master's,Engineering,1,6,1,Self-employed,TEER 2,1,1,111446,No Test,4.7,No French,60604,8470,1728,Employer,0,0,0,0,0,0,0,1
+37,Nigeria,Germany,Married,0,Master's,Engineering,1,3,3,Employed,TEER 0,1,1,56365,IELTS,7.2,No French,51382,26845,19612,Self,1,1,0,1,0,0,0,1
+41,Vietnam,USA,Single,0,Diploma,Information Technology,1,6,1,Self-employed,TEER 1,0,0,0,CELPIP,8.4,Intermediate,80228,129649,4191,Self,0,0,0,0,0,0,0,1
+22,Pakistan,China,Married,0,Bachelor's,Computer Science,1,2,0,Employed,TEER 2,0,0,0,CELPIP,5.5,No French,45578,14364,1911,Self,0,1,1,1,0,0,0,0
+51,India,UAE,Married,1,Bachelor's,Computer Science,1,7,1,Employed,TEER 4/5,1,1,75616,IELTS,6.6,No French,71239,23095,9421,Self,1,0,0,0,0,0,0,1
+23,France,Brazil,Married,2,Diploma,Healthcare,1,3,1,Employed,TEER 2,1,0,110097,CELPIP,6.1,Basic,32072,12932,2244,Self,0,0,0,0,1,0,0,1
+19,India,China,Single,1,Master's,Computer Science,1,0,0,Employed,TEER 2,1,1,83927,IELTS,6.0,No French,46159,55378,22988,Self,0,0,0,0,0,0,0,1
+30,USA,USA,Single,0,Bachelor's,Healthcare,1,1,0,Employed,TEER 1,1,1,90462,IELTS,9.3,No French,20745,52988,3666,Self,0,1,0,0,0,0,0,1
+60,Philippines,China,Married,3,Diploma,Information Technology,1,2,1,Employed,TEER 1,1,0,84039,IELTS,7.0,No French,63017,7923,8740,Self,1,0,0,0,0,0,0,0
+60,Pakistan,Nigeria,Single,1,Bachelor's,Engineering,1,5,2,Employed,TEER 1,1,1,83092,No Test,5.3,No French,42591,60551,3387,Family,0,0,0,0,0,0,0,1
+28,Pakistan,UAE,Single,3,Diploma,Engineering,1,4,0,Employed,TEER 2,0,0,0,IELTS,8.4,No French,52156,7107,13170,Self,0,0,0,0,0,0,0,0
+40,USA,Canada,Single,1,Bachelor's,Information Technology,1,5,0,Employed,TEER 1,0,0,0,CELPIP,5.7,No French,38732,5507,18178,Family,0,0,0,0,0,0,0,0
+33,USA,India,Married,0,Diploma,Computer Science,1,8,7,Employed,TEER 3,1,1,72501,CELPIP,6.5,Basic,56728,29456,12406,Other,0,0,0,1,0,0,0,1
+48,Philippines,USA,Married,0,PhD,Information Technology,1,4,3,Employed,TEER 4/5,1,1,103569,IELTS,8.8,No French,52948,15190,15097,Self,1,0,0,0,0,0,0,1
+28,India,UAE,Married,2,Master's,Healthcare,1,6,5,Employed,TEER 0,0,0,0,IELTS,8.9,No French,25106,21914,859,Self,0,0,0,0,0,0,0,1
+33,Nigeria,Canada,Single,0,Bachelor's,Healthcare,1,3,0,Employed,TEER 0,1,1,51505,CELPIP,7.0,No French,26264,29429,20622,Self,0,0,0,0,0,0,0,1
+25,India,Canada,Single,0,Bachelor's,Information Technology,1,4,2,Employed,TEER 0,1,1,87307,No Test,4.1,No French,44444,4357,7831,Self,0,0,0,0,0,0,0,1
+21,Brazil,UK,Married,1,Master's,Engineering,1,1,1,Employed,TEER 1,0,0,0,IELTS,8.5,No French,58191,11666,16273,Family,0,0,0,0,0,0,0,1
+57,Philippines,China,Married,1,Bachelor's,Computer Science,1,5,0,Self-employed,TEER 0,0,0,0,IELTS,6.7,Basic,82257,18446,9227,Self,0,1,0,0,0,0,0,0
+21,Vietnam,Canada,Single,1,Diploma,Computer Science,1,1,0,Employed,TEER 3,1,1,48216,IELTS,6.0,No French,51059,10751,1803,Self,0,0,0,0,1,0,0,1
+42,Brazil,Nigeria,Married,0,Bachelor's,Computer Science,0,2,1,Employed,TEER 0,0,0,0,IELTS,6.5,No French,65150,4255,7523,Self,0,0,0,1,0,0,0,0
+20,USA,UAE,Single,0,Master's,Finance,0,0,0,Employed,TEER 1,0,0,0,IELTS,7.0,Intermediate,12742,5266,762,Employer,0,0,0,0,1,0,0,1
+49,India,Philippines,Common-Law,1,Bachelor's,Computer Science,1,10,4,Employed,TEER 0,0,0,0,IELTS,5.7,No French,85259,43455,9518,Family,0,0,0,1,0,0,0,1
+20,Pakistan,Philippines,Single,3,Bachelor's,Information Technology,1,0,0,Self-employed,TEER 3,1,1,77245,IELTS,7.4,No French,57113,63586,4207,Other,0,0,0,0,0,0,1,1
+44,France,USA,Common-Law,2,Master's,Information Technology,1,5,2,Self-employed,TEER 2,0,0,0,IELTS,8.5,No French,44007,7128,1316,Employer,0,0,0,0,0,0,0,1
+46,Nigeria,Germany,Married,3,Master's,Computer Science,1,3,1,Employed,TEER 3,1,1,54302,CELPIP,7.6,No French,41706,10167,30993,Self,1,0,0,0,0,0,0,1
+49,China,China,Married,2,Master's,Healthcare,1,3,3,Employed,TEER 4/5,0,0,0,No Test,4.3,No French,22856,29406,18507,Self,0,0,0,0,0,0,0,1
+36,UK,Germany,Single,1,High School,Computer Science,0,8,6,Employed,TEER 1,0,0,0,IELTS,7.3,No French,28574,80125,17920,Self,0,1,0,0,0,0,0,0
+38,India,Canada,Married,0,Bachelor's,Computer Science,1,3,2,Employed,TEER 0,1,1,84001,CELPIP,8.3,No French,83208,11902,12440,Self,0,1,0,0,0,0,0,1
+22,Nigeria,UAE,Single,1,Bachelor's,Healthcare,1,2,2,Self-employed,TEER 0,0,0,0,IELTS,5.7,No French,25219,51312,9420,Self,1,1,0,1,0,0,0,0
+35,Philippines,USA,Single,1,Master's,Information Technology,0,8,0,Employed,TEER 0,1,1,49783,Other,5.7,Basic,24834,20631,8515,Self,1,0,0,0,1,0,0,1
+45,India,Brazil,Married,1,Bachelor's,Healthcare,1,4,0,Employed,TEER 2,1,1,95833,CELPIP,7.0,No French,30955,81408,897,Self,1,0,0,0,0,0,0,1
+59,Philippines,Canada,Divorced,0,Diploma,Engineering,1,5,4,Employed,TEER 0,1,0,65484,CELPIP,6.3,No French,21036,6662,18466,Self,0,0,0,1,0,0,0,1
+39,India,China,Married,1,Master's,Information Technology,1,6,2,Employed,TEER 0,0,0,0,IELTS,9.2,No French,45306,93928,17037,Employer,1,0,0,0,0,0,0,1
+38,India,Philippines,Married,0,Bachelor's,Healthcare,1,1,0,Employed,TEER 2,1,0,85360,IELTS,7.8,No French,66778,17539,11021,Employer,0,0,0,0,1,0,1,1
+23,India,UK,Single,1,High School,Computer Science,0,2,1,Self-employed,TEER 2,0,0,0,IELTS,6.6,No French,32790,79407,20972,Self,0,0,0,0,0,0,0,0
+18,Vietnam,UAE,Single,0,Bachelor's,Engineering,1,0,0,Employed,TEER 2,0,0,0,IELTS,8.3,No French,17533,18344,6443,Self,0,0,0,0,0,0,0,0
+22,China,India,Single,2,Diploma,Engineering,1,2,1,Self-employed,TEER 1,0,0,0,IELTS,7.0,No French,50837,21879,4748,Self,1,1,0,0,0,0,0,0
+58,Vietnam,Germany,Married,0,Bachelor's,Information Technology,0,4,3,Employed,TEER 2,1,1,105740,IELTS,6.0,No French,43884,43840,27523,Employer,0,0,0,0,1,0,0,1
+29,Nigeria,USA,Common-Law,0,High School,Healthcare,0,4,4,Employed,TEER 1,0,0,0,CELPIP,6.4,No French,65054,35059,4990,Other,0,0,0,0,0,0,0,0
+43,Philippines,Germany,Married,0,Bachelor's,Finance,1,3,0,Employed,TEER 0,1,0,53073,IELTS,8.1,Basic,35909,27163,8202,Self,1,0,0,0,1,0,0,1
+51,Nigeria,UAE,Single,1,Bachelor's,Other,1,5,3,Employed,TEER 2,0,0,0,IELTS,5.7,No French,39796,16488,3735,Self,0,0,0,0,0,0,0,0
+31,Nigeria,Germany,Single,0,Bachelor's,Healthcare,0,5,1,Self-employed,TEER 4/5,0,0,0,IELTS,6.6,Intermediate,42009,42308,8091,Self,0,1,0,0,1,0,0,1
+43,India,UAE,Married,0,Bachelor's,Engineering,1,2,0,Employed,TEER 0,1,1,49278,IELTS,6.3,Basic,46780,77022,10186,Self,0,1,0,1,1,0,0,1
+44,Brazil,Germany,Single,1,Master's,Information Technology,1,6,0,Employed,TEER 1,0,0,0,CELPIP,6.3,Advanced,37148,3246,7839,Family,0,0,0,0,0,0,0,0
+26,India,Nigeria,Married,0,Diploma,Information Technology,1,3,0,Employed,TEER 1,1,1,68860,IELTS,8.2,Basic,33907,25158,5781,Self,1,0,0,0,1,0,0,1
+43,China,Brazil,Married,3,Diploma,Engineering,1,4,4,Employed,TEER 0,1,0,48600,IELTS,8.8,No French,8000,53244,2854,Other,0,0,0,0,0,0,0,1
+39,Brazil,Canada,Married,3,Master's,Information Technology,1,3,2,Employed,TEER 3,1,1,35346,IELTS,8.4,No French,33692,29468,8259,Self,0,0,0,0,0,0,0,1
+47,India,Canada,Single,1,Diploma,Finance,1,6,3,Employed,TEER 1,0,0,0,CELPIP,8.1,No French,59304,43339,19125,Family,0,0,0,1,0,0,0,1
+60,India,China,Single,0,PhD,Information Technology,1,4,3,Employed,TEER 2,0,0,0,IELTS,9.2,Basic,62004,59359,55,Self,0,0,0,0,1,0,0,1
+34,USA,India,Single,2,Master's,Information Technology,1,1,0,Employed,TEER 2,0,0,0,No Test,4.3,No French,35577,37752,1150,Self,1,0,0,0,0,0,0,0
+43,Nigeria,India,Single,0,Bachelor's,Information Technology,0,9,1,Employed,TEER 1,0,0,0,IELTS,6.2,No French,70989,34559,1020,Family,1,0,0,0,0,0,0,0
+53,India,China,Single,0,PhD,Business,1,7,2,Employed,TEER 0,1,1,120827,CELPIP,7.2,No French,44425,86629,20532,Employer,1,0,0,0,0,0,0,1
+18,Vietnam,UK,Married,0,High School,Healthcare,0,0,0,Employed,TEER 0,0,0,0,IELTS,7.0,No French,18243,52819,8695,Family,1,0,0,0,0,0,0,0
+25,India,Canada,Married,3,Bachelor's,Healthcare,1,4,1,Employed,TEER 0,1,1,85535,IELTS,7.2,No French,11952,45236,24257,Family,1,0,0,0,0,0,0,1
+52,Brazil,UK,Single,0,Bachelor's,Information Technology,1,2,0,Employed,TEER 0,0,0,0,IELTS,6.3,No French,69365,5259,6993,Family,0,0,0,0,0,0,0,0
+32,Vietnam,UAE,Single,1,Bachelor's,Business,1,4,3,Employed,TEER 1,0,0,0,IELTS,6.1,Basic,37539,9829,4955,Self,0,0,0,0,0,0,0,0
+39,India,UAE,Single,2,Master's,Computer Science,1,5,3,Employed,TEER 3,1,1,66091,IELTS,7.5,Basic,20718,23340,12574,Family,0,0,0,0,0,0,0,1
+31,India,Philippines,Single,0,High School,Finance,0,4,0,Employed,TEER 1,1,1,72981,IELTS,9.2,Basic,8000,33908,1403,Family,0,0,0,0,0,0,0,1
+43,India,Germany,Married,0,Bachelor's,Engineering,1,6,0,Employed,TEER 2,1,0,106975,IELTS,7.1,Basic,37085,12031,3841,Self,0,0,0,0,0,0,0,1
+45,Philippines,India,Single,4,Bachelor's,Information Technology,1,3,3,Employed,TEER 1,0,0,0,IELTS,5.7,No French,53095,5449,5022,Self,0,1,0,0,1,0,0,0
+40,India,Philippines,Single,1,Bachelor's,Engineering,0,7,3,Employed,TEER 2,1,1,79053,CELPIP,8.3,Intermediate,31046,12316,2835,Family,1,1,0,0,1,0,0,1
+31,Brazil,Brazil,Single,1,Diploma,Healthcare,0,5,3,Employed,TEER 4/5,1,1,71802,CELPIP,6.7,No French,23935,39854,3712,Employer,0,0,0,0,0,0,0,1
+41,India,China,Common-Law,0,Bachelor's,Computer Science,1,6,5,Employed,TEER 0,0,0,0,IELTS,6.5,Intermediate,34012,55470,650,Self,1,1,1,0,0,0,0,0
+19,Nigeria,China,Married,0,Master's,Finance,1,0,0,Self-employed,TEER 3,1,0,86151,IELTS,6.8,No French,69863,64018,1765,Employer,1,0,0,0,0,0,0,1
+43,Vietnam,UAE,Single,0,Diploma,Engineering,1,2,2,Employed,TEER 2,1,1,90164,IELTS,8.4,No French,17140,14905,3269,Employer,0,1,0,0,0,0,0,1
+31,USA,Canada,Married,0,Master's,Information Technology,1,6,0,Unemployed,TEER 2,0,0,0,IELTS,8.8,Basic,32165,14651,12712,Self,0,0,0,0,0,0,0,1
+24,China,UK,Married,0,Bachelor's,Computer Science,1,4,0,Employed,TEER 2,1,1,61146,CELPIP,7.9,No French,69215,16051,1612,Family,0,0,0,1,0,0,0,1
+20,Philippines,India,Divorced,2,Master's,Engineering,1,0,0,Employed,TEER 1,0,0,0,CELPIP,6.8,No French,54883,14782,3405,Self,0,0,0,0,0,0,0,0
+40,Brazil,Philippines,Single,0,Bachelor's,Engineering,1,3,1,Employed,TEER 0,1,1,47172,IELTS,6.7,No French,48582,30430,536,Self,1,0,0,0,0,0,0,1
+60,China,UK,Common-Law,0,Diploma,Engineering,0,6,3,Employed,TEER 0,1,1,43010,IELTS,6.0,No French,32031,14091,6515,Self,0,0,0,0,0,0,0,1
+35,Nigeria,Philippines,Common-Law,1,Bachelor's,Healthcare,1,8,4,Employed,TEER 1,0,0,0,CELPIP,9.2,No French,45610,3513,7558,Employer,1,0,0,0,0,0,0,1
+55,India,Germany,Common-Law,2,Master's,Engineering,1,3,1,Employed,TEER 4/5,1,1,98649,IELTS,8.1,No French,34243,17451,16050,Self,1,0,0,0,0,0,0,1
+52,Pakistan,Brazil,Married,0,Bachelor's,Other,1,7,2,Unemployed,TEER 2,0,0,0,IELTS,5.6,No French,27812,9344,13679,Employer,1,0,0,0,1,0,0,0
+32,Nigeria,Brazil,Married,1,PhD,Engineering,1,12,2,Employed,TEER 1,0,0,0,CELPIP,8.1,No French,23398,3730,2688,Self,0,0,0,0,0,0,0,1
+42,India,UK,Single,0,Bachelor's,Business,1,7,2,Self-employed,TEER 3,1,0,72608,IELTS,7.3,No French,60681,18911,1178,Employer,0,1,0,0,0,1,0,0
+54,Philippines,UK,Married,0,Diploma,Computer Science,1,6,6,Employed,TEER 2,1,0,53753,IELTS,9.4,No French,43791,8765,1357,Employer,0,0,0,0,0,0,0,1
+45,Nigeria,UK,Married,0,Bachelor's,Information Technology,0,3,1,Employed,TEER 1,1,1,81162,Other,8.8,No French,51290,18070,27780,Employer,0,1,0,0,1,0,0,1
+27,USA,Philippines,Married,2,PhD,Information Technology,1,2,0,Employed,TEER 0,1,1,68807,IELTS,6.2,No French,48033,11134,8947,Family,0,0,0,0,0,0,0,1
+56,UK,Germany,Single,0,Bachelor's,Engineering,1,5,2,Employed,TEER 0,1,1,91022,CELPIP,8.4,No French,53818,26140,348,Employer,0,0,0,0,1,0,0,1
+34,UK,Nigeria,Married,0,Master's,Business,1,6,4,Employed,TEER 3,0,0,0,IELTS,7.4,No French,39905,120424,1176,Self,0,0,0,0,0,1,0,0
+56,India,UK,Married,0,Master's,Computer Science,0,6,6,Self-employed,TEER 3,1,1,36287,CELPIP,6.2,Advanced,35366,22809,5321,Self,0,0,0,0,0,0,0,1
+39,Nigeria,Canada,Single,2,Bachelor's,Computer Science,1,4,0,Employed,TEER 1,1,1,56724,Other,8.3,Basic,28694,29024,1863,Self,0,1,0,1,0,0,0,1
+43,Nigeria,India,Married,0,High School,Business,0,1,0,Employed,TEER 1,1,1,78127,IELTS,7.7,Basic,16720,65917,13023,Family,0,0,0,0,1,0,0,1
+61,India,India,Married,0,Bachelor's,Computer Science,1,6,2,Employed,TEER 2,1,1,79982,CELPIP,5.6,No French,22559,14710,6811,Self,0,1,0,0,0,0,0,0
+42,Philippines,Philippines,Married,0,Bachelor's,Healthcare,0,8,8,Employed,TEER 3,0,0,0,CELPIP,8.1,No French,37691,7554,7587,Self,0,0,1,0,0,0,0,0
+34,UK,UK,Single,0,Master's,Engineering,0,2,1,Employed,TEER 2,1,1,44197,IELTS,8.0,No French,12939,11309,4971,Employer,0,0,0,0,0,0,0,1
+30,India,UAE,Single,1,Bachelor's,Business,1,2,1,Employed,TEER 2,1,1,79237,CELPIP,6.1,No French,17354,15887,2366,Family,0,1,0,1,0,0,0,1
+37,China,China,Common-Law,1,Bachelor's,Computer Science,0,2,2,Employed,TEER 0,1,1,47119,Other,6.9,Basic,65842,28892,7121,Employer,0,0,0,0,0,0,0,1
+42,India,Nigeria,Single,0,Master's,Computer Science,1,5,4,Employed,TEER 1,0,0,0,IELTS,7.8,No French,49483,3114,10097,Self,0,0,0,0,0,0,0,1
+21,India,Canada,Married,0,Bachelor's,Engineering,1,1,0,Employed,TEER 0,1,1,68206,IELTS,6.1,No French,35963,50998,3708,Self,1,0,0,0,0,0,0,1
+27,India,Germany,Married,0,Bachelor's,Finance,1,7,3,Employed,TEER 2,0,0,0,IELTS,8.9,No French,90431,4978,5624,Self,0,0,0,0,1,0,0,1
+20,Vietnam,UAE,Married,0,Bachelor's,Engineering,1,0,0,Employed,TEER 1,1,1,58675,IELTS,5.6,No French,12035,60728,14644,Self,0,0,0,0,0,0,0,1
+58,USA,Brazil,Single,0,Bachelor's,Information Technology,0,4,2,Employed,TEER 3,0,0,0,IELTS,5.9,No French,64512,77612,1287,Self,1,0,0,0,0,0,0,0
+35,France,UAE,Married,2,Bachelor's,Healthcare,1,7,5,Employed,TEER 1,0,0,0,IELTS,6.0,No French,42770,118387,6303,Self,0,0,0,0,0,0,0,1
+53,Nigeria,Philippines,Single,3,Master's,Finance,0,5,0,Unemployed,TEER 3,1,1,62156,IELTS,7.6,No French,60700,44453,3426,Self,0,0,0,0,0,0,0,1
+39,India,Nigeria,Single,4,Bachelor's,Business,1,7,2,Unemployed,TEER 1,0,0,0,IELTS,8.0,No French,47179,6824,9706,Self,1,1,0,0,0,0,0,0
+51,China,USA,Single,2,Bachelor's,Other,1,7,7,Employed,TEER 1,0,0,0,IELTS,7.1,No French,8000,33618,151,Self,1,0,0,0,0,0,0,1
+25,Nigeria,USA,Single,1,Bachelor's,Computer Science,0,3,2,Unemployed,TEER 2,1,1,81688,IELTS,6.7,Basic,46909,8682,8880,Self,0,1,0,0,0,0,0,1
+57,USA,UK,Divorced,1,Diploma,Computer Science,1,5,4,Employed,TEER 0,1,1,97320,IELTS,8.7,Basic,51711,59856,868,Family,0,1,0,0,0,0,0,1
+61,India,UK,Divorced,0,Diploma,Healthcare,1,5,3,Employed,TEER 4/5,0,0,0,CELPIP,5.8,Basic,8000,12517,535,Family,1,1,0,0,0,0,0,0
+36,Nigeria,Philippines,Single,1,Master's,Business,1,5,0,Employed,TEER 1,0,0,0,IELTS,6.6,No French,83880,12892,10316,Employer,0,0,0,0,0,0,0,0
+59,India,Germany,Married,0,Bachelor's,Information Technology,0,5,2,Self-employed,TEER 1,0,0,0,IELTS,5.7,No French,51224,65420,8180,Self,0,1,0,0,0,0,0,0
+58,Philippines,UK,Single,0,Bachelor's,Information Technology,1,8,8,Employed,TEER 3,0,0,0,IELTS,5.6,Intermediate,58439,3332,18025,Other,0,0,0,1,1,0,0,1
+54,UK,China,Married,2,Bachelor's,Business,0,2,2,Self-employed,TEER 3,0,0,0,IELTS,6.9,No French,21689,8390,5866,Employer,0,0,0,1,0,0,0,0
+23,Nigeria,Nigeria,Married,0,High School,Computer Science,0,3,2,Self-employed,TEER 1,0,0,0,IELTS,6.3,No French,58812,16701,6040,Self,1,0,0,0,0,0,0,0
+43,Philippines,Philippines,Common-Law,0,Bachelor's,Information Technology,1,6,2,Employed,TEER 3,0,0,0,CELPIP,6.6,No French,66790,33159,9821,Self,0,0,0,1,0,0,0,1
+51,Philippines,India,Single,3,Bachelor's,Engineering,1,6,1,Employed,TEER 0,1,0,78099,IELTS,8.8,No French,50071,29072,3125,Self,0,0,0,0,0,0,0,1
+23,Nigeria,Brazil,Married,0,Bachelor's,Engineering,1,1,1,Employed,TEER 0,0,0,0,No Test,5.2,No French,44812,30672,300,Family,0,0,0,1,0,0,0,0
+54,USA,Philippines,Single,0,Bachelor's,Business,1,10,3,Employed,TEER 1,1,0,62035,IELTS,8.6,Basic,27128,56011,2091,Self,0,0,0,0,0,0,0,1
+50,Pakistan,Philippines,Divorced,3,High School,Information Technology,1,5,4,Employed,TEER 1,1,0,77181,IELTS,8.2,No French,40675,6225,2174,Employer,1,0,0,0,1,0,0,1
+39,France,USA,Single,1,Diploma,Healthcare,0,3,2,Employed,TEER 1,0,0,0,CELPIP,6.8,No French,34759,21462,3271,Self,1,1,1,0,0,0,0,0
+38,USA,Canada,Married,1,PhD,Engineering,1,0,0,Employed,TEER 1,1,1,82605,CELPIP,7.7,No French,56439,35318,22982,Other,1,0,0,0,1,0,0,1
+23,Philippines,Germany,Married,0,Bachelor's,Engineering,1,3,2,Employed,TEER 1,1,0,65913,CELPIP,7.3,No French,28002,28273,13071,Employer,1,0,0,0,0,0,0,1
+23,Brazil,Canada,Married,0,Bachelor's,Healthcare,1,3,0,Employed,TEER 3,1,0,61730,No Test,4.5,No French,56293,17869,21985,Other,0,0,0,0,0,0,0,1
+21,Nigeria,China,Single,2,High School,Information Technology,0,1,0,Employed,TEER 1,0,0,0,IELTS,9.1,No French,28220,3431,52625,Self,0,0,0,0,0,0,0,0
+47,Philippines,India,Common-Law,1,High School,Computer Science,0,4,4,Employed,TEER 4/5,0,0,0,CELPIP,7.8,No French,39752,4558,4550,Self,1,0,0,1,1,0,0,1
+28,USA,USA,Single,1,Bachelor's,Computer Science,0,2,2,Employed,TEER 2,0,0,0,IELTS,9.0,Basic,57320,6165,2060,Family,1,0,0,1,0,0,0,1
+47,India,India,Married,0,Bachelor's,Information Technology,1,4,1,Employed,TEER 1,1,1,68574,CELPIP,8.8,No French,30924,13510,6567,Family,1,0,0,1,0,0,0,1
+48,Pakistan,China,Single,0,Bachelor's,Engineering,0,9,7,Unemployed,TEER 1,1,1,83750,IELTS,5.8,No French,58010,6129,17038,Self,0,0,0,1,0,0,0,1
+41,Nigeria,Canada,Single,3,Diploma,Business,1,4,4,Employed,TEER 1,1,1,68880,IELTS,6.3,No French,56059,16881,5014,Family,0,1,0,0,0,0,0,1
+26,Brazil,Philippines,Married,0,Bachelor's,Healthcare,0,5,4,Employed,TEER 3,1,1,102783,CELPIP,6.1,No French,39580,7919,5632,Self,0,0,0,0,1,0,0,1
+20,Brazil,UK,Single,1,Diploma,Business,1,0,0,Self-employed,TEER 0,1,0,56574,IELTS,8.8,No French,68235,40758,1155,Self,0,1,0,1,0,0,0,1
+48,Pakistan,UK,Single,0,Diploma,Information Technology,1,2,2,Employed,TEER 0,1,0,73886,IELTS,8.9,No French,46555,54293,4364,Self,0,0,0,0,0,0,0,1
+57,Brazil,UAE,Single,1,Bachelor's,Engineering,1,2,0,Employed,TEER 3,1,1,47095,IELTS,7.6,Intermediate,67045,15342,3915,Employer,1,0,0,0,0,0,0,1
+54,China,Brazil,Single,3,Diploma,Information Technology,1,5,3,Employed,TEER 2,1,0,70368,CELPIP,5.9,No French,80869,20901,3467,Self,0,0,0,0,0,0,0,0
+53,India,Germany,Married,1,Diploma,Computer Science,1,4,0,Self-employed,TEER 0,0,0,0,Other,6.0,No French,40173,79705,17464,Family,0,0,0,1,0,0,0,1
+41,Nigeria,China,Common-Law,0,Bachelor's,Computer Science,0,8,7,Self-employed,TEER 0,0,0,0,CELPIP,8.8,No French,57899,22170,489,Self,0,0,0,0,0,0,0,1
+48,India,Brazil,Single,1,Bachelor's,Engineering,0,6,1,Employed,TEER 3,0,0,0,CELPIP,9.2,Basic,32248,135826,28646,Family,0,0,0,0,0,0,0,1
+23,UK,Germany,Single,2,Master's,Other,1,3,0,Employed,TEER 3,0,0,0,IELTS,6.3,No French,24343,6832,66,Employer,0,0,0,0,0,0,0,0
+19,Nigeria,Brazil,Single,0,Bachelor's,Computer Science,1,0,0,Self-employed,TEER 1,1,1,78635,IELTS,5.5,No French,41090,52553,23290,Self,1,0,0,0,0,0,1,0
+37,Brazil,Canada,Single,2,High School,Computer Science,0,2,0,Self-employed,TEER 1,0,0,0,IELTS,6.8,Intermediate,17747,20189,6353,Self,1,0,0,0,0,0,0,0
+45,India,Germany,Married,1,Diploma,Business,1,8,5,Employed,TEER 3,1,1,60392,IELTS,5.6,No French,26247,3574,9697,Family,0,0,0,1,0,0,0,1
+28,India,Canada,Married,2,PhD,Information Technology,1,3,0,Employed,TEER 2,0,0,0,IELTS,8.8,No French,56828,92588,1657,Employer,1,0,0,1,0,0,0,1
+21,UK,Philippines,Single,1,Bachelor's,Business,1,1,1,Self-employed,TEER 2,0,0,0,IELTS,7.5,No French,34727,86844,8495,Self,1,0,1,1,0,0,0,0
+32,India,USA,Single,0,Bachelor's,Healthcare,1,4,2,Employed,TEER 1,0,0,0,IELTS,8.1,Basic,59210,15083,17093,Self,0,0,0,0,0,0,0,1
+23,India,Canada,Single,0,High School,Finance,0,3,1,Employed,TEER 3,0,0,0,CELPIP,7.1,Basic,50988,80055,1201,Self,0,0,0,1,0,0,0,1
+47,India,UK,Married,0,Bachelor's,Engineering,1,4,2,Employed,TEER 1,0,0,0,IELTS,6.9,Basic,82023,6799,1087,Self,0,0,0,1,1,0,0,1
+55,France,Brazil,Divorced,3,High School,Healthcare,0,8,4,Employed,TEER 0,0,0,0,CELPIP,6.4,Intermediate,55486,31494,2898,Self,1,0,0,0,0,0,0,0
+19,UK,UAE,Single,2,Bachelor's,Engineering,1,0,0,Employed,TEER 2,1,1,83034,CELPIP,8.6,No French,67284,8327,1411,Employer,1,0,0,1,0,0,0,1
+32,Philippines,Nigeria,Single,1,Master's,Healthcare,1,7,7,Employed,TEER 1,0,0,0,CELPIP,8.3,No French,53037,10080,938,Self,0,0,0,0,0,0,0,1
+28,Philippines,Germany,Married,0,PhD,Engineering,1,4,3,Employed,TEER 3,1,1,59600,No Test,5.2,No French,51227,40778,9073,Self,0,0,0,0,0,1,0,1
+25,Philippines,China,Common-Law,0,Bachelor's,Computer Science,1,5,5,Employed,TEER 0,0,0,0,IELTS,6.8,Advanced,68294,14844,1924,Employer,0,0,0,1,0,0,0,1
+43,USA,UAE,Single,2,Bachelor's,Engineering,1,2,0,Self-employed,TEER 3,1,1,89452,CELPIP,5.5,No French,58375,3178,8797,Self,0,0,1,1,0,0,0,0
+61,Brazil,UK,Single,0,Master's,Engineering,1,3,0,Employed,TEER 1,1,1,77130,Other,5.8,Intermediate,49201,16371,15839,Family,0,1,0,0,0,0,0,0
+22,India,Canada,Single,0,Bachelor's,Business,1,2,1,Employed,TEER 2,0,0,0,IELTS,8.0,No French,49113,9471,8444,Family,1,0,0,0,0,0,0,0
+23,India,USA,Married,1,High School,Business,0,1,0,Employed,TEER 0,1,0,62062,CELPIP,7.6,Basic,55764,31747,1016,Self,1,0,0,0,1,0,0,0
+43,India,Philippines,Single,0,Bachelor's,Healthcare,1,3,0,Employed,TEER 2,0,0,0,IELTS,7.2,No French,31572,8405,6818,Self,1,0,0,0,0,0,0,0
+21,Brazil,Nigeria,Single,0,Diploma,Computer Science,1,1,1,Employed,TEER 2,1,1,46686,IELTS,8.8,Basic,30724,49169,4002,Self,0,1,0,0,0,0,0,1
+36,UK,India,Married,0,Bachelor's,Business,1,4,2,Employed,TEER 1,0,0,0,IELTS,7.5,No French,73508,10768,3365,Self,1,0,0,0,0,0,0,1
+37,Philippines,UAE,Single,0,Bachelor's,Engineering,1,7,3,Employed,TEER 0,0,0,0,No Test,4.3,No French,82288,15481,3068,Self,0,0,0,0,0,0,0,0
+50,India,USA,Married,4,Bachelor's,Finance,1,9,8,Unemployed,TEER 1,0,0,0,CELPIP,6.1,No French,26422,11846,21209,Other,0,0,0,0,0,0,0,0
+37,India,India,Single,0,Bachelor's,Finance,1,1,0,Employed,TEER 3,1,1,47236,Other,8.8,No French,31620,28815,10854,Self,1,0,0,1,0,0,0,1
+29,Vietnam,Nigeria,Single,0,Diploma,Computer Science,0,3,3,Employed,TEER 1,1,1,106957,CELPIP,7.8,No French,67850,5666,1149,Employer,0,0,0,0,1,0,0,1
+18,Philippines,China,Married,0,Bachelor's,Business,1,0,0,Employed,TEER 1,0,0,0,IELTS,5.9,Intermediate,55670,19256,5170,Self,0,0,0,0,0,0,0,1
+43,UK,China,Single,2,Master's,Computer Science,0,1,1,Employed,TEER 1,1,0,87023,IELTS,8.1,No French,58528,13178,3064,Employer,0,0,0,1,0,0,0,1
+31,Brazil,Brazil,Divorced,0,Bachelor's,Information Technology,0,3,2,Employed,TEER 4/5,1,0,55162,Other,7.2,No French,62932,56883,30511,Family,0,0,0,0,1,0,1,1
+55,Philippines,Nigeria,Married,1,Bachelor's,Engineering,1,5,2,Employed,TEER 1,0,0,0,IELTS,8.7,No French,40185,4906,30544,Employer,1,0,0,0,0,1,0,0
+54,India,Nigeria,Single,0,Master's,Computer Science,1,7,1,Employed,TEER 0,1,1,76952,IELTS,9.2,No French,51599,47254,3079,Self,0,0,0,0,0,0,0,1
+28,India,India,Married,0,Master's,Business,0,4,4,Employed,TEER 2,1,1,83950,IELTS,7.9,Basic,50043,7588,3472,Self,1,0,1,0,0,0,0,1
+53,China,USA,Single,0,Diploma,Computer Science,1,6,4,Employed,TEER 2,1,1,78483,IELTS,8.4,Basic,27830,5318,7318,Self,0,0,0,0,0,0,0,1
+30,USA,Germany,Common-Law,2,High School,Computer Science,0,4,2,Employed,TEER 0,1,1,84185,CELPIP,5.7,Advanced,51301,8651,5220,Family,0,0,0,0,0,0,0,1
+60,Brazil,India,Single,2,Bachelor's,Engineering,1,3,2,Self-employed,TEER 4/5,0,0,0,IELTS,7.7,No French,69754,5707,1917,Employer,0,1,0,0,0,0,0,0
+20,China,Philippines,Married,0,Master's,Healthcare,1,0,0,Employed,TEER 2,1,1,83832,CELPIP,8.5,No French,38317,21400,8640,Self,1,0,0,0,0,0,0,1
+50,India,China,Single,1,PhD,Finance,1,4,2,Employed,TEER 1,0,0,0,Other,7.5,No French,48051,114023,3253,Employer,0,1,0,0,0,0,0,0
+23,Vietnam,China,Single,3,Master's,Healthcare,1,3,3,Employed,TEER 1,1,1,70559,IELTS,7.9,No French,49134,3873,8483,Employer,0,0,0,0,0,0,0,1
+27,USA,Brazil,Married,0,Bachelor's,Healthcare,1,4,4,Unemployed,TEER 3,1,1,65327,IELTS,9.1,Advanced,39306,18456,3871,Self,0,0,0,0,0,0,0,1
+22,Philippines,Philippines,Married,2,Bachelor's,Information Technology,1,2,1,Self-employed,TEER 0,0,0,0,IELTS,6.3,No French,58538,15196,9637,Self,1,0,0,1,0,0,0,1
+40,Vietnam,China,Single,0,High School,Computer Science,0,4,2,Employed,TEER 1,1,0,110205,No Test,5.1,No French,31398,13372,8816,Employer,0,0,0,0,0,0,0,0
+27,China,India,Single,3,Diploma,Computer Science,1,7,2,Self-employed,TEER 0,0,0,0,IELTS,8.3,Basic,71652,13081,5687,Self,1,0,0,0,0,0,0,1
+61,China,Philippines,Married,2,Bachelor's,Engineering,1,3,1,Employed,TEER 2,0,0,0,IELTS,8.8,No French,57524,59347,9759,Employer,1,0,0,0,1,0,0,1
+19,UK,India,Common-Law,3,Bachelor's,Healthcare,1,0,0,Unemployed,TEER 1,1,1,95566,CELPIP,8.9,No French,26264,3478,4943,Employer,0,0,0,0,0,0,0,1
+30,USA,Germany,Single,1,Bachelor's,Engineering,1,4,3,Employed,TEER 2,0,0,0,IELTS,8.1,Basic,78960,40282,987,Self,1,0,1,0,0,0,0,0
+57,Brazil,Germany,Married,0,Bachelor's,Business,1,3,3,Employed,TEER 0,1,1,44877,No Test,5.4,No French,48362,10290,1608,Family,0,0,0,1,1,0,0,1
+19,India,China,Single,3,Diploma,Engineering,0,0,0,Employed,TEER 2,1,1,72232,Other,8.3,Intermediate,30541,15084,2258,Self,0,0,0,0,0,0,0,1
+37,Philippines,China,Common-Law,0,Bachelor's,Computer Science,1,5,3,Employed,TEER 2,1,1,70629,IELTS,5.8,No French,67091,16624,522,Employer,0,0,0,0,0,0,0,1
+18,France,USA,Single,0,High School,Computer Science,1,0,0,Employed,TEER 1,0,0,0,CELPIP,8.5,No French,54893,12086,9941,Self,1,0,0,0,0,0,1,0
+54,India,Germany,Single,1,Bachelor's,Business,1,2,0,Employed,TEER 2,1,1,45304,IELTS,6.2,No French,9560,5455,3663,Self,1,0,1,0,1,0,0,0
+26,Philippines,UAE,Married,2,Master's,Business,1,4,1,Employed,TEER 1,0,0,0,CELPIP,6.4,No French,34486,6035,785,Employer,1,1,0,1,0,0,0,0
+34,Nigeria,UAE,Single,3,Bachelor's,Finance,1,4,0,Employed,TEER 2,1,1,85139,CELPIP,7.1,No French,50581,11850,13716,Self,1,0,0,0,0,0,0,1
+26,Nigeria,Brazil,Married,0,PhD,Computer Science,0,6,2,Employed,TEER 0,1,1,52317,IELTS,6.8,No French,8000,46122,9207,Family,0,1,0,0,1,0,0,1
+28,China,Germany,Single,2,Diploma,Other,1,2,1,Self-employed,TEER 1,1,1,61590,IELTS,6.8,No French,46701,6614,4815,Self,0,0,0,0,0,0,0,1
+32,France,India,Single,2,Bachelor's,Computer Science,1,3,3,Self-employed,TEER 4/5,0,0,0,Other,6.2,No French,48159,36931,2274,Self,0,0,0,0,0,0,0,1
+41,India,India,Single,0,Bachelor's,Computer Science,1,4,3,Unemployed,TEER 4/5,0,0,0,IELTS,6.7,No French,21330,11522,1316,Family,0,0,1,0,0,0,0,0
+55,India,UK,Married,0,Bachelor's,Other,1,5,4,Employed,TEER 1,1,1,81757,CELPIP,5.6,No French,50412,56739,4905,Self,1,0,0,0,1,0,0,1
+52,India,Philippines,Single,0,Master's,Information Technology,1,7,5,Employed,TEER 1,0,0,0,IELTS,7.4,Advanced,45149,16979,17319,Other,1,1,0,0,1,0,0,1
+47,Pakistan,Canada,Married,0,Bachelor's,Healthcare,1,5,1,Employed,TEER 0,1,1,89139,IELTS,8.6,Basic,21174,7710,1669,Self,0,1,0,1,0,0,0,1
+48,Brazil,UAE,Married,4,Master's,Computer Science,1,3,3,Employed,TEER 3,0,0,0,CELPIP,8.9,No French,63391,109441,6726,Self,0,0,0,0,0,0,0,1
+22,Philippines,China,Married,1,Diploma,Engineering,1,2,0,Employed,TEER 1,0,0,0,IELTS,8.8,No French,61757,7858,26095,Self,0,0,0,1,0,0,0,0
+61,USA,Brazil,Single,1,Master's,Finance,1,5,1,Employed,TEER 1,0,0,0,CELPIP,7.2,No French,39205,23961,8109,Family,1,0,0,0,0,0,0,0
+31,Pakistan,Canada,Single,4,High School,Information Technology,0,7,5,Self-employed,TEER 0,0,0,0,IELTS,8.4,No French,41028,24057,4638,Self,1,1,0,0,0,0,0,0
+28,USA,Nigeria,Single,0,Master's,Healthcare,1,5,3,Employed,TEER 4/5,1,1,79739,IELTS,6.7,No French,59525,14662,10080,Self,1,1,0,1,0,0,0,1
+26,France,Brazil,Single,2,Bachelor's,Computer Science,0,5,2,Self-employed,TEER 1,0,0,0,Other,5.7,No French,40986,78648,13924,Employer,0,0,0,0,0,0,0,0
+51,Philippines,Nigeria,Single,0,Bachelor's,Healthcare,1,7,7,Employed,TEER 1,0,0,0,IELTS,8.2,No French,8000,49427,7142,Self,1,0,0,0,0,0,0,1
+29,UK,Germany,Married,2,Bachelor's,Information Technology,1,7,4,Employed,TEER 1,1,0,134348,Other,8.1,No French,54738,47272,16435,Self,0,0,0,0,0,0,0,1
+52,Nigeria,Nigeria,Single,0,Master's,Computer Science,1,10,9,Employed,TEER 1,0,0,0,Other,8.7,Basic,28734,94387,5782,Self,0,0,0,0,0,0,0,1
+52,USA,Nigeria,Single,3,High School,Information Technology,0,4,2,Employed,TEER 2,1,0,26998,No Test,4.3,No French,37203,18271,14177,Self,0,0,0,0,0,0,0,0
+18,UK,USA,Single,0,Bachelor's,Computer Science,1,0,0,Unemployed,TEER 3,1,0,91100,Other,6.1,No French,74157,5555,24295,Self,1,1,0,0,1,0,0,0
+57,USA,USA,Married,0,Master's,Finance,1,0,0,Employed,TEER 3,1,1,82097,IELTS,8.9,Basic,42320,39252,5565,Self,0,1,0,0,0,0,0,1
+39,Brazil,USA,Single,2,Bachelor's,Information Technology,1,3,1,Employed,TEER 1,1,0,101342,No Test,4.6,Basic,45034,14983,7430,Self,1,1,0,0,0,0,0,0
+46,India,Germany,Married,0,Diploma,Information Technology,1,3,3,Employed,TEER 3,1,0,84267,IELTS,8.7,No French,55193,8278,7521,Self,0,0,0,0,0,0,0,1
+25,China,Canada,Single,1,Bachelor's,Engineering,0,2,2,Employed,TEER 1,0,0,0,IELTS,8.6,Basic,55106,19504,12165,Self,1,0,0,1,0,0,0,1
+28,Vietnam,Brazil,Common-Law,0,Bachelor's,Information Technology,0,8,3,Employed,TEER 1,1,1,102835,IELTS,6.7,No French,26616,67997,13851,Family,1,1,0,0,1,0,0,1
+58,France,Brazil,Common-Law,2,Master's,Business,1,8,3,Employed,TEER 4/5,0,0,0,IELTS,5.8,No French,43794,7699,220,Family,0,1,0,0,1,0,0,0
+54,India,China,Single,0,Master's,Other,0,8,5,Employed,TEER 1,1,0,47495,CELPIP,6.2,No French,45723,50212,10574,Self,0,0,0,1,0,0,0,1
+31,India,USA,Single,0,Bachelor's,Engineering,1,4,4,Employed,TEER 1,1,0,60034,IELTS,5.9,Basic,50440,16540,12252,Employer,1,0,0,1,0,0,0,1
+47,India,Germany,Single,0,PhD,Business,1,10,4,Employed,TEER 4/5,1,0,75676,IELTS,6.5,No French,50784,6677,9643,Employer,0,0,0,0,0,0,0,1
+52,UK,China,Single,0,Bachelor's,Engineering,0,3,1,Self-employed,TEER 0,1,0,80165,IELTS,7.3,No French,96748,50159,10005,Other,1,0,0,0,0,0,0,1
+38,USA,Philippines,Married,0,High School,Computer Science,0,2,1,Self-employed,TEER 2,0,0,0,IELTS,9.1,No French,21482,90349,338,Self,1,0,0,0,0,0,0,0
+54,India,China,Married,0,Diploma,Healthcare,0,2,2,Employed,TEER 3,0,0,0,CELPIP,9.0,No French,64601,11607,4667,Family,0,0,0,1,0,0,0,0
+22,Nigeria,Canada,Married,0,Bachelor's,Engineering,1,2,2,Employed,TEER 1,1,1,99914,IELTS,8.4,No French,68667,12043,13637,Self,1,0,1,0,1,0,0,1
+36,USA,UAE,Married,0,Diploma,Healthcare,1,6,3,Employed,TEER 0,1,1,115899,IELTS,5.6,No French,54855,15379,21745,Employer,0,0,0,0,0,0,0,1
+31,UK,Nigeria,Single,1,Master's,Finance,1,2,0,Self-employed,TEER 1,0,0,0,IELTS,6.9,No French,31993,45067,2085,Self,0,0,0,1,0,0,0,1
+43,China,USA,Single,2,Master's,Engineering,1,9,5,Employed,TEER 0,1,1,59248,IELTS,8.2,No French,78293,3261,6924,Self,0,0,0,0,0,0,0,1
+21,China,UAE,Married,0,Diploma,Finance,1,1,0,Self-employed,TEER 1,1,1,74757,IELTS,6.0,No French,8000,9338,13050,Self,1,0,0,0,0,0,0,1
+42,Nigeria,China,Single,1,Bachelor's,Business,1,4,4,Employed,TEER 2,0,0,0,IELTS,8.7,Basic,31334,33595,11167,Self,0,0,0,0,0,0,0,1
+59,Philippines,Germany,Married,1,Bachelor's,Engineering,0,4,4,Employed,TEER 1,1,1,89322,IELTS,9.2,No French,68433,16006,7717,Self,0,0,0,0,0,0,0,1
+42,China,Nigeria,Single,0,Master's,Healthcare,1,3,2,Employed,TEER 1,0,0,0,IELTS,6.9,No French,37597,13022,150,Self,0,1,0,0,0,0,0,0
+35,Brazil,Brazil,Single,1,Master's,Information Technology,1,9,9,Employed,TEER 1,0,0,0,IELTS,8.3,Advanced,76929,54448,10295,Self,1,0,0,0,0,0,0,1
+57,Pakistan,India,Divorced,0,Bachelor's,Other,1,10,4,Employed,TEER 1,1,1,67846,No Test,4.2,No French,14763,65323,11870,Employer,0,0,0,0,0,0,0,1
+25,Brazil,Nigeria,Single,1,Master's,Healthcare,1,5,2,Employed,TEER 3,1,1,86464,IELTS,8.3,No French,22757,76906,10265,Employer,0,1,0,0,0,0,0,1
+56,UK,Canada,Divorced,0,Bachelor's,Computer Science,1,5,3,Employed,TEER 1,0,0,0,CELPIP,5.6,No French,34367,10955,11612,Self,0,0,0,0,0,0,0,0
+57,India,Canada,Divorced,1,Bachelor's,Information Technology,1,9,0,Employed,TEER 3,1,1,65125,CELPIP,6.1,No French,53347,63906,4509,Self,0,0,0,0,0,0,0,1
+31,Nigeria,China,Married,1,Diploma,Healthcare,1,2,1,Self-employed,TEER 1,0,0,0,IELTS,8.3,No French,40559,36386,40604,Self,0,1,0,0,0,0,0,0
+49,India,Philippines,Married,0,Diploma,Computer Science,1,5,2,Employed,TEER 1,0,0,0,No Test,5.1,No French,35192,7187,11784,Self,1,0,0,0,0,0,0,0
+55,India,Canada,Married,0,Bachelor's,Computer Science,0,5,1,Self-employed,TEER 1,1,1,79805,CELPIP,8.1,No French,73407,26557,6914,Self,1,1,0,0,0,0,0,0
+50,UK,Canada,Married,4,Diploma,Engineering,1,8,7,Unemployed,TEER 1,0,0,0,CELPIP,7.4,No French,75268,3667,21768,Self,1,0,0,1,0,0,0,1
+40,Vietnam,Germany,Single,0,High School,Information Technology,1,6,5,Self-employed,TEER 2,1,1,101029,IELTS,8.2,No French,36712,33807,19104,Family,1,0,0,1,0,0,0,1
+32,India,China,Married,1,Bachelor's,Engineering,1,6,3,Employed,TEER 0,1,1,81241,IELTS,8.6,Basic,10804,36065,13480,Self,0,0,0,0,1,0,0,1
+50,Nigeria,Nigeria,Married,3,High School,Information Technology,1,7,4,Self-employed,TEER 3,0,0,0,IELTS,9.4,Basic,8000,41937,6635,Self,0,0,1,0,1,0,0,0
+42,USA,Philippines,Single,1,Bachelor's,Computer Science,1,5,5,Employed,TEER 1,0,0,0,IELTS,9.1,No French,49785,7734,5990,Self,0,0,0,0,0,0,0,1
+34,India,UAE,Single,1,Bachelor's,Healthcare,1,5,4,Employed,TEER 3,0,0,0,CELPIP,8.7,No French,58119,27738,3188,Self,0,0,0,0,1,0,0,1
+50,China,India,Single,2,PhD,Engineering,1,7,7,Employed,TEER 0,1,0,98962,Other,8.3,No French,46259,7926,2310,Family,0,0,0,0,0,0,0,1
+19,UK,USA,Married,2,Bachelor's,Computer Science,0,0,0,Employed,TEER 1,0,0,0,IELTS,7.8,No French,43581,76272,5745,Self,1,1,0,0,0,0,0,1
+31,China,Brazil,Married,0,High School,Information Technology,0,4,2,Unemployed,TEER 0,1,1,86114,CELPIP,6.0,Basic,28909,31099,6897,Self,0,0,0,1,0,0,0,1
+57,India,Canada,Single,0,Bachelor's,Engineering,1,6,3,Employed,TEER 1,0,0,0,CELPIP,6.2,No French,58099,5504,2243,Family,0,0,0,0,1,0,0,0
+57,Philippines,China,Common-Law,0,Master's,Computer Science,1,6,0,Employed,TEER 3,0,0,0,IELTS,8.8,No French,78563,8176,20470,Self,0,0,0,0,0,0,0,0
+56,USA,USA,Married,3,PhD,Computer Science,1,4,0,Employed,TEER 0,0,0,0,IELTS,8.7,No French,8000,30225,6518,Self,0,0,0,0,0,0,0,0
+23,China,Brazil,Married,1,Bachelor's,Computer Science,1,3,0,Unemployed,TEER 1,0,0,0,IELTS,8.0,No French,43449,19188,5980,Self,0,0,0,0,0,0,0,0
+23,India,Brazil,Married,0,Bachelor's,Business,1,3,1,Employed,TEER 0,0,0,0,CELPIP,7.3,No French,25593,36323,4576,Self,0,0,0,0,0,0,0,1
+20,UK,UAE,Married,2,Master's,Business,1,0,0,Employed,TEER 1,0,0,0,CELPIP,5.6,No French,15190,11240,478,Self,0,0,0,0,0,0,0,0
+24,India,UAE,Single,0,Diploma,Business,1,4,3,Employed,TEER 3,0,0,0,IELTS,6.8,No French,22400,29817,17123,Family,1,0,0,1,1,0,0,1
+25,UK,UAE,Married,0,Bachelor's,Healthcare,1,5,3,Employed,TEER 2,0,0,0,IELTS,7.2,Intermediate,52593,7868,3050,Self,1,0,0,0,0,0,0,1
+59,India,UK,Single,1,Bachelor's,Healthcare,1,4,2,Employed,TEER 2,0,0,0,CELPIP,7.4,No French,53099,22615,8228,Self,0,0,0,0,0,0,0,0
+32,France,UK,Common-Law,0,High School,Engineering,0,1,1,Employed,TEER 1,0,0,0,CELPIP,9.2,Basic,74205,82133,7480,Employer,0,1,1,0,0,0,0,0
+46,Philippines,Brazil,Divorced,2,Bachelor's,Healthcare,1,5,0,Self-employed,TEER 4/5,0,0,0,IELTS,5.9,Basic,45175,27736,7025,Self,1,0,0,1,0,1,0,0
+50,Philippines,UAE,Single,0,Diploma,Computer Science,1,7,2,Employed,TEER 2,1,1,75689,IELTS,7.6,No French,9835,4282,5967,Other,0,0,0,0,0,0,0,0
+47,India,Germany,Single,2,Bachelor's,Healthcare,0,4,1,Employed,TEER 1,1,0,61428,Other,7.0,No French,40236,115211,1601,Self,0,0,0,0,0,0,0,1
+56,Philippines,Canada,Married,1,Master's,Business,1,3,3,Employed,TEER 1,0,0,0,IELTS,9.5,No French,17272,7265,2634,Family,0,1,0,0,0,0,0,0
+44,Pakistan,USA,Single,0,Diploma,Engineering,1,5,0,Unemployed,TEER 3,1,1,81089,IELTS,8.9,No French,20864,34652,5941,Family,0,0,0,0,0,0,0,1
+53,Vietnam,USA,Married,4,Master's,Information Technology,0,7,2,Unemployed,TEER 1,0,0,0,CELPIP,7.3,No French,56611,22010,12460,Employer,0,0,0,0,1,0,0,0
+46,Philippines,UK,Single,1,High School,Information Technology,0,9,4,Employed,TEER 2,1,1,40050,IELTS,9.5,No French,48883,11716,4524,Self,0,0,0,0,0,1,0,0
+55,Nigeria,Brazil,Single,0,Bachelor's,Healthcare,1,2,1,Unemployed,TEER 1,1,0,24666,Other,7.6,No French,56751,7879,1824,Self,1,0,0,0,0,0,0,1
+50,UK,China,Divorced,0,High School,Healthcare,0,6,2,Employed,TEER 0,0,0,0,IELTS,6.2,Basic,37850,7891,736,Self,0,0,0,0,0,0,0,0
+54,Pakistan,Nigeria,Married,2,Master's,Finance,1,2,0,Employed,TEER 2,0,0,0,IELTS,7.7,Advanced,60810,51868,8701,Employer,1,0,0,1,0,0,0,1
+44,China,Nigeria,Married,0,Master's,Information Technology,1,3,0,Employed,TEER 2,1,1,90679,IELTS,6.4,No French,36731,54571,4404,Self,1,0,0,0,1,0,0,1
+50,Philippines,UK,Single,0,Bachelor's,Business,1,5,0,Employed,TEER 1,0,0,0,IELTS,8.0,No French,67333,18644,1071,Employer,0,1,0,0,0,0,0,0
+21,Nigeria,China,Married,0,Master's,Engineering,1,1,1,Employed,TEER 2,0,0,0,IELTS,9.2,Basic,51892,5734,8978,Self,0,0,0,0,0,0,0,1
+39,Brazil,UK,Married,0,Bachelor's,Finance,1,4,4,Employed,TEER 0,1,1,81752,CELPIP,8.6,No French,40860,56889,1861,Self,0,0,0,0,1,0,0,1
+19,India,Nigeria,Married,2,PhD,Engineering,1,0,0,Self-employed,TEER 2,1,1,107926,IELTS,6.6,No French,49241,19687,5690,Self,1,0,0,1,0,0,0,1
+27,China,China,Married,0,Bachelor's,Engineering,1,4,3,Employed,TEER 4/5,1,1,58508,No Test,5.1,No French,44642,17440,2924,Self,0,0,0,1,0,0,0,1
+22,Philippines,UAE,Married,0,Master's,Engineering,1,2,2,Employed,TEER 3,1,1,89084,IELTS,5.8,Intermediate,76922,16079,21469,Employer,1,0,0,0,0,0,0,1
+27,USA,Brazil,Single,0,Bachelor's,Business,1,2,2,Employed,TEER 1,1,0,79874,IELTS,6.6,No French,49908,14353,2073,Self,1,0,0,1,0,0,0,1
+50,India,USA,Single,0,Diploma,Other,1,4,0,Employed,TEER 1,1,1,95989,IELTS,5.9,No French,44967,21663,4356,Employer,0,0,0,1,0,0,0,1
+55,China,Germany,Married,3,Bachelor's,Computer Science,0,5,5,Unemployed,TEER 2,1,1,72856,CELPIP,7.5,No French,40230,26192,25650,Self,0,0,1,0,1,0,0,1
+30,Nigeria,Philippines,Single,0,Diploma,Computer Science,1,6,3,Employed,TEER 1,0,0,0,IELTS,8.3,Basic,61863,18704,3070,Family,0,0,0,1,1,0,0,1
+48,Brazil,Brazil,Married,4,Bachelor's,Finance,1,10,3,Unemployed,TEER 1,0,0,0,IELTS,8.5,Intermediate,59158,59740,8275,Family,0,1,0,0,0,0,0,0
+53,India,UAE,Single,0,Bachelor's,Engineering,1,5,2,Employed,TEER 3,0,0,0,Other,5.7,No French,39523,12555,3046,Self,0,0,0,0,0,0,0,0
+41,China,Nigeria,Married,0,Bachelor's,Healthcare,1,6,2,Employed,TEER 1,1,0,83329,IELTS,6.9,Intermediate,21887,24587,938,Self,1,0,0,0,0,0,0,1
+32,China,UAE,Married,2,High School,Engineering,0,7,0,Employed,TEER 1,0,0,0,IELTS,6.7,No French,26960,11915,7901,Self,1,1,0,0,0,0,0,0
+46,China,UK,Single,0,Diploma,Computer Science,0,4,3,Employed,TEER 0,0,0,0,IELTS,5.9,No French,41316,37994,19818,Self,0,1,0,0,0,0,0,0
+25,China,China,Single,1,Bachelor's,Business,1,5,2,Employed,TEER 0,1,1,121002,CELPIP,6.9,Intermediate,71978,5693,4820,Employer,0,0,0,0,0,0,0,1
+22,Brazil,USA,Single,4,PhD,Business,1,2,0,Employed,TEER 0,0,0,0,IELTS,6.7,No French,39996,8227,7871,Other,0,0,0,0,0,0,0,0
+46,USA,Canada,Married,0,Bachelor's,Information Technology,1,2,0,Employed,TEER 3,0,0,0,CELPIP,8.0,No French,33117,43386,7510,Family,1,0,0,1,0,0,0,1
+21,Philippines,UK,Married,0,Bachelor's,Information Technology,1,1,1,Employed,TEER 1,0,0,0,CELPIP,9.0,No French,9785,8058,4290,Family,0,0,0,0,0,0,0,1
+29,USA,Brazil,Single,2,Bachelor's,Business,1,4,4,Employed,TEER 1,0,0,0,CELPIP,7.3,Basic,75270,27570,7633,Self,1,0,0,0,0,0,1,0
+19,Nigeria,UK,Married,0,Bachelor's,Computer Science,1,0,0,Employed,TEER 3,1,1,81632,IELTS,8.5,Basic,56380,90867,2401,Self,0,0,1,0,0,1,0,0
+44,India,Brazil,Single,0,Diploma,Finance,1,5,4,Employed,TEER 2,1,1,69398,No Test,5.0,Basic,60920,21500,3799,Employer,0,0,0,0,0,1,0,0
+48,India,Canada,Married,0,Bachelor's,Information Technology,1,7,7,Employed,TEER 2,1,1,68580,IELTS,9.1,No French,64233,8187,4671,Self,1,0,0,0,0,0,0,1
+53,Philippines,India,Common-Law,0,Diploma,Engineering,1,3,3,Employed,TEER 1,1,1,76092,IELTS,6.1,Basic,41705,12666,15961,Family,0,0,1,0,1,0,0,0
+53,USA,USA,Single,2,PhD,Finance,1,3,3,Employed,TEER 3,1,1,78916,IELTS,6.3,No French,46691,46354,3425,Family,0,0,0,0,0,0,0,1
+43,UK,Germany,Married,0,Diploma,Healthcare,1,6,3,Self-employed,TEER 0,0,0,0,CELPIP,5.9,No French,74772,13833,8065,Self,0,0,0,0,0,0,0,0
+60,USA,Germany,Single,0,Bachelor's,Engineering,1,3,0,Self-employed,TEER 0,1,1,76547,IELTS,6.7,Basic,48591,35139,1920,Self,0,0,0,0,0,0,0,1
+44,Nigeria,Philippines,Single,1,High School,Healthcare,0,9,3,Employed,TEER 0,0,0,0,IELTS,7.7,No French,56750,40553,2328,Family,0,0,0,1,0,0,0,0
+22,Nigeria,UAE,Single,0,Diploma,Information Technology,1,2,2,Employed,TEER 1,0,0,0,CELPIP,9.5,No French,62411,20387,8362,Self,0,1,0,0,1,0,0,1
+37,India,India,Single,0,Master's,Information Technology,1,5,0,Employed,TEER 1,1,1,50780,IELTS,8.7,No French,57858,41221,11494,Employer,0,0,0,0,0,0,0,1
+28,Philippines,Germany,Married,2,Diploma,Other,1,6,0,Employed,TEER 2,1,0,74668,IELTS,7.0,No French,42436,12527,4960,Self,1,1,0,0,1,0,0,0
+27,Nigeria,UK,Single,0,High School,Business,1,6,4,Unemployed,TEER 0,1,0,62278,CELPIP,7.8,No French,44322,21150,3264,Self,1,0,1,0,0,0,0,0
+57,India,UAE,Married,2,Bachelor's,Healthcare,1,3,0,Unemployed,TEER 2,0,0,0,CELPIP,8.0,No French,60552,32003,19287,Self,1,0,0,0,1,0,0,0
+55,India,India,Single,2,High School,Information Technology,1,8,4,Self-employed,TEER 0,0,0,0,IELTS,8.8,No French,60520,7600,1167,Family,0,1,0,1,0,0,0,0
+23,China,China,Single,0,High School,Computer Science,0,3,3,Employed,TEER 0,1,1,62373,IELTS,8.4,No French,68364,10992,10204,Self,0,0,0,0,1,0,1,1
+25,UK,China,Married,1,Master's,Computer Science,1,5,0,Unemployed,TEER 1,0,0,0,No Test,4.2,Basic,56021,29391,9373,Self,0,0,0,0,1,0,0,0
+40,Vietnam,UAE,Divorced,0,Master's,Engineering,1,7,2,Employed,TEER 3,0,0,0,IELTS,8.2,No French,56932,29631,9375,Self,1,0,0,0,0,0,0,1
+43,France,Brazil,Single,0,Master's,Business,1,2,0,Self-employed,TEER 3,1,1,44270,IELTS,8.5,No French,36075,19996,21918,Self,0,0,0,0,0,0,0,1
+60,Brazil,Brazil,Common-Law,2,Master's,Engineering,1,5,4,Employed,TEER 4/5,0,0,0,CELPIP,6.0,No French,33377,42690,10421,Self,0,0,0,0,0,0,0,1
+29,Nigeria,UK,Married,2,Bachelor's,Business,1,8,7,Employed,TEER 2,0,0,0,IELTS,6.3,Basic,60612,19447,2871,Self,1,0,0,0,0,0,0,1
+43,Brazil,India,Married,0,High School,Computer Science,1,6,2,Employed,TEER 2,1,1,35521,IELTS,8.3,No French,33516,56283,3488,Self,0,0,0,1,0,0,0,1
+30,USA,India,Married,1,Master's,Information Technology,0,2,1,Employed,TEER 2,0,0,0,IELTS,8.9,No French,44585,36286,3968,Self,0,0,0,0,0,0,0,1
+57,India,UAE,Single,3,Master's,Information Technology,1,3,2,Employed,TEER 2,1,0,38403,IELTS,7.1,Intermediate,72580,12447,250,Self,0,0,0,0,0,0,0,1
+35,Nigeria,Nigeria,Single,3,Master's,Engineering,1,10,3,Self-employed,TEER 0,1,1,67304,Other,9.4,No French,69411,15573,19581,Self,0,0,1,0,0,0,0,1
+42,USA,China,Married,1,Bachelor's,Computer Science,0,3,2,Employed,TEER 1,1,1,87417,IELTS,6.4,Intermediate,51035,30541,611,Self,0,0,0,0,1,0,0,1
+50,Philippines,India,Single,0,Diploma,Other,1,4,4,Employed,TEER 1,0,0,0,IELTS,7.2,No French,39077,59214,9626,Self,0,0,0,0,1,0,0,1
+57,China,UAE,Common-Law,0,Master's,Information Technology,0,9,1,Employed,TEER 1,0,0,0,Other,7.0,No French,42532,7921,10479,Self,1,1,0,0,0,0,0,0
+60,China,Canada,Single,3,Bachelor's,Finance,1,2,0,Employed,TEER 1,1,1,101912,IELTS,9.2,No French,62353,21072,14848,Other,0,0,0,0,0,0,0,1
+29,India,Philippines,Single,0,PhD,Engineering,0,5,1,Unemployed,TEER 0,1,1,57514,CELPIP,6.6,No French,44270,6161,6448,Self,0,1,0,0,0,0,0,1
+61,Philippines,Canada,Married,1,Diploma,Other,1,1,1,Employed,TEER 1,1,1,51664,IELTS,7.4,Intermediate,33834,11193,10335,Family,0,0,0,0,0,0,0,1
+53,Philippines,USA,Single,0,Diploma,Engineering,0,5,0,Employed,TEER 0,0,0,0,CELPIP,6.2,Advanced,69315,31957,2884,Self,1,1,0,1,0,0,0,0
+21,India,UK,Married,0,Diploma,Finance,1,1,0,Self-employed,TEER 4/5,1,1,101376,IELTS,7.6,Intermediate,48632,5023,10950,Employer,0,0,0,0,0,0,0,1
+22,India,India,Married,0,Master's,Computer Science,1,2,2,Self-employed,TEER 0,0,0,0,IELTS,8.9,Basic,33454,30144,3365,Employer,0,1,0,0,0,0,0,1
+54,USA,USA,Common-Law,4,Diploma,Business,1,5,1,Employed,TEER 1,0,0,0,IELTS,6.7,Basic,54578,60768,18651,Self,1,0,0,0,0,0,0,0
+25,Philippines,Germany,Married,0,High School,Finance,0,5,0,Employed,TEER 3,0,0,0,CELPIP,8.7,No French,64424,90144,1427,Employer,0,0,0,0,0,0,0,1
+59,Nigeria,USA,Married,1,PhD,Computer Science,1,7,4,Employed,TEER 1,1,0,45394,CELPIP,9.1,Basic,24846,9103,3035,Self,0,0,0,0,0,0,0,1
+45,Philippines,UAE,Married,0,High School,Computer Science,0,3,2,Employed,TEER 0,1,1,81454,CELPIP,5.8,No French,40990,37547,5525,Self,0,0,0,0,0,0,0,1
+48,France,India,Common-Law,0,Master's,Engineering,1,7,6,Employed,TEER 1,1,1,79567,IELTS,8.5,No French,40066,68217,11963,Self,0,0,0,1,0,0,0,1
+26,Philippines,Philippines,Single,0,Bachelor's,Finance,1,6,1,Unemployed,TEER 0,0,0,0,IELTS,6.5,No French,54045,5395,11052,Self,1,0,0,0,1,0,0,1
+46,Nigeria,UAE,Single,1,Master's,Engineering,1,6,2,Employed,TEER 0,0,0,0,CELPIP,6.2,Basic,57640,16361,1893,Self,0,0,0,0,0,0,0,1
+31,Pakistan,UAE,Single,0,Bachelor's,Engineering,1,4,1,Employed,TEER 0,0,0,0,CELPIP,7.9,No French,33970,65959,1246,Self,0,0,0,0,0,0,0,1
+57,USA,UK,Single,0,Master's,Computer Science,1,10,1,Employed,TEER 1,1,1,75246,CELPIP,8.3,Basic,15144,8665,2898,Self,0,0,0,1,0,0,0,1
+58,India,UK,Married,0,Master's,Computer Science,1,6,3,Employed,TEER 2,0,0,0,IELTS,7.1,No French,65635,70862,5289,Family,1,1,0,0,0,0,0,0
+39,USA,China,Married,0,High School,Business,0,8,5,Self-employed,TEER 1,1,1,39705,IELTS,5.7,Basic,22601,21726,6194,Self,0,0,0,1,0,0,0,1
+28,Nigeria,China,Married,3,High School,Computer Science,0,3,2,Employed,TEER 2,1,1,66513,IELTS,9.1,Advanced,50423,5631,4484,Self,0,0,0,0,0,0,0,1
+40,Nigeria,Brazil,Single,3,Diploma,Healthcare,0,6,5,Employed,TEER 0,0,0,0,IELTS,8.4,No French,42360,17940,8703,Self,0,0,0,1,0,0,0,1
+18,India,Nigeria,Married,0,Bachelor's,Finance,0,0,0,Employed,TEER 1,1,0,51392,Other,6.6,Intermediate,48248,12872,4462,Self,0,0,0,0,0,0,0,1
+54,India,India,Single,1,Master's,Computer Science,1,3,2,Employed,TEER 3,0,0,0,CELPIP,7.5,No French,78024,11289,23399,Self,0,0,1,0,0,0,0,0
+38,UK,India,Married,3,Bachelor's,Healthcare,1,7,5,Unemployed,TEER 0,0,0,0,IELTS,5.6,No French,105765,22493,2419,Self,0,0,0,0,1,0,0,1
+43,Nigeria,USA,Married,0,Bachelor's,Computer Science,1,4,0,Employed,TEER 3,0,0,0,IELTS,6.9,Basic,12331,19521,7897,Self,0,1,0,0,0,0,0,0
+53,Nigeria,India,Single,2,Diploma,Healthcare,0,3,3,Employed,TEER 1,1,0,63055,IELTS,7.6,No French,64678,19442,7561,Self,1,0,0,0,0,0,0,1
+40,UK,India,Single,3,Master's,Computer Science,1,9,7,Employed,TEER 3,1,0,28988,Other,7.6,No French,41875,5306,2645,Employer,0,0,0,0,0,0,0,1
+18,UK,Nigeria,Single,0,PhD,Business,1,0,0,Employed,TEER 1,1,0,110509,Other,6.3,No French,65957,43527,4243,Self,0,1,0,1,1,0,0,1
+57,India,Germany,Married,0,Diploma,Information Technology,1,4,4,Employed,TEER 1,1,1,71713,IELTS,8.6,No French,64145,19417,3639,Self,0,1,0,0,1,0,0,1
+32,China,China,Common-Law,3,Bachelor's,Engineering,1,3,0,Employed,TEER 2,0,0,0,CELPIP,6.7,No French,73194,45996,1514,Self,0,0,0,1,0,0,0,1
+38,India,China,Married,1,High School,Engineering,1,2,1,Self-employed,TEER 2,0,0,0,IELTS,7.8,No French,50699,46516,5189,Other,1,0,0,1,1,0,0,1
+26,UK,Philippines,Single,0,Bachelor's,Computer Science,1,3,2,Employed,TEER 0,1,1,82497,IELTS,6.6,Intermediate,27208,12536,3910,Family,1,0,0,0,0,0,0,1
+26,Brazil,India,Single,0,Bachelor's,Business,1,6,5,Employed,TEER 4/5,0,0,0,CELPIP,7.2,No French,63552,3108,1571,Self,0,0,0,0,0,0,0,1
+27,France,Nigeria,Married,0,Diploma,Information Technology,1,7,6,Unemployed,TEER 0,0,0,0,CELPIP,6.3,No French,47359,63547,4780,Self,1,0,0,1,0,0,0,1
+43,India,China,Married,1,Bachelor's,Healthcare,1,7,3,Self-employed,TEER 0,1,1,52589,CELPIP,8.0,Intermediate,40323,38750,4383,Self,1,1,1,0,0,0,0,1
+58,India,Nigeria,Single,2,Bachelor's,Computer Science,1,4,3,Self-employed,TEER 1,1,1,94718,IELTS,7.2,Intermediate,35475,5836,1126,Self,0,0,0,0,0,0,0,1
+52,Philippines,Canada,Single,4,Bachelor's,Healthcare,1,7,0,Unemployed,TEER 2,1,0,56068,IELTS,5.6,Basic,65126,33243,1125,Family,0,0,0,0,0,0,0,1
+42,Philippines,Germany,Married,0,Bachelor's,Computer Science,1,5,1,Employed,TEER 4/5,0,0,0,IELTS,5.6,No French,77067,3505,8341,Self,1,0,0,0,1,0,0,0
+43,India,India,Single,1,High School,Engineering,0,8,3,Employed,TEER 1,1,1,92273,IELTS,7.4,No French,21092,3703,9809,Self,1,0,0,1,1,0,0,1
+28,Pakistan,Philippines,Single,1,Master's,Information Technology,1,4,4,Employed,TEER 0,0,0,0,IELTS,6.2,No French,57439,21654,22666,Self,1,1,0,0,0,0,0,0
+55,India,USA,Single,0,Bachelor's,Business,1,7,1,Employed,TEER 2,1,1,112887,IELTS,7.8,No French,37552,5524,728,Family,0,0,0,1,0,1,0,0
+19,Philippines,China,Married,0,Bachelor's,Information Technology,1,0,0,Self-employed,TEER 1,0,0,0,IELTS,7.1,Basic,15654,86340,1003,Self,0,0,0,1,1,0,0,1
+24,UK,Canada,Married,4,High School,Finance,1,2,1,Employed,TEER 1,1,1,70870,IELTS,8.1,No French,47954,59068,425,Employer,1,0,0,0,0,0,0,1
+35,Nigeria,Nigeria,Divorced,2,Master's,Finance,1,4,0,Employed,TEER 1,0,0,0,CELPIP,9.3,No French,28337,29232,6078,Self,0,1,0,0,0,0,0,1
+44,USA,UK,Married,0,PhD,Computer Science,1,6,6,Unemployed,TEER 0,0,0,0,CELPIP,7.6,No French,13444,4645,7798,Family,1,0,0,0,0,0,0,1
+51,India,UAE,Married,1,Diploma,Healthcare,1,6,2,Employed,TEER 1,1,0,108155,CELPIP,8.6,No French,29365,12819,4133,Self,1,0,1,0,0,0,0,0
+44,Nigeria,India,Single,0,Bachelor's,Computer Science,1,4,0,Employed,TEER 1,0,0,0,IELTS,8.5,No French,24444,14619,12792,Self,0,0,0,0,0,0,0,0
+34,India,India,Married,1,Diploma,Information Technology,1,3,2,Employed,TEER 2,0,0,0,IELTS,9.2,Basic,32066,19390,9284,Family,1,0,0,0,0,0,0,1
+60,India,Canada,Single,1,Bachelor's,Healthcare,1,4,4,Employed,TEER 2,0,0,0,IELTS,6.4,No French,18482,7625,34058,Employer,0,0,0,0,0,0,0,0
+61,Pakistan,Nigeria,Married,1,Diploma,Healthcare,1,5,0,Employed,TEER 0,1,0,111028,IELTS,8.8,No French,37097,24539,1187,Self,0,0,0,1,0,0,0,1
+41,India,Brazil,Single,4,Bachelor's,Healthcare,0,7,1,Self-employed,TEER 0,1,0,66672,IELTS,9.1,No French,30735,17307,480,Family,1,0,0,0,0,0,0,1
+42,China,India,Single,1,Bachelor's,Information Technology,1,10,7,Employed,TEER 1,0,0,0,IELTS,7.1,No French,52512,76577,2570,Family,0,0,0,0,0,0,0,1
+24,Nigeria,Brazil,Single,0,Bachelor's,Information Technology,1,4,2,Self-employed,TEER 0,0,0,0,CELPIP,6.8,No French,56870,71798,153,Self,0,0,0,0,0,0,0,1
+23,Philippines,UK,Single,2,Bachelor's,Computer Science,1,3,1,Employed,TEER 2,1,1,117545,No Test,4.6,No French,50202,23837,21578,Employer,0,1,0,0,1,0,0,1
+41,Pakistan,Canada,Single,0,Bachelor's,Healthcare,1,3,1,Employed,TEER 4/5,0,0,0,IELTS,8.0,No French,40291,28845,2898,Self,0,1,0,0,0,0,0,0
+50,India,Nigeria,Single,0,Bachelor's,Engineering,1,4,3,Employed,TEER 2,1,1,86910,CELPIP,7.0,Intermediate,39751,6706,6431,Family,0,0,0,1,0,0,0,1
+46,Brazil,Nigeria,Divorced,0,High School,Healthcare,0,4,4,Employed,TEER 2,0,0,0,IELTS,8.7,No French,28258,9318,3062,Self,1,1,0,0,0,0,0,0
+60,Vietnam,Germany,Single,0,High School,Information Technology,0,8,4,Unemployed,TEER 1,1,1,96567,CELPIP,6.7,No French,28740,60744,2256,Self,0,1,0,1,1,0,0,1
+39,China,UAE,Married,2,Master's,Information Technology,1,8,8,Employed,TEER 1,1,0,97778,CELPIP,6.2,No French,59072,33029,1322,Employer,1,0,0,0,0,0,0,1
+43,France,China,Common-Law,0,High School,Information Technology,0,4,4,Unemployed,TEER 3,1,0,130734,Other,7.7,No French,9805,8250,3089,Self,1,0,0,0,0,1,0,0
+45,India,China,Divorced,2,Bachelor's,Computer Science,0,4,4,Unemployed,TEER 4/5,1,1,88604,IELTS,7.8,No French,43385,24111,7644,Self,0,0,0,0,0,0,0,1
+38,Nigeria,USA,Married,1,Master's,Information Technology,1,8,8,Unemployed,TEER 1,1,1,93930,IELTS,8.8,No French,38529,71242,28496,Employer,1,0,0,1,0,0,0,1
+24,Philippines,Philippines,Married,0,Diploma,Business,1,4,3,Employed,TEER 1,1,0,67641,IELTS,7.3,No French,56982,13584,6533,Employer,1,0,0,0,0,0,0,1
+34,UK,Canada,Single,2,Bachelor's,Finance,1,6,1,Unemployed,TEER 2,1,0,89910,IELTS,8.8,No French,16499,8139,6086,Self,0,1,0,0,0,0,0,1
+37,Vietnam,UK,Single,0,Bachelor's,Engineering,1,6,5,Employed,TEER 0,1,1,69642,Other,6.7,No French,45249,74193,287,Self,0,0,0,0,0,0,0,1
+58,Philippines,Nigeria,Single,0,Master's,Engineering,1,1,0,Employed,TEER 2,0,0,0,CELPIP,7.8,No French,51859,18463,14665,Family,1,1,1,1,0,0,0,0
+37,Brazil,UAE,Married,1,Master's,Computer Science,1,5,5,Employed,TEER 2,1,1,81839,CELPIP,6.3,No French,8000,16499,367,Self,1,0,0,0,0,0,0,1
+39,India,Brazil,Married,0,Bachelor's,Finance,1,3,3,Unemployed,TEER 0,1,1,70249,IELTS,7.0,Basic,23513,10784,18935,Self,1,0,0,0,0,0,0,1
+45,China,Canada,Single,0,High School,Computer Science,0,9,7,Employed,TEER 4/5,0,0,0,Other,8.9,No French,43164,58544,6189,Self,1,0,0,0,0,0,0,1
+57,Nigeria,USA,Single,1,Bachelor's,Finance,1,4,4,Employed,TEER 4/5,0,0,0,IELTS,6.4,No French,55282,49707,1475,Self,0,0,1,0,0,1,0,0
+24,Vietnam,Canada,Married,1,Bachelor's,Engineering,1,4,4,Employed,TEER 3,0,0,0,IELTS,8.7,Basic,48649,15895,4807,Self,0,0,0,0,0,0,0,1
+18,China,USA,Single,0,Bachelor's,Information Technology,1,0,0,Employed,TEER 1,1,1,101686,CELPIP,6.6,No French,56209,3777,42361,Family,0,1,0,1,0,0,0,1
+49,Philippines,Nigeria,Married,3,High School,Finance,1,2,2,Employed,TEER 0,0,0,0,IELTS,5.6,No French,23412,17794,2911,Family,0,0,0,0,0,0,0,0
+30,India,Philippines,Married,1,Diploma,Computer Science,1,6,5,Self-employed,TEER 1,0,0,0,IELTS,5.9,Basic,13224,7987,2511,Self,0,0,0,0,0,0,0,1
+47,India,USA,Married,2,Master's,Engineering,0,9,7,Employed,TEER 1,1,0,45939,IELTS,8.5,No French,46690,6850,1004,Self,0,0,0,1,0,0,0,1
+40,India,Nigeria,Married,0,Bachelor's,Engineering,1,4,4,Self-employed,TEER 0,0,0,0,CELPIP,6.5,Basic,20412,15484,7273,Self,0,0,0,1,0,0,0,1
+36,Philippines,Nigeria,Common-Law,1,Bachelor's,Computer Science,1,4,0,Employed,TEER 1,1,1,89669,CELPIP,8.1,No French,27693,5608,747,Self,0,0,1,0,0,0,0,0
+49,Pakistan,Philippines,Married,2,Bachelor's,Engineering,0,6,0,Unemployed,TEER 2,1,0,69236,IELTS,8.3,No French,63645,81935,11619,Self,0,0,0,1,0,0,0,1
+47,China,China,Married,1,Master's,Healthcare,1,13,0,Employed,TEER 0,1,1,123870,CELPIP,6.9,No French,48781,4217,20128,Family,0,0,0,0,0,0,0,1
+46,China,Canada,Married,1,Bachelor's,Business,1,6,2,Employed,TEER 1,0,0,0,CELPIP,7.4,No French,33637,15827,21490,Self,0,0,0,0,1,0,0,0
+46,India,India,Single,0,Diploma,Computer Science,1,8,5,Employed,TEER 0,1,1,95256,Other,7.1,No French,31039,7439,913,Family,0,0,0,1,0,0,0,1
+47,Pakistan,India,Single,0,Diploma,Finance,1,8,5,Employed,TEER 2,1,1,93681,IELTS,9.3,No French,57418,32183,6536,Family,1,0,0,0,0,0,0,1
+33,UK,Brazil,Single,0,Diploma,Computer Science,1,1,0,Self-employed,TEER 2,1,1,89914,CELPIP,6.8,No French,49239,5052,817,Self,0,0,0,0,0,0,0,1
+57,India,Brazil,Single,0,Master's,Information Technology,1,8,6,Employed,TEER 0,1,1,81876,CELPIP,6.2,No French,20708,22785,6789,Self,0,1,0,1,0,0,0,1
+36,UK,India,Married,2,Bachelor's,Information Technology,1,4,4,Self-employed,TEER 4/5,1,1,90114,IELTS,7.0,No French,8000,40081,13498,Employer,0,0,0,1,0,0,0,1
+35,China,UK,Married,0,Bachelor's,Computer Science,1,4,1,Self-employed,TEER 0,0,0,0,IELTS,8.2,Intermediate,82636,77923,6173,Family,0,0,1,0,0,0,1,0
+18,India,India,Single,3,Bachelor's,Computer Science,1,0,0,Employed,TEER 1,1,1,62030,IELTS,8.3,Intermediate,20550,32976,16449,Other,0,0,0,0,0,0,0,1
+31,Nigeria,Brazil,Single,3,Bachelor's,Other,1,6,3,Employed,TEER 2,0,0,0,IELTS,9.2,Advanced,55553,5619,12942,Self,1,0,0,0,0,0,0,1
+19,Nigeria,UAE,Divorced,0,Master's,Information Technology,1,0,0,Employed,TEER 2,1,1,73967,IELTS,9.0,No French,75213,5317,2589,Employer,0,0,0,0,1,0,0,1
+45,India,Brazil,Single,0,Bachelor's,Computer Science,1,3,0,Employed,TEER 0,1,1,53937,IELTS,6.7,No French,47951,35881,7956,Self,0,1,0,0,0,0,0,1
+47,France,UK,Married,2,Diploma,Computer Science,1,5,3,Employed,TEER 3,1,1,93777,IELTS,7.3,No French,32991,9062,59,Self,0,0,0,0,0,0,0,1
+55,USA,Canada,Married,3,Diploma,Healthcare,1,8,3,Unemployed,TEER 3,1,0,65584,IELTS,8.5,No French,16479,17820,4034,Self,1,0,0,0,0,0,0,1
+21,Brazil,India,Married,0,Bachelor's,Business,1,1,0,Employed,TEER 1,1,1,45047,IELTS,9.2,No French,16199,96898,2174,Self,1,0,0,1,0,0,0,1
+18,Nigeria,Philippines,Single,0,Master's,Information Technology,0,0,0,Employed,TEER 1,0,0,0,CELPIP,6.8,No French,52533,45857,22131,Family,0,0,0,1,0,0,0,1
+25,Nigeria,UAE,Single,1,Bachelor's,Computer Science,1,2,2,Employed,TEER 0,0,0,0,CELPIP,7.3,No French,74019,49866,4158,Self,0,1,0,0,0,0,0,0
+46,Brazil,Nigeria,Single,1,Master's,Information Technology,1,7,7,Employed,TEER 1,1,1,100626,IELTS,9.1,No French,37090,52290,8492,Employer,0,0,0,0,0,0,0,1
+56,China,UK,Married,0,Master's,Computer Science,1,6,3,Self-employed,TEER 1,1,1,81370,IELTS,6.9,No French,33885,27159,10533,Self,1,0,0,1,0,0,0,1
+20,India,Brazil,Married,2,Diploma,Computer Science,0,0,0,Self-employed,TEER 2,1,1,108412,IELTS,7.4,No French,58949,37057,11869,Employer,1,0,0,0,1,0,0,1
+49,Nigeria,Philippines,Single,0,High School,Engineering,0,6,0,Employed,TEER 1,0,0,0,IELTS,9.1,No French,31281,14116,10647,Self,1,0,1,0,0,0,0,0
+27,USA,USA,Married,0,Diploma,Information Technology,1,4,0,Self-employed,TEER 2,0,0,0,IELTS,8.7,No French,50489,164676,2730,Family,1,0,0,0,0,0,0,1
+27,Nigeria,China,Married,0,Bachelor's,Engineering,1,6,6,Employed,TEER 0,1,1,140471,CELPIP,6.5,No French,45836,11199,9268,Self,1,1,0,0,0,0,0,1
+36,India,India,Single,0,Diploma,Information Technology,1,10,3,Employed,TEER 0,1,1,85832,IELTS,6.8,Basic,36810,25290,6370,Self,0,0,0,0,0,0,0,1
+51,USA,China,Married,0,Bachelor's,Finance,1,4,3,Employed,TEER 0,0,0,0,CELPIP,6.9,No French,44689,11284,7277,Family,0,0,0,0,0,0,0,0
+50,India,UK,Married,0,Bachelor's,Finance,1,3,1,Self-employed,TEER 0,1,0,93257,CELPIP,9.2,Basic,80263,5971,6,Self,0,0,0,0,0,0,0,1
+40,Philippines,USA,Single,0,Bachelor's,Engineering,0,0,0,Employed,TEER 1,1,1,46714,IELTS,9.5,No French,57090,23959,2390,Self,0,0,0,0,0,0,0,1
+45,India,USA,Single,0,Diploma,Information Technology,1,8,3,Employed,TEER 2,1,0,90887,IELTS,8.6,No French,66850,13898,21352,Family,0,0,0,0,0,0,0,0
+49,Philippines,USA,Married,0,Bachelor's,Information Technology,1,3,0,Employed,TEER 2,0,0,0,IELTS,7.4,No French,26626,24879,2740,Self,0,0,0,0,0,0,0,0
+24,UK,Nigeria,Common-Law,4,Bachelor's,Engineering,1,4,2,Employed,TEER 1,0,0,0,IELTS,5.5,Intermediate,66918,23449,4610,Self,1,0,0,0,1,0,0,1
+46,Nigeria,UK,Married,0,Bachelor's,Business,1,5,5,Unemployed,TEER 2,0,0,0,IELTS,8.3,No French,57780,22536,1652,Self,0,1,0,1,0,0,0,1
+25,India,Canada,Married,0,Master's,Engineering,0,3,0,Employed,TEER 1,0,0,0,No Test,4.6,No French,15008,6289,1193,Self,0,0,1,0,0,0,0,0
+18,Pakistan,China,Married,1,Diploma,Business,1,0,0,Employed,TEER 1,1,1,56607,CELPIP,8.0,No French,55795,17503,1872,Family,0,0,0,0,0,0,0,1
+20,Pakistan,Canada,Single,4,Master's,Finance,1,0,0,Employed,TEER 1,1,1,124940,Other,7.9,No French,34734,44783,6453,Self,0,0,1,0,0,0,0,1
+41,Pakistan,Philippines,Married,0,Bachelor's,Information Technology,1,4,1,Employed,TEER 2,1,1,80511,IELTS,7.4,No French,14083,12463,20109,Self,1,0,0,0,0,0,0,1
+40,India,Germany,Married,1,Bachelor's,Engineering,1,3,3,Employed,TEER 0,0,0,0,IELTS,9.3,No French,47595,17667,3158,Family,0,0,0,0,0,0,0,1
+25,Nigeria,UAE,Single,1,Bachelor's,Computer Science,1,5,5,Employed,TEER 0,0,0,0,IELTS,5.6,No French,55780,20022,3125,Family,0,1,1,1,0,0,0,0
+54,Vietnam,UAE,Married,1,Bachelor's,Computer Science,1,5,2,Employed,TEER 1,1,1,71881,IELTS,8.3,No French,48032,52645,6643,Employer,1,0,0,0,0,0,0,1
+20,USA,Canada,Married,0,Diploma,Engineering,1,0,0,Employed,TEER 4/5,1,1,131072,IELTS,7.1,Basic,42817,29648,3529,Self,0,0,0,0,0,0,0,1
+50,India,Germany,Single,1,Bachelor's,Computer Science,1,7,7,Employed,TEER 2,1,0,58539,CELPIP,8.4,No French,38388,5639,19300,Self,0,1,0,0,0,0,0,1
+45,India,Germany,Common-Law,0,Bachelor's,Finance,1,10,0,Employed,TEER 2,0,0,0,IELTS,8.2,No French,94331,53093,3796,Self,1,0,0,1,0,0,0,1
+25,Nigeria,India,Single,1,Bachelor's,Computer Science,1,5,2,Employed,TEER 2,1,1,66167,Other,5.5,Intermediate,21348,47604,5393,Self,1,0,0,0,1,0,0,1
+51,Pakistan,Philippines,Single,2,Bachelor's,Engineering,1,3,3,Employed,TEER 1,1,1,88983,No Test,5.3,No French,62458,38024,6098,Self,0,1,0,0,0,0,0,1
+52,China,UK,Single,0,Master's,Healthcare,1,3,0,Employed,TEER 2,1,0,66518,IELTS,6.3,No French,45308,18686,12188,Employer,0,1,0,1,0,0,0,0
+49,Nigeria,Germany,Married,2,Bachelor's,Healthcare,1,7,0,Employed,TEER 3,1,1,52940,Other,6.2,No French,27910,38423,6639,Employer,1,0,0,1,0,0,0,1
+41,India,Brazil,Married,0,High School,Information Technology,1,3,0,Employed,TEER 0,0,0,0,IELTS,8.4,No French,44032,19287,2186,Self,0,1,0,0,0,0,0,0
+31,Brazil,UAE,Single,2,Bachelor's,Business,1,3,2,Self-employed,TEER 1,0,0,0,IELTS,6.5,No French,17141,36354,1058,Self,0,1,0,0,0,0,0,0
+49,USA,Brazil,Married,0,Master's,Engineering,1,3,3,Employed,TEER 0,0,0,0,CELPIP,7.4,Intermediate,33090,56029,22215,Self,0,0,0,0,0,0,0,1
+60,Philippines,Philippines,Single,0,Master's,Engineering,1,8,6,Self-employed,TEER 1,0,0,0,IELTS,6.5,No French,44061,58305,12938,Employer,0,0,0,0,0,0,0,1
+33,USA,Germany,Married,0,Bachelor's,Computer Science,1,2,0,Self-employed,TEER 3,0,0,0,Other,7.8,No French,13977,18154,185,Employer,0,1,0,1,1,0,0,1
+21,Vietnam,China,Married,3,Master's,Engineering,1,1,0,Employed,TEER 1,0,0,0,CELPIP,8.4,Intermediate,55127,52035,13786,Self,0,0,0,0,0,0,0,1
+54,India,UAE,Single,0,Diploma,Business,1,4,3,Employed,TEER 1,1,1,53049,Other,6.8,Advanced,25724,5674,7144,Family,1,0,0,0,0,0,0,1
+38,China,India,Common-Law,0,Bachelor's,Healthcare,1,2,2,Employed,TEER 3,0,0,0,No Test,5.2,No French,15965,5684,5853,Self,1,0,0,0,0,0,0,0
+31,Philippines,India,Single,0,Master's,Business,1,3,1,Employed,TEER 1,1,0,79195,IELTS,8.8,Basic,23391,22866,98,Self,0,0,0,0,0,0,0,1
+48,USA,USA,Single,1,Master's,Engineering,1,2,0,Self-employed,TEER 1,0,0,0,IELTS,5.9,No French,88519,29377,12144,Self,1,0,0,0,0,0,0,0
+35,China,Nigeria,Married,1,Bachelor's,Computer Science,1,6,0,Self-employed,TEER 3,1,1,113771,IELTS,8.3,Basic,8000,7151,1765,Self,0,0,0,0,0,0,0,1
+24,Brazil,Germany,Divorced,0,Master's,Computer Science,0,3,3,Employed,TEER 1,1,1,97086,IELTS,6.8,Basic,53722,18975,10415,Self,0,0,0,0,1,0,0,1
+27,USA,Philippines,Single,0,High School,Information Technology,1,6,6,Employed,TEER 2,0,0,0,IELTS,6.0,No French,29967,5477,127,Self,1,0,0,0,0,0,0,1

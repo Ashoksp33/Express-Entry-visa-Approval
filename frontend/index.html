@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CanVisa AI — Canada Work Visa Decision Support & Eligibility Engine</title>
+    <meta name="description" content="Atlys-inspired AI decision-support platform for Canadian employment visa predictions using Machine Learning and Explainable AI.">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <!-- TOP ATLYS BRAND NAVBAR -->
+    <header class="atlys-navbar">
+        <div class="nav-container">
+            <div class="brand-group" onclick="switchTab('hero-tab')">
+                <div class="brand-logo-icon">🇨🇦</div>
+                <div class="brand-text">
+                    <span class="brand-name">CanVisa<span class="brand-accent">.ai</span></span>
+                    <span class="brand-tag">Academic AI Decision Support</span>
+                </div>
+            </div>
+
+            <nav class="nav-menu">
+                <button class="nav-link active" onclick="switchTab('hero-tab')">Overview</button>
+                <button class="nav-link" onclick="switchTab('wizard-tab')">Eligibility Audit</button>
+                <button class="nav-link" id="nav-dashboard-link" onclick="switchTab('results-tab')">AI Report & XAI</button>
+                <button class="nav-link" onclick="switchTab('history-tab')">History</button>
+                <button class="nav-link" onclick="switchTab('benchmark-tab')">ML Model Info</button>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="btn-atlys-outline" onclick="downloadReport()">
+                    <span>📥</span> Download PDF Report
+                </button>
+                <button class="btn-atlys-primary" onclick="switchTab('wizard-tab')">
+                    ⚡ Start 60-Sec Audit
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- DISCLAIMER BAR -->
+    <div class="atlys-disclaimer-strip">
+        <div class="strip-content">
+            <span class="info-icon">ℹ️</span>
+            <span><strong>Academic AI Prototype:</strong> Predictions are statistical estimates generated from trained ML models for decision support and are <strong>NOT</strong> official IRCC visa determinations. Final visa decisions are made exclusively by Canadian immigration authorities.</span>
+        </div>
+    </div>
+
+    <main class="app-main-body">
+
+        <!-- TAB 1: HERO / LANDING OVERVIEW -->
+        <section id="hero-tab" class="tab-panel active">
+            <div class="hero-container">
+                <div class="hero-left">
+                    <div class="atlys-pill-badge">
+                        <span class="pill-dot"></span> Scikit-Learn ML Engine • SHAP Explainable AI
+                    </div>
+                    <h1 class="hero-main-title">
+                        Check Your <span class="highlight-gradient">Canada Work Visa</span> Approval Odds in 60 Seconds
+                    </h1>
+                    <p class="hero-description">
+                        Evaluate your employment immigration profile across NOC TEER skill categories, LMIA Canadian job offers, IELTS/CELPIP benchmarks, ECA credentials, and LICO settlement solvency with transparent ML factors.
+                    </p>
+
+                    <!-- Trust Metrics Badges -->
+                    <div class="trust-badges-row">
+                        <div class="trust-item">
+                            <span class="trust-icon">🛡️</span>
+                            <div>
+                                <strong>100% Confidential</strong>
+                                <small>Academic Privacy Safeguarded</small>
+                            </div>
+                        </div>
+                        <div class="trust-item">
+                            <span class="trust-icon">⚡</span>
+                            <div>
+                                <strong>Instant AI Audit</strong>
+                                <small>60-Second Execution</small>
+                            </div>
+                        </div>
+                        <div class="trust-item">
+                            <span class="trust-icon">📊</span>
+                            <div>
+                                <strong>96.5% ROC-AUC</strong>
+                                <small>Validated Benchmark</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero-cta-group">
+                        <button class="btn-atlys-hero" onclick="switchTab('wizard-tab')">
+                            📋 Begin Profile Assessment →
+                        </button>
+                    </div>
+                </div>
+
+                <!-- One-Click Preset Profiles Cards (Atlys Style) -->
+                <div class="hero-right">
+                    <div class="preset-card-box">
+                        <div class="preset-box-header">
+                            <h3>⚡ 1-Click Demo Profiles</h3>
+                            <p>Select a preset for instant university panel demonstration:</p>
+                        </div>
+
+                        <div class="preset-list">
+                            <!-- Preset 1 -->
+                            <div class="preset-item preset-green" onclick="loadPreset('strong_profile')">
+                                <div class="preset-item-head">
+                                    <span class="preset-emoji">🚀</span>
+                                    <div>
+                                        <h4>Profile A — Tech Professional</h4>
+                                        <small>Master's, IELTS 8.5, 6 yrs exp, LMIA Job Offer, $65k Funds</small>
+                                    </div>
+                                </div>
+                                <span class="badge-status bg-green">Expected: ~92% Approval</span>
+                            </div>
+
+                            <!-- Preset 2 -->
+                            <div class="preset-item preset-yellow" onclick="loadPreset('moderate_profile')">
+                                <div class="preset-item-head">
+                                    <span class="preset-emoji">⚖️</span>
+                                    <div>
+                                        <h4>Profile B — Skilled Worker</h4>
+                                        <small>Bachelor's, IELTS 7.0, 3 yrs exp, Job Offer, $22k Funds</small>
+                                    </div>
+                                </div>
+                                <span class="badge-status bg-yellow">Expected: ~68% Moderate</span>
+                            </div>
+
+                            <!-- Preset 3 -->
+                            <div class="preset-item preset-red" onclick="loadPreset('weak_profile')">
+                                <div class="preset-item-head">
+                                    <span class="preset-emoji">⚠️</span>
+                                    <div>
+                                        <h4>Profile C — High Risk Applicant</h4>
+                                        <small>Diploma, IELTS 5.5, 1 yr exp, No Offer, Prior Refusal</small>
+                                    </div>
+                                </div>
+                                <span class="badge-status bg-red">Expected: ~22% High Risk</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 2: STEPPER WIZARD APPLICATION FORM -->
+        <section id="wizard-tab" class="tab-panel">
+            <div class="wizard-card-container">
+                <div class="wizard-header">
+                    <h2>Canada Work Visa Profile Assessment</h2>
+                    <p>Complete the step-by-step form to calculate model-estimated approval probabilities and XAI feature impacts.</p>
+                </div>
+
+                <!-- Stepper Progress Bar -->
+                <div class="stepper-bar">
+                    <div class="step-indicator active" id="step-ind-1">
+                        <span class="step-num">1</span>
+                        <span class="step-lbl">Personal & Academic</span>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="step-indicator" id="step-ind-2">
+                        <span class="step-num">2</span>
+                        <span class="step-lbl">Employment & NOC</span>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="step-indicator" id="step-ind-3">
+                        <span class="step-num">3</span>
+                        <span class="step-lbl">Language & Solvency</span>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="step-indicator" id="step-ind-4">
+                        <span class="step-num">4</span>
+                        <span class="step-lbl">History & Submit</span>
+                    </div>
+                </div>
+
+                <form id="atlysForm" onsubmit="handleFormSubmit(event)">
+
+                    <!-- STEP 1: Personal & Education -->
+                    <div class="step-content active" id="step-content-1">
+                        <h3 class="step-title">Step 1: Personal Details & Educational Credentials</h3>
+                        <div class="form-grid-2col">
+                            <div class="form-input-group">
+                                <label for="age">Applicant Age (18 to 70 years) *</label>
+                                <input type="number" id="age" name="age" min="18" max="70" value="30" required>
+                            </div>
+                            <div class="form-input-group">
+                                <label for="country_citizenship">Country of Citizenship *</label>
+                                <select id="country_citizenship" name="country_citizenship">
+                                    <option value="India">India</option>
+                                    <option value="Philippines">Philippines</option>
+                                    <option value="Nigeria">Nigeria</option>
+                                    <option value="China">China</option>
+                                    <option value="Brazil">Brazil</option>
+                                    <option value="UK">United Kingdom</option>
+                                    <option value="USA">United States</option>
+                                    <option value="Other">Other Country</option>
+                                </select>
+                            </div>
+                            <div class="form-input-group">
+                                <label for="country_residence">Current Residence Country *</label>
+                                <select id="country_residence" name="country_residence">
+                                    <option value="India">India</option>
+                                    <option value="Philippines">Philippines</option>
+                                    <option value="Nigeria">Nigeria</option>
+                                    <option value="China">China</option>
+                                    <option value="Brazil">Brazil</option>
+                                    <option value="UAE">United Arab Emirates</option>
+                                    <option value="Canada">Canada</option>
+                                    <option value="USA">United States</option>
+                                    <option value="Other">Other Country</option>
+                                </select>
+                            </div>
+                            <div class="form-input-group">
+                                <label for="marital_status">Marital Status</label>
+                                <select id="marital_status" name="marital_status">
+                                    <option value="Single">Single</option>
+                                    <option value="Married">Married</option>
+                                    <option value="Common-Law">Common-Law</option>
+                                    <option value="Divorced">Divorced</option>
+                                </select>
+                            </div>
+                            <div class="form-input-group">
+                                <label for="dependents">Number of Dependents</label>
+                                <input type="number" id="dependents" name="dependents" min="0" max="10" value="0">
+                            </div>
+                            <div class="form-input-group">
+                                <label for="education_level">Highest Education Degree *</label>
+                                <select id="education_level" name="education_level">
+                                    <option value="High School">High School Diploma</option>
+                                    <option value="Diploma">Post-Secondary Diploma (1-2 yrs)</option>
+                                    <option value="Bachelor's" selected>Bachelor's Degree (3+ yrs)</option>
+                                    <option value="Master's">Master's Degree</option>
+                                    <option value="PhD">Doctorate (PhD)</option>
+                                </select>
+                            </div>
+                            <div class="form-input-group">
+                                <label for="field_of_study">Field of Study *</label>
+                                <select id="field_of_study" name="field_of_study">
+                                    <option value="Computer Science">Computer Science & IT</option>
+                                    <option value="Information Technology">Information Technology</option>
+                                    <option value="Engineering">Engineering & Technology</option>
+                                    <option value="Healthcare">Healthcare & Medicine</option>
+                                    <option value="Business">Business Administration</option>
+                                    <option value="Finance">Finance & Accounting</option>
+                                    <option value="Other">Other Field</option>
+                                </select>
+                            </div>
+                            <div class="form-input-group">
+                                <label for="eca_done">Educational Credential Assessment (ECA) *</label>
+                                <select id="eca_done" name="eca_done">
+                                    <option value="1" selected>Yes (Completed WES / ICAS / IQAS)</option>
+                                    <option value="0">No / Pending</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="wizard-btn-row">
+                            <span></span>
+                            <button type="button" class="btn-wiz-next" onclick="goToStep(2)">Next: Employment Details →</button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 2: Employment Details -->
+                    <div class="step-content" id="step-content-2">
+                        <h3 class="step-title">Step 2: Employment Experience & Canadian Job Offer</h3>
+                        <div class="form-grid-2col">
+                            <div class="form-input-group">
+                                <label for="total_work_exp">Total Work Experience (Years) *</label>
+                                <input type="number" id="total_work_exp" name="total_work_exp" min="0" max="50" value="6" required>
+                            </div>
+                            <div class="form-input-group">
+                                <label for="relevant_work_exp">Relevant Work Experience (Years) *</label>
+                                <input type="number" id="relevant_work_exp" name="relevant_work_exp" min="0" max="50" value="5" required>
+                            </div>
+                            <div class="form-input-group">
+                                <label for="teer_category">Occupation Skill / TEER Category *</label>
+                                <select id="teer_category" name="teer_category">
+                                    <option value="TEER 0">TEER 0 (Management Occupations)</option>
+                                    <option value="TEER 1" selected>TEER 1 (Professional - IT, Eng, Health)</option>
+                                    <option value="TEER 2">TEER 2 (Technical & Supervisory)</option>
+                                    <option value="TEER 3">TEER 3 (Intermediate Skilled)</option>
+                                    <option value="TEER 4/5">TEER 4/5 (Trades & General Labor)</option>
+                                </select>
+                            </div>
+                            <div class="form-input-group">
+                                <label for="current_employment_status">Employment Status</label>
+                                <select id="current_employment_status" name="current_employment_status">
+                                    <option value="Employed" selected>Employed (Full-Time)</option>
+                                    <option value="Self-employed">Self-Employed</option>
+                                    <option value="Unemployed">Unemployed</option>
+                                </select>
+                            </div>
+                            <div class="form-input-group">
+                                <label for="job_offer">Valid Canadian Employment Offer *</label>
+                                <select id="job_offer" name="job_offer">
+                                    <option value="1" selected>Yes (Canadian Job Offer Verified)</option>
+                                    <option value="0">No Job Offer</option>
+                                </select>
+                            </div>
+                            <div class="form-input-group">
+                                <label for="employer_sponsorship">LMIA / Sponsorship Support *</label>
+                                <select id="employer_sponsorship" name="employer_sponsorship">
+                                    <option value="1" selected>Yes (Positive LMIA or LMIA-Exempt)</option>
+                                    <option value="0">No / Pending</option>
+                                </select>
+                            </div>
+                            <div class="form-input-group">
+                                <label for="offered_salary_cad">Offered Canadian Salary (Annual CAD) *</label>
+                                <input type="number" id="offered_salary_cad" name="offered_salary_cad" value="78000" step="1000">
+                            </div>
+                        </div>
+
+                        <div class="wizard-btn-row">
+                            <button type="button" class="btn-wiz-prev" onclick="goToStep(1)">← Back</button>
+                            <button type="button" class="btn-wiz-next" onclick="goToStep(3)">Next: Language & Funds →</button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 3: Language & Solvency -->
+                    <div class="step-content" id="step-content-3">
+                        <h3 class="step-title">Step 3: Language Test Benchmark & Financial Settlement Funds</h3>
+                        <div class="form-grid-2col">
+                            <div class="form-input-group">
+                                <label for="english_test">English Test Type</label>
+                                <select id="english_test" name="english_test">
+                                    <option value="IELTS" selected>IELTS General Training</option>
+                                    <option value="CELPIP">CELPIP-General</option>
+                                    <option value="Other">Other Recognized Test</option>
+                                    <option value="No Test">No Test Taken</option>
+                                </select>
+                            </div>
+                            <div class="form-input-group">
+                                <label for="language_overall_score">Overall Language Score (CLB 4-10) *</label>
+                                <input type="number" id="language_overall_score" name="language_overall_score" min="0" max="10" step="0.5" value="8.0" required>
+                                <small class="input-help">IELTS Band 8.0 ≈ CLB 9/10 Benchmark</small>
+                            </div>
+                            <div class="form-input-group">
+                                <label for="french_proficiency">French Language Proficiency</label>
+                                <select id="french_proficiency" name="french_proficiency">
+                                    <option value="No French" selected>No French Proficiency</option>
+                                    <option value="Basic">Basic (NCLC 4-5)</option>
+                                    <option value="Intermediate">Intermediate (NCLC 6-7)</option>
+                                    <option value="Advanced">Advanced (NCLC 8+)</option>
+                                </select>
+                            </div>
+                            <div class="form-input-group">
+                                <label for="annual_income_cad">Current Annual Income (CAD)</label>
+                                <input type="number" id="annual_income_cad" name="annual_income_cad" value="45000" step="1000">
+                            </div>
+                            <div class="form-input-group">
+                                <label for="settlement_funds_cad">Available Settlement Funds (CAD) *</label>
+                                <input type="number" id="settlement_funds_cad" name="settlement_funds_cad" value="35000" step="1000" required>
+                                <small class="input-help">IRCC LICO Single Applicant Requirement ≈ $13,757 CAD</small>
+                            </div>
+                            <div class="form-input-group">
+                                <label for="outstanding_debt_cad">Outstanding Liabilities / Debt (CAD)</label>
+                                <input type="number" id="outstanding_debt_cad" name="outstanding_debt_cad" value="2000" step="500">
+                            </div>
+                            <div class="form-input-group">
+                                <label for="financial_sponsor">Primary Financial Backer</label>
+                                <select id="financial_sponsor" name="financial_sponsor">
+                                    <option value="Self" selected>Self (Savings)</option>
+                                    <option value="Family">Family Support</option>
+                                    <option value="Employer">Canadian Employer</option>
+                                    <option value="Other">Other Sponsor</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="wizard-btn-row">
+                            <button type="button" class="btn-wiz-prev" onclick="goToStep(2)">← Back</button>
+                            <button type="button" class="btn-wiz-next" onclick="goToStep(4)">Next: Background & Submit →</button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 4: Background & Submission -->
+                    <div class="step-content" id="step-content-4">
+                        <h3 class="step-title">Step 4: Immigration History & Admissibility Verification</h3>
+                        <div class="form-grid-2col">
+                            <div class="form-input-group">
+                                <label for="previous_canada_visa">Prior Canadian Visa Issued</label>
+                                <select id="previous_canada_visa" name="previous_canada_visa">
+                                    <option value="0" selected>No</option>
+                                    <option value="1">Yes</option>
+                                </select>
+                            </div>
+                            <div class="form-input-group">
+                                <label for="previous_visa_refusal">Previous Visa Refusal History *</label>
+                                <select id="previous_visa_refusal" name="previous_visa_refusal">
+                                    <option value="0" selected>No Previous Refusal</option>
+                                    <option value="1">Yes (Previous Refusal Recorded)</option>
+                                </select>
+                            </div>
+                            <div class="form-input-group">
+                                <label for="previous_canada_work">Prior Canadian Work Experience</label>
+                                <select id="previous_canada_work" name="previous_canada_work">
+                                    <option value="0" selected>No</option>
+                                    <option value="1">Yes (1+ Year Work in Canada)</option>
+                                </select>
+                            </div>
+                            <div class="form-input-group">
+                                <label for="previous_canada_study">Prior Canadian Study Experience</label>
+                                <select id="previous_canada_study" name="previous_canada_study">
+                                    <option value="0" selected>No</option>
+                                    <option value="1">Yes (Canadian DLI Graduate)</option>
+                                </select>
+                            </div>
+                            <div class="form-input-group">
+                                <label for="criminal_record">Criminal Record Flag *</label>
+                                <select id="criminal_record" name="criminal_record">
+                                    <option value="0" selected>No Criminal Record</option>
+                                    <option value="1">Yes (Background Flag)</option>
+                                </select>
+                            </div>
+                            <div class="form-input-group">
+                                <label for="medical_flag">Medical Inadmissibility Flag</label>
+                                <select id="medical_flag" name="medical_flag">
+                                    <option value="0" selected>No Medical Flag</option>
+                                    <option value="1">Yes (Medical Concern)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="wizard-btn-row">
+                            <button type="button" class="btn-wiz-prev" onclick="goToStep(3)">← Back</button>
+                            <button type="submit" class="btn-atlys-submit">
+                                🤖 Execute AI Model Pipeline & View Dashboard Report
+                            </button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </section>
+
+        <!-- TAB 3: ATLYS RESULTS DASHBOARD -->
+        <section id="results-tab" class="tab-panel">
+            <div id="results-dashboard-content" class="results-dashboard-wrapper">
+                
+                <!-- TOP HERO ASSESSMENT CARD -->
+                <div class="atlys-assessment-hero">
+                    <div class="hero-outcome-box">
+                        <div class="outcome-badge-circle bg-green-light" id="hero-outcome-circle">
+                            <span class="outcome-check-icon">✓</span>
+                        </div>
+                        <div class="outcome-details">
+                            <span class="outcome-sub-lbl">AI Model Outcome Prediction</span>
+                            <h2 id="dash-prediction-title" class="outcome-title-green">LIKELY APPROVED</h2>
+                            <span class="risk-pill pill-green" id="dash-risk-pill">LOW RISK</span>
+                        </div>
+                    </div>
+
+                    <!-- Top 3 Probability Metrics -->
+                    <div class="hero-metrics-grid">
+                        <div class="metric-box">
+                            <small>Approval Likelihood</small>
+                            <strong class="text-green" id="dash-app-prob">86%</strong>
+                            <div class="mini-bar-track">
+                                <div id="dash-app-bar" class="mini-bar-fill bg-green" style="width: 86%;"></div>
+                            </div>
+                        </div>
+                        <div class="metric-box">
+                            <small>Denial Likelihood</small>
+                            <strong class="text-red" id="dash-den-prob">14%</strong>
+                            <div class="mini-bar-track">
+                                <div id="dash-den-bar" class="mini-bar-fill bg-red" style="width: 14%;"></div>
+                            </div>
+                        </div>
+                        <div class="metric-box">
+                            <small>Model Architecture</small>
+                            <strong class="text-blue">Random Forest</strong>
+                            <span class="sub-tag">250 Trees • MDI XAI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6 NUMBERED VISUAL DASHBOARD GRID -->
+                <div class="atlys-6card-grid">
+
+                    <!-- CARD 1: Approval vs Denial Probability Donut -->
+                    <div class="atlys-card">
+                        <h3 class="card-num-header">1. Approval vs Denial Probability</h3>
+                        <div class="donut-chart-flex">
+                            <div class="donut-canvas-holder">
+                                <canvas id="donutChartCanvas" height="170"></canvas>
+                            </div>
+                            <div class="donut-legend-box">
+                                <div class="legend-row"><span class="dot bg-green"></span> Approved <strong id="legend-approved-pct">86%</strong></div>
+                                <div class="legend-row"><span class="dot bg-red"></span> Denied <strong id="legend-denied-pct">14%</strong></div>
+                            </div>
+                        </div>
+                        <div class="atlys-banner banner-green" id="donut-bottom-banner">
+                            <span class="banner-icon">✔</span>
+                            <span id="donut-banner-text">High probability of approval based on the provided profile.</span>
+                        </div>
+                    </div>
+
+                    <!-- CARD 2: Key Factors (Feature Importance) -->
+                    <div class="atlys-card">
+                        <h3 class="card-num-header">2. Key Factors (Feature Importance)</h3>
+                        <div class="chart-canvas-box">
+                            <canvas id="featureDivergingChart" height="210"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- CARD 3: Speedometer Risk Indicator Gauge -->
+                    <div class="atlys-card">
+                        <h3 class="card-num-header">3. Risk Indicator</h3>
+                        <div class="gauge-center-box">
+                            <canvas id="gaugeCanvas" width="240" height="130"></canvas>
+                            <div class="gauge-status-val text-green" id="gauge-risk-text">LOW RISK</div>
+                            <p class="gauge-desc-text" id="gauge-subtext">The applicant profile shows strong indicators for a successful outcome.</p>
+                            <div class="gauge-legend-row">
+                                <span><strong class="dot bg-green"></strong> Low (≥ 0.75)</span>
+                                <span><strong class="dot bg-yellow"></strong> Medium (0.50-0.75)</span>
+                                <span><strong class="dot bg-red"></strong> High (&lt; 0.50)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 4: Applicant Profile Summary -->
+                    <div class="atlys-card">
+                        <h3 class="card-num-header">4. Applicant Profile Summary</h3>
+                        <div class="profile-mini-matrix">
+                            <div class="mini-card-item">
+                                <div class="mini-icon-circle icon-purple">🎓</div>
+                                <span class="mini-lbl">Education</span>
+                                <strong id="mini-edu">Master's Degree</strong>
+                                <small id="mini-field">Computer Science</small>
+                            </div>
+                            <div class="mini-card-item">
+                                <div class="mini-icon-circle icon-blue">💼</div>
+                                <span class="mini-lbl">Experience</span>
+                                <strong id="mini-exp-tot">6.2 Years</strong>
+                                <small id="mini-exp-rel">Relevant: 5.1 Years</small>
+                            </div>
+                            <div class="mini-card-item">
+                                <div class="mini-icon-circle icon-green">💲</div>
+                                <span class="mini-lbl">Offered Salary</span>
+                                <strong id="mini-salary">CAD 78,000</strong>
+                                <small>Annual</small>
+                            </div>
+                            <div class="mini-card-item">
+                                <div class="mini-icon-circle icon-yellow">🗣️</div>
+                                <span class="mini-lbl">Language (Overall)</span>
+                                <strong id="mini-lang">CLB 8</strong>
+                                <small id="mini-lang-sub">High Proficiency</small>
+                            </div>
+                            <div class="mini-card-item">
+                                <div class="mini-icon-circle icon-red">📜</div>
+                                <span class="mini-lbl">Job Offer</span>
+                                <strong id="mini-job">Yes</strong>
+                                <small id="mini-job-sub">Full-time</small>
+                            </div>
+                            <div class="mini-card-item">
+                                <div class="mini-icon-circle icon-teal">🏛️</div>
+                                <span class="mini-lbl">Financial Strength</span>
+                                <strong id="mini-fin">Strong</strong>
+                                <small id="mini-fin-sub">Adequate Funds</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 5: Why did the AI make this prediction? -->
+                    <div class="atlys-card">
+                        <h3 class="card-num-header">5. Why did the AI make this prediction?</h3>
+                        
+                        <div class="xai-sub-section">
+                            <h4 class="xai-group-lbl text-green">Positive Factors (Strong Influences)</h4>
+                            <div id="xai-positive-bars" class="xai-bar-stack">
+                                <!-- Dynamic bars -->
+                            </div>
+                        </div>
+
+                        <div class="xai-sub-section mt-3">
+                            <h4 class="xai-group-lbl text-red">Negative Factors (Weakening Influences)</h4>
+                            <div id="xai-negative-bars" class="xai-bar-stack">
+                                <!-- Dynamic bars -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 6: Personalized Recommendations -->
+                    <div class="atlys-card">
+                        <h3 class="card-num-header">6. Personalized Recommendations</h3>
+                        <div id="recommendations-list" class="atlys-checklist-stack">
+                            <!-- Dynamic checklist items -->
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- FOOTER NOTE BANNER -->
+                <div class="atlys-footer-note">
+                    <span class="info-icon">ℹ</span>
+                    <span>Note: This is a model-estimated analysis based on the information you provided. It is not an official decision. Final decisions are made by Canadian immigration authorities.</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- TAB 4: APPLICATION HISTORY -->
+        <section id="history-tab" class="tab-panel">
+            <div class="atlys-card">
+                <div class="panel-top-row">
+                    <h2>Application Prediction History</h2>
+                    <button class="btn-atlys-sm" onclick="loadHistory()">🔄 Refresh Records</button>
+                </div>
+                <p class="sub-desc">Saved evaluation history stored in SQLite database (`backend/visa_system.db`):</p>
+
+                <div class="table-responsive-box">
+                    <table class="atlys-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Timestamp</th>
+                                <th>Education</th>
+                                <th>Experience</th>
+                                <th>Job Offer</th>
+                                <th>Prediction</th>
+                                <th>Approval %</th>
+                                <th>Risk Category</th>
+                            </tr>
+                        </thead>
+                        <tbody id="historyTableBody">
+                            <tr><td colspan="8" class="text-center">Loading evaluation history...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 5: ML MODEL BENCHMARK INFO -->
+        <section id="benchmark-tab" class="tab-panel">
+            <div class="atlys-card">
+                <h2>Machine Learning Model Intelligence Benchmark</h2>
+                <p class="sub-desc">Trained model evaluation metrics on stratified 20% test dataset (240 unseen samples):</p>
+
+                <div class="table-responsive-box mt-3">
+                    <table class="atlys-table">
+                        <thead>
+                            <tr>
+                                <th>Model Architecture</th>
+                                <th>Accuracy</th>
+                                <th>Precision</th>
+                                <th>Recall</th>
+                                <th>F1 Score</th>
+                                <th>ROC-AUC</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Logistic Regression</td>
+                                <td>90.42%</td>
+                                <td>93.63%</td>
+                                <td>91.87%</td>
+                                <td>0.9274</td>
+                                <td>0.9651</td>
+                            </tr>
+                            <tr>
+                                <td>Gradient Boosting</td>
+                                <td>89.58%</td>
+                                <td>91.41%</td>
+                                <td>93.13%</td>
+                                <td>0.9226</td>
+                                <td>0.9404</td>
+                            </tr>
+                            <tr class="selected-row">
+                                <td>🌟 <strong>Random Forest (Selected Primary)</strong></td>
+                                <td><strong>83.33%</strong></td>
+                                <td><strong>86.59%</strong></td>
+                                <td><strong>88.75%</strong></td>
+                                <td><strong>0.8765</strong></td>
+                                <td><strong>0.9288</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Decision Tree</td>
+                                <td>77.50%</td>
+                                <td>85.33%</td>
+                                <td>80.00%</td>
+                                <td>0.8258</td>
+                                <td>0.7788</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="atlys-card mt-4">
+                <h2>Exploratory Data Analysis (EDA) Figures</h2>
+                <div class="eda-image-grid">
+                    <div class="eda-img-box">
+                        <h4>Visa Outcome Target Distribution</h4>
+                        <img src="/reports/figures/approval_vs_denial.png" alt="Target Distribution" onerror="this.src='https://via.placeholder.com/400x300?text=Target+Distribution'">
+                    </div>
+                    <div class="eda-img-box">
+                        <h4>Education Level vs Outcome</h4>
+                        <img src="/reports/figures/education_vs_outcome.png" alt="Education vs Outcome" onerror="this.src='https://via.placeholder.com/400x300?text=Education+vs+Outcome'">
+                    </div>
+                    <div class="eda-img-box">
+                        <h4>Experience vs Offered Salary</h4>
+                        <img src="/reports/figures/experience_salary_outcome.png" alt="Experience vs Salary" onerror="this.src='https://via.placeholder.com/400x300?text=Experience+vs+Salary'">
+                    </div>
+                    <div class="eda-img-box">
+                        <h4>Language Score vs Outcome</h4>
+                        <img src="/reports/figures/language_vs_outcome.png" alt="Language vs Outcome" onerror="this.src='https://via.placeholder.com/400x300?text=Language+vs+Outcome'">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="atlys-footer">
+        <div class="footer-wrap">
+            <p>© 2026 CanVisa AI Decision Support Engine • University Engineering Project</p>
+            <p class="foot-sub">Disclaimer: Not an official IRCC decision tool. Built for decision support & university project review.</p>
+        </div>
+    </footer>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

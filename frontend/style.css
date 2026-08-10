@@ -1,0 +1,1088 @@
+:root {
+    --atlys-bg: #f8fafc;
+    --atlys-navy: #0b132b;
+    --atlys-card: #ffffff;
+    --atlys-border: #e2e8f0;
+    
+    --atlys-primary: #2563eb;
+    --atlys-primary-hover: #1d4ed8;
+    --atlys-primary-light: #eff6ff;
+    
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+    
+    --green-val: #10b981;
+    --green-bg: #d1fae5;
+    --green-txt: #065f46;
+    
+    --red-val: #ef4444;
+    --red-bg: #fee2e2;
+    --red-txt: #991b1b;
+    
+    --yellow-val: #f59e0b;
+    --yellow-bg: #fef3c7;
+    --yellow-txt: #92400e;
+
+    --blue-val: #3b82f6;
+    --blue-bg: #dbeafe;
+    
+    --purple-val: #8b5cf6;
+    --purple-bg: #ede9fe;
+    
+    --teal-val: #14b8a6;
+    --teal-bg: #ccfbf1;
+
+    --radius-lg: 16px;
+    --radius-md: 12px;
+    --radius-sm: 8px;
+    
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03);
+    --shadow-lg: 0 10px 25px -5px rgba(0,0,0,0.08), 0 8px 10px -6px rgba(0,0,0,0.01);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif;
+    background-color: var(--atlys-bg);
+    color: var(--text-main);
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* TOP ATLYS NAVBAR */
+.atlys-navbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--atlys-border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow-sm);
+}
+
+.nav-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0.85rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand-group {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    cursor: pointer;
+}
+
+.brand-logo-icon {
+    font-size: 1.8rem;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-name {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--atlys-navy);
+    letter-spacing: -0.02em;
+}
+
+.brand-accent {
+    color: var(--atlys-primary);
+}
+
+.brand-tag {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.nav-link {
+    background: transparent;
+    border: none;
+    padding: 0.5rem 0.9rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+    color: var(--text-main);
+    background-color: #f1f5f9;
+}
+
+.nav-link.active {
+    color: var(--atlys-primary);
+    background-color: var(--atlys-primary-light);
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.btn-atlys-outline {
+    background-color: #ffffff;
+    border: 1px solid var(--atlys-border);
+    color: var(--text-main);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-atlys-outline:hover {
+    background-color: #f8fafc;
+    border-color: #cbd5e1;
+}
+
+.btn-atlys-primary {
+    background-color: var(--atlys-primary);
+    color: #ffffff;
+    border: none;
+    padding: 0.55rem 1.1rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+.btn-atlys-primary:hover {
+    background-color: var(--atlys-primary-hover);
+    transform: translateY(-1px);
+}
+
+/* DISCLAIMER STRIP */
+.atlys-disclaimer-strip {
+    background-color: #fefce8;
+    border-bottom: 1px solid #fef08a;
+    padding: 0.5rem 1.5rem;
+    font-size: 0.8rem;
+    color: #854d0e;
+}
+
+.strip-content {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* MAIN BODY & TAB PANELS */
+.app-main-body {
+    max-width: 1280px;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+    flex: 1;
+}
+
+.tab-panel {
+    display: none;
+}
+
+.tab-panel.active {
+    display: block;
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* HERO TAB SECTION */
+.hero-container {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+@media (max-width: 992px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.atlys-pill-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background-color: var(--atlys-primary-light);
+    color: var(--atlys-primary);
+    border: 1px solid #bfdbfe;
+    padding: 0.35rem 0.85rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+}
+
+.pill-dot {
+    width: 7px;
+    height: 7px;
+    background-color: var(--atlys-primary);
+    border-radius: 50%;
+}
+
+.hero-main-title {
+    font-size: 2.6rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--atlys-navy);
+    margin-bottom: 1rem;
+    letter-spacing: -0.03em;
+}
+
+.highlight-gradient {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-description {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.trust-badges-row {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.trust-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.trust-icon {
+    font-size: 1.5rem;
+}
+
+.trust-item strong {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-main);
+}
+
+.trust-item small {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.btn-atlys-hero {
+    background-color: var(--atlys-navy);
+    color: #ffffff;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: var(--radius-md);
+    font-size: 1.05rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-atlys-hero:hover {
+    background-color: #1e293b;
+    transform: translateY(-2px);
+}
+
+/* Preset Cards Box */
+.preset-card-box {
+    background-color: #ffffff;
+    border: 1px solid var(--atlys-border);
+    border-radius: var(--radius-lg);
+    padding: 1.75rem;
+    box-shadow: var(--shadow-lg);
+}
+
+.preset-box-header h3 {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--atlys-navy);
+}
+
+.preset-box-header p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 1.25rem;
+}
+
+.preset-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.preset-item {
+    background-color: #f8fafc;
+    border: 1px solid var(--atlys-border);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.preset-item:hover {
+    border-color: var(--atlys-primary);
+    background-color: #ffffff;
+    transform: translateX(4px);
+    box-shadow: var(--shadow-md);
+}
+
+.preset-item-head {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.preset-emoji {
+    font-size: 1.3rem;
+}
+
+.preset-item-head h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.preset-item-head small {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+}
+
+.badge-status {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+}
+
+.bg-green { background-color: var(--green-bg); color: var(--green-txt); }
+.bg-yellow { background-color: var(--yellow-bg); color: var(--yellow-txt); }
+.bg-red { background-color: var(--red-bg); color: var(--red-txt); }
+
+/* STEPPER WIZARD TAB */
+.wizard-card-container {
+    background-color: #ffffff;
+    border: 1px solid var(--atlys-border);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem;
+    box-shadow: var(--shadow-lg);
+}
+
+.wizard-header h2 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--atlys-navy);
+}
+
+.wizard-header p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+}
+
+/* Stepper Progress Bar */
+.stepper-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
+    background-color: #f8fafc;
+    padding: 1rem 1.5rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--atlys-border);
+}
+
+.step-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    opacity: 0.5;
+}
+
+.step-indicator.active {
+    opacity: 1;
+}
+
+.step-num {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: #cbd5e1;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.step-indicator.active .step-num {
+    background-color: var(--atlys-primary);
+}
+
+.step-lbl {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.step-line {
+    flex: 1;
+    height: 2px;
+    background-color: var(--atlys-border);
+    margin: 0 1rem;
+}
+
+.step-content {
+    display: none;
+}
+
+.step-content.active {
+    display: block;
+}
+
+.step-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--atlys-navy);
+}
+
+.form-grid-2col {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+}
+
+.form-input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-input-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+    color: #334155;
+}
+
+.form-input-group input,
+.form-input-group select {
+    padding: 0.65rem 0.85rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    transition: border-color 0.2s;
+}
+
+.form-input-group input:focus,
+.form-input-group select:focus {
+    outline: none;
+    border-color: var(--atlys-primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.input-help {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 0.25rem;
+}
+
+.wizard-btn-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--atlys-border);
+}
+
+.btn-wiz-prev {
+    background-color: #f1f5f9;
+    border: 1px solid var(--atlys-border);
+    padding: 0.65rem 1.25rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-wiz-next {
+    background-color: var(--atlys-primary);
+    color: #ffffff;
+    border: none;
+    padding: 0.65rem 1.4rem;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn-atlys-submit {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--green-val);
+    color: #ffffff;
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: 1.05rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+}
+
+.btn-atlys-submit:hover {
+    background-color: var(--green-txt);
+}
+
+/* RESULTS DASHBOARD (ATLYS 6-CARD GRID) */
+.results-dashboard-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+
+/* Hero Assessment Top Card */
+.atlys-assessment-hero {
+    background-color: #ffffff;
+    border: 1px solid var(--atlys-border);
+    border-radius: var(--radius-lg);
+    padding: 1.75rem;
+    box-shadow: var(--shadow-lg);
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+@media (max-width: 992px) {
+    .atlys-assessment-hero {
+        grid-template-columns: 1fr;
+    }
+}
+
+.hero-outcome-box {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.outcome-badge-circle {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.outcome-check-icon {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--green-val);
+}
+
+.outcome-sub-lbl {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+.outcome-title-green {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--green-val);
+    line-height: 1.1;
+    margin: 0.2rem 0;
+}
+
+.outcome-title-red {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--red-val);
+    line-height: 1.1;
+    margin: 0.2rem 0;
+}
+
+.risk-pill {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 800;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+}
+
+.pill-green { background-color: var(--green-bg); color: var(--green-txt); }
+.pill-yellow { background-color: var(--yellow-bg); color: var(--yellow-txt); }
+.pill-red { background-color: var(--red-bg); color: var(--red-txt); }
+
+.hero-metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    background-color: #f8fafc;
+    padding: 1.25rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--atlys-border);
+}
+
+.metric-box small {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.metric-box strong {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin: 0.2rem 0;
+}
+
+.mini-bar-track {
+    height: 6px;
+    background-color: #e2e8f0;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.mini-bar-fill {
+    height: 100%;
+    border-radius: 999px;
+}
+
+.sub-tag {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+}
+
+/* 6-CARD DASHBOARD GRID */
+.atlys-6card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+@media (max-width: 1200px) {
+    .atlys-6card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .atlys-6card-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.atlys-card {
+    background-color: #ffffff;
+    border: 1px solid var(--atlys-border);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-md);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-num-header {
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--atlys-navy);
+    margin-bottom: 1.25rem;
+}
+
+/* CARD 1: Donut Chart */
+.donut-chart-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.5rem 0;
+}
+
+.donut-canvas-holder {
+    width: 140px;
+    height: 140px;
+}
+
+.donut-legend-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.legend-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.atlys-banner {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.65rem 0.85rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.78rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.banner-green { background-color: var(--green-bg); color: var(--green-txt); }
+.banner-red { background-color: var(--red-bg); color: var(--red-txt); }
+
+/* CARD 2: Feature Diverging Chart */
+.chart-canvas-box {
+    position: relative;
+    min-height: 210px;
+    flex: 1;
+}
+
+/* CARD 3: Speedometer Gauge */
+.gauge-center-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.gauge-status-val {
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-top: -0.5rem;
+}
+
+.gauge-desc-text {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin: 0.3rem 0 0.8rem;
+}
+
+.gauge-legend-row {
+    display: flex;
+    gap: 0.75rem;
+    font-size: 0.72rem;
+    color: var(--text-muted);
+}
+
+/* CARD 4: Applicant Profile Matrix Mini Grid */
+.profile-mini-matrix {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+}
+
+.mini-card-item {
+    background-color: #f8fafc;
+    border: 1px solid var(--atlys-border);
+    border-radius: var(--radius-sm);
+    padding: 0.75rem 0.4rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mini-icon-circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    margin-bottom: 0.35rem;
+}
+
+.icon-purple { background-color: var(--purple-bg); }
+.icon-blue { background-color: var(--blue-bg); }
+.icon-green { background-color: var(--green-bg); }
+.icon-yellow { background-color: var(--yellow-bg); }
+.icon-red { background-color: var(--red-bg); }
+.icon-teal { background-color: var(--teal-bg); }
+
+.mini-lbl {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.mini-card-item strong {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.mini-card-item small {
+    font-size: 0.68rem;
+    color: var(--text-muted);
+}
+
+/* CARD 5: XAI Factor Contribution Bars */
+.xai-sub-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.xai-group-lbl {
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.xai-bar-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.xai-bar-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+}
+
+.xai-bar-label {
+    width: 140px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.xai-bar-track {
+    flex: 1;
+    height: 8px;
+    background-color: #f1f5f9;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.xai-bar-fill {
+    height: 100%;
+    border-radius: 4px;
+}
+
+.xai-bar-val {
+    width: 42px;
+    text-align: right;
+    font-weight: 700;
+}
+
+/* CARD 6: Personalized Recommendations Checklist Stack */
+.atlys-checklist-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+}
+
+.atlys-check-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    background-color: #f8fafc;
+    border-radius: var(--radius-sm);
+    border-left: 4px solid var(--atlys-primary);
+}
+
+.atlys-check-item.border-green { border-left-color: var(--green-val); }
+.atlys-check-item.border-yellow { border-left-color: var(--yellow-val); }
+.atlys-check-item.border-red { border-left-color: var(--red-val); }
+
+.item-badge-icon {
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.item-title-text {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.item-desc-text {
+    font-size: 0.73rem;
+    color: var(--text-muted);
+}
+
+/* FOOTER NOTE */
+.atlys-footer-note {
+    background-color: #eff6ff;
+    border: 1px solid #dbeafe;
+    color: #1e40af;
+    border-radius: var(--radius-md);
+    padding: 0.85rem 1.25rem;
+    font-size: 0.82rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+/* HISTORY & BENCHMARK TABLES */
+.panel-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.sub-desc {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.table-responsive-box {
+    overflow-x: auto;
+}
+
+.atlys-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+}
+
+.atlys-table th, .atlys-table td {
+    padding: 0.85rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--atlys-border);
+}
+
+.atlys-table th {
+    background-color: #f8fafc;
+    font-weight: 700;
+}
+
+.selected-row {
+    background-color: #ecfdf5;
+}
+
+.eda-image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1.25rem;
+}
+
+.eda-img-box {
+    background-color: #f8fafc;
+    border: 1px solid var(--atlys-border);
+    border-radius: var(--radius-sm);
+    padding: 0.85rem;
+    text-align: center;
+}
+
+.eda-img-box h4 {
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+}
+
+.eda-img-box img {
+    max-width: 100%;
+    border-radius: 6px;
+}
+
+.btn-atlys-sm {
+    background-color: #f1f5f9;
+    border: 1px solid var(--atlys-border);
+    padding: 0.4rem 0.85rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.text-green { color: var(--green-val); }
+.text-red { color: var(--red-val); }
+.text-yellow { color: var(--yellow-val); }
+.text-blue { color: var(--atlys-primary); }
+.text-center { text-align: center; }
+.mt-3 { margin-top: 1rem; }
+.mt-4 { margin-top: 1.5rem; }
+
+/* FOOTER */
+.atlys-footer {
+    background-color: var(--atlys-navy);
+    color: #94a3b8;
+    padding: 2rem;
+    text-align: center;
+    font-size: 0.85rem;
+    margin-top: auto;
+}
+
+.footer-wrap {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.foot-sub {
+    font-size: 0.75rem;
+    color: #64748b;
+    margin-top: 0.3rem;
+}
+
+/* PRINT MEDIA PDF STYLING */
+@media print {
+    .atlys-navbar, .atlys-disclaimer-strip, .nav-actions, .wizard-btn-row {
+        display: none !important;
+    }
+    body {
+        background: #ffffff !important;
+        height: auto !important;
+        overflow: visible !important;
+    }
+    .app-main-body {
+        padding: 0 !important;
+    }
+    .atlys-6card-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}

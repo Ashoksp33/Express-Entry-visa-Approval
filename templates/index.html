@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Driven Immigration Decision Support System // Consular Predictive Intelligence</title>
+    <meta name="description" content="AI Driven Immigration Decision Support System — Machine Learning prediction model, calibrated probability estimation, Explainable AI (XAI) factor analysis, and actionable visa approval improvement suggestions.">
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="dark-theme">
+
+    <!-- Ambient Glow Background Blobs -->
+    <div class="glow-sphere glow-1"></div>
+    <div class="glow-sphere glow-2"></div>
+    <div class="glow-sphere glow-3"></div>
+
+    <div class="app-container">
+        
+        <!-- HEADER NAVBAR -->
+        <header class="main-header">
+            <div class="brand-box">
+                <div class="brand-icon">
+                    <i class="fas fa-brain-circuit"></i>
+                </div>
+                <div class="brand-text">
+                    <h1>AI Driven Immigration Decision Support System</h1>
+                    <p class="tagline">Consular Random Forest Decision Engine & Explainable AI (XAI) Analytics</p>
+                </div>
+            </div>
+
+            <div class="system-status">
+                <span class="status-indicator online"></span>
+                <span class="status-text">Random Forest Classifier Active (250 Estimators)</span>
+            </div>
+        </header>
+
+        <!-- PRESET PROFILES BAR -->
+        <section class="preset-section">
+            <div class="preset-header">
+                <i class="fas fa-bolt text-cyan"></i>
+                <span>Quick Test Presets (Click to Auto-Load Profile):</span>
+            </div>
+            <div class="preset-buttons">
+                <button type="button" class="preset-btn" onclick="loadPreset('strong_tech')">
+                    <i class="fas fa-user-check text-emerald"></i> Strong Tech Professional (Canada)
+                </button>
+                <button type="button" class="preset-btn" onclick="loadPreset('phd_researcher')">
+                    <i class="fas fa-graduation-cap text-cyan"></i> PhD AI Researcher (Germany)
+                </button>
+                <button type="button" class="preset-btn" onclick="loadPreset('borderline')">
+                    <i class="fas fa-balance-scale text-amber"></i> Borderline Applicant (USA)
+                </button>
+                <button type="button" class="preset-btn" onclick="loadPreset('high_risk')">
+                    <i class="fas fa-user-shield text-rose"></i> High Risk Profile (Australia)
+                </button>
+            </div>
+        </section>
+
+        <!-- MAIN DASHBOARD GRID -->
+        <main class="dashboard-grid">
+
+            <!-- LEFT COLUMN: APPLICANT PROFILE INPUT FORM -->
+            <section class="card form-card">
+                <div class="card-header">
+                    <h2><i class="fas fa-id-card-clip text-cyan"></i> Applicant Details Form</h2>
+                    <span class="step-badge">Module 1: Profile Ingestion</span>
+                </div>
+
+                <form id="visaForm" action="/" method="POST" class="applicant-form">
+                    
+                    <!-- Form Section 1: Personal & Destination -->
+                    <div class="form-group-title">
+                        <i class="fas fa-globe"></i> 1. Personal & Target Destination
+                    </div>
+                    <div class="form-row">
+                        <div class="field">
+                            <label for="country">Target Country</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-passport input-icon"></i>
+                                <select id="country" name="country" required>
+                                    <option value="Australia" {% if input_data.country == 'Australia' %}selected{% endif %}>Australia</option>
+                                    <option value="Canada" {% if input_data.country == 'Canada' %}selected{% endif %}>Canada</option>
+                                    <option value="Germany" {% if input_data.country == 'Germany' %}selected{% endif %}>Germany</option>
+                                    <option value="UK" {% if input_data.country == 'UK' %}selected{% endif %}>United Kingdom (UK)</option>
+                                    <option value="USA" {% if input_data.country == 'USA' %}selected{% endif %}>United States (USA)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label for="age">Age (Years)</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-user input-icon"></i>
+                                <input type="number" id="age" name="age" min="18" max="70" value="{{ input_data.age }}" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Form Section 2: Financial Metrics -->
+                    <div class="form-group-title">
+                        <i class="fas fa-wallet"></i> 2. Financial Stability & Solvency
+                    </div>
+                    <div class="form-row">
+                        <div class="field">
+                            <label for="salary">Annual Income / Salary ($ USD)</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-dollar-sign input-icon"></i>
+                                <input type="number" id="salary" name="salary" min="10000" max="300000" step="1000" value="{{ input_data.salary }}" required>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label for="bank_balance">Liquid Bank Savings ($ USD)</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-piggy-bank input-icon"></i>
+                                <input type="number" id="bank_balance" name="bank_balance" min="5000" max="300000" step="1000" value="{{ input_data.bank_balance }}" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="field">
+                            <label for="sponsorship">Sponsorship Guarantee</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-building-columns input-icon"></i>
+                                <select id="sponsorship" name="sponsorship" required>
+                                    <option value="Yes" {% if input_data.sponsorship == 'Yes' %}selected{% endif %}>Yes (Employer / Sponsor)</option>
+                                    <option value="No" {% if input_data.sponsorship == 'No' %}selected{% endif %}>No (Self-Funded)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label for="employment_type">Employment Status</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-briefcase input-icon"></i>
+                                <select id="employment_type" name="employment_type" required>
+                                    <option value="Full-Time" {% if input_data.employment_type == 'Full-Time' %}selected{% endif %}>Full-Time</option>
+                                    <option value="Contract" {% if input_data.employment_type == 'Contract' %}selected{% endif %}>Contract / Temporary</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Form Section 3: Qualifications & Domain -->
+                    <div class="form-group-title">
+                        <i class="fas fa-user-graduate"></i> 3. Academic & Work Credentials
+                    </div>
+                    <div class="form-row">
+                        <div class="field">
+                            <label for="education">Highest Education Degree</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-certificate input-icon"></i>
+                                <select id="education" name="education" required>
+                                    <option value="Diploma" {% if input_data.education == 'Diploma' %}selected{% endif %}>Diploma</option>
+                                    <option value="Bachelors" {% if input_data.education == 'Bachelors' %}selected{% endif %}>Bachelors</option>
+                                    <option value="Masters" {% if input_data.education == 'Masters' %}selected{% endif %}>Masters</option>
+                                    <option value="PhD" {% if input_data.education == 'PhD' %}selected{% endif %}>PhD</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label for="job_role">Job Role / Industry Field</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-laptop-code input-icon"></i>
+                                <select id="job_role" name="job_role" required>
+                                    <option value="Software Engineer" {% if input_data.job_role == 'Software Engineer' %}selected{% endif %}>Software Engineer</option>
+                                    <option value="Data Scientist" {% if input_data.job_role == 'Data Scientist' %}selected{% endif %}>Data Scientist</option>
+                                    <option value="Cloud Engineer" {% if input_data.job_role == 'Cloud Engineer' %}selected{% endif %}>Cloud Engineer</option>
+                                    <option value="AI Engineer" {% if input_data.job_role == 'AI Engineer' %}selected{% endif %}>AI Engineer</option>
+                                    <option value="Backend Developer" {% if input_data.job_role == 'Backend Developer' %}selected{% endif %}>Backend Developer</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="field">
+                            <label for="experience">Work Experience (Years)</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-business-time input-icon"></i>
+                                <input type="number" id="experience" name="experience" min="0" max="25" value="{{ input_data.experience }}" required>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label for="ielts_score">IELTS Language Score (0 - 9.0)</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-language input-icon"></i>
+                                <input type="number" id="ielts_score" name="ielts_score" min="4.0" max="9.0" step="0.1" value="{{ input_data.ielts_score }}" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Form Section 4: Travel & Security Record -->
+                    <div class="form-group-title">
+                        <i class="fas fa-shield-halved"></i> 4. Travel History & Security Background
+                    </div>
+                    <div class="form-row">
+                        <div class="field">
+                            <label for="international_experience">Prior Travel / Visa Experience</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-plane-departure input-icon"></i>
+                                <select id="international_experience" name="international_experience" required>
+                                    <option value="Yes" {% if input_data.international_experience == 'Yes' %}selected{% endif %}>Yes (Prior Travel History)</option>
+                                    <option value="No" {% if input_data.international_experience == 'No' %}selected{% endif %}>No (First Time International Travel)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label for="criminal_record">Security / Criminal Record</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-gavel input-icon"></i>
+                                <select id="criminal_record" name="criminal_record" required>
+                                    <option value="No" {% if input_data.criminal_record == 'No' %}selected{% endif %}>No (Clean Background)</option>
+                                    <option value="Yes" {% if input_data.criminal_record == 'Yes' %}selected{% endif %}>Yes (Security / Conviction Flag)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SUBMIT BUTTON -->
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-analyze" id="btnSubmit">
+                            <i class="fas fa-microchip"></i>
+                            <span>ANALYZE APPLICANT PROFILE</span>
+                        </button>
+                    </div>
+
+                </form>
+            </section>
+
+
+            <!-- RIGHT COLUMN: DECISION SUPPORT INTELLIGENCE DASHBOARD -->
+            <section class="results-wrapper">
+
+                {% if result %}
+                <!-- PREDICTION RESULT DECISION CARD -->
+                <div class="card result-card {% if result.prediction == 'Likely Approved' %}approved-style{% else %}rejected-style{% endif %} fade-in">
+                    
+                    <div class="result-badge-container">
+                        <div class="decision-pill">
+                            {% if result.prediction == 'Likely Approved' %}
+                                <i class="fas fa-circle-check"></i> LIKELY APPROVED
+                            {% else %}
+                                <i class="fas fa-circle-xmark"></i> LIKELY REJECTED
+                            {% endif %}
+                        </div>
+                        <span class="confidence-tag">{{ result.confidence }}</span>
+                    </div>
+
+                    <!-- PROBABILITY GAUGE METER -->
+                    <div class="probability-display">
+                        <div class="gauge-container">
+                            <svg class="gauge-svg" viewBox="0 0 120 120">
+                                <circle class="gauge-bg" cx="60" cy="60" r="50"></circle>
+                                <circle class="gauge-fill {% if result.prediction == 'Likely Approved' %}fill-approved{% else %}fill-rejected{% endif %}" 
+                                        cx="60" cy="60" r="50" 
+                                        style="stroke-dashoffset: {{ 314.15 - (314.15 * result.approval_probability / 100) }};">
+                                </circle>
+                            </svg>
+                            <div class="gauge-center">
+                                <span class="gauge-value">{{ result.approval_probability }}%</span>
+                                <span class="gauge-label">Approval Chance</span>
+                            </div>
+                        </div>
+
+                        <div class="probability-breakdown-bars">
+                            <div class="prob-bar-group">
+                                <div class="prob-labels">
+                                    <span>Approval Probability</span>
+                                    <strong>{{ result.approval_probability }}%</strong>
+                                </div>
+                                <div class="bar-track">
+                                    <div class="bar-fill fill-approved-bar" style="width: {{ result.approval_probability }}%;"></div>
+                                </div>
+                            </div>
+
+                            <div class="prob-bar-group">
+                                <div class="prob-labels">
+                                    <span>Denial / Rejection Probability</span>
+                                    <strong>{{ result.denial_probability }}%</strong>
+                                </div>
+                                <div class="bar-track">
+                                    <div class="bar-fill fill-rejected-bar" style="width: {{ result.denial_probability }}%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EXPLAINABLE AI (XAI) FACTOR ATTRIBUTION -->
+                <div class="card xai-card fade-in">
+                    <div class="card-header">
+                        <h2><i class="fas fa-magnifying-glass-chart text-cyan"></i> Explainable AI (XAI) Factor Attribution</h2>
+                        <span class="step-badge">Module 3: Decision Explanation</span>
+                    </div>
+
+                    <div class="xai-grid">
+                        <!-- Positive Factors -->
+                        <div class="xai-column positive-col">
+                            <div class="column-title">
+                                <i class="fas fa-circle-up text-emerald"></i> Positive Contributing Factors
+                            </div>
+                            <div class="factor-list">
+                                {% for factor in result.explainability.positive_factors %}
+                                <div class="factor-item positive-item">
+                                    <div class="factor-head">
+                                        <span class="factor-title">{{ factor.factor }}</span>
+                                        <span class="factor-impact positive-badge">{{ factor.impact }}</span>
+                                    </div>
+                                    <p class="factor-desc">{{ factor.description }}</p>
+                                </div>
+                                {% else %}
+                                <p class="empty-state">No major positive factors identified.</p>
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                        <!-- Risk Factors -->
+                        <div class="xai-column risk-col">
+                            <div class="column-title">
+                                <i class="fas fa-triangle-exclamation text-rose"></i> Risk & Penalty Factors
+                            </div>
+                            <div class="factor-list">
+                                {% for factor in result.explainability.risk_factors %}
+                                <div class="factor-item risk-item">
+                                    <div class="factor-head">
+                                        <span class="factor-title">{{ factor.factor }}</span>
+                                        <span class="factor-impact risk-badge">{{ factor.impact }}</span>
+                                    </div>
+                                    <p class="factor-desc">{{ factor.description }}</p>
+                                </div>
+                                {% else %}
+                                <div class="factor-item clean-item">
+                                    <i class="fas fa-shield-check text-emerald"></i>
+                                    <span>No critical consular risk flags detected in this profile!</span>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ACTIONABLE IMPROVEMENT SUGGESTIONS -->
+                <div class="card suggestions-card fade-in">
+                    <div class="card-header">
+                        <h2><i class="fas fa-lightbulb text-amber"></i> Actionable Improvement Suggestions</h2>
+                        <span class="step-badge">Module 4: Profile Optimization</span>
+                    </div>
+
+                    <div class="suggestions-list">
+                        {% for sug in result.suggestions %}
+                        <div class="suggestion-item">
+                            <div class="sug-header">
+                                <span class="sug-area"><i class="fas fa-arrow-trend-up"></i> {{ sug.area }}</span>
+                                <span class="sug-boost"><i class="fas fa-plus"></i> {{ sug.estimated_approval_boost }} Approval Boost</span>
+                            </div>
+                            <p class="sug-action">{{ sug.action }}</p>
+                            <div class="sug-target"><i class="fas fa-bullseye"></i> Target Benchmark: {{ sug.target }}</div>
+                        </div>
+                        {% else %}
+                        <div class="all-set-box">
+                            <i class="fas fa-award text-emerald"></i>
+                            <div>
+                                <h4>Optimal Applicant Profile</h4>
+                                <p>This profile already meets or exceeds all standard consular benchmarks for {{ input_data.country }}.</p>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <!-- REAL-TIME WHAT-IF SIMULATOR -->
+                <div class="card simulator-card fade-in">
+                    <div class="card-header">
+                        <h2><i class="fas fa-sliders text-cyan"></i> Interactive What-If Scenario Simulator</h2>
+                        <span class="step-badge">Module 5: Real-Time Simulation</span>
+                    </div>
+                    <p class="sim-intro">Adjust parameters below to see instantaneous recalculation of approval probability:</p>
+
+                    <div class="sim-sliders">
+                        <div class="slider-group">
+                            <label>Liquid Bank Balance ($ USD): <strong id="simBankVal">${{ "{:,}".format(input_data.bank_balance) }}</strong></label>
+                            <input type="range" id="simBank" min="10000" max="150000" step="5000" value="{{ input_data.bank_balance }}" oninput="runSimulation()">
+                        </div>
+
+                        <div class="slider-group">
+                            <label>IELTS Language Score: <strong id="simIeltsVal">{{ input_data.ielts_score }}</strong></label>
+                            <input type="range" id="simIelts" min="5.0" max="9.0" step="0.5" value="{{ input_data.ielts_score }}" oninput="runSimulation()">
+                        </div>
+
+                        <div class="slider-group">
+                            <label>Annual Salary ($ USD): <strong id="simSalaryVal">${{ "{:,}".format(input_data.salary) }}</strong></label>
+                            <input type="range" id="simSalary" min="20000" max="200000" step="5000" value="{{ input_data.salary }}" oninput="runSimulation()">
+                        </div>
+                    </div>
+
+                    <div class="sim-result-box" id="simResultBox">
+                        <span>Live Simulated Approval Probability:</span>
+                        <strong id="simProbVal" class="text-cyan">{{ result.approval_probability }}%</strong>
+                    </div>
+                </div>
+
+                {% else %}
+                <!-- INITIAL PLACEHOLDER CARD -->
+                <div class="card empty-welcome-card fade-in">
+                    <div class="welcome-icon">
+                        <i class="fas fa-passport"></i>
+                    </div>
+                    <h3>Ready for Consular Decision Analysis</h3>
+                    <p>Select a quick test preset above or fill in the applicant details form on the left, then click <strong>"ANALYZE APPLICANT PROFILE"</strong>.</p>
+                    
+                    <div class="feature-highlights">
+                        <div class="feat-box">
+                            <i class="fas fa-chart-pie text-emerald"></i>
+                            <span>Calibrated Approval & Denial Probabilities</span>
+                        </div>
+                        <div class="feat-box">
+                            <i class="fas fa-brain text-cyan"></i>
+                            <span>Explainable AI (XAI) Feature Attribution</span>
+                        </div>
+                        <div class="feat-box">
+                            <i class="fas fa-wand-magic-sparkles text-amber"></i>
+                            <span>Actionable Improvement Recommendations</span>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+
+            </section>
+
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="main-footer">
+            <p>AI Driven Immigration Decision Support System &copy; 2026. Powered by Scikit-Learn Random Forest Classifier.</p>
+        </footer>
+
+    </div>
+
+    <!-- Client-Side JavaScript -->
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

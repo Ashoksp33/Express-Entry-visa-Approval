@@ -1,0 +1,15 @@
+# Python bytecode & virtualenvs
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+
+# Database & artifacts
+*.db
+models/*.pkl
+
+# OS files
+.DS_Store
+Thumbs.db
