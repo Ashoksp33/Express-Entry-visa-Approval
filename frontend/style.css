@@ -88,12 +88,16 @@ body {
 }
 
 .brand-logo-img {
-    width: 36px;
-    height: 36px;
-    object-fit: contain;
-    border-radius: 50%;
+    width: 34px !important;
+    height: 34px !important;
+    max-width: 34px !important;
+    max-height: 34px !important;
+    object-fit: contain !important;
+    border-radius: 50% !important;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
     transition: transform 0.2s ease;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .brand-group:hover .brand-logo-img {
