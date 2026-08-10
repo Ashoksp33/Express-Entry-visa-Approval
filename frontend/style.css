@@ -87,6 +87,19 @@ body {
     font-size: 1.8rem;
 }
 
+.brand-logo-img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    transition: transform 0.2s ease;
+}
+
+.brand-group:hover .brand-logo-img {
+    transform: scale(1.08);
+}
+
 .brand-text {
     display: flex;
     flex-direction: column;
