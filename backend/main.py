@@ -230,8 +230,13 @@ def get_model_info():
         "global_feature_importances": explainer.get_global_feature_importance()
     }
 
-# Mount static frontend directory
+# Mount static frontend and reports directories
 frontend_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "frontend"))
+reports_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "reports"))
+
+if os.path.exists(reports_dir):
+    app.mount("/reports", StaticFiles(directory=reports_dir), name="reports")
+
 if os.path.exists(frontend_dir):
     app.mount("/static", StaticFiles(directory=frontend_dir), name="static")
 
