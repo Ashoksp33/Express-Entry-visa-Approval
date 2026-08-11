@@ -2,13 +2,18 @@
 let donutChartInstance = null;
 let divergingChartInstance = null;
 let currentStep = 1;
+let autoSwitchOnSubmit = true;
 
 document.addEventListener("DOMContentLoaded", () => {
     // Initial fetch of default history data
     loadHistory();
 
-    // Auto-run analysis for Profile A on load so live visuals render instantly
-    loadPreset('strong_profile');
+    // Ensure Home Page (Overview) is active on initial load
+    switchTab('hero-tab');
+
+    // Pre-calculate baseline dashboard analysis in background without auto-switching tab
+    autoSwitchOnSubmit = false;
+    loadPreset('strong_profile', false);
 });
 
 // Helper for safe integer parsing with default fallbacks
@@ -84,7 +89,8 @@ function downloadReport() {
 }
 
 // 1-Click Preset Profile Loader
-async function loadPreset(presetKey) {
+async function loadPreset(presetKey, switchImmediately = true) {
+    autoSwitchOnSubmit = switchImmediately;
     try {
         const response = await fetch('/presets');
         if (!response.ok) throw new Error("Failed to load presets");
@@ -175,8 +181,12 @@ async function handleFormSubmit(event) {
         // Render Dashboard Data matching Atlys Layout
         renderDashboardView(data);
 
-        // Switch to AI Report & XAI Tab
-        switchTab('results-tab');
+        // Switch to AI Report & XAI Tab only if user requested tab switch
+        if (autoSwitchOnSubmit) {
+            switchTab('results-tab');
+        } else {
+            autoSwitchOnSubmit = true; // reset for future user clicks
+        }
 
     } catch (err) {
         console.error("Analysis Error:", err);
