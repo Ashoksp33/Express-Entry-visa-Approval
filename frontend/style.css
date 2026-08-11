@@ -273,11 +273,11 @@ body {
 .hero-container {
     display: grid;
     grid-template-columns: 1.15fr 0.85fr;
-    gap: 2.25rem;
+    gap: 3.5rem;
     align-items: center;
-    padding: 2.5rem 0;
+    padding: 1.5rem 0;
     width: 100%;
-    min-height: calc(100vh - 160px);
+    min-height: calc(100vh - 180px);
 }
 
 @media (max-width: 992px) {
@@ -289,30 +289,30 @@ body {
 .atlys-pill-badge {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.4rem;
     background-color: var(--atlys-primary-light);
     color: var(--atlys-primary);
     border: 1px solid #bfdbfe;
-    padding: 0.45rem 1.1rem;
+    padding: 0.35rem 0.85rem;
     border-radius: 999px;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     font-weight: 700;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
 }
 
 .pill-dot {
-    width: 8px;
-    height: 8px;
+    width: 7px;
+    height: 7px;
     background-color: var(--atlys-primary);
     border-radius: 50%;
 }
 
 .hero-main-title {
-    font-size: clamp(3rem, 4vw, 3.8rem);
+    font-size: clamp(2.6rem, 3.5vw, 3.4rem);
     font-weight: 800;
-    line-height: 1.15;
+    line-height: 1.18;
     color: var(--atlys-navy);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
     letter-spacing: -0.03em;
 }
 
@@ -323,38 +323,38 @@ body {
 }
 
 .hero-description {
-    font-size: clamp(1.15rem, 1.4vw, 1.3rem);
+    font-size: clamp(1.05rem, 1.3vw, 1.2rem);
     color: var(--text-muted);
-    margin-bottom: 2.5rem;
-    line-height: 1.65;
-    text-align: left;
+    margin-bottom: 2.25rem;
+    line-height: 1.6;
+    text-align: justify;
 }
 
 .trust-badges-row {
     display: flex;
-    gap: 2rem;
-    margin-bottom: 2.5rem;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
     flex-wrap: wrap;
 }
 
 .trust-item {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    gap: 0.6rem;
 }
 
 .trust-icon {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
 }
 
 .trust-item strong {
     display: block;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     color: var(--text-main);
 }
 
 .trust-item small {
-    font-size: 0.82rem;
+    font-size: 0.75rem;
     color: var(--text-muted);
 }
 
@@ -362,9 +362,9 @@ body {
     background-color: var(--atlys-navy);
     color: #ffffff;
     border: none;
-    padding: 1.15rem 2.25rem;
+    padding: 1rem 2rem;
     border-radius: var(--radius-md);
-    font-size: 1.15rem;
+    font-size: 1.05rem;
     font-weight: 700;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -381,33 +381,33 @@ body {
     background-color: #ffffff;
     border: 1px solid var(--atlys-border);
     border-radius: var(--radius-lg);
-    padding: 2.25rem;
+    padding: 1.75rem;
     box-shadow: var(--shadow-lg);
 }
 
 .preset-box-header h3 {
-    font-size: 1.35rem;
+    font-size: 1.15rem;
     font-weight: 800;
     color: var(--atlys-navy);
 }
 
 .preset-box-header p {
-    font-size: 0.92rem;
+    font-size: 0.85rem;
     color: var(--text-muted);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
 }
 
 .preset-list {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.85rem;
 }
 
 .preset-item {
     background-color: #f8fafc;
     border: 1px solid var(--atlys-border);
     border-radius: var(--radius-md);
-    padding: 1.25rem;
+    padding: 1rem;
     cursor: pointer;
     transition: all 0.2s ease;
 }
@@ -421,22 +421,22 @@ body {
 
 .preset-item-head {
     display: flex;
-    gap: 0.85rem;
-    margin-bottom: 0.6rem;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
 }
 
 .preset-emoji {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 .preset-item-head h4 {
-    font-size: 1.05rem;
+    font-size: 0.95rem;
     font-weight: 700;
     color: var(--text-main);
 }
 
 .preset-item-head small {
-    font-size: 0.85rem;
+    font-size: 0.78rem;
     color: var(--text-muted);
 }
 
