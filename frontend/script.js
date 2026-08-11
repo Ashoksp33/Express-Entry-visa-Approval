@@ -279,6 +279,7 @@ function renderDonutChart(appProb, denProb) {
             cutout: '70%',
             responsive: true,
             maintainAspectRatio: false,
+            devicePixelRatio: Math.max(2, window.devicePixelRatio || 2),
             plugins: {
                 legend: { display: false },
                 tooltip: { enabled: true }
@@ -309,7 +310,7 @@ function renderDivergingChart(data) {
 
     const labels = factors.map(f => f.name);
     const values = factors.map(f => f.val);
-    const bgColors = values.map(v => v >= 0 ? '#6366f1' : '#ef4444');
+    const bgColors = values.map(v => v >= 0 ? '#4f46e5' : '#dc2626');
 
     divergingChartInstance = new Chart(ctx, {
         type: 'bar',
@@ -318,26 +319,44 @@ function renderDivergingChart(data) {
             datasets: [{
                 data: values,
                 backgroundColor: bgColors,
-                borderRadius: 4
+                borderRadius: 5,
+                barThickness: 12
             }]
         },
         options: {
             indexAxis: 'y',
             responsive: true,
             maintainAspectRatio: false,
+            devicePixelRatio: Math.max(2, window.devicePixelRatio || 2),
             plugins: {
-                legend: { display: false }
+                legend: { display: false },
+                tooltip: {
+                    titleFont: { family: "'Plus Jakarta Sans', sans-serif", size: 12, weight: '700' },
+                    bodyFont: { family: "'Plus Jakarta Sans', sans-serif", size: 11, weight: '600' }
+                }
             },
             scales: {
                 x: {
                     min: -0.2,
                     max: 0.3,
-                    grid: { color: '#e2e8f0' },
-                    title: { display: true, text: 'Impact on Prediction', font: { size: 10 } }
+                    grid: { color: '#e2e8f0', drawBorder: false },
+                    ticks: {
+                        color: '#334155',
+                        font: { family: "'Plus Jakarta Sans', sans-serif", size: 11, weight: '600' }
+                    },
+                    title: {
+                        display: true,
+                        text: 'Impact on Prediction',
+                        color: '#0f172a',
+                        font: { family: "'Plus Jakarta Sans', sans-serif", size: 11, weight: '800' }
+                    }
                 },
                 y: {
                     grid: { display: false },
-                    ticks: { font: { size: 10 } }
+                    ticks: {
+                        color: '#0f172a',
+                        font: { family: "'Plus Jakarta Sans', sans-serif", size: 11, weight: '700' }
+                    }
                 }
             }
         }
@@ -347,9 +366,19 @@ function renderDivergingChart(data) {
 // CARD 3: Speedometer Risk Indicator Gauge
 function renderRiskGauge(appProb, riskText) {
     const canvas = document.getElementById('gaugeCanvas');
+    const dpr = Math.max(2, window.devicePixelRatio || 2);
+    
+    // High DPI Canvas crispness scaling
+    canvas.width = 240 * dpr;
+    canvas.height = 130 * dpr;
+    canvas.style.width = '240px';
+    canvas.style.height = '130px';
+
     const ctx = canvas.getContext('2d');
-    const w = canvas.width;
-    const h = canvas.height;
+    ctx.scale(dpr, dpr);
+
+    const w = 240;
+    const h = 130;
     const cx = w / 2;
     const cy = h - 15;
     const radius = 85;
@@ -359,21 +388,21 @@ function renderRiskGauge(appProb, riskText) {
     // Red Segment (180deg to 240deg)
     ctx.beginPath();
     ctx.arc(cx, cy, radius, Math.PI, Math.PI * 1.33, false);
-    ctx.lineWidth = 22;
+    ctx.lineWidth = 20;
     ctx.strokeStyle = '#ef4444';
     ctx.stroke();
 
     // Yellow Segment (240deg to 285deg)
     ctx.beginPath();
     ctx.arc(cx, cy, radius, Math.PI * 1.33, Math.PI * 1.66, false);
-    ctx.lineWidth = 22;
+    ctx.lineWidth = 20;
     ctx.strokeStyle = '#f59e0b';
     ctx.stroke();
 
     // Green Segment (285deg to 360deg)
     ctx.beginPath();
     ctx.arc(cx, cy, radius, Math.PI * 1.66, Math.PI * 2, false);
-    ctx.lineWidth = 22;
+    ctx.lineWidth = 20;
     ctx.strokeStyle = '#10b981';
     ctx.stroke();
 
@@ -386,15 +415,15 @@ function renderRiskGauge(appProb, riskText) {
     ctx.rotate(needleAngle);
 
     ctx.beginPath();
-    ctx.moveTo(0, -6);
+    ctx.moveTo(0, -5);
     ctx.lineTo(radius - 12, 0);
-    ctx.lineTo(0, 6);
+    ctx.lineTo(0, 5);
     ctx.fillStyle = '#0f172a';
     ctx.fill();
 
     // Pivot Circle
     ctx.beginPath();
-    ctx.arc(0, 0, 8, 0, Math.PI * 2);
+    ctx.arc(0, 0, 7, 0, Math.PI * 2);
     ctx.fillStyle = '#1e293b';
     ctx.fill();
 

@@ -913,29 +913,31 @@ body {
 }
 
 .xai-group-lbl {
-    font-size: 0.8rem;
-    font-weight: 700;
-    margin-bottom: 0.15rem;
+    font-size: 0.82rem;
+    font-weight: 800;
+    margin-bottom: 0.2rem;
 }
 
 .xai-bar-stack {
     display: flex;
     flex-direction: column;
-    gap: 0.35rem;
+    gap: 0.4rem;
 }
 
 .xai-bar-row {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    font-size: 0.75rem;
+    font-size: 0.78rem;
 }
 
 .xai-bar-label {
-    width: 140px;
+    width: 145px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    color: #0f172a;
+    font-weight: 600;
 }
 
 .xai-bar-track {
@@ -952,9 +954,10 @@ body {
 }
 
 .xai-bar-val {
-    width: 42px;
+    width: 48px;
     text-align: right;
-    font-weight: 700;
+    font-weight: 800;
+    color: #0f172a;
 }
 
 /* CARD 6: Personalized Recommendations Checklist Stack */
