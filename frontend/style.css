@@ -319,6 +319,7 @@ body {
     color: var(--text-muted);
     margin-bottom: 2.25rem;
     line-height: 1.6;
+    text-align: justify;
 }
 
 .trust-badges-row {
