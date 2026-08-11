@@ -8,12 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // Initial fetch of default history data
     loadHistory();
 
-    // Ensure Home Page (Overview) is active on initial load
+    // Always enforce Overview Home Page (hero-tab) on initial website load
     switchTab('hero-tab');
-
-    // Pre-calculate baseline dashboard analysis in background without auto-switching tab
-    autoSwitchOnSubmit = false;
-    loadPreset('strong_profile', false);
 });
 
 // Helper for safe integer parsing with default fallbacks
@@ -181,12 +177,8 @@ async function handleFormSubmit(event) {
         // Render Dashboard Data matching Atlys Layout
         renderDashboardView(data);
 
-        // Switch to AI Report & XAI Tab only if user requested tab switch
-        if (autoSwitchOnSubmit) {
-            switchTab('results-tab');
-        } else {
-            autoSwitchOnSubmit = true; // reset for future user clicks
-        }
+        // Switch to AI Report & XAI Tab
+        switchTab('results-tab');
 
     } catch (err) {
         console.error("Analysis Error:", err);
