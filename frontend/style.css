@@ -41,18 +41,10 @@
     --shadow-lg: 0 10px 25px -5px rgba(0,0,0,0.08), 0 8px 10px -6px rgba(0,0,0,0.01);
 }
 
-*, *::before, *::after {
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-html, body {
-    width: 100vw;
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
 }
 
 body {
@@ -60,6 +52,7 @@ body {
     background-color: var(--atlys-bg);
     color: var(--text-main);
     line-height: 1.5;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -72,23 +65,23 @@ body {
     top: 0;
     z-index: 100;
     box-shadow: var(--shadow-sm);
-    width: 100%;
 }
 
 .nav-container {
-    max-width: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0.9rem 2.5rem;
+    max-width: 1380px;
+    width: 92%;
+    margin: 0 auto;
+    padding: 0.85rem 1.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
 @media (max-width: 768px) {
     .nav-container {
-        padding: 0.9rem 1.25rem;
+        width: 100%;
+        padding: 0.85rem 1rem;
     }
 }
 
@@ -222,16 +215,15 @@ body {
 .atlys-disclaimer-strip {
     background-color: #fefce8;
     border-bottom: 1px solid #fef08a;
-    padding: 0.5rem 2.5rem;
+    padding: 0.5rem 1.5rem;
     font-size: 0.8rem;
     color: #854d0e;
-    width: 100%;
 }
 
 .strip-content {
-    max-width: 100%;
-    width: 100%;
-    margin: 0;
+    max-width: 1380px;
+    width: 92%;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -239,24 +231,21 @@ body {
 
 /* MAIN BODY & TAB PANELS */
 .app-main-body {
-    max-width: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 1.5rem 2.5rem;
+    max-width: 1380px;
+    width: 92%;
+    margin: 2.25rem auto;
+    padding: 0 1.5rem;
     flex: 1;
-    min-height: calc(100vh - 140px);
 }
 
 @media (max-width: 768px) {
     .app-main-body {
-        padding: 1.25rem;
+        padding: 0 1.25rem;
     }
 }
 
 .tab-panel {
     display: none;
-    width: 100%;
-    min-height: 100%;
 }
 
 .tab-panel.active {
@@ -275,9 +264,7 @@ body {
     grid-template-columns: 1.15fr 0.85fr;
     gap: 3.5rem;
     align-items: center;
-    padding: 2rem 0;
-    width: 100%;
-    min-height: calc(100vh - 180px);
+    padding: 1.5rem 0;
 }
 
 @media (max-width: 992px) {
@@ -1136,17 +1123,15 @@ body {
 .atlys-footer {
     background-color: var(--atlys-navy);
     color: #94a3b8;
-    padding: 2rem 2.5rem;
+    padding: 2rem;
     text-align: center;
     font-size: 0.85rem;
     margin-top: auto;
-    width: 100%;
 }
 
 .footer-wrap {
-    max-width: 100%;
-    width: 100%;
-    margin: 0;
+    max-width: 1280px;
+    margin: 0 auto;
 }
 
 .foot-sub {
