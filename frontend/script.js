@@ -84,6 +84,19 @@ function downloadReport() {
     window.print();
 }
 
+// Fullscreen Mode Toggle Helper
+function toggleFullScreen() {
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(err => {
+            console.warn(`Fullscreen error: ${err.message}`);
+        });
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        }
+    }
+}
+
 // 1-Click Preset Profile Loader
 async function loadPreset(presetKey, switchImmediately = true) {
     autoSwitchOnSubmit = switchImmediately;
