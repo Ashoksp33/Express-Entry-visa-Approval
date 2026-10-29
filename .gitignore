@@ -12,7 +12,6 @@ venv/
 
 # Database & artifacts
 *.db
-models/*.pkl
 
 # Backup, media and temp files
 *.bak
