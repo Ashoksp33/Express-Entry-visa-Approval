@@ -15,11 +15,17 @@ def open_browser():
     webbrowser.open("http://localhost:8000")
 
 if __name__ == "__main__":
-    print("Starting CanVisa AI FastAPI Server on http://localhost:8000 ...")
-    threading.Thread(target=open_browser, daemon=True).start()
+    port = int(os.environ.get("PORT", 8000))
+    is_cloud = bool(os.environ.get("PORT"))
+    host = "0.0.0.0" if is_cloud else "127.0.0.1"
+
+    print(f"Starting CanVisa AI FastAPI Server on http://{host}:{port} ...")
+    if not is_cloud:
+        threading.Thread(target=open_browser, daemon=True).start()
+
     uvicorn.run(
         app,
-        host="127.0.0.1",
-        port=8000,
+        host=host,
+        port=port,
         reload=False
     )
