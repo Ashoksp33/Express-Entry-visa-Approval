@@ -67,7 +67,7 @@ class VisaPredictor:
             "raw_approval_prob": approval_prob,
             "raw_denial_prob": denial_prob,
             "risk_level": risk_level,
-            "model_used": self.model_name
+            "model_used": "Standard Eligibility Assessment"
         }
 
 if __name__ == "__main__":

@@ -28,16 +28,19 @@ class VisaExplainer:
         self.shap_explainer = None
         if SHAP_AVAILABLE and hasattr(self.classifier, "predict_proba"):
             try:
-                # TreeExplainer for Random Forest / Tree models
-                self.shap_explainer = shap.TreeExplainer(self.classifier)
+                if hasattr(self.classifier, "feature_importances_"):
+                    self.shap_explainer = shap.TreeExplainer(self.classifier)
+                elif hasattr(self.classifier, "coef_"):
+                    self.shap_explainer = shap.LinearExplainer(self.classifier, np.zeros((1, self.classifier.coef_.shape[1])))
             except Exception:
                 self.shap_explainer = None
 
     def get_global_feature_importance(self, top_n=10) -> list:
         """
         Extracts global feature importances from the trained classifier.
+        Supports both tree feature_importances_ and linear model coef_.
         """
-        if not hasattr(self.classifier, "feature_importances_"):
+        if not hasattr(self.classifier, "feature_importances_") and not hasattr(self.classifier, "coef_"):
             return []
 
         # Get feature names from preprocessor
@@ -51,7 +54,11 @@ class VisaExplainer:
         # Binary
         feature_names.extend(BINARY_FEATURES)
 
-        importances = self.classifier.feature_importances_
+        if hasattr(self.classifier, "feature_importances_"):
+            importances = self.classifier.feature_importances_
+        else:
+            # Absolute coefficients representing linear feature importance
+            importances = np.abs(self.classifier.coef_[0])
         
         # Map importances to domain feature groups for user-friendly display
         group_importances = {

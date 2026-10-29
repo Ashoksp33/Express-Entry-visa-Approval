@@ -1,3 +1,7 @@
+# Environment & secrets
+.env
+.env.local
+
 # Python bytecode & virtualenvs
 __pycache__/
 *.py[cod]
@@ -10,6 +14,20 @@ venv/
 *.db
 models/*.pkl
 
-# OS files
+# Backup, media and temp files
+*.bak
+*.tmp
+dash*.png
+hero_no_sub.png
+frame_*.jpg
+poster_preview.jpg
+trail_mask.jpg
+*.mp4
+data/backup/
+
+# OS & IDE files
 .DS_Store
 Thumbs.db
+.vscode/
+.idea/
+

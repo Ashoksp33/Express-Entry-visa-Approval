@@ -1,5 +1,6 @@
 import os
 import sys
+from typing import Optional, List, Dict, Any
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
@@ -12,6 +13,8 @@ from backend.model_service import get_model_service
 from backend.explanation_service import get_explanation_service
 from backend.recommendation_service import generate_personalized_recommendations
 from backend.database import init_db, save_application_record, fetch_application_history
+from backend.chat_service import answer_project_query
+from backend.auth_service import request_otp, verify_otp
 
 app = FastAPI(
     title="AI-Driven Canada Employment Visa Decision Support System",
@@ -150,7 +153,7 @@ def health_check():
         "status": "online",
         "system": "Canada Employment Visa Decision Support System",
         "backend": "FastAPI",
-        "ml_engine": "Scikit-Learn Random Forest Pipeline"
+        "engine": "Rules & Eligibility Scoring Engine"
     }
 
 @app.get("/presets")
@@ -204,6 +207,10 @@ def full_visa_analysis(profile: ApplicantProfileSchema):
 
         return {
             "id": record_id,
+            "target_country": prediction_res.get("target_country", "canada"),
+            "country_name": prediction_res.get("country_name", "Canada"),
+            "country_flag": prediction_res.get("country_flag", "🍁"),
+            "currency": prediction_res.get("currency", "CAD"),
             "prediction": prediction_res["prediction"],
             "approval_probability": prediction_res["approval_probability"],
             "denial_probability": prediction_res["denial_probability"],
@@ -220,11 +227,15 @@ def full_visa_analysis(profile: ApplicantProfileSchema):
         print(f"Error in full_visa_analysis: {err}")
         return {
             "id": 1,
+            "target_country": profile_dict.get("target_country", "canada"),
+            "country_name": "Canada",
+            "country_flag": "🍁",
+            "currency": "CAD",
             "prediction": "Likely Approved",
             "approval_probability": 85.0,
             "denial_probability": 15.0,
             "risk_level": "LOW RISK",
-            "model_used": "Random Forest Classifier",
+            "model_used": "Standard Eligibility Assessment",
             "top_positive_factors": [{"factor": "Relevant Work Experience", "impact": "+0.24", "description": "Solid experience."}],
             "top_negative_factors": [],
             "recommendations": [{"category": "Documentation", "priority": "High", "title": "Maintain strong documentation", "action": "Ensure experience records are verifiable."}],
@@ -254,6 +265,76 @@ def download_processed_dataset():
         return FileResponse(processed_path, media_type="text/csv", filename="canada_employment_visa_processed.csv")
     return {"error": "Processed dataset file not found"}
 
+from pydantic import BaseModel
+class ChatQuerySchema(BaseModel):
+    message: str
+    lang: Optional[str] = "en"
+
+@app.post("/api/chat")
+def chat_with_project_assistant(query: ChatQuerySchema):
+    if not query.message or not query.message.strip():
+        raise HTTPException(status_code=400, detail="Empty query provided.")
+    result = answer_project_query(query.message.strip(), query.lang or "en")
+    return result
+
+@app.get("/api/chat/starters")
+def get_chat_starters(lang: str = "en"):
+    starters_map = {
+        "kn": [
+            "ಪ್ರೊಫೈಲ್‌ಗೆ Medium Risk ಏಕೆ ಬರುತ್ತದೆ?",
+            "Medium ನಿಂದ Low Risk ಗೆ ಹೋಗುವುದು ಹೇಗೆ?",
+            "ಕೆನಡಾ Proof of Funds (ಬ್ಯಾಂಕ್ ಉಳಿತಾಯ) ಎಷ್ಟು ಬೇಕು?",
+            "ಕೆನಡಾ Express Entry ನಿಯಮಗಳು ಯಾವುವು?",
+            "ಆಸ್ಟ್ರೇಲಿಯಾ ಮತ್ತು ಯುಕೆ ನಿಯಮಗಳು ಯಾವುವು?",
+            "ಜರ್ಮನಿ Chancenkarte (ಅವಕಾಶ ಕಾರ್ಡ್) ನಿಯಮಗಳೇನು?",
+            "ಫಲಿತಾಂಶ ನಿರ್ಧರಿಸುವ ಅಂಶಗಳು ಯಾವುವು?"
+        ],
+        "hi": [
+            "प्रोफाइल को Medium Risk क्यों मिलता है?",
+            "Medium से Low Risk में कैसे जाएं?",
+            "कनाडा Proof of Funds (बैंक बैलेंस) कितना चाहिए?",
+            "कनाडा Express Entry के नियम क्या हैं?",
+            "ऑस्ट्रेलिया और यूके के मुख्य नियम क्या हैं?",
+            "जर्मनी Chancenkarte के नियम क्या हैं?",
+            "परिणाम तय करने वाले कारक क्या हैं?"
+        ],
+        "en": [
+            "Why does a profile get Medium Risk?",
+            "How to move from Medium to Low Risk?",
+            "What is Proof of Funds for Canada?",
+            "What are Canada Express Entry requirements?",
+            "What are the rules for Australia & UK?",
+            "What is the Germany Opportunity Card?",
+            "What factors decide my visa score?"
+        ]
+    }
+    return {"starters": starters_map.get(lang, starters_map["en"])}
+
+class SendOtpSchema(BaseModel):
+    email: str
+
+class VerifyOtpSchema(BaseModel):
+    email: str
+    otp: str
+
+@app.post("/api/auth/send-otp")
+def api_send_otp(payload: SendOtpSchema):
+    if not payload.email or not payload.email.strip():
+        raise HTTPException(status_code=400, detail="Please enter a valid email address.")
+    result = request_otp(payload.email)
+    if not result.get("success"):
+        raise HTTPException(status_code=400, detail=result.get("message"))
+    return result
+
+@app.post("/api/auth/verify-otp")
+def api_verify_otp(payload: VerifyOtpSchema):
+    if not payload.email or not payload.otp:
+        raise HTTPException(status_code=400, detail="Email and OTP code are required.")
+    result = verify_otp(payload.email, payload.otp)
+    if not result.get("success"):
+        raise HTTPException(status_code=400, detail=result.get("message"))
+    return result
+
 # Mount static frontend and reports directories
 frontend_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "frontend"))
 reports_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "reports"))
@@ -265,7 +346,23 @@ if os.path.exists(frontend_dir):
     app.mount("/static", StaticFiles(directory=frontend_dir), name="static")
 
     @app.get("/")
-    def serve_frontend_index():
+    def serve_root():
+        # Clean separation: root opens the cinematic launch page
+        launch_file = os.path.join(frontend_dir, "launch.html")
+        if os.path.exists(launch_file):
+            return FileResponse(launch_file)
+        return FileResponse(os.path.join(frontend_dir, "index.html"))
+
+    @app.get("/launch")
+    def serve_launch_page():
+        return FileResponse(os.path.join(frontend_dir, "launch.html"))
+
+    @app.get("/login")
+    def serve_login_page():
+        return FileResponse(os.path.join(frontend_dir, "login.html"))
+
+    @app.get("/app")
+    def serve_app_dashboard():
         return FileResponse(os.path.join(frontend_dir, "index.html"))
 
 if __name__ == "__main__":

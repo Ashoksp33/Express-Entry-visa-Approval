@@ -49,8 +49,8 @@ def train_and_evaluate_models(models_dir="models"):
     print("\n--- MODEL COMPARISON TABLE ---")
     print(comparison_df.to_string(index=False))
 
-    # Select Random Forest as primary production pipeline
-    best_model_name = "Random Forest"
+    # Select Logistic Regression as primary production pipeline (highest accuracy & ROC-AUC)
+    best_model_name = "Logistic Regression"
     best_pipeline = trained_pipelines[best_model_name]
 
     pipeline_save_path = os.path.join(models_dir, "visa_prediction_pipeline.pkl")

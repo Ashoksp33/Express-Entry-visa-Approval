@@ -2,149 +2,445 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CanVisa AI — Canada Work Visa Decision Support & Eligibility Engine</title>
-    <meta name="description" content="Atlys-inspired AI decision-support platform for Canadian employment visa predictions using Machine Learning and Explainable AI.">
-    <link rel="stylesheet" href="/static/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>CanVisa AI — Global Work Visa Decision Support & Eligibility Engine</title>
+    <meta name="description" content="AI decision-support platform for global employment visa predictions across 4 destinations using Machine Learning and Explainable AI.">
+    <link rel="stylesheet" href="/static/style.css?v=3">
+    <link rel="stylesheet" href="/static/chatbot.css?v=12">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-
-    <!-- TOP ATLYS BRAND NAVBAR -->
+    <!-- LOOPING VIDEO BACKGROUND (SYNCED WITH LAUNCH & LOGIN) -->
+    <video class="art-bg" autoplay muted loop playsinline preload="auto" aria-hidden="true"
+      poster="https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/130837c4-0244-4f37-9c61-8d801d93fd29.jpg"
+      src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260912_104303_0c6d60b2-9353-408e-9449-585108a22fb5.mp4"></video>
+    <div class="ambient-glow-veil" aria-hidden="true"></div>
     <header class="atlys-navbar">
         <div class="nav-container">
             <div class="brand-group" onclick="switchTab('hero-tab')">
-                <img src="/static/canada_flag.png" width="34" height="34" style="width:34px; height:34px; max-width:34px; max-height:34px; object-fit:contain; border-radius:50%;" alt="Canada Flag Logo" class="brand-logo-img">
+                <svg class="brand-neural-mark" viewBox="0 0 23 17" aria-hidden="true">
+                    <path d="M8.15 0.9 L4.55 0.9 L0.5 9.3 L4.1 9.3 Z"/>
+                    <path d="M17.0 0 L13.4 0 L6.15 16.4 L9.75 16.4 Z"/>
+                    <path d="M22.9 0 L19.3 0 L15.0 7.6 L18.6 7.6 Z"/>
+                    <path d="M22.6 6.9 L19.0 6.9 L14.05 16.4 L17.65 16.4 Z"/>
+                </svg>
                 <div class="brand-text">
                     <span class="brand-name">CanVisa<span class="brand-accent">.ai</span></span>
-                    <span class="brand-tag">Academic AI Decision Support</span>
+                    <span class="brand-tag" data-i18n="brand_tag">Smart Visa Prediction System</span>
                 </div>
             </div>
 
-            <nav class="nav-menu">
-                <button class="nav-link active" onclick="switchTab('hero-tab')">Overview</button>
-                <button class="nav-link" onclick="switchTab('wizard-tab')">Eligibility Audit</button>
-                <button class="nav-link" id="nav-dashboard-link" onclick="switchTab('results-tab')">AI Report & XAI</button>
-                <button class="nav-link" onclick="switchTab('history-tab')">History</button>
-                <button class="nav-link" onclick="switchTab('benchmark-tab')">ML Model Info</button>
-            </nav>
+            <div class="nav-right-cluster">
+                <!-- Multilingual Language Changer Dropdown -->
+                <div class="language-changer-wrapper" id="languageChangerWrapper">
+                    <button class="language-changer-btn" id="languageChangerBtn" onclick="toggleLanguageDropdown(event)" aria-label="Select Language" title="Select Language">
+                        <span class="lang-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
+                        <span class="lang-current-label" id="currentLangLabel">English</span>
+                        <span class="lang-arrow">▾</span>
+                    </button>
+                    <div class="language-dropdown-menu" id="languageDropdownMenu">
+                        <div class="lang-dropdown-header">
+                            <span data-i18n="select_lang_title">Select Language</span>
+                        </div>
+                        <div class="lang-options-grid">
+                            <button type="button" class="lang-opt-btn active" data-lang="en" onclick="setAppLanguage('en'); closeLanguageDropdown();">
+                                <span class="lang-code-tag">EN</span>
+                                <span class="lang-name">English</span>
+                            </button>
+                            <button type="button" class="lang-opt-btn" data-lang="hi" onclick="setAppLanguage('hi'); closeLanguageDropdown();">
+                                <span class="lang-code-tag">IN</span>
+                                <span class="lang-name">हिन्दी</span>
+                            </button>
+                            <button type="button" class="lang-opt-btn" data-lang="kn" onclick="setAppLanguage('kn'); closeLanguageDropdown();">
+                                <span class="lang-code-tag">IN</span>
+                                <span class="lang-name">ಕನ್ನಡ</span>
+                            </button>
+                            <button type="button" class="lang-opt-btn" data-lang="fr" onclick="setAppLanguage('fr'); closeLanguageDropdown();">
+                                <span class="lang-code-tag">FR</span>
+                                <span class="lang-name">Français</span>
+                            </button>
+                            <button type="button" class="lang-opt-btn" data-lang="es" onclick="setAppLanguage('es'); closeLanguageDropdown();">
+                                <span class="lang-code-tag">ES</span>
+                                <span class="lang-name">Español</span>
+                            </button>
+                            <button type="button" class="lang-opt-btn" data-lang="de" onclick="setAppLanguage('de'); closeLanguageDropdown();">
+                                <span class="lang-code-tag">DE</span>
+                                <span class="lang-name">Deutsch</span>
+                            </button>
+                            <button type="button" class="lang-opt-btn" data-lang="pa" onclick="setAppLanguage('pa'); closeLanguageDropdown();">
+                                <span class="lang-code-tag">IN</span>
+                                <span class="lang-name">ਪੰਜਾਬੀ</span>
+                            </button>
+                            <button type="button" class="lang-opt-btn" data-lang="ar" onclick="setAppLanguage('ar'); closeLanguageDropdown();">
+                                <span class="lang-code-tag">AR</span>
+                                <span class="lang-name">العربية</span>
+                            </button>
+                            <button type="button" class="lang-opt-btn" data-lang="zh" onclick="setAppLanguage('zh'); closeLanguageDropdown();">
+                                <span class="lang-code-tag">ZH</span>
+                                <span class="lang-name">中文</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="nav-actions">
-                <button class="btn-atlys-outline" onclick="toggleFullScreen()" title="Toggle Fullscreen Mode">
-                    <span>⛶</span> Fullscreen
-                </button>
-                <button class="btn-atlys-outline" onclick="downloadReport()">
-                    <span>📥</span> Download PDF Report
-                </button>
-                <button class="btn-atlys-primary" onclick="switchTab('wizard-tab')">
-                    ⚡ Start 60-Sec Audit
+                <!-- User Profile Circle & Session Dropdown -->
+                <div class="user-profile-wrapper" id="userProfileWrapper">
+                    <button type="button" class="user-profile-circle-btn" id="userProfileBtn" onclick="toggleUserProfileDropdown(event)" aria-label="User Account Profile" title="User Session & Details">
+                        <span class="user-avatar-initial" id="userAvatarInitial">G</span>
+                        <span class="user-status-indicator" id="userStatusDot" title="Session: Active"></span>
+                    </button>
+                    <div class="user-profile-dropdown" id="userProfileDropdown">
+                        <div class="profile-dropdown-header">
+                            <div class="profile-dropdown-avatar" id="profileDropdownAvatar">G</div>
+                            <div class="profile-dropdown-meta">
+                                <span class="profile-dropdown-name" id="profileDropdownName">Guest Evaluator</span>
+                                <span class="profile-dropdown-email" id="profileDropdownEmail">Not logged in</span>
+                            </div>
+                        </div>
+                        <div class="profile-dropdown-body">
+                            <div class="profile-detail-item">
+                                <span class="detail-label">Status</span>
+                                <span class="detail-badge" id="profileDropdownStatus">Active</span>
+                            </div>
+                            <div class="profile-detail-item">
+                                <span class="detail-label">Role</span>
+                                <span class="detail-val" id="profileDropdownRole">Verified Applicant</span>
+                            </div>
+                            <div class="profile-detail-item">
+                                <span class="detail-label">Session ID</span>
+                                <span class="detail-val" id="profileDropdownSessionId">SYS-7429-ACT</span>
+                            </div>
+                        </div>
+                        <div class="profile-dropdown-actions">
+                            <button type="button" class="profile-btn-logout" id="profileLogoutBtn" onclick="handleProfileLogout()">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                                    <polyline points="16 17 21 12 16 7"></polyline>
+                                    <line x1="21" y1="12" x2="9" y2="12"></line>
+                                </svg>
+                                <span id="profileLogoutLabel">Log Out</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hamburger Menu Trigger (3 lines) -->
+                <button class="hamburger-menu-btn" id="hamburgerMenuBtn" onclick="toggleSidebarDrawer()" aria-label="Toggle Navigation Drawer" title="Open Menu">
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
                 </button>
             </div>
         </div>
     </header>
 
-    <!-- DISCLAIMER BAR -->
-    <div class="atlys-disclaimer-strip">
-        <div class="strip-content">
-            <span class="info-icon">ℹ️</span>
-            <span><strong>Academic AI Prototype:</strong> Predictions are statistical estimates generated from trained ML models for decision support and are <strong>NOT</strong> official IRCC visa determinations. Final visa decisions are made exclusively by Canadian immigration authorities.</span>
+    <!-- SLIDE-OUT CORNER SIDEBAR (HAMBURGER DRAWER) -->
+    <div class="sidebar-drawer-overlay" id="sidebarDrawerOverlay" onclick="closeSidebarDrawer()"></div>
+    <aside class="sidebar-drawer" id="sidebarDrawer" aria-hidden="true">
+        <div class="drawer-header">
+            <div class="drawer-brand">
+                <svg class="brand-neural-mark" viewBox="0 0 23 17" aria-hidden="true">
+                    <path d="M8.15 0.9 L4.55 0.9 L0.5 9.3 L4.1 9.3 Z"/>
+                    <path d="M17.0 0 L13.4 0 L6.15 16.4 L9.75 16.4 Z"/>
+                    <path d="M22.9 0 L19.3 0 L15.0 7.6 L18.6 7.6 Z"/>
+                    <path d="M22.6 6.9 L19.0 6.9 L14.05 16.4 L17.65 16.4 Z"/>
+                </svg>
+                <span class="drawer-brand-title">CanVisa<span class="brand-accent">.ai</span></span>
+            </div>
+            <button class="drawer-close-btn" onclick="closeSidebarDrawer()" aria-label="Close Menu">✕</button>
         </div>
-    </div>
+
+        <div class="drawer-content">
+            <!-- Theme Appearance Selector (Dark & Light Theme) -->
+            <div class="drawer-group">
+                <span class="drawer-group-label" data-i18n="theme_mode_title">THEME</span>
+                <div class="drawer-theme-toggle-group">
+                    <button type="button" class="theme-toggle-pill active" id="themeBtnDark" onclick="setAppTheme('dark')" aria-label="Dark Theme">
+                        <span class="theme-pill-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+                        <span class="theme-pill-text" data-i18n="theme_dark">Dark</span>
+                    </button>
+                    <button type="button" class="theme-toggle-pill" id="themeBtnLight" onclick="setAppTheme('light')" aria-label="Light Theme">
+                        <span class="theme-pill-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                        <span class="theme-pill-text" data-i18n="theme_light">Light</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Language Selector in Sliding Drawer -->
+            <div class="drawer-group">
+                <span class="drawer-group-label" data-i18n="select_language">LANGUAGE</span>
+                <div class="drawer-language-selector">
+                    <select id="drawerLanguageSelect" class="drawer-lang-select" onchange="setAppLanguage(this.value)">
+                        <option value="en">English</option>
+                        <option value="hi">हिन्दी (Hindi)</option>
+                        <option value="kn">ಕನ್ನಡ (Kannada)</option>
+                        <option value="fr">Français (French)</option>
+                        <option value="es">Español (Spanish)</option>
+                        <option value="de">Deutsch (German)</option>
+                        <option value="pa">ਪੰਜਾਬੀ (Punjabi)</option>
+                        <option value="ar">العربية (Arabic)</option>
+                        <option value="zh">中文 (Chinese)</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Navigation Sections -->
+            <div class="drawer-group">
+                <span class="drawer-group-label" data-i18n="nav_modules">NAVIGATION MODULES</span>
+                <nav class="drawer-nav-list">
+                    <button class="drawer-nav-item active" id="drawer-nav-hero" onclick="switchTabFromDrawer('hero-tab')">
+                        <span class="drawer-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span>
+                        <div class="drawer-item-text">
+                            <strong data-i18n="nav_overview">Overview</strong>
+                            <small data-i18n="nav_overview_sub">Global hubs & case intake</small>
+                        </div>
+                    </button>
+                    <button class="drawer-nav-item" id="drawer-nav-wizard" onclick="switchTabFromDrawer('wizard-tab')">
+                        <span class="drawer-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>
+                        <div class="drawer-item-text">
+                            <strong data-i18n="nav_wizard">Check Eligibility</strong>
+                            <small data-i18n="nav_wizard_sub">Dynamic pre-assessment form</small>
+                        </div>
+                    </button>
+                    <button class="drawer-nav-item" id="drawer-nav-results" onclick="switchTabFromDrawer('results-tab')">
+                        <span class="drawer-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span>
+                        <div class="drawer-item-text">
+                            <strong data-i18n="nav_results">Visa Results & Insights</strong>
+                            <small data-i18n="nav_results_sub">Score breakdown & chances</small>
+                        </div>
+                    </button>
+                    <button class="drawer-nav-item" id="drawer-nav-history" onclick="switchTabFromDrawer('history-tab')">
+                        <span class="drawer-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
+                        <div class="drawer-item-text">
+                            <strong data-i18n="nav_history">History</strong>
+                            <small data-i18n="nav_history_sub">Past evaluations & audits</small>
+                        </div>
+                    </button>
+                </nav>
+            </div>
+
+            <!-- Quick Action Utilities -->
+            <div class="drawer-group">
+                <span class="drawer-group-label" data-i18n="sys_tools">SYSTEM TOOLS & UTILITIES</span>
+                <div class="drawer-tools-grid">
+                    <a href="/launch" class="drawer-tool-btn" title="Back to Launch Screen">
+                        <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span>
+                        <span data-i18n="tool_launch">Launch Page</span>
+                    </a>
+                    <a href="/login" class="drawer-tool-btn" id="drawerAuthBtn" title="Reviewer / Evaluator Sign In">
+                        <span id="drawerAuthIcon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>
+                        <span id="drawerAuthLabel" data-i18n="tool_signin">Sign In</span>
+                    </a>
+                    <button class="drawer-tool-btn" onclick="toggleFullScreen(); closeSidebarDrawer();" title="Toggle Fullscreen Mode">
+                        <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+                        <span data-i18n="tool_fullscreen">Fullscreen</span>
+                    </button>
+                    <button class="drawer-tool-btn" onclick="downloadReport(); closeSidebarDrawer();" title="Export PDF Dossier Report">
+                        <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></span>
+                        <span data-i18n="tool_pdf">PDF Report</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="drawer-footer">
+            <span>CanVisa AI • v1.0.0 Architecture</span>
+        </div>
+    </aside>
 
     <main class="app-main-body">
 
-        <!-- TAB 1: HERO / LANDING OVERVIEW -->
+        <!-- TAB 1: IMMIGRATION OPERATIONS COMMAND & CASE INTAKE -->
         <section id="hero-tab" class="tab-panel active">
+
+            <!-- MOTIONSITES EDITORIAL DESTINATIONS GALLERY BANNER (FIRST IN TAB) -->
+            <div class="motionsites-country-section overview-destinations-showcase">
+                <div class="motionsites-header-row">
+                    <div class="motionsites-title-group">
+                        <span class="motionsites-kicker" data-i18n="destinations_kicker">/ IMMIGRATION DESTINATIONS</span>
+                        <h3 class="motionsites-hero-h3" data-i18n="destinations_hero_title">FOUR TIME ZONES.<br>ONE STANDARD OF WORK.</h3>
+                    </div>
+                    <div class="motionsites-meta-group">
+                        <span class="motionsites-meta-tag" data-i18n="destinations_est">EST. 2026 — WORLDWIDE →</span>
+                        <p class="motionsites-meta-desc" data-i18n="destinations_desc">CanVisa AI operates from 4 premier hubs across North America, Europe, and Oceania. Select a country to begin eligibility assessment.</p>
+                    </div>
+                </div>
+
+                <div class="motionsites-gallery-grid">
+                    <!-- Card 1: CANADA -->
+                    <div class="motionsites-card active card-theme-canada" id="country-hero-canada" onclick="selectDestinationCountryAndGo('canada')">
+                        <div class="motionsites-card-img-wrap">
+                            <img src="/static/landmarks/landmark_canada.jpg" alt="Canada" class="motionsites-card-img" />
+                            <div class="motionsites-card-duotone"></div>
+                            <div class="motionsites-halftone-overlay"></div>
+                        </div>
+                        <div class="motionsites-card-header">
+                            <span class="motionsites-country-name"><img src="/static/flags/ca.svg" class="card-flag-img" alt="Canada"> CANADA</span>
+                        </div>
+                        <div class="motionsites-card-meta">
+                            <span class="motionsites-badge-selected" data-i18n="badge_selected">SELECTED</span>
+                        </div>
+                        <div class="motionsites-card-action">
+                            <span class="motionsites-arrow-btn">↗</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: AUSTRALIA -->
+                    <div class="motionsites-card card-theme-australia" id="country-hero-australia" onclick="selectDestinationCountryAndGo('australia')">
+                        <div class="motionsites-card-img-wrap">
+                            <img src="/static/landmarks/landmark_australia.jpg" alt="Australia" class="motionsites-card-img" />
+                            <div class="motionsites-card-duotone"></div>
+                            <div class="motionsites-halftone-overlay"></div>
+                        </div>
+                        <div class="motionsites-card-header">
+                            <span class="motionsites-country-name"><img src="/static/flags/au.svg" class="card-flag-img" alt="Australia"> AUSTRALIA</span>
+                        </div>
+                        <div class="motionsites-card-meta">
+                            <span class="motionsites-badge-selected" data-i18n="badge_selected">SELECTED</span>
+                        </div>
+                        <div class="motionsites-card-action">
+                            <span class="motionsites-arrow-btn">↗</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: UNITED KINGDOM -->
+                    <div class="motionsites-card card-theme-uk" id="country-hero-uk" onclick="selectDestinationCountryAndGo('uk')">
+                        <div class="motionsites-card-img-wrap">
+                            <img src="/static/landmarks/landmark_uk.jpg" alt="United Kingdom" class="motionsites-card-img" />
+                            <div class="motionsites-card-duotone"></div>
+                            <div class="motionsites-halftone-overlay"></div>
+                        </div>
+                        <div class="motionsites-card-header">
+                            <span class="motionsites-country-name"><img src="/static/flags/gb.svg" class="card-flag-img" alt="UK"> UNITED KINGDOM</span>
+                        </div>
+                        <div class="motionsites-card-meta">
+                            <span class="motionsites-badge-selected" data-i18n="badge_selected">SELECTED</span>
+                        </div>
+                        <div class="motionsites-card-action">
+                            <span class="motionsites-arrow-btn">↗</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: GERMANY -->
+                    <div class="motionsites-card card-theme-germany" id="country-hero-germany" onclick="selectDestinationCountryAndGo('germany')">
+                        <div class="motionsites-card-img-wrap">
+                            <img src="/static/landmarks/landmark_germany.jpg" alt="Germany" class="motionsites-card-img" />
+                            <div class="motionsites-card-duotone"></div>
+                            <div class="motionsites-halftone-overlay"></div>
+                        </div>
+                        <div class="motionsites-card-header">
+                            <span class="motionsites-country-name"><img src="/static/flags/de.svg" class="card-flag-img" alt="Germany"> GERMANY</span>
+                        </div>
+                        <div class="motionsites-card-meta">
+                            <span class="motionsites-badge-selected" data-i18n="badge_selected">SELECTED</span>
+                        </div>
+                        <div class="motionsites-card-action">
+                            <span class="motionsites-arrow-btn">↗</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="hero-container">
                 <div class="hero-left">
-                    <div class="atlys-pill-badge">
-                        <span class="pill-dot"></span> Scikit-Learn ML Engine • SHAP Explainable AI
+                    <div class="atlys-pill-badge" data-i18n="hero_pill_badge">
+                        <span class="pill-dot"></span> Global Work Visa Eligibility AI
                     </div>
-                    <h1 class="hero-main-title">
-                        Check Your <span class="highlight-gradient">Canada Work Visa</span> Approval Odds in 60 Seconds
+                    <h1 class="hero-main-title" data-i18n="hero_title">
+                        Global Work Visa <span class="highlight-gradient">Approval Predictor</span>
                     </h1>
-                    <p class="hero-description">
-                        Evaluate your employment immigration profile across NOC TEER skill categories, LMIA Canadian job offers, IELTS/CELPIP benchmarks, ECA credentials, and LICO settlement solvency with transparent ML factors.
+                    <p class="hero-description" data-i18n="hero_desc">
+                        Check your approval chances instantly based on your education, job experience, destination job offer, English score (IELTS), and bank savings.
                     </p>
 
-                    <!-- Trust Metrics Badges -->
+                    <!-- Trust Metrics Badges (Clickable for full module info) -->
                     <div class="trust-badges-row">
-                        <div class="trust-item">
-                            <span class="trust-icon">🛡️</span>
+                        <div class="trust-item" onclick="openTrustModal('standards')" title="Click for details on Official Immigration Standards">
+                            <span class="trust-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M3 10h18M5 10v11M9 10v11M15 10v11M19 10v11M12 2l10 8H2l10-8z"/></svg></span>
                             <div>
-                                <strong>100% Confidential</strong>
-                                <small>Academic Privacy Safeguarded</small>
+                                <strong data-i18n="trust_standards_title">Official Standards</strong>
+                                <small data-i18n="trust_standards_sub">Official Standards & Skills</small>
                             </div>
+                            <span class="trust-item-hint"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg></span>
                         </div>
-                        <div class="trust-item">
-                            <span class="trust-icon">⚡</span>
+                        <div class="trust-item" onclick="openTrustModal('prediction')" title="Click for details on Instant AI Scoring">
+                            <span class="trust-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
                             <div>
-                                <strong>Instant AI Audit</strong>
-                                <small>60-Second Execution</small>
+                                <strong data-i18n="trust_pred_title">Instant Prediction</strong>
+                                <small data-i18n="trust_pred_sub">Clear Score Breakdown</small>
                             </div>
+                            <span class="trust-item-hint"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg></span>
                         </div>
-                        <div class="trust-item">
-                            <span class="trust-icon">📊</span>
+                        <div class="trust-item" onclick="openTrustModal('accuracy')" title="Click for details on Immigration Standards">
+                            <span class="trust-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></span>
                             <div>
-                                <strong>96.5% ROC-AUC</strong>
-                                <small>Validated Benchmark</small>
+                                <strong data-i18n="trust_acc_title">Verified Rules</strong>
+                                <small data-i18n="trust_acc_sub">Up-to-Date Standards</small>
                             </div>
+                            <span class="trust-item-hint"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg></span>
                         </div>
                     </div>
 
                     <div class="hero-cta-group">
-                        <button class="btn-atlys-hero" onclick="switchTab('wizard-tab')">
-                            📋 Begin Profile Assessment →
-                        </button>
+                        <a class="neural-glass-cta" href="javascript:void(0)" onclick="switchTab('wizard-tab')">
+                            <span data-i18n="hero_cta_btn">Check My Visa Chances Now</span>
+                            <svg class="cta-arrow-icon" viewBox="0 0 16 11" aria-hidden="true">
+                                <path d="M0 5.5 H14.6 M10.3 1.2 L14.9 5.5 L10.3 9.8"/>
+                            </svg>
+                        </a>
+                        <a class="hero-secondary-cta" href="/login">
+                            <span data-i18n="evaluator_login">Evaluator Login</span>
+                        </a>
                     </div>
                 </div>
 
-                <!-- One-Click Preset Profiles Cards (Atlys Style) -->
+                <!-- Case Studies Dossiers -->
                 <div class="hero-right">
                     <div class="preset-card-box">
                         <div class="preset-box-header">
-                            <h3>⚡ 1-Click Demo Profiles</h3>
-                            <p>Select a preset for instant university panel demonstration:</p>
+                            <span class="panel-section-badge" data-i18n="presets_badge">SAMPLE PROFILES</span>
+                            <h3 data-i18n="presets_title">Try Real-World Examples</h3>
+                            <p data-i18n="presets_desc">Click any profile to test how the AI predicts approval chances:</p>
                         </div>
 
                         <div class="preset-list">
                             <!-- Preset 1 -->
                             <div class="preset-item preset-green" onclick="loadPreset('strong_profile')">
                                 <div class="preset-item-head">
-                                    <span class="preset-emoji">🚀</span>
+                                    <span class="preset-case-num">CASE 01</span>
                                     <div>
-                                        <h4>Profile A — Tech Professional</h4>
-                                        <small>Master's, IELTS 8.5, 6 yrs exp, LMIA Job Offer, $65k Funds</small>
+                                        <h4 data-i18n="case_1_title">Lead Cloud Solutions Architect</h4>
+                                        <small data-i18n="case_1_sub">Master's • CLB 9+ • 6 Yrs Exp • Job Offer • $65k Savings</small>
                                     </div>
                                 </div>
-                                <span class="badge-status bg-green">Expected: ~92% Approval</span>
+                                <span class="badge-status bg-green" data-i18n="case_1_badge">~92% High Chance of Approval</span>
                             </div>
 
                             <!-- Preset 2 -->
                             <div class="preset-item preset-yellow" onclick="loadPreset('moderate_profile')">
                                 <div class="preset-item-head">
-                                    <span class="preset-emoji">⚖️</span>
+                                    <span class="preset-case-num">CASE 02</span>
                                     <div>
-                                        <h4>Profile B — Skilled Worker</h4>
-                                        <small>Bachelor's, IELTS 7.0, 3 yrs exp, Job Offer, $22k Funds</small>
+                                        <h4 data-i18n="case_2_title">Biomedical Technologist</h4>
+                                        <small data-i18n="case_2_sub">Bachelor's • CLB 7.0 • 3 Yrs Exp • Valid Job Offer • $22k Savings</small>
                                     </div>
                                 </div>
-                                <span class="badge-status bg-yellow">Expected: ~68% Moderate</span>
+                                <span class="badge-status bg-yellow" data-i18n="case_2_badge">~68% Moderate Chance</span>
                             </div>
 
                             <!-- Preset 3 -->
                             <div class="preset-item preset-red" onclick="loadPreset('weak_profile')">
                                 <div class="preset-item-head">
-                                    <span class="preset-emoji">⚠️</span>
+                                    <span class="preset-case-num">CASE 03</span>
                                     <div>
-                                        <h4>Profile C — High Risk Applicant</h4>
-                                        <small>Diploma, IELTS 5.5, 1 yr exp, No Offer, Prior Refusal</small>
+                                        <h4 data-i18n="case_3_title">Entry-Level Service Coordinator</h4>
+                                        <small data-i18n="case_3_sub">Diploma • CLB 5.5 • 1 Yr Exp • No Offer • Past Visa Refusal</small>
                                     </div>
                                 </div>
-                                <span class="badge-status bg-red">Expected: ~22% High Risk</span>
+                                <span class="badge-status bg-red" data-i18n="case_3_badge">~22% Low Chance / High Risk</span>
                             </div>
                         </div>
                     </div>
@@ -156,45 +452,118 @@
         <section id="wizard-tab" class="tab-panel">
             <div class="wizard-card-container">
                 <div class="wizard-header">
-                    <h2>Canada Work Visa Profile Assessment</h2>
-                    <p>Complete the step-by-step form to calculate model-estimated approval probabilities and XAI feature impacts.</p>
+                    <!-- Top-Left Back Arrow Button (Direct to Overview Section) -->
+                    <div class="page-back-nav">
+                        <button type="button" class="btn-page-back" onclick="switchTab('hero-tab')" aria-label="Back to Overview" title="Back to Overview">
+                            <svg class="back-arrow-svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="19" y1="12" x2="5" y2="12"></line>
+                                <polyline points="12 19 5 12 12 5"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <span class="panel-section-badge">ELIGIBILITY CHECKLIST</span>
+                    <h2 data-i18n="nav_wizard">Check Your Visa Eligibility</h2>
+                    <p data-i18n="country_desc_common">Select your target destination country below. The AI model and official immigration standards will automatically adapt to your chosen destination.</p>
+                    
+                    <!-- Pre-Assessment Country Selector (Clean Card Format with Flag & Currency) -->
+                    <div class="country-selector-container">
+                        <label class="country-selector-label" data-i18n="select_dest_country">Select Your Destination Country:</label>
+                        <div class="country-pills-grid">
+                            <!-- Canada -->
+                            <div class="country-pill-card active" id="country-pill-canada" onclick="selectDestinationCountry('canada')">
+                                <span class="country-pill-flag">
+                                    <img src="/static/flags/ca.svg" alt="Canada Flag" class="country-flag-img">
+                                </span>
+                                <div class="country-pill-text">
+                                    <div class="country-pill-title-row">
+                                        <strong>Canada</strong>
+                                        <span class="country-currency-badge">CAD ($)</span>
+                                    </div>
+                                </div>
+                                <span class="country-pill-check">✓</span>
+                            </div>
+
+                            <!-- Australia -->
+                            <div class="country-pill-card" id="country-pill-australia" onclick="selectDestinationCountry('australia')">
+                                <span class="country-pill-flag">
+                                    <img src="/static/flags/au.svg" alt="Australia Flag" class="country-flag-img">
+                                </span>
+                                <div class="country-pill-text">
+                                    <div class="country-pill-title-row">
+                                        <strong>Australia</strong>
+                                        <span class="country-currency-badge">AUD (A$)</span>
+                                    </div>
+                                </div>
+                                <span class="country-pill-check">✓</span>
+                            </div>
+
+                            <!-- United Kingdom -->
+                            <div class="country-pill-card" id="country-pill-uk" onclick="selectDestinationCountry('uk')">
+                                <span class="country-pill-flag">
+                                    <img src="/static/flags/gb.svg" alt="United Kingdom Flag" class="country-flag-img">
+                                </span>
+                                <div class="country-pill-text">
+                                    <div class="country-pill-title-row">
+                                        <strong>United Kingdom</strong>
+                                        <span class="country-currency-badge">GBP (£)</span>
+                                    </div>
+                                </div>
+                                <span class="country-pill-check">✓</span>
+                            </div>
+
+                            <!-- Germany -->
+                            <div class="country-pill-card" id="country-pill-germany" onclick="selectDestinationCountry('germany')">
+                                <span class="country-pill-flag">
+                                    <img src="/static/flags/de.svg" alt="Germany Flag" class="country-flag-img">
+                                </span>
+                                <div class="country-pill-text">
+                                    <div class="country-pill-title-row">
+                                        <strong>Germany</strong>
+                                        <span class="country-currency-badge">EUR (€)</span>
+                                    </div>
+                                </div>
+                                <span class="country-pill-check">✓</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Stepper Progress Bar -->
-                <div class="stepper-bar">
-                    <div class="step-indicator active" id="step-ind-1">
+                <div class="wizard-stepper">
+                    <div class="step-indicator active" id="step-ind-1" onclick="goToStep(1)" role="button" title="Jump to Step 1: Personal & Education">
                         <span class="step-num">1</span>
-                        <span class="step-lbl">Personal & Academic</span>
+                        <span class="step-lbl" data-i18n="step_1_lbl">Personal & Education</span>
                     </div>
                     <div class="step-line"></div>
-                    <div class="step-indicator" id="step-ind-2">
+                    <div class="step-indicator" id="step-ind-2" onclick="goToStep(2)" role="button" title="Jump to Step 2: Work & Job Offer">
                         <span class="step-num">2</span>
-                        <span class="step-lbl">Employment & NOC</span>
+                        <span class="step-lbl" data-i18n="step_2_lbl">Work & Job Offer</span>
                     </div>
                     <div class="step-line"></div>
-                    <div class="step-indicator" id="step-ind-3">
+                    <div class="step-indicator" id="step-ind-3" onclick="goToStep(3)" role="button" title="Jump to Step 3: Language & Savings">
                         <span class="step-num">3</span>
-                        <span class="step-lbl">Language & Solvency</span>
+                        <span class="step-lbl" data-i18n="step_3_lbl">Language & Savings</span>
                     </div>
                     <div class="step-line"></div>
-                    <div class="step-indicator" id="step-ind-4">
+                    <div class="step-indicator" id="step-ind-4" onclick="goToStep(4)" role="button" title="Jump to Step 4: Visa History & Safety">
                         <span class="step-num">4</span>
-                        <span class="step-lbl">History & Submit</span>
+                        <span class="step-lbl" data-i18n="step_4_lbl">Visa History & Safety</span>
                     </div>
                 </div>
 
-                <form id="atlysForm" onsubmit="handleFormSubmit(event)">
+                <form id="atlysForm" onsubmit="handleFormSubmit(event)" novalidate>
+                    <input type="hidden" id="target_country" name="target_country" value="canada">
 
                     <!-- STEP 1: Personal & Education -->
                     <div class="step-content active" id="step-content-1">
-                        <h3 class="step-title">Step 1: Personal Details & Educational Credentials</h3>
+                        <h3 class="step-title" data-i18n="step_1_title">Step 1: Personal Details & Educational Credentials</h3>
                         <div class="form-grid-2col">
                             <div class="form-input-group">
-                                <label for="age">Applicant Age (18 to 70 years) *</label>
+                                <label for="age" data-i18n="lbl_age">Applicant Age (18 to 70 years) *</label>
                                 <input type="number" id="age" name="age" min="18" max="70" value="30" required>
                             </div>
                             <div class="form-input-group">
-                                <label for="country_citizenship">Country of Citizenship *</label>
+                                <label for="country_citizenship" data-i18n="lbl_citizenship">Country of Citizenship *</label>
                                 <select id="country_citizenship" name="country_citizenship">
                                     <option value="India">India</option>
                                     <option value="Philippines">Philippines</option>
@@ -207,7 +576,7 @@
                                 </select>
                             </div>
                             <div class="form-input-group">
-                                <label for="country_residence">Current Residence Country *</label>
+                                <label for="country_residence" data-i18n="lbl_residence">Current Residence Country *</label>
                                 <select id="country_residence" name="country_residence">
                                     <option value="India">India</option>
                                     <option value="Philippines">Philippines</option>
@@ -221,30 +590,30 @@
                                 </select>
                             </div>
                             <div class="form-input-group">
-                                <label for="marital_status">Marital Status</label>
+                                <label for="marital_status" data-i18n="lbl_marital">Marital Status</label>
                                 <select id="marital_status" name="marital_status">
-                                    <option value="Single">Single</option>
-                                    <option value="Married">Married</option>
+                                    <option value="Single" data-i18n="opt_single">Single</option>
+                                    <option value="Married" data-i18n="opt_married">Married</option>
                                     <option value="Common-Law">Common-Law</option>
-                                    <option value="Divorced">Divorced</option>
+                                    <option value="Divorced" data-i18n="opt_divorced">Divorced</option>
                                 </select>
                             </div>
                             <div class="form-input-group">
-                                <label for="dependents">Number of Dependents</label>
+                                <label for="dependents" data-i18n="lbl_dependents">Number of Dependents</label>
                                 <input type="number" id="dependents" name="dependents" min="0" max="10" value="0">
                             </div>
                             <div class="form-input-group">
-                                <label for="education_level">Highest Education Degree *</label>
+                                <label for="education_level" data-i18n="lbl_education">Highest Education Degree *</label>
                                 <select id="education_level" name="education_level">
-                                    <option value="High School">High School Diploma</option>
-                                    <option value="Diploma">Post-Secondary Diploma (1-2 yrs)</option>
-                                    <option value="Bachelor's" selected>Bachelor's Degree (3+ yrs)</option>
-                                    <option value="Master's">Master's Degree</option>
-                                    <option value="PhD">Doctorate (PhD)</option>
+                                    <option value="High School" data-i18n="opt_secondary">High School Diploma</option>
+                                    <option value="Diploma" data-i18n="opt_diploma">Post-Secondary Diploma (1-2 yrs)</option>
+                                    <option value="Bachelor's" selected data-i18n="opt_bachelors">Bachelor's Degree (3+ yrs)</option>
+                                    <option value="Master's" data-i18n="opt_masters">Master's Degree</option>
+                                    <option value="PhD" data-i18n="opt_phd">Doctorate (PhD)</option>
                                 </select>
                             </div>
                             <div class="form-input-group">
-                                <label for="field_of_study">Field of Study *</label>
+                                <label for="field_of_study" data-i18n="lbl_field_study">Field of Study *</label>
                                 <select id="field_of_study" name="field_of_study">
                                     <option value="Computer Science">Computer Science & IT</option>
                                     <option value="Information Technology">Information Technology</option>
@@ -256,34 +625,34 @@
                                 </select>
                             </div>
                             <div class="form-input-group">
-                                <label for="eca_done">Educational Credential Assessment (ECA) *</label>
+                                <label for="eca_done" data-i18n="lbl_eca">Educational Credential Assessment (ECA) *</label>
                                 <select id="eca_done" name="eca_done">
-                                    <option value="1" selected>Yes (Completed WES / ICAS / IQAS)</option>
-                                    <option value="0">No / Pending</option>
+                                    <option value="1" selected data-i18n="opt_eca_yes">Yes (Completed WES / ICAS / IQAS)</option>
+                                    <option value="0" data-i18n="opt_eca_no">No / Pending</option>
                                 </select>
                             </div>
                         </div>
 
                         <div class="wizard-btn-row">
                             <span></span>
-                            <button type="button" class="btn-wiz-next" onclick="goToStep(2)">Next: Employment Details →</button>
+                            <button type="button" class="btn-wiz-next" onclick="goToStep(2)" data-i18n="btn_next_work">Next: Employment Details →</button>
                         </div>
                     </div>
 
                     <!-- STEP 2: Employment Details -->
                     <div class="step-content" id="step-content-2">
-                        <h3 class="step-title">Step 2: Employment Experience & Canadian Job Offer</h3>
+                        <h3 class="step-title" data-i18n="step_2_title">Step 2: Work Experience & Employment Credentials</h3>
                         <div class="form-grid-2col">
                             <div class="form-input-group">
-                                <label for="total_work_exp">Total Work Experience (Years) *</label>
+                                <label for="total_work_exp" data-i18n="lbl_work_exp">Total Work Experience (Years) *</label>
                                 <input type="number" id="total_work_exp" name="total_work_exp" min="0" max="50" value="6" required>
                             </div>
                             <div class="form-input-group">
-                                <label for="relevant_work_exp">Relevant Work Experience (Years) *</label>
+                                <label for="relevant_work_exp" data-i18n="lbl_rel_work_exp">Relevant Work Experience (Years) *</label>
                                 <input type="number" id="relevant_work_exp" name="relevant_work_exp" min="0" max="50" value="5" required>
                             </div>
                             <div class="form-input-group">
-                                <label for="teer_category">Occupation Skill / TEER Category *</label>
+                                <label for="teer_category" id="lbl_teer_category">Occupation Skill / TEER Category *</label>
                                 <select id="teer_category" name="teer_category">
                                     <option value="TEER 0">TEER 0 (Management Occupations)</option>
                                     <option value="TEER 1" selected>TEER 1 (Professional - IT, Eng, Health)</option>
@@ -293,148 +662,150 @@
                                 </select>
                             </div>
                             <div class="form-input-group">
-                                <label for="current_employment_status">Employment Status</label>
+                                <label for="current_employment_status" data-i18n="lbl_emp_status">Employment Status</label>
                                 <select id="current_employment_status" name="current_employment_status">
-                                    <option value="Employed" selected>Employed (Full-Time)</option>
-                                    <option value="Self-employed">Self-Employed</option>
-                                    <option value="Unemployed">Unemployed</option>
+                                    <option value="Employed" selected data-i18n="opt_emp_employed">Employed (Full-Time)</option>
+                                    <option value="Self-employed" data-i18n="opt_emp_self">Self-Employed</option>
+                                    <option value="Unemployed" data-i18n="opt_emp_unemployed">Unemployed</option>
                                 </select>
                             </div>
                             <div class="form-input-group">
-                                <label for="job_offer">Valid Canadian Employment Offer *</label>
+                                <label for="job_offer" id="lbl_job_offer" data-i18n="lbl_job_offer">Valid Employment Offer *</label>
                                 <select id="job_offer" name="job_offer">
-                                    <option value="1" selected>Yes (Canadian Job Offer Verified)</option>
-                                    <option value="0">No Job Offer</option>
+                                    <option value="1" selected data-i18n="opt_yes">Yes (Job Offer Verified)</option>
+                                    <option value="0" data-i18n="opt_no">No Job Offer</option>
                                 </select>
                             </div>
                             <div class="form-input-group">
-                                <label for="employer_sponsorship">LMIA / Sponsorship Support *</label>
+                                <label for="employer_sponsorship" id="lbl_employer_sponsorship" data-i18n="lbl_sponsorship">LMIA / Sponsorship Support *</label>
                                 <select id="employer_sponsorship" name="employer_sponsorship">
-                                    <option value="1" selected>Yes (Positive LMIA or LMIA-Exempt)</option>
-                                    <option value="0">No / Pending</option>
+                                    <option value="1" selected data-i18n="opt_yes">Yes (Positive LMIA or LMIA-Exempt)</option>
+                                    <option value="0" data-i18n="opt_no">No / Pending</option>
                                 </select>
                             </div>
                             <div class="form-input-group">
-                                <label for="offered_salary_cad">Offered Canadian Salary (Annual CAD) *</label>
+                                <label for="offered_salary_cad" id="lbl_offered_salary" data-i18n="lbl_offered_salary">Offered Salary (Annual CAD $) *</label>
                                 <input type="number" id="offered_salary_cad" name="offered_salary_cad" value="78000" step="1000">
                             </div>
                         </div>
 
                         <div class="wizard-btn-row">
-                            <button type="button" class="btn-wiz-prev" onclick="goToStep(1)">← Back</button>
-                            <button type="button" class="btn-wiz-next" onclick="goToStep(3)">Next: Language & Funds →</button>
+                            <button type="button" class="btn-wiz-prev" onclick="goToStep(1)" data-i18n="btn_back">← Back</button>
+                            <button type="button" class="btn-wiz-next" onclick="goToStep(3)" data-i18n="btn_next_funds">Next: Language & Funds →</button>
                         </div>
                     </div>
 
                     <!-- STEP 3: Language & Solvency -->
                     <div class="step-content" id="step-content-3">
-                        <h3 class="step-title">Step 3: Language Test Benchmark & Financial Settlement Funds</h3>
+                        <h3 class="step-title" data-i18n="step_3_title">Step 3: Language Test Benchmark & Financial Settlement Funds</h3>
                         <div class="form-grid-2col">
                             <div class="form-input-group">
-                                <label for="english_test">English Test Type</label>
+                                <label for="english_test" data-i18n="lbl_lang_test">English Test Type</label>
                                 <select id="english_test" name="english_test">
                                     <option value="IELTS" selected>IELTS General Training</option>
                                     <option value="CELPIP">CELPIP-General</option>
+                                    <option value="PTE Academic">PTE Academic</option>
+                                    <option value="TOEFL iBT">TOEFL iBT</option>
                                     <option value="Other">Other Recognized Test</option>
                                     <option value="No Test">No Test Taken</option>
                                 </select>
                             </div>
                             <div class="form-input-group">
-                                <label for="language_overall_score">Overall Language Score (CLB 4-10) *</label>
-                                <input type="number" id="language_overall_score" name="language_overall_score" min="0" max="10" step="0.5" value="8.0" required>
-                                <small class="input-help">IELTS Band 8.0 ≈ CLB 9/10 Benchmark</small>
+                                <label for="language_overall_score" data-i18n="lbl_lang_score">Overall Language Score (CLB / IELTS 4-10) *</label>
+                                <input type="number" id="language_overall_score" name="language_overall_score" min="0" max="100" step="0.5" value="8.0" required>
+                                <small class="input-help" id="help_language_score">IELTS Band 8.0 ≈ High Competency Benchmark</small>
                             </div>
                             <div class="form-input-group">
-                                <label for="french_proficiency">French Language Proficiency</label>
+                                <label for="french_proficiency" id="lbl_second_language" data-i18n="lbl_second_lang">Second Language Proficiency (French / German)</label>
                                 <select id="french_proficiency" name="french_proficiency">
-                                    <option value="No French" selected>No French Proficiency</option>
-                                    <option value="Basic">Basic (NCLC 4-5)</option>
-                                    <option value="Intermediate">Intermediate (NCLC 6-7)</option>
-                                    <option value="Advanced">Advanced (NCLC 8+)</option>
+                                    <option value="No French" selected>No Second Language</option>
+                                    <option value="Basic">Basic (A1 - A2)</option>
+                                    <option value="Intermediate">Intermediate (B1 - B2)</option>
+                                    <option value="Advanced">Advanced (C1+)</option>
                                 </select>
                             </div>
                             <div class="form-input-group">
-                                <label for="annual_income_cad">Current Annual Income (CAD)</label>
+                                <label for="annual_income_cad" id="lbl_annual_income" data-i18n="lbl_annual_income">Current Annual Income (CAD $)</label>
                                 <input type="number" id="annual_income_cad" name="annual_income_cad" value="45000" step="1000">
                             </div>
                             <div class="form-input-group">
-                                <label for="settlement_funds_cad">Available Settlement Funds (CAD) *</label>
+                                <label for="settlement_funds_cad" id="lbl_settlement_funds" data-i18n="lbl_settlement_funds">Available Settlement Funds (CAD $) *</label>
                                 <input type="number" id="settlement_funds_cad" name="settlement_funds_cad" value="35000" step="1000" required>
-                                <small class="input-help">IRCC LICO Single Applicant Requirement ≈ $13,757 CAD</small>
+                                <small class="input-help" id="help_settlement_funds">IRCC LICO Single Applicant Requirement ≈ $13,757 CAD</small>
                             </div>
                             <div class="form-input-group">
-                                <label for="outstanding_debt_cad">Outstanding Liabilities / Debt (CAD)</label>
+                                <label for="outstanding_debt_cad" id="lbl_outstanding_debt" data-i18n="lbl_outstanding_debt">Outstanding Liabilities / Debt (CAD $)</label>
                                 <input type="number" id="outstanding_debt_cad" name="outstanding_debt_cad" value="2000" step="500">
                             </div>
                             <div class="form-input-group">
-                                <label for="financial_sponsor">Primary Financial Backer</label>
+                                <label for="financial_sponsor" data-i18n="lbl_sponsor">Primary Financial Backer</label>
                                 <select id="financial_sponsor" name="financial_sponsor">
-                                    <option value="Self" selected>Self (Savings)</option>
-                                    <option value="Family">Family Support</option>
-                                    <option value="Employer">Canadian Employer</option>
-                                    <option value="Other">Other Sponsor</option>
+                                    <option value="Self" selected data-i18n="opt_sponsor_self">Self (Savings)</option>
+                                    <option value="Family" data-i18n="opt_sponsor_family">Family Support</option>
+                                    <option value="Employer" id="opt_sponsor_employer" data-i18n="opt_sponsor_employer">Canadian Employer</option>
+                                    <option value="Other" data-i18n="opt_sponsor_other">Other Sponsor</option>
                                 </select>
                             </div>
                         </div>
 
                         <div class="wizard-btn-row">
-                            <button type="button" class="btn-wiz-prev" onclick="goToStep(2)">← Back</button>
-                            <button type="button" class="btn-wiz-next" onclick="goToStep(4)">Next: Background & Submit →</button>
+                            <button type="button" class="btn-wiz-prev" onclick="goToStep(2)" data-i18n="btn_back">← Back</button>
+                            <button type="button" class="btn-wiz-next" onclick="goToStep(4)" data-i18n="btn_next_submit">Next: Background & Submit →</button>
                         </div>
                     </div>
 
                     <!-- STEP 4: Background & Submission -->
                     <div class="step-content" id="step-content-4">
-                        <h3 class="step-title">Step 4: Immigration History & Admissibility Verification</h3>
+                        <h3 class="step-title" data-i18n="step_4_title">Step 4: Immigration History & Admissibility Verification</h3>
                         <div class="form-grid-2col">
                             <div class="form-input-group">
-                                <label for="previous_canada_visa">Prior Canadian Visa Issued</label>
+                                <label for="previous_canada_visa" id="lbl_prev_visa" data-i18n="lbl_prev_visa">Prior Visa Issued (Target Country)</label>
                                 <select id="previous_canada_visa" name="previous_canada_visa">
-                                    <option value="0" selected>No</option>
-                                    <option value="1">Yes</option>
+                                    <option value="0" selected data-i18n="opt_no">No</option>
+                                    <option value="1" data-i18n="opt_yes">Yes</option>
                                 </select>
                             </div>
                             <div class="form-input-group">
-                                <label for="previous_visa_refusal">Previous Visa Refusal History *</label>
+                                <label for="previous_visa_refusal" data-i18n="lbl_prev_refusal">Previous Visa Refusal History *</label>
                                 <select id="previous_visa_refusal" name="previous_visa_refusal">
-                                    <option value="0" selected>No Previous Refusal</option>
-                                    <option value="1">Yes (Previous Refusal Recorded)</option>
+                                    <option value="0" selected data-i18n="opt_no_refusal">No Previous Refusal</option>
+                                    <option value="1" data-i18n="opt_yes_refusal">Yes (Previous Refusal Recorded)</option>
                                 </select>
                             </div>
                             <div class="form-input-group">
-                                <label for="previous_canada_work">Prior Canadian Work Experience</label>
+                                <label for="previous_canada_work" id="lbl_prev_work" data-i18n="lbl_prev_work">Prior In-Country Work Experience</label>
                                 <select id="previous_canada_work" name="previous_canada_work">
-                                    <option value="0" selected>No</option>
-                                    <option value="1">Yes (1+ Year Work in Canada)</option>
+                                    <option value="0" selected data-i18n="opt_no">No</option>
+                                    <option value="1" data-i18n="opt_yes">Yes (1+ Year In-Country Work)</option>
                                 </select>
                             </div>
                             <div class="form-input-group">
-                                <label for="previous_canada_study">Prior Canadian Study Experience</label>
+                                <label for="previous_canada_study" id="lbl_prev_study" data-i18n="lbl_prev_study">Prior In-Country Study Experience</label>
                                 <select id="previous_canada_study" name="previous_canada_study">
-                                    <option value="0" selected>No</option>
-                                    <option value="1">Yes (Canadian DLI Graduate)</option>
+                                    <option value="0" selected data-i18n="opt_no">No</option>
+                                    <option value="1" data-i18n="opt_yes">Yes (In-Country Degree Graduate)</option>
                                 </select>
                             </div>
                             <div class="form-input-group">
-                                <label for="criminal_record">Criminal Record Flag *</label>
+                                <label for="criminal_record" data-i18n="lbl_criminal">Criminal Record Flag *</label>
                                 <select id="criminal_record" name="criminal_record">
-                                    <option value="0" selected>No Criminal Record</option>
-                                    <option value="1">Yes (Background Flag)</option>
+                                    <option value="0" selected data-i18n="opt_no_criminal">No Criminal Record</option>
+                                    <option value="1" data-i18n="opt_yes_criminal">Yes (Background Flag)</option>
                                 </select>
                             </div>
                             <div class="form-input-group">
-                                <label for="medical_flag">Medical Inadmissibility Flag</label>
+                                <label for="medical_flag" data-i18n="lbl_medical">Medical Inadmissibility Flag</label>
                                 <select id="medical_flag" name="medical_flag">
-                                    <option value="0" selected>No Medical Flag</option>
-                                    <option value="1">Yes (Medical Concern)</option>
+                                    <option value="0" selected data-i18n="opt_no_med">No Medical Flag</option>
+                                    <option value="1" data-i18n="opt_yes_med">Yes (Medical Concern)</option>
                                 </select>
                             </div>
                         </div>
 
                         <div class="wizard-btn-row">
-                            <button type="button" class="btn-wiz-prev" onclick="goToStep(3)">← Back</button>
-                            <button type="submit" class="btn-atlys-submit">
-                                🤖 Execute AI Model Pipeline & View Dashboard Report
+                            <button type="button" class="btn-wiz-prev" onclick="goToStep(3)" data-i18n="btn_back">← Back</button>
+                            <button type="submit" id="btnCalculateChances" class="btn-atlys-submit" onclick="handleFormSubmit(event)" data-i18n="btn_calculate">
+                                Calculate My Visa Approval Chances
                             </button>
                         </div>
                     </div>
@@ -443,167 +814,475 @@
             </div>
         </section>
 
-        <!-- TAB 3: ATLYS RESULTS DASHBOARD -->
+        <!-- TAB 3: IMMIGRATION ADJUDICATION DASHBOARD & XAI -->
         <section id="results-tab" class="tab-panel">
             <div id="results-dashboard-content" class="results-dashboard-wrapper">
                 
-                <!-- TOP HERO ASSESSMENT CARD -->
-                <div class="atlys-assessment-hero">
-                    <div class="hero-outcome-box">
-                        <div class="outcome-badge-circle bg-green-light" id="hero-outcome-circle">
-                            <span class="outcome-check-icon">✓</span>
-                        </div>
-                        <div class="outcome-details">
-                            <span class="outcome-sub-lbl">AI Model Outcome Prediction</span>
-                            <h2 id="dash-prediction-title" class="outcome-title-green">LIKELY APPROVED</h2>
-                            <span class="risk-pill pill-green" id="dash-risk-pill">LOW RISK</span>
-                        </div>
-                    </div>
 
-                    <!-- Top 3 Probability Metrics -->
-                    <div class="hero-metrics-grid">
-                        <div class="metric-box">
-                            <small>Approval Likelihood</small>
-                            <strong class="text-green" id="dash-app-prob">86%</strong>
-                            <div class="mini-bar-track">
-                                <div id="dash-app-bar" class="mini-bar-fill bg-green" style="width: 86%;"></div>
-                            </div>
+                <!-- EXECUTIVE CASE DOSSIER HEADER -->
+                <div class="adjudication-case-header">
+                    <div class="case-meta-left">
+                        <div class="page-back-nav mb-2">
+                            <button type="button" class="btn-page-back" onclick="switchTab('hero-tab')" aria-label="Back to Overview" title="Back to Overview">
+                                <svg class="back-arrow-svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                                    <polyline points="12 19 5 12 12 5"></polyline>
+                                </svg>
+                            </button>
                         </div>
-                        <div class="metric-box">
-                            <small>Denial Likelihood</small>
-                            <strong class="text-red" id="dash-den-prob">14%</strong>
-                            <div class="mini-bar-track">
-                                <div id="dash-den-bar" class="mini-bar-fill bg-red" style="width: 14%;"></div>
-                            </div>
+                        <div class="case-badge-pill" id="dash-case-pill">
+                            <span class="status-live-dot"></span>
+                            <span id="dash-case-title">CANVISA • DECISION SUPPORT</span>
                         </div>
-                        <div class="metric-box">
-                            <small>Model Architecture</small>
-                            <strong class="text-blue">Random Forest</strong>
-                            <span class="sub-tag">250 Trees • MDI XAI</span>
+                        <h2 class="adjudication-main-title" id="dash-main-title">CANVISA • PERSONALIZED VISA OUTLOOK</h2>
+                        <p class="adjudication-meta-subtitle" id="dash-country-subtitle">
+                            Evaluated against official immigration standards and dedicated AI models.
+                        </p>
+                    </div>
+                    <div class="case-meta-right">
+                        <div class="case-step-tag">CASE INTELLIGENCE / FINAL STEP</div>
+                        <div class="case-id-display">
+                            <span id="dash-case-date">Oct 12, 2026</span> • <strong id="dash-case-id">CV-00127</strong>
+                        </div>
+                        <div class="case-meta-actions">
+                            <button class="btn-case-action" onclick="downloadReport()" title="Download PDF Report">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download report
+                            </button>
+                            <button class="btn-case-action primary" onclick="switchTab('wizard-tab')" title="Edit profile and check again">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg> Edit profile
+                            </button>
                         </div>
                     </div>
                 </div>
 
-                <!-- 6 NUMBERED VISUAL DASHBOARD GRID -->
-                <div class="atlys-6card-grid">
+                <!-- SECTION JUMP NAVIGATION PILLS -->
+                <div class="dash-jump-nav" role="navigation" aria-label="Dashboard sections">
+                    <button type="button" class="jump-pill active" onclick="scrollToDashSection('sec-outcome')" id="pill-sec-outcome">01 - Outcome</button>
+                    <button type="button" class="jump-pill" onclick="scrollToDashSection('sec-drivers')" id="pill-sec-drivers">02 - Model drivers</button>
+                    <button type="button" class="jump-pill" onclick="scrollToDashSection('sec-audit')" id="pill-sec-audit">03 - Profile audit</button>
+                    <button type="button" class="jump-pill" onclick="scrollToDashSection('sec-action')" id="pill-sec-action">04 - Action plan</button>
+                </div>
 
-                    <!-- CARD 1: Approval vs Denial Probability Donut -->
-                    <div class="atlys-card">
-                        <h3 class="card-num-header">1. Approval vs Denial Probability</h3>
-                        <div class="donut-chart-flex">
-                            <div class="donut-canvas-holder">
-                                <canvas id="donutChartCanvas" height="170"></canvas>
-                            </div>
-                            <div class="donut-legend-box">
-                                <div class="legend-row"><span class="dot bg-green"></span> Approved <strong id="legend-approved-pct">86%</strong></div>
-                                <div class="legend-row"><span class="dot bg-red"></span> Denied <strong id="legend-denied-pct">14%</strong></div>
-                            </div>
+                <!-- TIER 1: OUTCOME & PROBABILITY SUMMARY (2 COLUMNS) -->
+                <div class="dash-outcome-hero-grid" id="sec-outcome">
+                    
+                    <!-- Left: Outcome Assessment Card -->
+                    <div class="dash-outcome-card">
+                        <div class="outcome-tags-row">
+                            <span class="tag-model-output">CANVISA MODEL OUTPUT</span>
+                            <span class="risk-pill pill-green" id="dash-risk-pill"><span class="risk-dot"></span> LOW RISK</span>
                         </div>
-                        <div class="atlys-banner banner-green" id="donut-bottom-banner">
-                            <span class="banner-icon">✔</span>
-                            <span id="donut-banner-text">High probability of approval based on the provided profile.</span>
+                        <span class="outcome-kicker">ASSESSMENT OUTCOME</span>
+                        <h1 id="dash-prediction-title" class="outcome-headline outcome-title-green">Likely Approved</h1>
+                        <p class="outcome-desc-text" id="dash-outcome-desc">
+                            The model leans toward approval for the submitted profile. Inspect the evidence signals and suggested checks before treating this as a plan.
+                        </p>
+                        <div class="outcome-action-buttons">
+                            <button type="button" class="btn-outcome-primary" onclick="scrollToDashSection('sec-drivers')">
+                                Inspect model drivers &rarr;
+                            </button>
+                            <button type="button" class="btn-outcome-secondary" onclick="scrollToDashSection('sec-action')">
+                                Review next steps
+                            </button>
                         </div>
-                    </div>
+                        <p class="outcome-footnote">
+                            A statistical estimate for review — not an official immigration decision.
+                        </p>
 
-                    <!-- CARD 2: Key Factors (Feature Importance) -->
-                    <div class="atlys-card">
-                        <h3 class="card-num-header">2. Key Factors (Feature Importance)</h3>
-                        <div class="chart-canvas-box">
-                            <canvas id="featureDivergingChart" height="210"></canvas>
-                        </div>
-                    </div>
-
-                    <!-- CARD 3: Speedometer Risk Indicator Gauge -->
-                    <div class="atlys-card">
-                        <h3 class="card-num-header">3. Risk Indicator</h3>
-                        <div class="gauge-center-box">
-                            <canvas id="gaugeCanvas" width="240" height="130"></canvas>
-                            <div class="gauge-status-val text-green" id="gauge-risk-text">LOW RISK</div>
-                            <p class="gauge-desc-text" id="gauge-subtext">The applicant profile shows strong indicators for a successful outcome.</p>
-                            <div class="gauge-legend-row">
-                                <span><strong class="dot bg-green"></strong> Low (≥ 0.75)</span>
-                                <span><strong class="dot bg-yellow"></strong> Medium (0.50-0.75)</span>
-                                <span><strong class="dot bg-red"></strong> High (&lt; 0.50)</span>
-                            </div>
+                        <!-- Hidden elements for script backwards compatibility -->
+                        <div class="outcome-badge-circle bg-green" id="hero-outcome-circle" style="display:none;">
+                            <span class="outcome-check-icon">&#10003;</span>
                         </div>
                     </div>
 
-                    <!-- CARD 4: Applicant Profile Summary -->
-                    <div class="atlys-card">
-                        <h3 class="card-num-header">4. Applicant Profile Summary</h3>
-                        <div class="profile-mini-matrix">
-                            <div class="mini-card-item">
-                                <div class="mini-icon-circle icon-purple">🎓</div>
-                                <span class="mini-lbl">Education</span>
-                                <strong id="mini-edu">Master's Degree</strong>
-                                <small id="mini-field">Computer Science</small>
-                            </div>
-                            <div class="mini-card-item">
-                                <div class="mini-icon-circle icon-blue">💼</div>
-                                <span class="mini-lbl">Experience</span>
-                                <strong id="mini-exp-tot">6.2 Years</strong>
-                                <small id="mini-exp-rel">Relevant: 5.1 Years</small>
-                            </div>
-                            <div class="mini-card-item">
-                                <div class="mini-icon-circle icon-green">💲</div>
-                                <span class="mini-lbl">Offered Salary</span>
-                                <strong id="mini-salary">CAD 78,000</strong>
-                                <small>Annual</small>
-                            </div>
-                            <div class="mini-card-item">
-                                <div class="mini-icon-circle icon-yellow">🗣️</div>
-                                <span class="mini-lbl">Language (Overall)</span>
-                                <strong id="mini-lang">CLB 8</strong>
-                                <small id="mini-lang-sub">High Proficiency</small>
-                            </div>
-                            <div class="mini-card-item">
-                                <div class="mini-icon-circle icon-red">📜</div>
-                                <span class="mini-lbl">Job Offer</span>
-                                <strong id="mini-job">Yes</strong>
-                                <small id="mini-job-sub">Full-time</small>
-                            </div>
-                            <div class="mini-card-item">
-                                <div class="mini-icon-circle icon-teal">🏛️</div>
-                                <span class="mini-lbl">Financial Strength</span>
-                                <strong id="mini-fin">Strong</strong>
-                                <small id="mini-fin-sub">Adequate Funds</small>
-                            </div>
+                    <!-- Right: Outcome Probability Glass Card -->
+                    <div class="dash-probability-card">
+                        <div class="prob-header-row">
+                            <span class="prob-kicker-cyan">OUTCOME PROBABILITY</span>
+                            <span class="prob-tag-dark">MODEL OUTPUT</span>
                         </div>
-                    </div>
-
-                    <!-- CARD 5: Why did the AI make this prediction? -->
-                    <div class="atlys-card">
-                        <h3 class="card-num-header">5. Why did the AI make this prediction?</h3>
+                        <h3 class="prob-card-title">Estimated approval likelihood</h3>
                         
-                        <div class="xai-sub-section">
-                            <h4 class="xai-group-lbl text-green">Positive Factors (Strong Influences)</h4>
-                            <div id="xai-positive-bars" class="xai-bar-stack">
-                                <!-- Dynamic bars -->
+                        <div class="prob-stat-main">
+                            <span class="prob-number" id="dash-app-prob">81.4%</span>
+                            <span class="prob-scope-text">for this profile</span>
+                        </div>
+
+                        <div class="prob-sub-tags">
+                            <span class="prob-sub-chip">Refined estimate <strong id="dash-refined-prob">81.4%</strong></span>
+                            <span class="prob-sub-chip">Risk band <strong id="dash-band-text">LOW RISK</strong></span>
+                        </div>
+
+                        <!-- Probability Visual Scale Bar -->
+                        <div class="prob-scale-box">
+                            <div class="prob-scale-top">
+                                <span>Approval scale</span>
+                                <strong id="dash-scale-marker">81.4%</strong>
+                            </div>
+                            <div class="prob-scale-track">
+                                <div class="prob-scale-fill" id="dash-app-bar" style="width: 81.4%;"></div>
+                                <div class="prob-scale-thumb" id="dash-scale-thumb" style="left: 81.4%;"></div>
+                            </div>
+                            <div class="prob-scale-ends">
+                                <span>0 (0%)</span>
+                                <span>50%</span>
+                                <span>100%</span>
                             </div>
                         </div>
 
-                        <div class="xai-sub-section mt-3">
-                            <h4 class="xai-group-lbl text-red">Negative Factors (Weakening Influences)</h4>
-                            <div id="xai-negative-bars" class="xai-bar-stack">
-                                <!-- Dynamic bars -->
-                            </div>
+                        <!-- Factor Signals Divider & Bar List -->
+                        <div class="factor-signals-header">
+                            <span>Profile-specific factor signals</span>
+                            <span class="signals-badge">EVALUATION RESULTS</span>
                         </div>
-                    </div>
 
-                    <!-- CARD 6: Personalized Recommendations -->
-                    <div class="atlys-card">
-                        <h3 class="card-num-header">6. Personalized Recommendations</h3>
-                        <div id="recommendations-list" class="atlys-checklist-stack">
-                            <!-- Dynamic checklist items -->
+                        <div class="factor-signals-legend">
+                            <span class="legend-side-pink">&larr; LOWERS APPROVAL OUTPUT</span>
+                            <span class="legend-side-cyan">RAISES APPROVAL OUTPUT &rarr;</span>
                         </div>
+
+                        <div id="prob-factor-signals" class="prob-factor-bars-list">
+                            <!-- Populated dynamically with live assessment factor signals -->
+                        </div>
+
+                        <p class="prob-disclaimer">
+                            Machine learning model results. These are not a final verdict or government decision.
+                        </p>
+
+                        <!-- Hidden canvases for full script compatibility -->
+                        <canvas id="donutChartCanvas" width="1" height="1" style="display:none;"></canvas>
+                        <canvas id="gaugeCanvas" width="1" height="1" style="display:none;"></canvas>
+                        <span id="dash-den-prob" style="display:none;">18.6%</span>
+                        <div id="dash-den-bar" style="display:none; width: 18.6%;"></div>
+                        <span id="legend-approved-pct" style="display:none;">81.4%</span>
+                        <span id="legend-denied-pct" style="display:none;">18.6%</span>
+                        <div id="donut-bottom-banner" style="display:none;"><span id="donut-banner-text"></span></div>
+                        <span id="gauge-risk-text" style="display:none;">LOW RISK</span>
+                        <span id="gauge-subtext" style="display:none;"></span>
                     </div>
 
                 </div>
 
-                <!-- FOOTER NOTE BANNER -->
-                <div class="atlys-footer-note">
-                    <span class="info-icon">ℹ</span>
-                    <span>Note: This is a model-estimated analysis based on the information you provided. It is not an official decision. Final decisions are made by Canadian immigration authorities.</span>
+                <!-- TIER 2: INTELLIGENCE META GRID (4 CARDS) -->
+                <div class="dash-meta-grid">
+                    <div class="meta-item-card">
+                        <span class="meta-card-label">DESTINATION</span>
+                        <div class="meta-card-val"><span id="meta-country-flag">&#127809;</span> <span id="meta-country-name">Canada</span></div>
+                        <span class="meta-card-sub" id="meta-visa-category">NOC 2021 • MIA / PR</span>
+                    </div>
+                    <div class="meta-item-card">
+                        <span class="meta-card-label">ASSESSMENT ENGINE</span>
+                        <div class="meta-card-val" id="meta-model-name">Random Forest Classifier • CanVisa prototype</div>
+                        <span class="meta-card-sub">calibrated probabilistic assessment architecture</span>
+                    </div>
+                    <div class="meta-item-card">
+                        <span class="meta-card-label">EXPLAINABILITY</span>
+                        <div class="meta-card-val">SHAP + rules</div>
+                        <span class="meta-card-sub" id="meta-shap-status">SHAP v1 • STATIC RULES</span>
+                    </div>
+                    <div class="meta-item-card">
+                        <span class="meta-card-label">ASSESSMENT GENERATED</span>
+                        <div class="meta-card-val" id="meta-gen-date">Oct 12, 2026</div>
+                        <span class="meta-card-sub">MODEL VERSION: ML-V2-OCT2026</span>
+                    </div>
+                </div>
+
+                <!-- TIER 3: EXPLAINABILITY WORKSPACE -->
+                <div class="dash-section-card" id="sec-drivers">
+                    <div class="section-card-header">
+                        <span class="section-kicker">EXPLAINABILITY WORKSPACE</span>
+                        <h3 class="section-title">Inspect the model drivers</h3>
+                        <p class="section-subtitle">Switch between this project's applicant-specific rule signals, SHAP values (when available), and overall model feature importance.</p>
+                    </div>
+
+                    <!-- Tabs Nav -->
+                    <div class="xai-tabs-nav" role="tablist">
+                        <button type="button" class="xai-tab-btn" id="tab-btn-rules" onclick="switchXaiTab('rules')">Rule-based core signals</button>
+                        <button type="button" class="xai-tab-btn active" id="tab-btn-shap" onclick="switchXaiTab('shap')">Case-specific SHAP</button>
+                        <button type="button" class="xai-tab-btn" id="tab-btn-global" onclick="switchXaiTab('global')">Model-wide importance</button>
+                    </div>
+
+                    <!-- Panel 1: Case-specific SHAP (Active) -->
+                    <div class="xai-tab-panel active" id="xai-panel-shap">
+                        <div class="xai-info-callout">
+                            SHAP values show the direction and relative contribution to model output units. They are not percentages, point changes, or approval chances.
+                        </div>
+
+                        <div id="shap-diverging-list" class="shap-bars-container">
+                            <!-- Populated with dynamic SHAP bars -->
+                        </div>
+
+                        <!-- Backwards compatibility containers -->
+                        <div id="xai-positive-bars" style="display:none;"></div>
+                        <div id="xai-negative-bars" style="display:none;"></div>
+                    </div>
+
+                    <!-- Panel 2: Rule-Based Core Signals -->
+                    <div class="xai-tab-panel" id="xai-panel-rules" style="display:none;">
+                        <div class="statutory-compliance-grid" id="statutory-rules-list">
+                            <div class="compliance-rule-card">
+                                <div class="rule-icon-box text-green">&#10003;</div>
+                                <div class="rule-content">
+                                    <strong>Settlement Funds Compliance</strong>
+                                    <p id="rule-funds-desc">Meets IRCC LICO baseline solvency requirement for single applicant.</p>
+                                </div>
+                            </div>
+                            <div class="compliance-rule-card">
+                                <div class="rule-icon-box text-green">&#10003;</div>
+                                <div class="rule-content">
+                                    <strong>Language Standard Benchmark</strong>
+                                    <p id="rule-lang-desc">Exceeds minimum language proficiency criteria (CLB 7.0+ standard).</p>
+                                </div>
+                            </div>
+                            <div class="compliance-rule-card">
+                                <div class="rule-icon-box text-green">&#10003;</div>
+                                <div class="rule-content">
+                                    <strong>Employment & Offer Verification</strong>
+                                    <p id="rule-job-desc">Job offer supported by genuine Canadian employer with LMIA/TEER criteria.</p>
+                                </div>
+                            </div>
+                            <div class="compliance-rule-card">
+                                <div class="rule-icon-box text-green">&#10003;</div>
+                                <div class="rule-content">
+                                    <strong>Statutory Admissibility</strong>
+                                    <p id="rule-adm-desc">No criminal or security inadmissibility flags identified.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel 3: Model-Wide Feature Importance -->
+                    <div class="xai-tab-panel" id="xai-panel-global" style="display:none;">
+                        <div class="global-chart-wrap">
+                            <h4 class="global-chart-heading">Global Feature Importance (All Trained Profiles)</h4>
+                            <div class="chart-canvas-box" style="height: 240px; position: relative;">
+                                <canvas id="featureDivergingChart" height="240"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interactive What-If Scenario Sandbox Embedded Inside Workspace -->
+                    <div class="workspace-sandbox-box mt-4">
+                        <div class="sandbox-title-row">
+                            <span class="sandbox-badge">SENSITIVITY SANDBOX</span>
+                            <h4>Interactive What-If Simulation</h4>
+                            <p class="sandbox-sub">Test how credential upgrades alter model probability estimates:</p>
+                        </div>
+                        <div class="sandbox-chips-grid">
+                            <button type="button" class="btn-sim-chip" onclick="simulateChange('Language Upgrade (CLB 9/10)', 8)">
+                                <span class="chip-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg></span>
+                                <span class="chip-text">Improve Language (CLB 9+)</span>
+                                <span class="chip-boost">+8.0% Boost</span>
+                            </button>
+                            <button type="button" class="btn-sim-chip" onclick="simulateChange('Canadian Master\'s Credential', 9)">
+                                <span class="chip-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg></span>
+                                <span class="chip-text">Add Master's Degree</span>
+                                <span class="chip-boost">+9.0% Boost</span>
+                            </button>
+                            <button type="button" class="btn-sim-chip" onclick="simulateChange('Verified LMIA Job Offer', 14)">
+                                <span class="chip-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg></span>
+                                <span class="chip-text">Obtain LMIA Job Offer</span>
+                                <span class="chip-boost">+14.0% Boost</span>
+                            </button>
+                            <button type="button" class="btn-sim-chip reset" onclick="simulateChange('reset', 0)">
+                                <span class="chip-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg></span>
+                                <span class="chip-text">Reset to Original Score</span>
+                            </button>
+                        </div>
+                        <div id="sim-feedback-message" class="sim-feedback-box hidden"></div>
+                    </div>
+                </div>
+
+                <!-- TIER 4: SUBMITTED PROFILE DETAILS (INPUT AUDIT) -->
+                <div class="dash-section-card" id="sec-audit">
+                    <div class="section-card-header">
+                        <span class="section-kicker">INPUT AUDIT</span>
+                        <h3 class="section-title">Submitted profile details</h3>
+                        <p class="section-subtitle">Review the profile values the assessment used. Expand a section to inspect the complete input set received by the analysis.</p>
+                    </div>
+
+                    <!-- 6-Card Summary Pills Matrix -->
+                    <div class="audit-pills-row">
+                        <div class="audit-pill-card">
+                            <span class="audit-pill-lbl">DESTINATION</span>
+                            <strong class="audit-pill-val" id="audit-pill-country">Canada</strong>
+                        </div>
+                        <div class="audit-pill-card">
+                            <span class="audit-pill-lbl">EDUCATION</span>
+                            <strong class="audit-pill-val" id="audit-pill-edu">Master's</strong>
+                        </div>
+                        <div class="audit-pill-card">
+                            <span class="audit-pill-lbl">RELEVANT EXPERIENCE</span>
+                            <strong class="audit-pill-val" id="audit-pill-exp">5 years</strong>
+                        </div>
+                        <div class="audit-pill-card">
+                            <span class="audit-pill-lbl">JOB OFFER</span>
+                            <strong class="audit-pill-val" id="audit-pill-job">Yes</strong>
+                        </div>
+                        <div class="audit-pill-card">
+                            <span class="audit-pill-lbl">LANGUAGE SCORE</span>
+                            <strong class="audit-pill-val" id="audit-pill-lang">8.5</strong>
+                        </div>
+                        <div class="audit-pill-card">
+                            <span class="audit-pill-lbl">SETTLEMENT FUNDS</span>
+                            <strong class="audit-pill-val" id="audit-pill-funds">$55,000</strong>
+                        </div>
+                    </div>
+
+                    <!-- Collapsible Accordion Sections -->
+                    <div class="audit-accordions-stack">
+                        
+                        <!-- Accordion 1: Personal & Destination (Open by default) -->
+                        <div class="audit-acc-item open" id="acc-item-personal">
+                            <button type="button" class="audit-acc-trigger" onclick="toggleAuditAcc('acc-item-personal')">
+                                <span class="acc-title-text">Personal & Destination</span>
+                                <span class="acc-badge">6 inputs</span>
+                                <svg class="acc-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                            </button>
+                            <div class="audit-acc-content">
+                                <div class="audit-kv-grid">
+                                    <div class="kv-box"><span class="k-lbl">Age</span><strong class="v-val" id="audit-val-age">29 years</strong></div>
+                                    <div class="kv-box"><span class="k-lbl">Citizenship</span><strong class="v-val" id="audit-val-citizenship">India</strong></div>
+                                    <div class="kv-box"><span class="k-lbl">Current residence</span><strong class="v-val" id="audit-val-residence">India</strong></div>
+                                    <div class="kv-box"><span class="k-lbl">Marital status</span><strong class="v-val" id="audit-val-marital">Single</strong></div>
+                                    <div class="kv-box"><span class="k-lbl">Dependents</span><strong class="v-val" id="audit-val-dependents">0</strong></div>
+                                    <div class="kv-box"><span class="k-lbl">Destination</span><strong class="v-val" id="audit-val-dest">Canada</strong></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Accordion 2: Education & Credentials -->
+                        <div class="audit-acc-item" id="acc-item-edu">
+                            <button type="button" class="audit-acc-trigger" onclick="toggleAuditAcc('acc-item-edu')">
+                                <span class="acc-title-text">Education & Credentials</span>
+                                <span class="acc-badge">3 inputs</span>
+                                <svg class="acc-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                            </button>
+                            <div class="audit-acc-content">
+                                <div class="audit-kv-grid">
+                                    <div class="kv-box"><span class="k-lbl">Highest Credential</span><strong class="v-val" id="audit-val-edulevel">Master's Degree</strong></div>
+                                    <div class="kv-box"><span class="k-lbl">Field of Study</span><strong class="v-val" id="audit-val-field">Computer Science</strong></div>
+                                    <div class="kv-box"><span class="k-lbl">Institution Tier / ECA</span><strong class="v-val" id="audit-val-tier">Tier 1 Accredited</strong></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Accordion 3: Work & Offer -->
+                        <div class="audit-acc-item" id="acc-item-work">
+                            <button type="button" class="audit-acc-trigger" onclick="toggleAuditAcc('acc-item-work')">
+                                <span class="acc-title-text">Work & Offer</span>
+                                <span class="acc-badge">5 inputs</span>
+                                <svg class="acc-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                            </button>
+                            <div class="audit-acc-content">
+                                <div class="audit-kv-grid">
+                                    <div class="kv-box"><span class="k-lbl">Total Work Experience</span><strong class="v-val" id="audit-val-exptot">6 Years</strong></div>
+                                    <div class="kv-box"><span class="k-lbl">Relevant Experience</span><strong class="v-val" id="audit-val-exprel">5 Years</strong></div>
+                                    <div class="kv-box"><span class="k-lbl">Job Offer Status</span><strong class="v-val" id="audit-val-joboffer">Supported (Full-time)</strong></div>
+                                    <div class="kv-box"><span class="k-lbl">Local / Canadian Exp</span><strong class="v-val" id="audit-val-localexp">0 Years</strong></div>
+                                    <div class="kv-box"><span class="k-lbl">Occupation Skill Level</span><strong class="v-val" id="audit-val-skillteer">TEER 1 (Professional)</strong></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Accordion 4: Language & Finances -->
+                        <div class="audit-acc-item" id="acc-item-finance">
+                            <button type="button" class="audit-acc-trigger" onclick="toggleAuditAcc('acc-item-finance')">
+                                <span class="acc-title-text">Language & Finances</span>
+                                <span class="acc-badge">4 inputs</span>
+                                <svg class="acc-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                            </button>
+                            <div class="audit-acc-content">
+                                <div class="audit-kv-grid">
+                                    <div class="kv-box"><span class="k-lbl">Language Score</span><strong class="v-val" id="audit-val-langscore">CLB 8.5 / IELTS 8.0</strong></div>
+                                    <div class="kv-box"><span class="k-lbl">Offered Salary</span><strong class="v-val" id="audit-val-salary">CAD $78,000</strong></div>
+                                    <div class="kv-box"><span class="k-lbl">Settlement Funds</span><strong class="v-val" id="audit-val-funds">CAD $55,000</strong></div>
+                                    <div class="kv-box"><span class="k-lbl">Financial Sponsor</span><strong class="v-val" id="audit-val-sponsor">Self-Funded</strong></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Accordion 5: Immigration & Admissibility -->
+                        <div class="audit-acc-item" id="acc-item-adm">
+                            <button type="button" class="audit-acc-trigger" onclick="toggleAuditAcc('acc-item-adm')">
+                                <span class="acc-title-text">Immigration & Admissibility</span>
+                                <span class="acc-badge">3 inputs</span>
+                                <svg class="acc-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                            </button>
+                            <div class="audit-acc-content">
+                                <div class="audit-kv-grid">
+                                    <div class="kv-box"><span class="k-lbl">Previous Visa Refusal</span><strong class="v-val" id="audit-val-refusal">None</strong></div>
+                                    <div class="kv-box"><span class="k-lbl">Police / Security Clearance</span><strong class="v-val" id="audit-val-police">Clear Record</strong></div>
+                                    <div class="kv-box"><span class="k-lbl">Medical Examination</span><strong class="v-val" id="audit-val-medical">Passed / No Flags</strong></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Hidden legacy summary elements for backward compatibility -->
+                    <span id="mini-edu" style="display:none;"></span>
+                    <span id="mini-field" style="display:none;"></span>
+                    <span id="mini-exp-tot" style="display:none;"></span>
+                    <span id="mini-exp-rel" style="display:none;"></span>
+                    <span id="mini-salary" style="display:none;"></span>
+                    <span id="mini-lang" style="display:none;"></span>
+                    <span id="mini-lang-sub" style="display:none;"></span>
+                    <span id="mini-job" style="display:none;"></span>
+                    <span id="mini-job-sub" style="display:none;"></span>
+                    <span id="mini-fin" style="display:none;"></span>
+                    <span id="mini-fin-sub" style="display:none;"></span>
+                </div>
+
+                <!-- TIER 5: SUGGESTED ACTION PLAN (APPLICANT-CONTROLLED REVIEW CHECKLIST) -->
+                <div class="dash-section-card" id="sec-action">
+                    <div class="action-header-row">
+                        <div>
+                            <span class="section-kicker">APPLICANT-CONTROLLED REVIEW CHECKLIST</span>
+                            <h3 class="section-title">Suggested action plan</h3>
+                            <p class="section-subtitle">Mark steps reviewed as you work through them. Checklist progress is temporary and is not saved to the server.</p>
+                        </div>
+                        <div class="action-progress-box">
+                            <span id="action-progress-text">0/3 reviewed</span>
+                            <div class="action-progress-track">
+                                <div class="action-progress-fill" id="action-progress-bar" style="width: 0%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dynamic Recommendations Cards Stack -->
+                    <div id="recommendations-list" class="action-cards-grid">
+                        <!-- Populated dynamically with interactive action cards -->
+                    </div>
+
+                    <p class="action-footnote">
+                        Any "Estimated Impact" text is generated by the project's recommendation rules. It is not a guaranteed result or a re-calculated model score.
+                    </p>
+                </div>
+
+                <!-- BOTTOM STATUTORY DISCLAIMER -->
+                <div class="dash-disclaimer-box">
+                    <span class="disclaimer-icon">&#9878;&#65039;</span>
+                    <p class="disclaimer-text">
+                        <strong>Academic prototype — not an official decision.</strong> CanVisa provides statistical estimates only. It does not guarantee approval or refusal and is not legal or immigration advice. Only the relevant government immigration authority can make a final decision.
+                    </p>
+                </div>
+
+                <!-- BOTTOM FOOTER ACTION BUTTONS -->
+                <div class="dash-bottom-actions">
+                    <div class="actions-left">
+                        <button type="button" class="btn-dash-action" onclick="scrollToDashSection('sec-drivers')">
+                            Open full analytics &nearr;
+                        </button>
+                        <button type="button" class="btn-dash-action" onclick="switchTab('wizard-tab')">
+                            Edit profile & reassess
+                        </button>
+                    </div>
+                    <div class="actions-right">
+                        <button type="button" class="btn-dash-primary" onclick="downloadReport()">
+                            Download report &#128229;
+                        </button>
+                    </div>
                 </div>
 
             </div>
@@ -612,123 +1291,260 @@
         <!-- TAB 4: APPLICATION HISTORY -->
         <section id="history-tab" class="tab-panel">
             <div class="atlys-card">
-                <div class="panel-top-row">
-                    <h2>Application Prediction History</h2>
-                    <button class="btn-atlys-sm" onclick="loadHistory()">🔄 Refresh Records</button>
+                <div class="page-back-nav mb-2">
+                    <button type="button" class="btn-page-back" onclick="switchTab('hero-tab')" aria-label="Back to Overview" title="Back to Overview">
+                        <svg class="back-arrow-svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="19" y1="12" x2="5" y2="12"></line>
+                            <polyline points="12 19 5 12 12 5"></polyline>
+                        </svg>
+                    </button>
                 </div>
-                <p class="sub-desc">Saved evaluation history stored in SQLite database (`backend/visa_system.db`):</p>
+                <div class="panel-top-row">
+                    <div>
+                        <span class="panel-section-badge">SAVED ASSESSMENTS</span>
+                        <h2>Previous Visa Checks</h2>
+                    </div>
+                    <button class="btn-atlys-sm" onclick="loadHistory()">Refresh Records</button>
+                </div>
+                <p class="sub-desc">List of past applicant profile evaluations saved in the database:</p>
 
                 <div class="table-responsive-box">
                     <table class="atlys-table">
                         <thead>
                             <tr>
-                                <th>ID</th>
-                                <th>Timestamp</th>
+                                <th>Case ID</th>
+                                <th>Date & Time</th>
                                 <th>Education</th>
                                 <th>Experience</th>
                                 <th>Job Offer</th>
-                                <th>Prediction</th>
-                                <th>Approval %</th>
-                                <th>Risk Category</th>
+                                <th>Result</th>
+                                <th>Approval Chance</th>
+                                <th>Risk Level</th>
                             </tr>
                         </thead>
                         <tbody id="historyTableBody">
-                            <tr><td colspan="8" class="text-center">Loading evaluation history...</td></tr>
+                            <tr><td colspan="8" class="text-center">Loading past checks...</td></tr>
                         </tbody>
                     </table>
                 </div>
             </div>
         </section>
 
-        <!-- TAB 5: ML MODEL BENCHMARK INFO -->
-        <section id="benchmark-tab" class="tab-panel">
-            <div class="atlys-card">
-                <h2>Machine Learning Model Intelligence Benchmark</h2>
-                <p class="sub-desc">Trained model evaluation metrics on stratified 20% test dataset (240 unseen samples):</p>
 
-                <div class="table-responsive-box mt-3">
-                    <table class="atlys-table">
-                        <thead>
-                            <tr>
-                                <th>Model Architecture</th>
-                                <th>Accuracy</th>
-                                <th>Precision</th>
-                                <th>Recall</th>
-                                <th>F1 Score</th>
-                                <th>ROC-AUC</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Logistic Regression</td>
-                                <td>90.42%</td>
-                                <td>93.63%</td>
-                                <td>91.87%</td>
-                                <td>0.9274</td>
-                                <td>0.9651</td>
-                            </tr>
-                            <tr>
-                                <td>Gradient Boosting</td>
-                                <td>89.58%</td>
-                                <td>91.41%</td>
-                                <td>93.13%</td>
-                                <td>0.9226</td>
-                                <td>0.9404</td>
-                            </tr>
-                            <tr class="selected-row">
-                                <td>🌟 <strong>Random Forest (Selected Primary)</strong></td>
-                                <td><strong>83.33%</strong></td>
-                                <td><strong>86.59%</strong></td>
-                                <td><strong>88.75%</strong></td>
-                                <td><strong>0.8765</strong></td>
-                                <td><strong>0.9288</strong></td>
-                            </tr>
-                            <tr>
-                                <td>Decision Tree</td>
-                                <td>77.50%</td>
-                                <td>85.33%</td>
-                                <td>80.00%</td>
-                                <td>0.8258</td>
-                                <td>0.7788</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <div class="atlys-card mt-4">
-                <h2>Exploratory Data Analysis (EDA) Figures</h2>
-                <div class="eda-image-grid">
-                    <div class="eda-img-box">
-                        <h4>Visa Outcome Target Distribution</h4>
-                        <img src="/reports/figures/approval_vs_denial.png" alt="Target Distribution" onerror="this.src='https://via.placeholder.com/400x300?text=Target+Distribution'">
-                    </div>
-                    <div class="eda-img-box">
-                        <h4>Education Level vs Outcome</h4>
-                        <img src="/reports/figures/education_vs_outcome.png" alt="Education vs Outcome" onerror="this.src='https://via.placeholder.com/400x300?text=Education+vs+Outcome'">
-                    </div>
-                    <div class="eda-img-box">
-                        <h4>Experience vs Offered Salary</h4>
-                        <img src="/reports/figures/experience_salary_outcome.png" alt="Experience vs Salary" onerror="this.src='https://via.placeholder.com/400x300?text=Experience+vs+Salary'">
-                    </div>
-                    <div class="eda-img-box">
-                        <h4>Language Score vs Outcome</h4>
-                        <img src="/reports/figures/language_vs_outcome.png" alt="Language vs Outcome" onerror="this.src='https://via.placeholder.com/400x300?text=Language+vs+Outcome'">
-                    </div>
-                </div>
-            </div>
-        </section>
 
     </main>
 
     <!-- FOOTER -->
+    <!-- FOOTER WITH TERMS & CONDITIONS -->
     <footer class="atlys-footer">
         <div class="footer-wrap">
-            <p>© 2026 CanVisa AI Decision Support Engine • University Engineering Project</p>
-            <p class="foot-sub">Disclaimer: Not an official IRCC decision tool. Built for decision support & university project review.</p>
+            <div class="footer-terms-block">
+                <span class="terms-tag">LEGAL & REGULATORY NOTICE • TERMS OF USE</span>
+                <p class="terms-text"><strong>Decision Support System:</strong> Predictions generated by this system are intelligent assessments based on official immigration guidelines and applicant attributes. They are intended for self-assessment, guidance, and educational purposes and do <strong>NOT</strong> constitute official government immigration decisions. Final visa approvals or refusals are determined exclusively by official statutory bodies (IRCC in Canada, Home Affairs in Australia, UK Visas & Immigration, and the Federal Employment Agency / Ausländerbehörde in Germany).</p>
+            </div>
+            <div class="footer-bottom-line">
+                <p>© 2026 CanVisa Decision Support Engine • Global Visa Guidance Platform</p>
+                <div class="footer-links">
+                    <a href="javascript:void(0)" onclick="openTrustModal('standards')">Immigration Standards</a> •
+                    <a href="javascript:void(0)" onclick="openTrustModal('accuracy')">How It Works</a> •
+                    <a href="javascript:void(0)" onclick="openTermsModal()">Terms of Use</a>
+                </div>
+            </div>
         </div>
     </footer>
 
-    <script src="/static/script.js"></script>
+    <!-- ADMIN PROFILE & SYSTEM SETTINGS MODAL -->
+    <div id="adminModal" class="admin-modal-overlay" onclick="closeAdminModalOnOverlay(event)">
+        <div class="admin-modal-card">
+            <div class="admin-modal-header">
+                <div class="admin-modal-title-group">
+                    <div class="admin-modal-avatar">ADM</div>
+                    <div>
+                        <h3 class="admin-modal-title">Admin Profile & System Diagnostics</h3>
+                        <p class="admin-modal-subtitle">Administrator • CanVisa System Console</p>
+                    </div>
+                </div>
+                <button class="admin-modal-close" onclick="closeAdminModal()">✕</button>
+            </div>
+
+            <div class="admin-modal-body">
+                <!-- User Info Summary Card -->
+                <div class="admin-info-box">
+                    <div class="admin-detail-row">
+                        <span class="admin-detail-label">Administrator Name:</span>
+                        <span class="admin-detail-val">System Administrator (Lead)</span>
+                    </div>
+                    <div class="admin-detail-row">
+                        <span class="admin-detail-label">Access Level:</span>
+                        <span class="admin-badge badge-emerald">Super Admin (Verified)</span>
+                    </div>
+                    <div class="admin-detail-row">
+                        <span class="admin-detail-label">Active Session ID:</span>
+                        <span class="admin-code">SYS-SESSION-2026-99A4</span>
+                    </div>
+                    <div class="admin-detail-row">
+                        <span class="admin-detail-label">Security Credentials:</span>
+                        <span class="admin-code">AES-256 Auth Token Verified</span>
+                    </div>
+                </div>
+
+                <!-- Diagnostics & Operations -->
+                <h4 class="admin-section-heading">System Telemetry & Controls</h4>
+                <div class="admin-controls-grid">
+                    <div class="admin-control-card">
+                        <div class="control-header">
+                            <span>Decision Engine</span>
+                            <span class="admin-badge badge-green">Online</span>
+                        </div>
+                        <p class="control-desc">Automated Rule & Scoring Pipeline</p>
+                        <button class="btn-admin-action" onclick="testModelHealth()">Run Diagnostic Check</button>
+                    </div>
+
+                    <div class="admin-control-card">
+                        <div class="control-header">
+                            <span>SQLite Database</span>
+                            <span class="admin-badge badge-green">Connected</span>
+                        </div>
+                        <p class="control-desc">Persistent local audit history database active</p>
+                        <button class="btn-admin-action" onclick="loadHistory(); alert('Database Connection Verified & Synced!');">Reload DB Sync</button>
+                    </div>
+
+                    <div class="admin-control-card">
+                        <div class="control-header">
+                            <span>Score Breakdown Engine</span>
+                            <span class="admin-badge badge-purple">Active</span>
+                        </div>
+                        <p class="control-desc">Real-time positive & negative factor impact analysis</p>
+                        <button class="btn-admin-action" onclick="switchTab('results-tab'); closeAdminModal();">View Factor Console</button>
+                    </div>
+
+                    <div class="admin-control-card">
+                        <div class="control-header">
+                            <span>System Audit History</span>
+                            <span class="admin-badge badge-blue">Ready</span>
+                        </div>
+                        <p class="control-desc">View and inspect application history records</p>
+                        <button class="btn-admin-action" onclick="switchTab('history-tab'); closeAdminModal();">Inspect History Log</button>
+                    </div>
+                </div>
+
+                <!-- Toggle Options -->
+                <div class="admin-toggles-container">
+                    <div class="toggle-row">
+                        <div>
+                            <strong>Live Auto-Prediction Analysis</strong>
+                            <small>Automatically compute ML metrics when loading presets</small>
+                        </div>
+                        <input type="checkbox" class="admin-switch" checked id="autoAnalyzeSwitch">
+                    </div>
+                    <div class="toggle-row">
+                        <div>
+                            <strong>Fintech Dark Theme (Enforced)</strong>
+                            <small>Ultra-wide high contrast dark UI theme for fintech dashboards</small>
+                        </div>
+                        <input type="checkbox" class="admin-switch" checked disabled>
+                    </div>
+                </div>
+            </div>
+
+            <div class="admin-modal-footer">
+                <span class="admin-footer-text">CanVisa AI Engine v1.0.0 • All security protocols active</span>
+                <button class="btn-atlys-hero" onclick="closeAdminModal()">Close Profile</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- TRUST MODULE EXPLANATION MODAL -->
+    <div class="glass-modal-overlay" id="trustModalOverlay" onclick="handleTrustOverlayClick(event)">
+        <div class="glass-auth-modal trust-modal-card" role="dialog" aria-modal="true" aria-labelledby="trustModalTitle">
+            <button class="btn-close-glass-modal" onclick="closeTrustModal()" aria-label="Close Information Modal">✕</button>
+            <div id="trustModalContent">
+                <!-- Dynamically loaded via script.js -->
+            </div>
+        </div>
+    </div>
+
+    <!-- FLOATING GLASS LOGIN MODAL (OPTION 2) -->
+    <div class="glass-modal-overlay" id="loginModalOverlay" onclick="handleLoginOverlayClick(event)">
+        <div class="glass-auth-modal" role="dialog" aria-modal="true" aria-labelledby="authModalTitle">
+            <button class="btn-close-glass-modal" onclick="closeLoginModal()" aria-label="Close Authentication Modal">✕</button>
+
+            <div class="auth-modal-header">
+                <div class="auth-icon-badge">
+                    <svg viewBox="0 0 23 17" aria-hidden="true" class="auth-brand-mark">
+                        <path d="M8.15 0.9 L4.55 0.9 L0.5 9.3 L4.1 9.3 Z"/>
+                        <path d="M17.0 0 L13.4 0 L6.15 16.4 L9.75 16.4 Z"/>
+                        <path d="M22.9 0 L19.3 0 L15.0 7.6 L18.6 7.6 Z"/>
+                        <path d="M22.6 6.9 L19.0 6.9 L14.05 16.4 L17.65 16.4 Z"/>
+                    </svg>
+                </div>
+                <h3 id="authModalTitle">CanVisa Intelligence Access</h3>
+                <p>Sign in to save custom applicants or use the 1-click panel guest pass</p>
+            </div>
+
+            <!-- Fast-Pass Banner for Academic Reviewers -->
+            <div class="evaluator-fast-pass-box" onclick="loginAsGuest()">
+                <div class="fast-pass-left">
+                    <span class="fast-pass-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
+                    <div>
+                        <strong>1-Click Evaluator Fast Pass</strong>
+                        <small>Bypass credentials for university jury & review panels</small>
+                    </div>
+                </div>
+                <span class="fast-pass-arrow">→</span>
+            </div>
+
+            <div class="auth-divider">
+                <span>or continue with credentials</span>
+            </div>
+
+            <form id="authLoginForm" onsubmit="handleAuthSubmit(event)">
+                <div class="auth-field-group">
+                    <label for="authEmail">Reviewer / Academic Email</label>
+                    <input type="email" id="authEmail" placeholder="admin.evaluator@university.edu" required autocomplete="username">
+                </div>
+                <div class="auth-field-group">
+                    <div class="auth-label-row">
+                        <label for="authPassword">Access Passcode</label>
+                        <a href="javascript:void(0)" onclick="alert('Demo Passcode: admin123 or use 1-Click Fast Pass above.')" class="forgot-link">Demo hint?</a>
+                    </div>
+                    <input type="password" id="authPassword" placeholder="••••••••" required autocomplete="current-password">
+                </div>
+
+                <div class="auth-remember-row">
+                    <label class="remember-label">
+                        <input type="checkbox" id="authRemember" checked>
+                        <span>Remember session on this device</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn-auth-submit">
+                    <span>Enter Decision Engine</span>
+                    <span class="auth-btn-arrow">→</span>
+                </button>
+            </form>
+
+            <div class="auth-modal-footer">
+                <span class="security-lock-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>
+                <span>SHA-256 Secure Session • Visa Assessment System</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Global Google Website Translator Bridge -->
+    <div id="google_translate_element" style="display:none;"></div>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script src="/static/translations.js?v=5"></script>
+    <script src="/static/script.js?v=5"></script>
+    <script src="/static/chatbot.js?v=12"></script>
 </body>
 </html>

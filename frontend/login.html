@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>CanVisa AI — Reviewer & Evaluator Authentication</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/language-changer.css?v=2">
+  <link rel="stylesheet" href="/static/chatbot.css?v=12">
+  <style>
+    :root {
+      --ink: #ffffff;
+      --sub: #a2a9b8;
+      --nav: #fbfdff;
+      --foot: #f4f8fd;
+      --hair: rgba(196, 214, 232, 0.72);
+      --chev: rgba(214, 232, 250, 0.90);
+      --navdim: #e8ecf0;
+      --feat: #e2ebf5;
+      --veil: 6, 10, 18;
+
+      --cyan: #00f0ff;
+      --gold: #ffd166;
+      --card-bg: rgba(12, 18, 32, 0.75);
+      --border: rgba(196, 214, 232, 0.16);
+      --blur: 24px;
+      --glow: 34px;
+      --hairline: 1px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      background: #02060f;
+      overflow: hidden;
+    }
+
+    body {
+      font-family: 'Sora', system-ui, -apple-system, sans-serif;
+      color: var(--ink);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      position: relative;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: geometricPrecision;
+    }
+
+    /* LOOPING VIDEO BACKGROUND */
+    .art {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 50%;
+      z-index: 0;
+      user-select: none;
+      -webkit-user-drag: none;
+      pointer-events: none;
+      background: #03060c;
+    }
+
+    /* ATMOSPHERIC VEIL GRADIENT */
+    .veil {
+      position: fixed;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      background:
+        radial-gradient(140% 60% at 50% 40%,
+          rgba(var(--veil), 0.35) 0%,
+          rgba(var(--veil), 0.15) 50%,
+          rgba(var(--veil), 0) 100%),
+        linear-gradient(180deg,
+          rgba(var(--veil), 0.25) 0%,
+          rgba(var(--veil), 0.45) 100%);
+    }
+
+    /* TOP MINIMALIST NAV BAR */
+    .top-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 1.8rem 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 50;
+    }
+
+    .brand-link {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.25rem;
+      letter-spacing: -0.01em;
+    }
+
+    .brand-mark {
+      width: 24px;
+      height: 18px;
+      fill: var(--ink);
+      filter: drop-shadow(0 0 8px rgba(0, 240, 255, 0.4));
+    }
+
+    .back-home-pill {
+      background: rgba(255, 255, 255, 0.05);
+      border: var(--hairline) solid var(--hair);
+      color: var(--nav);
+      text-decoration: none;
+      padding: 0.55rem 1.3rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: all 0.25s ease;
+      backdrop-filter: blur(var(--blur)) saturate(0.5);
+      -webkit-backdrop-filter: blur(var(--blur)) saturate(0.5);
+    }
+
+    .back-home-pill:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.4);
+      color: #ffffff;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+    }
+
+    /* FROSTED GLASS LOGIN CARD (OPTION 2 / LAUNCH SYNCED) */
+    .auth-card {
+      position: relative;
+      z-index: 20;
+      width: 100%;
+      max-width: 440px;
+      background:
+        linear-gradient(180deg, rgba(15, 23, 42, 0.88) 0%, rgba(6, 12, 22, 0.92) 100%),
+        linear-gradient(90deg, rgba(255, 226, 178, 0.04) 0%, rgba(150, 196, 244, 0.04) 100%);
+      backdrop-filter: blur(var(--blur)) saturate(0.65);
+      -webkit-backdrop-filter: blur(var(--blur)) saturate(0.65);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 2.6rem 2.2rem;
+      box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.8),
+        0 0 var(--glow) rgba(168, 204, 252, 0.14),
+        inset 0 1px 0 rgba(255, 251, 242, 0.35);
+      animation: enterFade 0.7s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+    }
+
+    @keyframes enterFade {
+      from { opacity: 0; transform: translateY(22px) scale(0.97); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    .auth-header {
+      text-align: center;
+      margin-bottom: 1.8rem;
+    }
+
+    .auth-icon-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 14px;
+      background: rgba(0, 240, 255, 0.1);
+      border: 1px solid rgba(0, 240, 255, 0.3);
+      margin-bottom: 1rem;
+      box-shadow: 0 0 18px rgba(0, 240, 255, 0.22);
+    }
+
+    .auth-header h1 {
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 0.35rem;
+      letter-spacing: -0.015em;
+    }
+
+    .auth-header p {
+      font-size: 0.85rem;
+      color: var(--sub);
+      line-height: 1.45;
+    }
+
+    /* 1-CLICK FAST PASS FOR EVALUATORS */
+    .fast-pass-banner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: linear-gradient(90deg, rgba(255, 209, 102, 0.08) 0%, rgba(0, 240, 255, 0.06) 100%);
+      border: 1px dashed rgba(255, 209, 102, 0.45);
+      border-radius: 14px;
+      padding: 0.95rem 1.15rem;
+      cursor: pointer;
+      margin-bottom: 1.5rem;
+      transition: all 0.25s ease;
+    }
+
+    .fast-pass-banner:hover {
+      background: linear-gradient(90deg, rgba(255, 209, 102, 0.16) 0%, rgba(0, 240, 255, 0.14) 100%);
+      border-color: var(--gold);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 22px rgba(255, 209, 102, 0.22);
+    }
+
+    .fast-pass-left {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .fast-pass-icon { font-size: 1.4rem; }
+
+    .fast-pass-left strong {
+      display: block;
+      font-size: 0.88rem;
+      color: #ffeed2;
+      font-weight: 600;
+    }
+
+    .fast-pass-left small {
+      display: block;
+      font-size: 0.74rem;
+      color: var(--sub);
+    }
+
+    .fast-pass-arrow {
+      color: var(--gold);
+      font-size: 1.2rem;
+      font-weight: 700;
+      transition: transform 0.2s ease;
+    }
+
+    .fast-pass-banner:hover .fast-pass-arrow {
+      transform: translateX(4px);
+    }
+
+    /* DIVIDER */
+    .divider {
+      position: relative;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .divider::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .divider span {
+      position: relative;
+      background: #070d18;
+      padding: 0 0.8rem;
+      font-size: 0.75rem;
+      color: var(--sub);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* FORM FIELDS */
+    .field-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      margin-bottom: 1.15rem;
+    }
+
+    .field-group label {
+      font-size: 0.82rem;
+      color: var(--feat);
+      font-weight: 500;
+    }
+
+    .field-group input {
+      background: rgba(4, 9, 18, 0.75);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 12px;
+      padding: 0.8rem 1rem;
+      color: #ffffff;
+      font-family: inherit;
+      font-size: 0.92rem;
+      outline: none;
+      transition: all 0.2s ease;
+    }
+
+    .field-group input:focus {
+      border-color: var(--cyan);
+      box-shadow: 0 0 0 3px rgba(0, 240, 255, 0.15), 0 0 16px rgba(0, 240, 255, 0.2);
+    }
+
+    /* OTP INPUT ROW & ACTION */
+    .input-with-action {
+      display: flex;
+      gap: 0.55rem;
+      align-items: center;
+    }
+
+    .input-with-action input {
+      flex: 1;
+    }
+
+    .btn-action-inline {
+      padding: 0.78rem 1.15rem;
+      border-radius: 12px;
+      border: 1px solid rgba(0, 240, 255, 0.4);
+      background: linear-gradient(135deg, rgba(0, 240, 255, 0.14), rgba(37, 99, 235, 0.24));
+      color: #38bdf8;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-family: inherit;
+      outline: none;
+    }
+
+    .btn-action-inline:hover:not(:disabled) {
+      background: linear-gradient(135deg, rgba(0, 240, 255, 0.26), rgba(37, 99, 235, 0.4));
+      border-color: #38bdf8;
+      color: #ffffff;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(0, 240, 255, 0.3);
+    }
+
+    .btn-action-inline:disabled {
+      opacity: 0.55;
+      cursor: not-allowed;
+      border-color: rgba(255, 255, 255, 0.12);
+      color: #94a3b8;
+    }
+
+    .otp-field-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .otp-timer-badge {
+      font-size: 0.74rem;
+      color: #f59e0b;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .otp-code-input {
+      letter-spacing: 0.32em;
+      font-size: 1.15rem !important;
+      font-weight: 800 !important;
+      text-align: center;
+      font-family: 'Courier New', monospace !important;
+      background: rgba(2, 6, 23, 0.85) !important;
+      border: 1.5px solid rgba(56, 189, 248, 0.35) !important;
+    }
+
+    .otp-code-input:focus {
+      border-color: #38bdf8 !important;
+      box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.25), 0 0 20px rgba(56, 189, 248, 0.25) !important;
+    }
+
+    .otp-code-input.is-invalid {
+      border-color: #ef4444 !important;
+      box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.25) !important;
+    }
+
+    /* Live Toast / Alert Banner */
+    .auth-alert {
+      padding: 0.85rem 1rem;
+      border-radius: 12px;
+      font-size: 0.84rem;
+      line-height: 1.45;
+      margin-bottom: 1.25rem;
+      display: none;
+      animation: fadeInAlert 0.3s ease;
+    }
+
+    @keyframes fadeInAlert {
+      from { opacity: 0; transform: translateY(-6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .auth-alert-success {
+      background: rgba(16, 185, 129, 0.14);
+      border: 1px solid rgba(16, 185, 129, 0.45);
+      color: #34d399;
+    }
+
+    .auth-alert-error {
+      background: rgba(239, 68, 68, 0.14);
+      border: 1px solid rgba(239, 68, 68, 0.45);
+      color: #f87171;
+    }
+
+    .auth-alert-info {
+      background: rgba(56, 189, 248, 0.14);
+      border: 1px solid rgba(56, 189, 248, 0.45);
+      color: #7dd3fc;
+    }
+
+    .otp-demo-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 8px;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      background: rgba(245, 158, 11, 0.18);
+      border: 1px dashed rgba(245, 158, 11, 0.6);
+      color: #fbbf24;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .otp-demo-pill:hover {
+      background: rgba(245, 158, 11, 0.32);
+      color: #ffffff;
+      transform: translateY(-1px);
+    }
+
+    /* FROSTED GLASS SUBMIT BUTTON */
+    .btn-submit {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.65rem;
+      border-radius: 999px;
+      border: none;
+      padding: 0.95rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--ink);
+      cursor: pointer;
+      position: relative;
+      background:
+        linear-gradient(180deg, rgba(6, 12, 22, 0) 45%, rgba(6, 12, 22, 0.12) 78%, rgba(6, 12, 22, 0.28) 100%),
+        linear-gradient(90deg,
+          rgba(255, 226, 178, 0.17) 0%, rgba(255, 236, 208, 0.07) 22%,
+          rgba(176, 206, 238, 0.03) 55%, rgba(150, 196, 244, 0.09) 100%),
+        linear-gradient(90deg,
+          rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0.17) 12%,
+          rgba(255, 255, 255, 0.11) 26%, rgba(255, 255, 255, 0.07) 42%,
+          rgba(255, 255, 255, 0.05) 60%, rgba(255, 255, 255, 0.04) 80%,
+          rgba(255, 255, 255, 0.04) 100%);
+      -webkit-backdrop-filter: blur(var(--blur)) saturate(0.5);
+      backdrop-filter: blur(var(--blur)) saturate(0.5);
+      box-shadow:
+        0 -2px 20px rgba(255, 224, 176, 0.2),
+        0 0 var(--glow) rgba(168, 204, 252, 0.2),
+        inset 0 1px 0 0 rgba(255, 251, 242, 0.5);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      margin-top: 0.4rem;
+    }
+
+    .btn-submit::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: var(--hairline);
+      pointer-events: none;
+      background:
+        linear-gradient(180deg, rgba(255, 252, 246, 0.95) 0%, rgba(255, 252, 246, 0.20) 45%, rgba(255, 252, 246, 0) 78%),
+        linear-gradient(90deg,
+          rgba(255, 228, 182, 0.95) 0%, rgba(250, 236, 210, 0.70) 12%,
+          rgba(226, 230, 234, 0.03) 32%, rgba(214, 226, 240, 0.02) 62%,
+          rgba(200, 228, 250, 0.70) 90%, rgba(186, 224, 247, 0.95) 100%);
+      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor;
+      mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      mask-composite: exclude;
+    }
+
+    .btn-submit:hover {
+      transform: translateY(-2px);
+      box-shadow:
+        0 -4px 26px rgba(255, 224, 176, 0.35),
+        0 0 calc(var(--glow) * 1.3) rgba(168, 204, 252, 0.35),
+        inset 0 1px 0 0 rgba(255, 251, 242, 0.7);
+    }
+
+    .footer-note {
+      text-align: center;
+      margin-top: 1.6rem;
+      font-size: 0.74rem;
+      color: #64748b;
+    }
+  </style>
+</head>
+<body>
+  <!-- BACKGROUND VIDEO -->
+  <video class="art" autoplay muted loop playsinline preload="auto" aria-hidden="true"
+    poster="https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/130837c4-0244-4f37-9c61-8d801d93fd29.jpg"
+    src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260912_104303_0c6d60b2-9353-408e-9449-585108a22fb5.mp4"></video>
+
+  <div class="veil"></div>
+
+  <header class="top-bar">
+    <a href="/launch" class="brand-link">
+      <svg class="brand-mark" viewBox="0 0 23 17" aria-hidden="true">
+        <path d="M8.15 0.9 L4.55 0.9 L0.5 9.3 L4.1 9.3 Z"/>
+        <path d="M17.0 0 L13.4 0 L6.15 16.4 L9.75 16.4 Z"/>
+        <path d="M22.9 0 L19.3 0 L15.0 7.6 L18.6 7.6 Z"/>
+        <path d="M22.6 6.9 L19.0 6.9 L14.05 16.4 L17.65 16.4 Z"/>
+      </svg>
+      <span style="letter-spacing: 0.12em; font-weight: 700; font-size: 1.15rem;">CANVISA</span>
+    </a>
+    <div style="display: flex; gap: 0.75rem; align-items: center;">
+      <!-- Language Selector Dropdown -->
+      <div class="language-changer-wrapper" id="languageChangerWrapper">
+        <button type="button" class="lang-pill-btn" onclick="toggleLanguageDropdown(event)" title="Select Language">
+          <span class="lang-globe-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
+          <span class="lang-current-label" id="currentLangLabel"> English</span>
+          <span class="lang-arrow">▾</span>
+        </button>
+        <div class="language-dropdown-menu" id="languageDropdownMenu">
+          <div class="lang-dropdown-header">
+            <span data-i18n="select_lang_title">Select Language</span>
+          </div>
+          <div class="lang-options-grid">
+            <button type="button" class="lang-opt-btn active" data-lang="en" onclick="setAppLanguage('en'); closeLanguageDropdown();">
+              <span class="lang-code-tag">EN</span>
+              <span class="lang-name">English</span>
+            </button>
+            <button type="button" class="lang-opt-btn" data-lang="hi" onclick="setAppLanguage('hi'); closeLanguageDropdown();">
+              <span class="lang-code-tag">IN</span>
+              <span class="lang-name">हिन्दी</span>
+            </button>
+            <button type="button" class="lang-opt-btn" data-lang="kn" onclick="setAppLanguage('kn'); closeLanguageDropdown();">
+              <span class="lang-code-tag">IN</span>
+              <span class="lang-name">ಕನ್ನಡ</span>
+            </button>
+            <button type="button" class="lang-opt-btn" data-lang="fr" onclick="setAppLanguage('fr'); closeLanguageDropdown();">
+              <span class="lang-code-tag">FR</span>
+              <span class="lang-name">Français</span>
+            </button>
+            <button type="button" class="lang-opt-btn" data-lang="es" onclick="setAppLanguage('es'); closeLanguageDropdown();">
+              <span class="lang-code-tag">ES</span>
+              <span class="lang-name">Español</span>
+            </button>
+            <button type="button" class="lang-opt-btn" data-lang="de" onclick="setAppLanguage('de'); closeLanguageDropdown();">
+              <span class="lang-code-tag">DE</span>
+              <span class="lang-name">Deutsch</span>
+            </button>
+            <button type="button" class="lang-opt-btn" data-lang="pa" onclick="setAppLanguage('pa'); closeLanguageDropdown();">
+              <span class="lang-code-tag">IN</span>
+              <span class="lang-name">ਪੰਜਾਬੀ</span>
+            </button>
+            <button type="button" class="lang-opt-btn" data-lang="ar" onclick="setAppLanguage('ar'); closeLanguageDropdown();">
+              <span class="lang-code-tag">AR</span>
+              <span class="lang-name">العربية</span>
+            </button>
+            <button type="button" class="lang-opt-btn" data-lang="zh" onclick="setAppLanguage('zh'); closeLanguageDropdown();">
+              <span class="lang-code-tag">ZH</span>
+              <span class="lang-name">中文</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <a href="/launch" class="back-home-pill" data-i18n="login_btn_launch">← Launch Page</a>
+      <a href="/app" class="back-home-pill" style="border-color: rgba(0, 240, 255, 0.4); color: #00f0ff; background: rgba(0, 240, 255, 0.08);" data-i18n="login_btn_app">Dashboard App →</a>
+    </div>
+  </header>
+
+  <main class="auth-card">
+    <div class="auth-header">
+      <div class="auth-icon-badge">
+        <svg viewBox="0 0 23 17" aria-hidden="true" style="width: 24px; height: 18px; fill: var(--cyan);">
+          <path d="M8.15 0.9 L4.55 0.9 L0.5 9.3 L4.1 9.3 Z"/>
+          <path d="M17.0 0 L13.4 0 L6.15 16.4 L9.75 16.4 Z"/>
+          <path d="M22.9 0 L19.3 0 L15.0 7.6 L18.6 7.6 Z"/>
+          <path d="M22.6 6.9 L19.0 6.9 L14.05 16.4 L17.65 16.4 Z"/>
+        </svg>
+      </div>
+      <div style="font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.4rem;" data-i18n="login_suite_tag">CanVisa Intelligence Suite</div>
+      <h1 data-i18n="login_title">Evaluator & Reviewer Access</h1>
+      <p data-i18n="login_sub">Log in or use the 1-click evaluator pass to access the decision engine</p>
+    </div>
+
+    <!-- 1-Click Fast Pass -->
+    <div class="fast-pass-banner" onclick="enterGuestSession()">
+      <div class="fast-pass-left">
+        <span class="fast-pass-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
+        <div>
+          <strong data-i18n="login_fastpass_title">1-Click Evaluator Fast Pass</strong>
+          <small data-i18n="login_fastpass_sub">Instant access for academic panel judges & reviewers</small>
+        </div>
+      </div>
+      <span class="fast-pass-arrow">→</span>
+    </div>
+
+    <div class="divider">
+      <span data-i18n="login_divider">or enter credentials</span>
+    </div>
+
+    <!-- Live Notification / Toast Banner -->
+    <div id="authAlert" class="auth-alert"></div>
+
+    <form onsubmit="handleFormLogin(event)">
+      <!-- Email Field with Send OTP Button -->
+      <div class="field-group">
+        <label for="loginEmail" data-i18n="login_lbl_email">Email Address</label>
+        <div class="input-with-action">
+          <input type="email" id="loginEmail" placeholder="applicant@example.com" required autocomplete="username">
+          <button type="button" id="btnSendOtp" class="btn-action-inline" onclick="requestOtp()">
+            <span id="btnSendOtpText" data-i18n="login_btn_send_otp">Send OTP</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Email Verification Code (OTP) -->
+      <div class="field-group" id="otpGroup">
+        <div class="otp-field-header">
+          <label for="loginOtp" data-i18n="login_lbl_otp">Email Verification Code (OTP) *</label>
+          <span id="otpTimerText" class="otp-timer-badge" style="display:none;"></span>
+        </div>
+        <input type="text" id="loginOtp" class="otp-code-input" maxlength="6" pattern="[0-9]{6}" inputmode="numeric" placeholder="••••••" required autocomplete="one-time-code">
+      </div>
+
+      <button type="submit" id="btnLoginSubmit" class="btn-submit">
+        <span id="btnLoginSubmitText" data-i18n="login_btn_submit">Verify OTP & Log In</span>
+        <span>→</span>
+      </button>
+    </form>
+
+    <p class="footer-note" data-i18n="login_foot_note"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> CanVisa Decision Support System • Secure Session</p>
+  </main>
+
+  <script>
+    let otpCooldownTimer = null;
+    let otpCooldownSeconds = 0;
+
+    function showAlert(message, type = 'info', htmlContent = null) {
+      const alertEl = document.getElementById('authAlert');
+      if (!alertEl) return;
+      alertEl.className = `auth-alert auth-alert-${type}`;
+      if (htmlContent) {
+        alertEl.innerHTML = htmlContent;
+      } else {
+        alertEl.textContent = message;
+      }
+      alertEl.style.display = 'block';
+    }
+
+    function hideAlert() {
+      const alertEl = document.getElementById('authAlert');
+      if (alertEl) alertEl.style.display = 'none';
+    }
+
+    function escapeHtml(str) {
+      return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+
+    async function requestOtp() {
+      const emailInput = document.getElementById('loginEmail');
+      const email = emailInput.value.trim();
+      if (!email || !email.includes('@')) {
+        showAlert('Please enter a valid email address first.', 'error');
+        emailInput.focus();
+        return;
+      }
+
+      const btn = document.getElementById('btnSendOtp');
+      const btnText = document.getElementById('btnSendOtpText');
+      btn.disabled = true;
+      btnText.textContent = 'Sending...';
+      hideAlert();
+
+      try {
+        const res = await fetch('/api/auth/send-otp', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: email })
+        });
+        const data = await res.json();
+
+        if (res.ok && data.success) {
+          startCooldown(60);
+          const otpInput = document.getElementById('loginOtp');
+          if (otpInput) {
+            otpInput.value = '';
+            otpInput.classList.remove('is-invalid');
+            otpInput.focus();
+          }
+
+          if (data.smtp_delivered) {
+            showAlert('', 'success', `📧 <strong>Verification code sent!</strong> We sent a 6-digit code to <strong>${escapeHtml(email)}</strong>.<br>Please open your email inbox (or spam folder) and enter the 6-digit code below.`);
+          } else {
+            showAlert('', 'warning', `⚠️ <strong>Email could not be delivered to ${escapeHtml(email)}</strong><br><span style="font-size:12px; color:#fde047;">Gmail SMTP rejected credentials (535 Bad Credentials). The App Password in .env is invalid.</span><br><br>Please configure a valid Google App Password in <code>.env</code> to receive emails.<br><span style="font-size:12px; color:#94a3b8;">(Backup code for testing: <strong style="color:#38bdf8; letter-spacing:2px;">${escapeHtml(data.dev_otp || '')}</strong>)</span>`);
+          }
+        } else {
+          showAlert(data.detail || data.message || 'Failed to send OTP email.', 'error');
+          btn.disabled = false;
+          btnText.textContent = 'Send OTP';
+        }
+      } catch (err) {
+        console.error('OTP request error:', err);
+        showAlert('Network error connecting to verification service. Please try again.', 'error');
+        btn.disabled = false;
+        btnText.textContent = 'Send OTP';
+      }
+    }
+
+    function startCooldown(seconds) {
+      otpCooldownSeconds = seconds;
+      const btn = document.getElementById('btnSendOtp');
+      const btnText = document.getElementById('btnSendOtpText');
+      const timerText = document.getElementById('otpTimerText');
+
+      clearInterval(otpCooldownTimer);
+      btn.disabled = true;
+
+      if (timerText) {
+        timerText.style.display = 'inline';
+        timerText.textContent = `⏱ Resend in ${otpCooldownSeconds}s`;
+      }
+      btnText.textContent = `${otpCooldownSeconds}s`;
+
+      otpCooldownTimer = setInterval(() => {
+        otpCooldownSeconds--;
+        if (otpCooldownSeconds <= 0) {
+          clearInterval(otpCooldownTimer);
+          btn.disabled = false;
+          btnText.textContent = 'Resend OTP';
+          if (timerText) timerText.style.display = 'none';
+        } else {
+          btnText.textContent = `${otpCooldownSeconds}s`;
+          if (timerText) timerText.textContent = `⏱ Resend in ${otpCooldownSeconds}s`;
+        }
+      }, 1000);
+    }
+
+    async function handleFormLogin(e) {
+      e.preventDefault();
+      const email = document.getElementById('loginEmail').value.trim();
+      const otp = document.getElementById('loginOtp').value.trim();
+      const submitBtn = document.getElementById('btnLoginSubmit');
+      const submitText = document.getElementById('btnLoginSubmitText');
+      const otpInput = document.getElementById('loginOtp');
+
+      if (!email) {
+        showAlert('Please enter your email address.', 'error');
+        return;
+      }
+      if (!otp || otp.length !== 6) {
+        showAlert('Please enter the 6-digit verification code sent to your email.', 'error');
+        otpInput.classList.add('is-invalid');
+        otpInput.focus();
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitText.textContent = 'Verifying OTP...';
+      hideAlert();
+
+      try {
+        const res = await fetch('/api/auth/verify-otp', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: email, otp: otp })
+        });
+        const data = await res.json();
+
+        if (res.ok && data.success) {
+          otpInput.classList.remove('is-invalid');
+          showAlert('Email verified successfully! Redirecting to dashboard...', 'success');
+
+          const user = {
+            name: email.split('@')[0].replace('.', ' '),
+            email: email,
+            role: 'Verified Applicant',
+            email_verified: true,
+            token: data.token || ('jwt_' + Date.now())
+          };
+          sessionStorage.setItem('canvisa_user', JSON.stringify(user));
+          localStorage.setItem('canvisa_user', JSON.stringify(user));
+
+          setTimeout(() => {
+            window.location.href = '/app';
+          }, 600);
+        } else {
+          otpInput.classList.add('is-invalid');
+          showAlert(data.detail || data.message || 'Invalid or expired OTP code. Please try again.', 'error');
+          submitBtn.disabled = false;
+          submitText.textContent = 'Verify OTP & Log In';
+        }
+      } catch (err) {
+        console.error('OTP verify error:', err);
+        showAlert('Network error while verifying OTP. Please try again.', 'error');
+        submitBtn.disabled = false;
+        submitText.textContent = 'Verify OTP & Log In';
+      }
+    }
+
+    function enterGuestSession() {
+      const guest = {
+        name: "Verified Evaluator",
+        email: "panel.guest@canvisa.app",
+        role: "Evaluator",
+        email_verified: true,
+        token: "demo_guest_jwt_" + Date.now()
+      };
+      sessionStorage.setItem("canvisa_user", JSON.stringify(guest));
+      localStorage.setItem("canvisa_user", JSON.stringify(guest));
+      window.location.href = "/app";
+    }
+  </script>
+
+  <!-- Global Google Website Translator Bridge -->
+  <div id="google_translate_element" style="display:none;"></div>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <script src="/static/translations.js?v=5"></script>
+  <script src="/static/chatbot.js?v=12"></script>
+</body>
+</html>

@@ -45,8 +45,16 @@ class ApplicantProfileSchema(BaseModel):
     criminal_record: int = Field(default=0, ge=0, le=1)
     medical_flag: int = Field(default=0, ge=0, le=1)
 
+    # Multi-Country Target Selector
+    target_country: str = Field(default="canada", description="Target destination: canada, australia, uk, or germany")
+    occupation_skill_level: Optional[str] = Field(default=None, description="Country specific skill level e.g. ANZSCO, RQF, or MINT")
+
 class AnalysisResponseSchema(BaseModel):
     id: Optional[int] = None
+    target_country: Optional[str] = "canada"
+    country_name: Optional[str] = "Canada"
+    country_flag: Optional[str] = "🍁"
+    currency: Optional[str] = "CAD"
     prediction: str
     approval_probability: float
     denial_probability: float
@@ -58,3 +66,4 @@ class AnalysisResponseSchema(BaseModel):
     global_feature_importances: List[Dict[str, Any]]
     shap_available: bool
     applicant_summary: Dict[str, Any]
+

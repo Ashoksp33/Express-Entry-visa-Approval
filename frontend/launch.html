@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>CanVisa AI — Autonomous Decision Support & Intelligence Engine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/language-changer.css?v=2">
+  <link rel="stylesheet" href="/static/chatbot.css?v=12">
+  <style>
+    :root {
+      --ink: #ffffff;
+      --sub: #a2a9b8;
+      --nav: #fbfdff;
+      --foot: #f4f8fd;
+      --hair: rgba(196, 214, 232, 0.72);
+      --chev: rgba(214, 232, 250, 0.90);
+      --navdim: #e8ecf0;
+      --feat: #e2ebf5;
+      --veil: 6, 10, 18;
+
+      --cover: max(calc(100vw / 1536), calc(100vh / 1024));
+      --fit: calc(100vh / 910);
+      --u: min(var(--cover), var(--fit));
+      --blur: calc(var(--u) * 26);
+      --glow: calc(var(--u) * 34);
+      --hairline: max(1px, calc(var(--u) * 1.6));
+    }
+
+    @supports (height: 100dvh) {
+      :root {
+        --cover: max(calc(100vw / 1536), calc(100dvh / 1024));
+        --fit: calc(100dvh / 910);
+      }
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      background: #02060f;
+      overflow: hidden;
+    }
+
+    body {
+      font-family: 'Sora', system-ui, -apple-system, sans-serif;
+      color: var(--ink);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: geometricPrecision;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    a:focus-visible {
+      outline: 2px solid #9fe0ff;
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    /* BACKGROUND VIDEO & VEIL */
+    .art {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 50%;
+      z-index: 0;
+      user-select: none;
+      -webkit-user-drag: none;
+      pointer-events: none;
+      background: #03060c;
+    }
+
+    .trail-mask {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 50%;
+      z-index: 1;
+      pointer-events: none;
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+
+    .veil {
+      position: fixed;
+      inset: 0;
+      z-index: 2;
+      pointer-events: none;
+      background:
+        radial-gradient(140% 60% at 50% 40%,
+          rgba(var(--veil), 0.16) 0%,
+          rgba(var(--veil), 0.057) 50%,
+          rgba(var(--veil), 0) 100%),
+        linear-gradient(180deg,
+          rgba(var(--veil), 0) 45%,
+          rgba(var(--veil), 0.10) 100%);
+    }
+
+    /* AIRCRAFT STYLING & MOTION */
+    .aircraft-stage {
+      position: fixed;
+      inset: 0;
+      z-index: 5;
+      pointer-events: none;
+      overflow: hidden;
+      perspective: 1000px;
+    }
+
+    .launch-aircraft {
+      position: absolute;
+      left: 50%;
+      bottom: calc(var(--u) * 50);
+      width: min(calc(var(--u) * 620), 58vw);
+      max-width: 680px;
+      height: auto;
+      display: block;
+      filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.8));
+      transform: translate3d(-50%, 0, 0);
+      will-change: transform, opacity;
+      pointer-events: none;
+      transform-origin: 50% 60%;
+      animation: planeIdleHover 4.5s ease-in-out infinite;
+    }
+
+    /* Subtle atmospheric idle floating motion while waiting for user */
+    @keyframes planeIdleHover {
+      0%, 100% {
+        transform: translate3d(-50%, 0, 0) scale(1);
+      }
+      50% {
+        transform: translate3d(-50%, calc(var(--u) * -8), 0) scale(1.02);
+      }
+    }
+
+    @media (max-width: 1199px), (max-height: 559px), (max-aspect-ratio: 100/95) {
+      .launch-aircraft {
+        left: 50%;
+        bottom: calc(env(safe-area-inset-bottom) + calc(var(--c) * 26));
+        width: min(calc(var(--c) * 300), 78vw);
+        max-width: 360px;
+        opacity: 0.96;
+        transform: translate3d(-50%, 0, 0);
+      }
+      @keyframes planeIdleHover {
+        0%, 100% {
+          transform: translate3d(-50%, 0, 0) scale(1);
+        }
+        50% {
+          transform: translate3d(-50%, calc(var(--c) * -6), 0) scale(1.025);
+        }
+      }
+    }
+
+    .bar {
+      position: fixed;
+      z-index: 50;
+      pointer-events: auto;
+    }
+
+    .hero {
+      position: fixed;
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    .foot {
+      position: fixed;
+      z-index: 20;
+      pointer-events: auto;
+    }
+
+    .hero a, .hero button, .hero input, .hero .cta {
+      pointer-events: auto;
+      z-index: 30;
+    }
+
+    .bar a, .bar button, .bar label, .bar .pill, .bar .login {
+      pointer-events: auto;
+      cursor: pointer;
+    }
+
+    /* COMPONENT SKIN */
+    .brand svg {
+      fill: var(--ink);
+      display: block;
+    }
+
+    .caret, .navarrow {
+      fill: none;
+      stroke: var(--nav);
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .navarrow {
+      stroke-linecap: square;
+      stroke-linejoin: miter;
+    }
+
+    .pill {
+      border: var(--hairline) solid var(--hair);
+      border-radius: 999px;
+      transition: all 0.2s ease;
+    }
+
+    .pill:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: #ffffff;
+    }
+
+    .chev {
+      fill: none;
+      stroke: var(--chev);
+      stroke-width: 1.75;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .rule {
+      background: linear-gradient(180deg,
+        rgba(186, 200, 214, 0.70) 0%,
+        rgba(206, 220, 232, 0.92) 52%,
+        rgba(182, 198, 212, 0.68) 100%);
+    }
+
+    /* FROSTED GLASS CTA */
+    .cta {
+      border-radius: 999px;
+      background:
+        linear-gradient(180deg, rgba(6, 12, 22, 0) 45%, rgba(6, 12, 22, 0.12) 78%, rgba(6, 12, 22, 0.28) 100%),
+        linear-gradient(90deg,
+          rgba(255, 226, 178, 0.17) 0%, rgba(255, 236, 208, 0.07) 22%,
+          rgba(176, 206, 238, 0.03) 55%, rgba(150, 196, 244, 0.09) 100%),
+        linear-gradient(90deg,
+          rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0.17) 12%,
+          rgba(255, 255, 255, 0.11) 26%, rgba(255, 255, 255, 0.07) 42%,
+          rgba(255, 255, 255, 0.05) 60%, rgba(255, 255, 255, 0.04) 80%,
+          rgba(255, 255, 255, 0.04) 100%);
+      -webkit-backdrop-filter: blur(var(--blur)) saturate(0.45);
+      backdrop-filter: blur(var(--blur)) saturate(0.45);
+      box-shadow:
+        0 calc(var(--u) * -2) calc(var(--u) * 20) rgba(255, 224, 176, 0.20),
+        0 0 var(--glow) rgba(168, 204, 252, 0.16),
+        inset 0 var(--hairline) 0 0 rgba(255, 251, 242, 0.45);
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .cta:hover {
+      transform: scale(1.02);
+      box-shadow:
+        0 calc(var(--u) * -4) calc(var(--u) * 26) rgba(255, 224, 176, 0.32),
+        0 0 calc(var(--glow) * 1.3) rgba(168, 204, 252, 0.3),
+        inset 0 var(--hairline) 0 0 rgba(255, 251, 242, 0.6);
+    }
+
+    .cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: var(--hairline);
+      pointer-events: none;
+      background:
+        linear-gradient(180deg, rgba(255, 252, 246, 0.95) 0%, rgba(255, 252, 246, 0.20) 45%, rgba(255, 252, 246, 0) 78%),
+        linear-gradient(90deg,
+          rgba(255, 228, 182, 0.95) 0%, rgba(250, 236, 210, 0.70) 12%,
+          rgba(226, 230, 234, 0.03) 32%, rgba(214, 226, 240, 0.02) 62%,
+          rgba(200, 228, 250, 0.70) 90%, rgba(186, 224, 247, 0.95) 100%);
+      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor;
+      mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      mask-composite: exclude;
+    }
+
+    .cta .arrow {
+      fill: none;
+      stroke: var(--ink);
+      stroke-width: 1.6;
+      stroke-linecap: square;
+      stroke-linejoin: miter;
+    }
+
+    #word { font-variation-settings: 'wght' 531; color: var(--ink); }
+    #about { font-variation-settings: 'wght' 506; color: var(--nav); }
+    #product { font-variation-settings: 'wght' 506; color: var(--nav); }
+    #solutions { font-variation-settings: 'wght' 506; color: var(--nav); }
+    #login { font-variation-settings: 'wght' 506; color: var(--nav); }
+    #contact { font-variation-settings: 'wght' 581; color: var(--navdim); }
+    #h1a, #h1b { font-variation-settings: 'wght' 424; color: var(--ink); }
+    #sub1, #sub2 { font-variation-settings: 'wght' 446; color: var(--sub); }
+    #cta { font-variation-settings: 'wght' 497; color: var(--ink); }
+    #f1, #f2, #f3, #f4 { font-variation-settings: 'wght' 534; color: var(--feat); }
+    #foot1, #foot2 { font-variation-settings: 'wght' 521; color: var(--foot); }
+
+    /* ENTRANCE TIMELINE */
+    @media (prefers-reduced-motion: no-preference) {
+      :root {
+        --ent-line: cubic-bezier(0.16, 1, 0.3, 1);
+        --ent-soft: cubic-bezier(0.25, 0.8, 0.35, 1);
+        --rise: 9px;
+      }
+
+      @keyframes en-wipe {
+        from { clip-path: inset(-0.78em 0 calc(100% + 0.78em) 0); translate: 0 var(--rise); }
+        to { clip-path: inset(-0.78em 0 -0.78em 0); translate: 0 0; }
+      }
+      @keyframes en-lift {
+        from { opacity: 0; translate: 0 var(--rise); }
+      }
+      @keyframes en-settle {
+        from { opacity: 0; translate: 0 calc(var(--rise) * 0.7); scale: 0.99; }
+      }
+      @keyframes en-draw {
+        from { scale: 1 0; }
+      }
+
+      html:not(.is-entered) .brand { animation: en-lift 0.60s var(--ent-soft) 0.12s backwards; }
+      html:not(.is-entered) #about { animation: en-lift 0.55s var(--ent-soft) 0.20s backwards; }
+      html:not(.is-entered) #product { animation: en-lift 0.55s var(--ent-soft) 0.25s backwards; }
+      html:not(.is-entered) #solutions,
+      html:not(.is-entered) .caret { animation: en-lift 0.55s var(--ent-soft) 0.30s backwards; }
+      html:not(.is-entered) #login,
+      html:not(.is-entered) .navarrow { animation: en-lift 0.55s var(--ent-soft) 0.35s backwards; }
+      html:not(.is-entered) .pill { animation: en-settle 0.60s var(--ent-soft) 0.40s backwards; }
+      html:not(.is-entered) .burger { animation: en-lift 0.60s var(--ent-soft) 0.40s backwards; }
+      html:not(.is-entered) #h1a { animation: en-wipe 0.95s var(--ent-line) 0.34s backwards; }
+      html:not(.is-entered) #h1b { animation: en-wipe 0.95s var(--ent-line) 0.44s backwards; }
+      html:not(.is-entered) #sub1 { animation: en-lift 0.70s var(--ent-soft) 0.74s backwards; }
+      html:not(.is-entered) #sub2 { animation: en-lift 0.70s var(--ent-soft) 0.80s backwards; }
+      html:not(.is-entered) .cta { animation: en-lift 0.80s var(--ent-line) 0.94s backwards; }
+      html:not(.is-entered) .feats li:nth-child(1) { animation: en-lift 0.60s var(--ent-soft) 1.08s backwards; }
+      html:not(.is-entered) .feats li:nth-child(2) { animation: en-lift 0.60s var(--ent-soft) 1.15s backwards; }
+      html:not(.is-entered) .feats li:nth-child(3) { animation: en-lift 0.60s var(--ent-soft) 1.22s backwards; }
+      html:not(.is-entered) .feats li:nth-child(4) { animation: en-lift 0.60s var(--ent-soft) 1.29s backwards; }
+      html:not(.is-entered) .rule { transform-origin: top; animation: en-draw 0.55s var(--ent-line) 1.34s backwards; }
+      html:not(.is-entered) #foot1 { animation: en-lift 0.60s var(--ent-soft) 1.42s backwards; }
+      html:not(.is-entered) #foot2 { animation: en-lift 0.60s var(--ent-soft) 1.48s backwards; }
+    }
+
+    /* DESKTOP (LOCKED GRID) */
+    @media (min-width: 1200px) and (min-height: 560px) and (min-aspect-ratio: 100/95) {
+      .bar, .hero, .foot {
+        left: 50%;
+        width: calc(var(--u) * 1536);
+        transform: translateX(-50%);
+      }
+      .bar {
+        top: 0;
+        height: calc(var(--u) * 120);
+      }
+      .foot {
+        bottom: 0;
+        height: calc(var(--u) * 140);
+      }
+      .hero {
+        top: 50%;
+        height: calc(var(--u) * 1024);
+        transform: translate(-50%, -50%);
+      }
+      .navtoggle, .burger, .scrim {
+        display: none;
+      }
+      .navpanel {
+        display: contents;
+      }
+      .bar > *, .foot > *, .hero > *, .pill, .caret, .navarrow {
+        position: absolute;
+      }
+      .menu, .menu a, .login {
+        position: static;
+      }
+      .title, .sub, .feats {
+        inset: 0;
+        font-weight: inherit;
+        pointer-events: none;
+      }
+      .cta {
+        pointer-events: auto !important;
+        z-index: 99 !important;
+      }
+      .bar span, .foot span, .title span, .sub span, .feats span, .cta span {
+        position: absolute;
+        line-height: 0;
+        white-space: nowrap;
+      }
+
+      .brand {
+        left: calc(var(--u) * 221);
+        top: calc(var(--u) * 55);
+        display: flex;
+        align-items: center;
+        gap: calc(var(--u) * 7);
+      }
+      .brand svg {
+        width: calc(var(--u) * 23);
+        height: calc(var(--u) * 17);
+      }
+      #word {
+        position: relative;
+        font-size: calc(var(--u) * 23.4);
+        letter-spacing: calc(var(--u) * 4.8);
+        transform: translate(0, 0);
+      }
+
+      .caret {
+        left: calc(var(--u) * 744);
+        top: calc(var(--u) * 62.4);
+        width: calc(var(--u) * 9);
+        height: calc(var(--u) * 6);
+        stroke-width: 1.25;
+      }
+      .navarrow {
+        left: calc(var(--u) * 1163);
+        top: calc(var(--u) * 61.6);
+        width: calc(var(--u) * 10);
+        height: calc(var(--u) * 9);
+        stroke-width: 1.2;
+      }
+      .pill {
+        left: calc(var(--u) * 1191.5);
+        top: calc(var(--u) * 43.5);
+        width: calc(var(--u) * 144);
+        height: calc(var(--u) * 44);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      /* LANGUAGE SELECTOR FIX IN LAUNCH BAR */
+      .bar .language-changer-wrapper {
+        position: absolute !important;
+        left: calc(var(--u) * 1350) !important;
+        top: calc(var(--u) * 43.5) !important;
+        height: calc(var(--u) * 44) !important;
+        display: flex !important;
+        align-items: center !important;
+        z-index: 100 !important;
+      }
+      .bar .language-changer-wrapper .lang-pill-btn {
+        height: calc(var(--u) * 44) !important;
+        padding: 0 calc(var(--u) * 16) !important;
+        border: var(--hairline) solid var(--hair) !important;
+        border-radius: 999px !important;
+        background: rgba(255, 255, 255, 0.05) !important;
+        color: var(--nav) !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: calc(var(--u) * 8) !important;
+        font-family: inherit !important;
+        font-size: calc(var(--u) * 13.5) !important;
+        cursor: pointer !important;
+        backdrop-filter: blur(var(--blur)) saturate(0.5) !important;
+        -webkit-backdrop-filter: blur(var(--blur)) saturate(0.5) !important;
+        white-space: nowrap !important;
+        width: auto !important;
+        min-width: max-content !important;
+        box-sizing: border-box !important;
+        transition: all 0.2s ease !important;
+      }
+      .bar .language-changer-wrapper .lang-pill-btn:hover {
+        background: rgba(255, 255, 255, 0.12) !important;
+        border-color: #ffffff !important;
+        color: #ffffff !important;
+      }
+
+      /* CRITICAL: Overrule .bar span { position: absolute; line-height: 0; } */
+      .bar .language-changer-wrapper span,
+      .bar .language-changer-wrapper .lang-pill-btn span,
+      .bar .language-changer-wrapper .language-dropdown-menu span {
+        position: static !important;
+        line-height: normal !important;
+        white-space: nowrap !important;
+        display: inline-block !important;
+        transform: none !important;
+      }
+      .bar .language-changer-wrapper .lang-globe-icon {
+        font-size: calc(var(--u) * 15) !important;
+        line-height: 1 !important;
+      }
+      .bar .language-changer-wrapper .lang-current-label {
+        font-size: calc(var(--u) * 13.5) !important;
+        font-weight: 500 !important;
+        letter-spacing: calc(var(--u) * 0.2) !important;
+      }
+      .bar .language-changer-wrapper .lang-arrow {
+        font-size: calc(var(--u) * 10) !important;
+        opacity: 0.7 !important;
+      }
+
+      /* Dropdown Menu inside Launch bar */
+      .bar .language-dropdown-menu {
+        position: absolute !important;
+        top: calc(100% + 8px) !important;
+        right: 0 !important;
+        left: auto !important;
+        width: 290px !important;
+        box-sizing: border-box !important;
+      }
+      .bar .lang-opt-btn {
+        display: flex !important;
+        align-items: center !important;
+        width: 100% !important;
+      }
+
+      .cta {
+        left: calc(var(--u) * 625.8);
+        top: calc(var(--u) * 555.2);
+        width: calc(var(--u) * 279.6);
+        height: calc(var(--u) * 46.6);
+      }
+      .cta .arrow {
+        position: absolute;
+        left: calc(var(--u) * 230.8);
+        top: calc(var(--u) * 17.8);
+        width: calc(var(--u) * 16);
+        height: calc(var(--u) * 11);
+      }
+
+      .feats li {
+        position: absolute;
+        width: calc(var(--u) * 220);
+        height: calc(var(--u) * 20);
+      }
+      .feats .chev {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: calc(var(--u) * 11);
+        height: calc(var(--u) * 20);
+      }
+      .feats li:nth-child(1) { left: calc(var(--u) * 360); top: calc(var(--u) * 718); }
+      .feats li:nth-child(2) { left: calc(var(--u) * 590); top: calc(var(--u) * 719); }
+      .feats li:nth-child(3) { left: calc(var(--u) * 803); top: calc(var(--u) * 721); }
+      .feats li:nth-child(4) { left: calc(var(--u) * 1013); top: calc(var(--u) * 722); }
+
+      .rule {
+        left: calc(var(--u) * 767);
+        top: calc(var(--u) * 792);
+        width: calc(var(--u) * 1);
+        height: calc(var(--u) * 57);
+      }
+
+      #about {
+        font-size: calc(var(--u) * 13.5);
+        letter-spacing: calc(var(--u) * -0.5);
+        left: calc(var(--u) * 477);
+        top: calc(var(--u) * 65.66);
+      }
+      #product {
+        font-size: calc(var(--u) * 13.5);
+        letter-spacing: calc(var(--u) * -0.167);
+        left: calc(var(--u) * 568.5);
+        top: calc(var(--u) * 65.66);
+      }
+      #solutions {
+        font-size: calc(var(--u) * 13.5);
+        letter-spacing: calc(var(--u) * -0.5);
+        left: calc(var(--u) * 675);
+        top: calc(var(--u) * 65.66);
+      }
+      #login {
+        font-size: calc(var(--u) * 13.5);
+        letter-spacing: calc(var(--u) * -0.227);
+        left: calc(var(--u) * 1002.5);
+        top: calc(var(--u) * 66.16);
+      }
+      #contact {
+        font-size: calc(var(--u) * 13.5);
+        letter-spacing: calc(var(--u) * 0.25);
+        left: 0; right: 0; text-align: center;
+        top: calc(var(--u) * 21.66);
+        transform: translateX(calc(var(--u) * -0.5));
+      }
+      #h1a {
+        font-size: calc(var(--u) * 46.8);
+        letter-spacing: calc(var(--u) * 0.532);
+        left: 0; right: 0; text-align: center;
+        top: calc(var(--u) * 285.222);
+        transform: translateX(calc(var(--u) * -1));
+      }
+      #h1b {
+        font-size: calc(var(--u) * 46.8);
+        letter-spacing: calc(var(--u) * -0.398);
+        left: 0; right: 0; text-align: center;
+        top: calc(var(--u) * 335.222);
+        transform: translateX(calc(var(--u) * -3));
+      }
+      #sub1 {
+        font-size: calc(var(--u) * 20.6);
+        letter-spacing: calc(var(--u) * 0.367);
+        left: 0; right: 0; text-align: center;
+        top: calc(var(--u) * 408.115);
+        transform: translateX(calc(var(--u) * -0.5));
+      }
+      #sub2 {
+        font-size: calc(var(--u) * 19.1);
+        letter-spacing: calc(var(--u) * -0.632);
+        left: 0; right: 0; text-align: center;
+        top: calc(var(--u) * 432.153);
+        transform: translateX(calc(var(--u) * -2));
+      }
+      #cta {
+        font-size: calc(var(--u) * 22);
+        letter-spacing: calc(var(--u) * -0.312);
+        left: 0; right: 0; text-align: center;
+        top: calc(var(--u) * 23.113);
+        transform: translateX(calc(var(--u) * -14.5));
+      }
+      #f1 { font-size: calc(var(--u) * 14.6); letter-spacing: calc(var(--u) * -0.75); left: calc(var(--u) * 26); top: calc(var(--u) * 11.266); }
+      #f2 { font-size: calc(var(--u) * 14.6); letter-spacing: calc(var(--u) * -0.889); left: calc(var(--u) * 26); top: calc(var(--u) * 11.266); }
+      #f3 { font-size: calc(var(--u) * 14.6); letter-spacing: calc(var(--u) * -1.067); left: calc(var(--u) * 26); top: calc(var(--u) * 11.266); }
+      #f4 { font-size: calc(var(--u) * 14.6); letter-spacing: calc(var(--u) * -1.067); left: calc(var(--u) * 29); top: calc(var(--u) * 11.266); }
+      #foot1 {
+        font-size: calc(var(--u) * 16.3);
+        letter-spacing: calc(var(--u) * -0.256);
+        left: 0; right: 0; text-align: center;
+        bottom: calc(var(--u) * 101.344);
+        transform: translateX(calc(var(--u) * -0.5));
+      }
+      #foot2 {
+        font-size: calc(var(--u) * 16.3);
+        letter-spacing: calc(var(--u) * -0.667);
+        left: 0; right: 0; text-align: center;
+        bottom: calc(var(--u) * 76.344);
+        transform: translateX(calc(var(--u) * -2));
+      }
+    }
+
+    /* MOBILE / TABLET FLOW */
+    @media (max-width: 1199px), (max-height: 559px), (max-aspect-ratio: 100/95) {
+      :root {
+        --c: min(calc(100vw / 430), calc(100vh / 860));
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        padding: calc(env(safe-area-inset-top) + calc(var(--c) * 24)) calc(var(--c) * 22)
+                 calc(env(safe-area-inset-bottom) + calc(var(--c) * 22));
+      }
+
+      .bar, .hero, .foot {
+        position: static;
+        width: 100%;
+      }
+
+      .bar {
+        order: 1;
+        position: relative;
+        z-index: 5;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: calc(var(--c) * 16);
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: calc(var(--c) * 8);
+      }
+      .brand svg {
+        width: calc(var(--c) * 22);
+        height: auto;
+      }
+      #word {
+        font-size: calc(var(--c) * 19);
+        letter-spacing: 0.06em;
+      }
+
+      .navtoggle {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+        margin: 0;
+        pointer-events: none;
+      }
+
+      .burger {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: calc(var(--c) * 42);
+        height: calc(var(--c) * 30);
+        border-radius: 999px;
+        cursor: pointer;
+        border: var(--hairline) solid var(--hair);
+        background: rgba(255, 255, 255, 0.03);
+        -webkit-backdrop-filter: blur(var(--blur)) saturate(0.45);
+        backdrop-filter: blur(var(--blur)) saturate(0.45);
+      }
+      .burger svg {
+        width: calc(var(--c) * 19);
+        height: auto;
+        fill: none;
+        stroke: var(--nav);
+        stroke-width: 1.4;
+        stroke-linecap: round;
+      }
+
+      .navpanel {
+        position: absolute;
+        top: calc(100% + calc(var(--c) * 12));
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        gap: calc(var(--c) * 2);
+        width: min(calc(var(--c) * 268), 78vw);
+        padding: calc(var(--c) * 12);
+        border-radius: calc(var(--c) * 20);
+        background:
+          linear-gradient(180deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.045) 100%),
+          linear-gradient(90deg, rgba(255, 226, 178, 0.06) 0%, rgba(150, 196, 244, 0.06) 100%),
+          linear-gradient(180deg, rgba(6, 12, 22, 0.60) 0%, rgba(6, 12, 22, 0.70) 100%);
+        -webkit-backdrop-filter: blur(var(--blur)) saturate(0.45);
+        backdrop-filter: blur(var(--blur)) saturate(0.45);
+        box-shadow: 0 calc(var(--c) * 14) calc(var(--c) * 38) rgba(2, 6, 14, 0.45);
+        opacity: 0;
+        transform: translateY(calc(var(--c) * -8)) scale(0.985);
+        transform-origin: 100% 0;
+        pointer-events: none;
+        transition: opacity 0.2s ease, transform 0.2s ease;
+      }
+      .navtoggle:checked ~ .navpanel {
+        opacity: 1;
+        transform: none;
+        pointer-events: auto;
+      }
+
+      .navpanel .language-changer-wrapper {
+        margin-bottom: calc(var(--c) * 8);
+        width: 100%;
+      }
+      .navpanel .language-changer-wrapper .lang-pill-btn {
+        width: 100%;
+        justify-content: space-between;
+      }
+      .navpanel .menu {
+        display: flex;
+        flex-direction: column;
+      }
+      .navpanel .menu a,
+      .navpanel .login {
+        display: flex;
+        align-items: center;
+        gap: calc(var(--c) * 8);
+        padding: calc(var(--c) * 10) calc(var(--c) * 12);
+        border-radius: calc(var(--c) * 12);
+        font-size: calc(var(--c) * 16);
+        color: var(--nav);
+      }
+
+      .hero {
+        order: 2;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: calc(var(--c) * 20);
+      }
+      .title {
+        font-size: calc(var(--c) * 33);
+        line-height: 1.12;
+        max-width: 15ch;
+      }
+      .sub {
+        color: var(--sub);
+        font-size: calc(var(--c) * 17);
+        line-height: 1.32;
+        max-width: 26ch;
+      }
+      .cta {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        gap: calc(var(--c) * 12);
+        padding: calc(var(--c) * 16) calc(var(--c) * 26);
+        font-size: calc(var(--c) * 18);
+      }
+      .cta .arrow {
+        width: calc(var(--c) * 16);
+        height: calc(var(--c) * 11);
+      }
+      .feats {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: calc(var(--c) * 15) calc(var(--c) * 13);
+        width: 100%;
+        max-width: calc(var(--c) * 400);
+        margin-top: calc(var(--c) * 6);
+      }
+      .feats li {
+        display: flex;
+        align-items: center;
+        gap: calc(var(--c) * 9);
+        font-size: calc(var(--c) * 14);
+      }
+      .feats .chev {
+        width: calc(var(--c) * 11);
+        height: calc(var(--c) * 20);
+        flex-shrink: 0;
+      }
+      .rule {
+        width: 1px;
+        height: calc(var(--c) * 33);
+        margin: calc(var(--c) * 19) auto 0;
+      }
+      .foot {
+        order: 3;
+        text-align: center;
+        color: var(--foot);
+        font-size: calc(var(--c) * 13);
+        line-height: 1.55;
+      }
+      .foot span {
+        display: block;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <!-- VIDEO BACKGROUND -->
+  <video class="art" autoplay muted loop playsinline preload="auto" aria-hidden="true"
+    poster="https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/130837c4-0244-4f37-9c61-8d801d93fd29.jpg"
+    src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260912_104303_0c6d60b2-9353-408e-9449-585108a22fb5.mp4"></video>
+
+  <!-- Precision cloud trail mask to eliminate the two moving curved light trails while preserving cloud motion -->
+  <img class="trail-mask" src="/static/trail_mask.png" alt="" aria-hidden="true">
+
+  <div class="veil"></div>
+
+  <!-- AIRCRAFT STAGE -->
+  <div class="aircraft-stage" aria-hidden="true">
+    <img id="launchAircraft" class="launch-aircraft" src="/static/aircraft.png" alt="CanVisa Airliner" loading="eager">
+  </div>
+
+  <!-- HEADER BAR -->
+  <header class="bar">
+    <a class="brand" href="/">
+      <svg viewBox="0 0 23 17" aria-hidden="true">
+        <path d="M8.15 0.9 L4.55 0.9 L0.5 9.3 L4.1 9.3 Z"/>
+        <path d="M17.0 0 L13.4 0 L6.15 16.4 L9.75 16.4 Z"/>
+        <path d="M22.9 0 L19.3 0 L15.0 7.6 L18.6 7.6 Z"/>
+        <path d="M22.6 6.9 L19.0 6.9 L14.05 16.4 L17.65 16.4 Z"/>
+      </svg>
+      <span id="word">CANVISA</span>
+    </a>
+    <input class="navtoggle" type="checkbox" id="nav-open">
+    <label class="scrim" for="nav-open" aria-hidden="true"></label>
+    <label class="burger" for="nav-open" aria-label="Menu">
+      <svg viewBox="0 0 22 14">
+        <path d="M1 1 H21"/>
+        <path d="M1 7 H21"/>
+        <path d="M1 13 H21"/>
+      </svg>
+    </label>
+    <div class="navpanel">
+      <!-- Language Selector in Launch Page -->
+      <div class="language-changer-wrapper" id="languageChangerWrapper">
+        <button type="button" class="lang-pill-btn" onclick="toggleLanguageDropdown(event)" title="Select Language">
+          <span class="lang-globe-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
+          <span class="lang-current-label" id="currentLangLabel"> English</span>
+          <span class="lang-arrow">▾</span>
+        </button>
+        <div class="language-dropdown-menu" id="languageDropdownMenu">
+          <div class="lang-dropdown-header">
+            <span data-i18n="select_lang_title">Select Language</span>
+          </div>
+          <div class="lang-options-grid">
+            <button type="button" class="lang-opt-btn active" data-lang="en" onclick="setAppLanguage('en'); closeLanguageDropdown();">
+              <span class="lang-code-tag">EN</span>
+              <span class="lang-name">English</span>
+            </button>
+            <button type="button" class="lang-opt-btn" data-lang="hi" onclick="setAppLanguage('hi'); closeLanguageDropdown();">
+              <span class="lang-code-tag">IN</span>
+              <span class="lang-name">हिन्दी</span>
+            </button>
+            <button type="button" class="lang-opt-btn" data-lang="kn" onclick="setAppLanguage('kn'); closeLanguageDropdown();">
+              <span class="lang-code-tag">IN</span>
+              <span class="lang-name">ಕನ್ನಡ</span>
+            </button>
+            <button type="button" class="lang-opt-btn" data-lang="fr" onclick="setAppLanguage('fr'); closeLanguageDropdown();">
+              <span class="lang-code-tag">FR</span>
+              <span class="lang-name">Français</span>
+            </button>
+            <button type="button" class="lang-opt-btn" data-lang="es" onclick="setAppLanguage('es'); closeLanguageDropdown();">
+              <span class="lang-code-tag">ES</span>
+              <span class="lang-name">Español</span>
+            </button>
+            <button type="button" class="lang-opt-btn" data-lang="de" onclick="setAppLanguage('de'); closeLanguageDropdown();">
+              <span class="lang-code-tag">DE</span>
+              <span class="lang-name">Deutsch</span>
+            </button>
+            <button type="button" class="lang-opt-btn" data-lang="pa" onclick="setAppLanguage('pa'); closeLanguageDropdown();">
+              <span class="lang-code-tag">IN</span>
+              <span class="lang-name">ਪੰਜਾਬੀ</span>
+            </button>
+            <button type="button" class="lang-opt-btn" data-lang="ar" onclick="setAppLanguage('ar'); closeLanguageDropdown();">
+              <span class="lang-code-tag">AR</span>
+              <span class="lang-name">العربية</span>
+            </button>
+            <button type="button" class="lang-opt-btn" data-lang="zh" onclick="setAppLanguage('zh'); closeLanguageDropdown();">
+              <span class="lang-code-tag">ZH</span>
+              <span class="lang-name">中文</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <nav class="menu">
+        <a href="/login"><span id="about" data-i18n="launch_nav_models">How It Works</span></a>
+        <a href="/login"><span id="product" data-i18n="launch_nav_shap">Visa Guidelines</span></a>
+        <a href="/login"><span id="solutions" data-i18n="launch_nav_evals">Check Eligibility</span>
+          <svg class="caret" viewBox="0 0 9 6" aria-hidden="true">
+            <path d="M0.7 1.1 L4.5 4.6 L8.3 1.1"/>
+          </svg>
+        </a>
+      </nav>
+      <a class="login" href="/login"><span id="login" data-i18n="launch_nav_login">Log in / Access</span>
+        <svg class="navarrow" viewBox="0 0 10 9" aria-hidden="true">
+          <path d="M0 4.5 H9.1 M5.4 0.9 L9.2 4.5 L5.4 8.1"/>
+        </svg>
+      </a>
+      <a class="pill" href="/login"><span id="contact" data-i18n="launch_nav_pass">Start Assessment</span></a>
+    </div>
+  </header>
+
+  <!-- HERO LAUNCH CONTENT -->
+  <main class="hero">
+    <h1 class="title">
+      <span id="h1a" data-i18n="launch_h1a">World-Class Visa Decisions</span>
+      <span id="h1b" data-i18n="launch_h1b">Fast, Simple & Transparent.</span>
+    </h1>
+    <p class="sub">
+      <span id="sub1" data-i18n="launch_sub1">Check your work visa eligibility in minutes</span>
+      <span id="sub2" data-i18n="launch_sub2">with clear advice on how to improve your score.</span>
+    </p>
+    <a class="cta" href="/login">
+      <span id="cta" data-i18n="launch_cta">Get started today</span>
+      <svg class="arrow" viewBox="0 0 16 11" aria-hidden="true">
+        <path d="M0 5.5 H14.6 M10.3 1.2 L14.9 5.5 L10.3 9.8"/>
+      </svg>
+    </a>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="foot" style="display:none;">
+    <span id="foot2"></span>
+  </footer>
+
+  <script>
+    (function(){
+      var q = window.matchMedia && window.matchMedia('(prefers-reduced-motion:reduce)'),
+          v = document.querySelector('video.art');
+      if (!q || !v) return;
+      function sync() {
+        if (q.matches) { v.pause(); } else { var p = v.play(); if (p) p.catch(function(){}); }
+      }
+      sync();
+      q.addEventListener ? q.addEventListener('change',sync) : q.addListener(sync);
+    })();
+
+    (function(){
+      var foot = document.getElementById('foot2');
+      var timer = setTimeout(done, 4000);
+      function done() {
+        clearTimeout(timer);
+        if (foot) foot.removeEventListener('animationend', done);
+        document.documentElement.classList.add('is-entered');
+      }
+      if (foot) { foot.addEventListener('animationend', done); } else { done(); }
+    })();
+
+    /* AIRCRAFT TAKEOFF ON 'Get started today' CLICK */
+    (function(){
+      var ctaBtn = document.querySelector('.hero .cta');
+      var aircraft = document.getElementById('launchAircraft');
+      if (!ctaBtn) return;
+
+      var isNavigating = false;
+
+      ctaBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        // Prevent repeat clicks during takeoff
+        if (isNavigating) return;
+        isNavigating = true;
+
+        ctaBtn.style.pointerEvents = 'none';
+        ctaBtn.style.opacity = '0.85';
+
+        // Respect prefers-reduced-motion: reduce -> skip animation and navigate immediately
+        var prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (prefersReduced || !aircraft) {
+          window.location.href = '/login';
+          return;
+        }
+
+        // Animate flight MOVING UPWARDS AND ZOOMING TOWARDS THE USER to cover the whole screen
+        var redirected = false;
+        function goLogin() {
+          if (!redirected) {
+            redirected = true;
+            window.location.href = '/login';
+          }
+        }
+
+        // Elevate aircraft stage on top of all UI (navbar, hero, footer) so it completely covers the launch page
+        var stage = document.querySelector('.aircraft-stage');
+        if (stage) {
+          stage.style.zIndex = '99999';
+        }
+
+        // Cancel idle hover animation so flight starts from current spot cleanly
+        aircraft.style.animation = 'none';
+        aircraft.style.filter = 'none';
+
+        if (aircraft.animate) {
+          var flight = aircraft.animate([
+            {
+              transform: 'translate3d(-50%, 0, 0) scale(1)',
+              opacity: '1'
+            },
+            {
+              transform: 'translate3d(-50%, -4vh, 0) scale(2.8)',
+              opacity: '1',
+              offset: 0.28
+            },
+            {
+              transform: 'translate3d(-50%, -15vh, 0) scale(8.5)',
+              opacity: '1',
+              offset: 0.52
+            },
+            {
+              transform: 'translate3d(-50%, -50vh, 0) scale(18)',
+              opacity: '1',
+              offset: 0.75
+            },
+            {
+              transform: 'translate3d(-50%, -100vh, 0) scale(26)',
+              opacity: '0.98',
+              offset: 0.90
+            },
+            {
+              transform: 'translate3d(-50%, -160vh, 0) scale(34)',
+              opacity: '0',
+              offset: 1.0
+            }
+          ], {
+            duration: 1350,
+            easing: 'cubic-bezier(0.25, 0.8, 0.25, 1)',
+            fill: 'forwards'
+          });
+
+          flight.onfinish = goLogin;
+          setTimeout(goLogin, 1400);
+        } else {
+          goLogin();
+        }
+      });
+    })();
+  </script>
+
+  <!-- Global Google Website Translator Bridge -->
+  <div id="google_translate_element" style="display:none;"></div>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <script src="/static/translations.js?v=5"></script>
+  <script src="/static/chatbot.js?v=12"></script>
+</body>
+</html>
